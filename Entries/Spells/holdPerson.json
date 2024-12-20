@@ -1,0 +1,16 @@
+{
+    "title": "Hold Person",
+    "damage": "",
+    "rang": 0,
+    "cost": "2",
+    "duration": "10 min",
+    "conc": true,
+    "modiferIndex": -1,
+    "preSaveNormalText": " A humanoid target is paralysed. WIS",
+    "postSaveNormalText": " to resist.",
+    "preSaveItalicText": "Target can retry save at the end of their turns.",
+    "postSaveItalicText": "",
+    "castTime": "a",
+    "ritual": false,
+    "isSpell": true
+}

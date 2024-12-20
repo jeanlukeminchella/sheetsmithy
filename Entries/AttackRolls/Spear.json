@@ -1,0 +1,10 @@
+{
+    "title": "Spear",
+    "addModToDamage": true,
+    "forcedMod": 0,
+    "damageType": "Piercing",
+    "damage": "d6",
+    "thrown": 20,
+    "versatile": "d8",
+    "mastery": "Sap"
+}

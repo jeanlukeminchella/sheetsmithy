@@ -1,0 +1,16 @@
+{
+    "title": "Mending",
+    "damage": "",
+    "rang": 0,
+    "cost": "",
+    "duration": "",
+    "conc": false,
+    "modiferIndex": -1,
+    "preSaveNormalText": "Repairs less than 1ft of damage on an object.",
+    "postSaveNormalText": "",
+    "preSaveItalicText": "Takes 10 actions (1 min) to cast.",
+    "postSaveItalicText": "",
+    "castTime": "a",
+    "ritual": false,
+    "isSpell": true
+}

@@ -1,0 +1,16 @@
+{
+    "title": "Moonbeam",
+    "damage": "",
+    "rang": 120,
+    "cost": "2",
+    "duration": "1 min",
+    "conc": true,
+    "modiferIndex": -1,
+    "preSaveNormalText": " 0ft beam of moonlight deals 2d8+2 radiant damage to creatures starting their turn there. CON",
+    "postSaveNormalText": " to half damage.",
+    "preSaveItalicText": " Can be moved with an action.",
+    "postSaveItalicText": "",
+    "castTime": "a",
+    "ritual": false,
+    "isSpell": true
+}

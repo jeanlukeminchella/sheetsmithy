@@ -1,0 +1,17 @@
+{
+    "title": "Fire Bolt",
+    "damage": "d10",
+    "rang": 120,
+    "cost": "",
+    "duration": "",
+    "conc": false,
+    "addModToDamage": false,
+    "damageType": "Fire",
+    "forcedMod": -1,
+    "cantripScaling": true,
+    "saveNotAttack": false,
+    "resistAttributeText": "",
+    "resistText": "",
+    "note": "",
+    "isSpell": true
+}

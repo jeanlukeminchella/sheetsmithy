@@ -1,0 +1,17 @@
+{
+    "title": "Poison Spray",
+    "damage": "d12",
+    "rang": 30,
+    "cost": "",
+    "duration": "",
+    "conc": false,
+    "addModToDamage": false,
+    "damageType": "Poison",
+    "forcedMod": -1,
+    "cantripScaling": true,
+    "saveNotAttack": false,
+    "resistAttributeText": "",
+    "resistText": "",
+    "note": "",
+    "isSpell": true
+}

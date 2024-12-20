@@ -1,0 +1,16 @@
+{
+    "title": "Bane",
+    "damage": "",
+    "rang": 30,
+    "cost": "1",
+    "duration": "1 min",
+    "conc": true,
+    "modiferIndex": -1,
+    "preSaveNormalText": "Up to three targets must subtract a d4 from attacks and saving throws. CHAR",
+    "postSaveNormalText": " to resist.",
+    "preSaveItalicText": "",
+    "postSaveItalicText": "",
+    "castTime": "a",
+    "ritual": false,
+    "isSpell": true
+}

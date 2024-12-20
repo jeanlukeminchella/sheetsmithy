@@ -1,0 +1,9 @@
+{
+    "title": "War Pick",
+    "addModToDamage": true,
+    "forcedMod": 0,
+    "damageType": "Piercing",
+    "damage": "d8",
+    "versatile": "d10",
+    "mastery": "Sap"
+}

@@ -1,0 +1,17 @@
+{
+    "title": "Create Bonfire",
+    "damage": "d8",
+    "rang": 60,
+    "cost": "",
+    "duration": "1 min",
+    "conc": true,
+    "addModToDamage": false,
+    "damageType": "fire",
+    "forcedMod": -1,
+    "cantripScaling": true,
+    "saveNotAttack": true,
+    "resistAttributeText": "DEX",
+    "resistText": " to dodge",
+    "note": " Bonfire fills a 5ft square.",
+    "isSpell": true
+}

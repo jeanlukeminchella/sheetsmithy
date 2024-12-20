@@ -1,0 +1,16 @@
+{
+    "title": "Necrotic Shroud",
+    "damage": "",
+    "rang": 10,
+    "cost": "",
+    "duration": "",
+    "conc": false,
+    "forcedMod": 5,
+    "preSaveNormalText": "Enemies become frightened of you. CHAR",
+    "postSaveNormalText": " to resist.",
+    "preSaveItalicText": "",
+    "postSaveItalicText": "",
+    "castTime": "ba",
+    "ritual": false,
+    "isSpell": true
+}

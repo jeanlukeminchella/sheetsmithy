@@ -1,0 +1,15 @@
+{
+    "title": "Thunderwave",
+    "damage": "",
+    "rang": 0,
+    "cost": "1",
+    "duration": "",
+    "conc": false,
+    "modiferIndex": -1,
+    "preSaveNormalText": "Creatures in a 15ft cube next to you take 2d8 thunder damage and are pushed 10ft away from you. CON",
+    "postSaveNormalText": " to half damage and stay put.",
+    "preSaveItalicText": "",
+    "postSaveItalicText": "",
+    "castTime": "a",
+    "ritual": false
+}

@@ -1,0 +1,14 @@
+{
+    "title": "Mass Healing Word",
+    "damage": "",
+    "rang": 60,
+    "cost": "3",
+    "duration": "",
+    "conc": false,
+    "preHealText": "Up to six creatures regain d4",
+    "postHealText": " hp",
+    "modiferIndex": -1,
+    "castTime": "ba",
+    "ritual": false,
+    "isSpell": true
+}

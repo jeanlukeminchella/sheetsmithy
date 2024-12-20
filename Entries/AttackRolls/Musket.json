@@ -1,0 +1,9 @@
+{
+    "title": "Musket",
+    "addModToDamage": true,
+    "forcedMod": 1,
+    "damageType": "Piercing",
+    "damage": "d12",
+    "rang": 40,
+    "mastery": "Slow"
+}

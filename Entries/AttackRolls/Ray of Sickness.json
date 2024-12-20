@@ -1,0 +1,17 @@
+{
+    "title": "Ray of Sickness",
+    "damage": "2d8",
+    "rang": 60,
+    "cost": "1",
+    "duration": "",
+    "conc": false,
+    "addModToDamage": false,
+    "damageType": "Poison",
+    "forcedMod": -1,
+    "cantripScaling": false,
+    "saveNotAttack": false,
+    "resistAttributeText": "",
+    "resistText": "",
+    "note": "On a hit, target is also Poisoned until the end of your next turn.",
+    "isSpell": true
+}

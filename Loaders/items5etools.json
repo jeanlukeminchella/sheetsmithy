@@ -1,0 +1,4813 @@
+[
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Yew Wand",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Spellcasting focus",
+			"property | Weight | 1 lb.",
+			"property | Value | 10 gp",
+			"rule",
+			"text | A druid can use this item as a spellcasting focus."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"spellcasting focus"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Wooden Staff",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon, spellcasting focus",
+			"property | Damage | 1d6 Bludgeoning",
+			"property | Properties | Versatile (1d8)",
+			"property | Type | Simple weapon",
+			"property | Weight | 4 lb.",
+			"property | Value | 5 gp",
+			"rule",
+			"description | Versatile | Use the damage in parentheses when making a melee attack with two hands.",
+			"text | A druid can use this item as a spellcasting focus."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"simple weapon",
+			"spellcasting focus"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Woodcarver's Tools",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Artisan's tools",
+			"property | Weight | 5 lb.",
+			"property | Value | 1 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Dexterity",
+			"bullet | <b>text | Utilize:</b> Carve a pattern in wood (DC 10)",
+			"bullet | <b>text | Craft:</b> Club, Greatclub, Quarterstaff, Ranged weapons (except Pistol, Musket, and  Sling), Arcane Focus, Arrows, Bolts, Druidic Focus, Ink Pen, Needles",
+			"text | Artisan's Tools are each focused on crafting items and pursuing a trade. Each type of Artisan's Tools tools requires a separate proficiency.",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"artisan's tools"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Whip",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d4 Slashing",
+			"property | Properties | Finesse, Reach",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"slow_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Slow</span>",
+			"property | Type | Martial weapon, melee weapon",
+			"property | Weight | 3 lb.",
+			"property | Value | 2 gp",
+			"rule",
+			"description | Finesse | When making an attack with a Finesse weapon, use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.",
+			"description | Reach | A Reach weapon adds 5 feet to your reach when you attack with it, as well as when determining your reach for Opportunity Attacks with it."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Weaver's Tools",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Artisan's tools",
+			"property | Weight | 5 lb.",
+			"property | Value | 1 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Dexterity",
+			"bullet | <b>text | Utilize:</b> Mend a tear in clothing (DC 10), or sew a Tiny design (DC 10)",
+			"bullet | <b>text | Craft:</b> Padded Armor, Basket, Bedroll, Blanket, Fine Clothes, Net, Robe, Rope, Sack, String, Tent, Traveler's Clothes",
+			"text | Artisan's Tools are each focused on crafting items and pursuing a trade. Each type of Artisan's Tools tools requires a separate proficiency.",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"artisan's tools"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Waterskin",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 5 lb. (full)",
+			"property | Value | 2 sp",
+			"rule",
+			"text | A Waterskin holds up to 4 pints. If you don't drink sufficient water, you risk dehydration."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Warship",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Vehicle (water)",
+			"property | Damage | Speed: 2½ mphCarrying Capacity: 200 tons cargo, 60 passengersCrew 60, AC 15, HP 500, Damage Threshold 20",
+			"property | Value | 25,000 gp",
+			"rule",
+			"description | Speed | A ship sailing against a strong wind moves at half speed. In a dead calm (no wind), waterborne ships can't move under sail and must be rowed. Keelboats and Rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can't be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A Rowboat can be carried and weighs 100 pounds.",
+			"description | Crew | A ship larger than a Keelboat or Rowboat needs a crew of skilled hirelings (see \"Services\") to function. The minimum number of skilled hirelings needed to crew a ship depends on the type of ship.",
+			"description | Passengers | The number of Small and Medium passengers the ship can accommodate using hammocks. A ship outfitted with private accommodations can carry one-fifth as many passengers. A passenger usually pays 5 SP per day for a hammock, but prices can vary from ship to ship. A small private cabin usually costs 2 GP per day.",
+			"description | Damage Threshold | See the rules glossary.",
+			"description | Ship Repair | Repairs to a damaged ship can be made while the vessel is berthed. Repairing 1 Hit Point of damage requires 1 day and costs 20 GP for materials and labor. If the repairs are made in a location where supplies and skilled labor are abundant, such as a city shipyard, the repair time and cost are halved."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"vehicle (water)"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Warhorse",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Mount",
+			"property | Damage | Speed: 60, Carrying Capacity: 540 lb.",
+			"property | Value | 400 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"mount"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Warhammer",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d8 Bludgeoning",
+			"property | Properties | Versatile (1d10)",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"push_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Push</span>",
+			"property | Type | Martial weapon, melee weapon",
+			"property | Weight | 5 lb.",
+			"property | Value | 15 gp",
+			"rule",
+			"description | Versatile | A Versatile weapon can be used with one or two hands. A damage value in parentheses appears with the property. The weapon deals that damage when used with two hands to make a melee attack."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "War Pick",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d8 Piercing",
+			"property | Properties | Versatile (1d10)",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"sap_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Sap</span>",
+			"property | Type | Martial weapon, melee weapon",
+			"property | Weight | 2 lb.",
+			"property | Value | 5 gp",
+			"rule",
+			"description | Versatile | A Versatile weapon can be used with one or two hands. A damage value in parentheses appears with the property. The weapon deals that damage when used with two hands to make a melee attack."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Wand",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Spellcasting focus",
+			"property | Weight | 1 lb.",
+			"property | Value | 10 gp",
+			"rule",
+			"text | A sorcerer, warlock, or wizard can use this item as a spellcasting focus."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"spellcasting focus"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Wagon",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Vehicle (land)",
+			"property | Weight | 400 lb.",
+			"property | Value | 35 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"vehicle (land)"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Viol",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Instrument",
+			"property | Weight | 1 lb.",
+			"property | Value | 30 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Charisma",
+			"bullet | <b>text | Utilize:</b> Play a known tune (DC 10), or improvise a song (DC 15)",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"instrument"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Vial",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Value | 1 gp",
+			"rule",
+			"text | A Vial holds up to 4 ounces."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Trinket",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"rule",
+			"text | When you make your character, you can roll once on the Trinkets table to gain a Tiny trinket, a simple item lightly touched by mystery. The DM might also use this table. It can help stock a room in a dungeon or fill a creature's pockets.",
+			"text | <b>Trinkets</b>",
+			"text | 1d100｜Trinket",
+			"text | 01｜A mummified goblin hand",
+			"text | 02｜A crystal that faintly glows in moonlight",
+			"text | 03｜A gold coin minted in an unknown land",
+			"text | 04｜A diary written in a language you don't know",
+			"text | 05｜A brass ring that never tarnishes",
+			"text | 06｜An old chess piece made from glass",
+			"text | 07｜A pair of knucklebone dice, each with a skull symbol on the side that would normally show six pips",
+			"text | 08｜A small idol depicting a nightmarish creature that gives you unsettling dreams when you sleep near it",
+			"text | 09｜A lock of someone's hair",
+			"text | 10｜The deed for a parcel of land in a realm unknown to you",
+			"text | 11｜A 1-ounce block made from an unknown material",
+			"text | 12｜A small cloth doll skewered with needles",
+			"text | 13｜A tooth from an unknown beast",
+			"text | 14｜An enormous scale, perhaps from a dragon",
+			"text | 15｜A bright-green feather",
+			"text | 16｜An old divination card bearing your likeness",
+			"text | 17｜A glass orb filled with moving smoke",
+			"text | 18｜A 1-pound egg with a bright-red shell",
+			"text | 19｜A pipe that blows bubbles",
+			"text | 20｜A glass jar containing a bit of flesh floating in pickling fluid",
+			"text | 21｜A gnome-crafted music box that plays a song you dimly remember from your childhood",
+			"text | 22｜A wooden statuette of a smug halfling",
+			"text | 23｜A brass orb etched with strange runes",
+			"text | 24｜A multicolored stone disk",
+			"text | 25｜A silver icon of a raven",
+			"text | 26｜A bag containing forty-seven teeth, one of which is rotten",
+			"text | 27｜A shard of obsidian that always feels warm to the touch",
+			"text | 28｜A dragon's talon strung on a leather necklace",
+			"text | 29｜A pair of old socks",
+			"text | 30｜A blank book whose pages refuse to hold ink, chalk, graphite, or any other marking",
+			"text | 31｜A silver badge that is a five-pointed star",
+			"text | 32｜A knife that belonged to a relative",
+			"text | 33｜A glass vial filled with nail clippings",
+			"text | 34｜A rectangular metal device with two tiny metal cups on one end that throws sparks when wet",
+			"text | 35｜A white, sequined glove sized for a human",
+			"text | 36｜A vest with one hundred tiny pockets",
+			"text | 37｜A weightless stone",
+			"text | 38｜A sketch of a goblin",
+			"text | 39｜An empty glass vial that smells of perfume",
+			"text | 40｜A gemstone that looks like a lump of coal when examined by anyone but you",
+			"text | 41｜A scrap of cloth from an old banner",
+			"text | 42｜A rank insignia from a lost legionnaire",
+			"text | 43｜A silver bell without a clapper",
+			"text | 44｜A mechanical canary inside a lamp",
+			"text | 45｜A miniature chest carved to look like it has numerous feet on the bottom",
+			"text | 46｜A dead sprite inside a clear glass bottle",
+			"text | 47｜A metal can that has no opening but sounds as if it is filled with liquid, sand, spiders, or broken glass (your choice)",
+			"text | 48｜A glass orb filled with water, in which swims a clockwork goldfish",
+			"text | 49｜A silver spoon with an M engraved on the handle",
+			"text | 50｜A whistle made from gold-colored wood",
+			"text | 51｜A dead scarab beetle the size of your hand",
+			"text | 52｜Two toy soldiers, one missing a head",
+			"text | 53｜A small box filled with different-sized buttons",
+			"text | 54｜A candle that can't be lit",
+			"text | 55｜A miniature cage with no door",
+			"text | 56｜An old key",
+			"text | 57｜An indecipherable treasure map",
+			"text | 58｜A hilt from a broken sword",
+			"text | 59｜A rabbit's foot",
+			"text | 60｜A glass eye",
+			"text | 61｜A cameo of a hideous person",
+			"text | 62｜A silver skull the size of a coin",
+			"text | 63｜An alabaster mask",
+			"text | 64｜A cone of sticky black incense that stinks",
+			"text | 65｜A nightcap that gives you pleasant dreams when you wear it",
+			"text | 66｜A single caltrop made from bone",
+			"text | 67｜A gold monocle frame without the lens",
+			"text | 68｜A 1-inch cube, each side a different color",
+			"text | 69｜A crystal doorknob",
+			"text | 70｜A packet filled with pink dust",
+			"text | 71｜A fragment of a beautiful song, written as musical notes on two pieces of parchment",
+			"text | 72｜A silver teardrop earring containing a real teardrop",
+			"text | 73｜An eggshell painted with scenes of misery in disturbing detail",
+			"text | 74｜A fan that, when unfolded, shows a sleepy cat",
+			"text | 75｜A set of bone pipes",
+			"text | 76｜A four-leaf clover pressed inside a book discussing manners and etiquette",
+			"text | 77｜A sheet of parchment upon which is drawn a mechanical contraption",
+			"text | 78｜An ornate scabbard that fits no blade you have found",
+			"text | 79｜An invitation to a party where a murder happened",
+			"text | 80｜A bronze pentacle with an etching of a rat's head in its center",
+			"text | 81｜A purple handkerchief embroidered with the name of an archmage",
+			"text | 82｜Half a floor plan for a temple, a castle, or another structure",
+			"text | 83｜A bit of folded cloth that, when unfolded, turns into a stylish cap",
+			"text | 84｜A receipt of deposit at a bank in a far-off city",
+			"text | 85｜A diary with seven missing pages",
+			"text | 86｜An empty silver snuffbox bearing the inscription \"dreams\" on its lid",
+			"text | 87｜An iron holy symbol devoted to an unknown god",
+			"text | 88｜A book about a legendary hero's rise and fall, with the last chapter missing",
+			"text | 89｜A vial of dragon blood",
+			"text | 90｜An ancient arrow of elven design",
+			"text | 91｜A needle that never bends",
+			"text | 92｜An ornate brooch of dwarven design",
+			"text | 93｜An empty wine bottle bearing a pretty label that says, \"The Wizard of Wines Winery, Red Dragon Crush, 331422-W\"",
+			"text | 94｜A mosaic tile with a multicolored, glazed surface",
+			"text | 95｜A petrified mouse",
+			"text | 96｜A black pirate flag adorned with a dragon's skull and crossbones",
+			"text | 97｜A tiny mechanical crab or spider that moves about when it's not being observed",
+			"text | 98｜A glass jar containing lard with a label that reads, \"Griffon Grease\"",
+			"text | 99｜A wooden box with a ceramic bottom that holds a living worm with a head on each end of its body",
+			"text | 00｜A metal urn containing the ashes of a hero"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Trident",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d8 Piercing",
+			"property | Properties | Thrown (20/60 ft.), Versatile (1d10)",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"topple_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Topple</span>",
+			"property | Type | Martial weapon, melee weapon",
+			"property | Weight | 4 lb.",
+			"property | Value | 5 gp",
+			"rule",
+			"description | Thrown | If a weapon has the Thrown property, you can throw the weapon to make a ranged attack, and you can draw that weapon as part of the attack. If the weapon is a Melee weapon, use the same ability modifier for the attack and damage rolls that you use for a melee attack with that weapon.",
+			"description | Versatile | A Versatile weapon can be used with one or two hands. A damage value in parentheses appears with the property. The weapon deals that damage when used with two hands to make a melee attack."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Traveler's Clothes",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 4 lb.",
+			"property | Value | 2 gp",
+			"rule",
+			"text | Traveler's Clothes are resilient garments designed for travel in various environments."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Torch",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 1 lb.",
+			"property | Value | 1 cp",
+			"rule",
+			"text | A Torch burns for 1 hour, casting Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. When you take the Attack action, you can attack with the Torch, using it as a Simple Melee weapon. On a hit, the target takes 1 Fire damage."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Tinker's Tools",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Artisan's tools",
+			"property | Weight | 10 lb.",
+			"property | Value | 50 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Dexterity",
+			"bullet | <b>text | Utilize:</b> Assemble a Tiny item composed of scrap, which falls apart in 1 minute (DC 20)",
+			"bullet | <b>text | Craft:</b> Musket, Pistol, Bell, Bullseye Lantern, Flask, Hooded Lantern, Hunting Trap, Lock, Manacles, Mirror, Shovel, Signal Whistle, Tinderbox",
+			"text | Artisan's Tools are each focused on crafting items and pursuing a trade. Each type of Artisan's Tools tools requires a separate proficiency.",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"artisan's tools"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Tinderbox",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 1 lb.",
+			"property | Value | 5 sp",
+			"rule",
+			"text | A Tinderbox is a small container holding flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a Candle, Lamp, Lantern, or Torch—or anything else with exposed fuel—takes a Bonus Action. Lighting any other fire takes 1 minute."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Three-Dragon Ante Set",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Gaming set",
+			"property | Value | 1 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Wisdom",
+			"bullet | <b>text | Utilize:</b> Discern whether someone is cheating (DC 10), or win the game (DC 20)",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"gaming set"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Thieves' Tools",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Tool",
+			"property | Weight | 1 lb.",
+			"property | Value | 25 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Dexterity",
+			"bullet | <b>text | Utilize:</b> Pick a lock (DC 15), or disarm a trap (DC 15)",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"tool"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Tent",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 20 lb.",
+			"property | Value | 2 gp",
+			"rule",
+			"text | A Tent sleeps up to two Small or Medium creatures."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Studded Leather Armor",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Light armor",
+			"property | Armor Class | AC 12 + Dex",
+			"property | Weight | 13 lb.",
+			"property | Value | 45 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"light armor"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "String",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Value | 1 sp",
+			"rule",
+			"text | String is 10 feet long. You can tie a knot in it as a Utilize action."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Staff",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Staff, weapon, spellcasting focus",
+			"property | Damage | 1d6 Bludgeoning",
+			"property | Properties | Versatile (1d8)",
+			"property | Type | Simple weapon, melee weapon",
+			"property | Weight | 4 lb.",
+			"property | Value | 5 gp",
+			"rule",
+			"description | Versatile | Use the damage in parentheses when making a melee attack with two hands.",
+			"text | A sorcerer, warlock, or wizard can use this item as a spellcasting focus."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"staff",
+			"simple weapon",
+			"melee weapon",
+			"spellcasting focus"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Stabling (per day)",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Tack and harness",
+			"property | Value | 5 cp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"tack and harness"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Spyglass",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 1 lb.",
+			"property | Value | 1,000 gp",
+			"rule",
+			"text | Objects viewed through a Spyglass are magnified to twice their size."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Sprig of Mistletoe",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Spellcasting focus",
+			"property | Value | 1 gp",
+			"rule",
+			"text | A druid can use this item as a spellcasting focus."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"spellcasting focus"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Splint Armor",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Heavy armor",
+			"property | Armor Class | AC 17",
+			"property | Weight | 60 lb.",
+			"property | Value | 200 gp",
+			"rule",
+			"text | Disadvantage on Stealth (Dexterity) checks.",
+			"text | Speed reduced by 10 feet if Strength score less than 15."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"heavy armor"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Spell Scroll (Level 1)",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Scroll, common",
+			"property | Value | 50 gp",
+			"rule",
+			"text | A Spell Scroll (Level 1) is a magic item that bears the words of a level 1 spell, determined by the scroll's creator. If the spell is on your class's spell list, you can read the scroll and cast the spell using its normal casting time and without providing any Material components.",
+			"text | If the spell requires a saving throw or an attack roll, the spell save DC is 13, and the attack bonus is +5. The scroll disintegrates when the casting is completed."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"scroll"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Spell Scroll (Cantrip)",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Scroll, common",
+			"property | Value | 30 gp",
+			"rule",
+			"text | A Spell Scroll (Cantrip) is a magic item that bears the words of a cantrip, determined by the scroll's creator. If the spell is on your class's spell list, you can read the scroll and cast the spell using its normal casting time and without providing any Material components.",
+			"text | If the spell requires a saving throw or an attack roll, the spell save DC is 13, and the attack bonus is +5. The scroll disintegrates when the casting is completed."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"scroll"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Spell Scroll",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Scroll"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"scroll"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Spear",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d6 Piercing",
+			"property | Properties | Thrown (20/60 ft.), Versatile (1d8)",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"sap_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Sap</span>",
+			"property | Type | Simple weapon, melee weapon",
+			"property | Weight | 3 lb.",
+			"property | Value | 1 gp",
+			"rule",
+			"description | Thrown | If a weapon has the Thrown property, you can throw the weapon to make a ranged attack, and you can draw that weapon as part of the attack. If the weapon is a Melee weapon, use the same ability modifier for the attack and damage rolls that you use for a melee attack with that weapon.",
+			"description | Versatile | A Versatile weapon can be used with one or two hands. A damage value in parentheses appears with the property. The weapon deals that damage when used with two hands to make a melee attack."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"simple weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Smith's Tools",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Artisan's tools",
+			"property | Weight | 8 lb.",
+			"property | Value | 20 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Strength",
+			"bullet | <b>text | Utilize:</b> Pry open a door or container (DC 20)",
+			"bullet | <b>text | Craft:</b> Any Melee weapon (except Club, Greatclub, Quarterstaff, and Whip), Medium armor (except Hide), Heavy armor, Ball Bearings, Bucket, Caltrops, Chain, Crowbar, Firearm Bullets, Grappling Hook, Iron Pot, Iron Spikes, Sling Bullets",
+			"text | Artisan's Tools are each focused on crafting items and pursuing a trade. Each type of Artisan's Tools tools requires a separate proficiency.",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"artisan's tools"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Sling Bullets (20)",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Ammunition",
+			"property | Weight | 1½ lb.",
+			"property | Value | 4 cp",
+			"rule",
+			"text | Sling bullets are used with a weapon that has the ammunition property to make a ranged attack. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack (you need a free hand to load a one-handed weapon). At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield.",
+			"text | Sling Bullets are typically stored in a Pouch (bought separately)."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"ammunition"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Sling Bullet",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Ammunition",
+			"property | Weight | 1.2 oz.",
+			"property | Value | 0.2 cp",
+			"rule",
+			"text | Sling bullets are used with a weapon that has the ammunition property to make a ranged attack. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack (you need a free hand to load a one-handed weapon). At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield.",
+			"text | Sling Bullets are typically stored in a Pouch (bought separately)."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"ammunition"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Sling",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d4 Bludgeoning",
+			"property | Properties | Ammunition (Range 30/120 ft.; Sling Bullet)",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"slow_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Slow</span>",
+			"property | Type | Simple weapon, ranged weapon",
+			"property | Value | 1 sp",
+			"rule",
+			"description | Range | Given as two numbers; normal and max. Attacks beyond normal range have disadvantage.",
+			"description | Ammunition | You can use a weapon that has the Ammunition property to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon's range. Each attack expends one piece of ammunition. Drawing the ammunition is part of the attack (you need a free hand to load a one-handed weapon). After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"simple weapon",
+			"ranged weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Sled",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Vehicle (land)",
+			"property | Weight | 300 lb.",
+			"property | Value | 20 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"vehicle (land)"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Signal Whistle",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Value | 5 cp",
+			"rule",
+			"text | When blown as a Utilize action, a Signal Whistle produces a sound that can be heard up to 600 feet away."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Sickle",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d4 Slashing",
+			"property | Properties | Light",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"nick_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Nick</span>",
+			"property | Type | Simple weapon, melee weapon",
+			"property | Weight | 2 lb.",
+			"property | Value | 1 gp",
+			"rule",
+			"description | Light | When you take the Attack action on your turn and attack with a Light weapon, you can make one extra attack as a Bonus Action later on the same turn. That extra attack must be made with a different Light weapon, and you don't add your ability modifier to the extra attack's damage unless that modifier is negative. For example, you can attack with a Shortsword in one hand and a Dagger in the other using the Attack action and a Bonus Action, but you don't add your Strength or Dexterity modifier to the damage roll of the Bonus Action unless that modifier is negative."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"simple weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Shovel",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 5 lb.",
+			"property | Value | 2 gp",
+			"rule",
+			"text | Working for 1 hour, you can use a Shovel to dig a hole that is 5 feet on each side in soil or similar material."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Shortsword",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d6 Piercing",
+			"property | Properties | Finesse, Light",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"vex_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Vex</span>",
+			"property | Type | Martial weapon, melee weapon",
+			"property | Weight | 2 lb.",
+			"property | Value | 10 gp",
+			"rule",
+			"description | Finesse | When making an attack with a Finesse weapon, use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.",
+			"description | Light | When you take the Attack action on your turn and attack with a Light weapon, you can make one extra attack as a Bonus Action later on the same turn. That extra attack must be made with a different Light weapon, and you don't add your ability modifier to the extra attack's damage unless that modifier is negative. For example, you can attack with a Shortsword in one hand and a Dagger in the other using the Attack action and a Bonus Action, but you don't add your Strength or Dexterity modifier to the damage roll of the Bonus Action unless that modifier is negative."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Shortbow",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d6 Piercing",
+			"property | Properties | Ammunition (Range 80/320 ft.; Arrow), Two‑Handed",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"vex_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Vex</span>",
+			"property | Type | Simple weapon, ranged weapon",
+			"property | Weight | 2 lb.",
+			"property | Value | 25 gp",
+			"rule",
+			"description | Range | Given as two numbers; normal and max. Attacks beyond normal range have disadvantage.",
+			"description | Ammunition | You can use a weapon that has the Ammunition property to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon's range. Each attack expends one piece of ammunition. Drawing the ammunition is part of the attack (you need a free hand to load a one-handed weapon). After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost.",
+			"description | Two-Handed | A Two-Handed weapon requires two hands when you attack with it."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"simple weapon",
+			"ranged weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Shield",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Armor (shield)",
+			"property | Armor Class | AC +2",
+			"property | Weight | 6 lb.",
+			"property | Value | 10 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"shield"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Shawm",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Instrument",
+			"property | Weight | 1 lb.",
+			"property | Value | 2 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Charisma",
+			"bullet | <b>text | Utilize:</b> Play a known tune (DC 10), or improvise a song (DC 15)",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"instrument"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Scimitar",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d6 Slashing",
+			"property | Properties | Finesse, Light",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"nick_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Nick</span>",
+			"property | Type | Martial weapon, melee weapon",
+			"property | Weight | 3 lb.",
+			"property | Value | 25 gp",
+			"rule",
+			"description | Finesse | When making an attack with a Finesse weapon, use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.",
+			"description | Light | When you take the Attack action on your turn and attack with a Light weapon, you can make one extra attack as a Bonus Action later on the same turn. That extra attack must be made with a different Light weapon, and you don't add your ability modifier to the extra attack's damage unless that modifier is negative. For example, you can attack with a Shortsword in one hand and a Dagger in the other using the Attack action and a Bonus Action, but you don't add your Strength or Dexterity modifier to the damage roll of the Bonus Action unless that modifier is negative."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Scholar's Pack",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 22 lb.",
+			"property | Value | 40 gp",
+			"rule",
+			"text | A Scholar's Pack contains the following items: Backpack, Book, Ink, Ink Pen, Lamp, 10 flasks of Oil, 10 sheets of Parchment, and Tinderbox."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Scale Mail",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Medium armor",
+			"property | Armor Class | AC 14 + Dex (max 2)",
+			"property | Weight | 45 lb.",
+			"property | Value | 50 gp",
+			"rule",
+			"text | Disadvantage on Stealth (Dexterity) checks."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"medium armor"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Sailing Ship",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Vehicle (water)",
+			"property | Damage | Speed: 2 mphCarrying Capacity: 100 tons cargo, 20 passengersCrew 20, AC 15, HP 300, Damage Threshold 15",
+			"property | Value | 10,000 gp",
+			"rule",
+			"description | Speed | A ship sailing against a strong wind moves at half speed. In a dead calm (no wind), waterborne ships can't move under sail and must be rowed. Keelboats and Rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can't be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A Rowboat can be carried and weighs 100 pounds.",
+			"description | Crew | A ship larger than a Keelboat or Rowboat needs a crew of skilled hirelings (see \"Services\") to function. The minimum number of skilled hirelings needed to crew a ship depends on the type of ship.",
+			"description | Passengers | The number of Small and Medium passengers the ship can accommodate using hammocks. A ship outfitted with private accommodations can carry one-fifth as many passengers. A passenger usually pays 5 SP per day for a hammock, but prices can vary from ship to ship. A small private cabin usually costs 2 GP per day.",
+			"description | Damage Threshold | See the rules glossary.",
+			"description | Ship Repair | Repairs to a damaged ship can be made while the vessel is berthed. Repairing 1 Hit Point of damage requires 1 day and costs 20 GP for materials and labor. If the repairs are made in a location where supplies and skilled labor are abundant, such as a city shipyard, the repair time and cost are halved."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"vehicle (water)"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Sack",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | ½ lb.",
+			"property | Value | 1 cp",
+			"rule",
+			"text | A Sack holds up to 30 pounds within 1 cubic foot."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Rowboat",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Vehicle (water)",
+			"property | Damage | Speed: 1½ mphCarrying Capacity: 3 passengersCrew 1, AC 11, HP 50",
+			"property | Value | 50 gp",
+			"rule",
+			"description | Speed | A ship sailing against a strong wind moves at half speed. In a dead calm (no wind), waterborne ships can't move under sail and must be rowed. Keelboats and Rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can't be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A Rowboat can be carried and weighs 100 pounds.",
+			"description | Crew | A ship larger than a Keelboat or Rowboat needs a crew of skilled hirelings (see \"Services\") to function. The minimum number of skilled hirelings needed to crew a ship depends on the type of ship.",
+			"description | Passengers | The number of Small and Medium passengers the ship can accommodate using hammocks. A ship outfitted with private accommodations can carry one-fifth as many passengers. A passenger usually pays 5 SP per day for a hammock, but prices can vary from ship to ship. A small private cabin usually costs 2 GP per day.",
+			"description | Damage Threshold | See the rules glossary.",
+			"description | Ship Repair | Repairs to a damaged ship can be made while the vessel is berthed. Repairing 1 Hit Point of damage requires 1 day and costs 20 GP for materials and labor. If the repairs are made in a location where supplies and skilled labor are abundant, such as a city shipyard, the repair time and cost are halved."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"vehicle (water)"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Rope",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 5 lb.",
+			"property | Value | 1 gp",
+			"rule",
+			"text | As a Utilize action, you can tie a knot with Rope if you succeed on a DC 10 Dexterity (Sleight of Hand) check. The Rope can be burst with a successful DC 20 Strength (Athletics) check.",
+			"text | You can bind an unwilling creature with the Rope only if the creature has the Grappled, Incapacitated, or Restrained condition. If the creature's legs are bound, the creature has the Restrained condition until it escapes. Escaping the Rope requires the creature to make a successful DC 15 Dexterity (Acrobatics) check as an action."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Rod",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Spellcasting focus",
+			"property | Weight | 2 lb.",
+			"property | Value | 10 gp",
+			"rule",
+			"text | A sorcerer, warlock, or wizard can use this item as a spellcasting focus."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"spellcasting focus"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Robe",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 4 lb.",
+			"property | Value | 1 gp",
+			"rule",
+			"text | A Robe has vocational or ceremonial significance. Some events and locations admit only people wearing a Robe bearing certain colors or symbols."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Ring Mail",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Heavy armor",
+			"property | Armor Class | AC 14",
+			"property | Weight | 40 lb.",
+			"property | Value | 30 gp",
+			"rule",
+			"text | Disadvantage on Stealth (Dexterity) checks."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"heavy armor"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Riding Saddle",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Tack and harness",
+			"property | Weight | 25 lb.",
+			"property | Value | 10 gp",
+			"rule",
+			"text | A saddle comes with a bit, a bridle, reins, and any other equipment needed to use the saddle."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"tack and harness"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Riding Horse",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Mount",
+			"property | Damage | Speed: 60, Carrying Capacity: 480 lb.",
+			"property | Value | 75 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"mount"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Reliquary",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Spellcasting focus",
+			"property | Weight | 2 lb.",
+			"property | Value | 5 gp",
+			"rule",
+			"text | For a Reliquary to be an effective Holy Symbol, it must be held.",
+			"text | A cleric or paladin can use this item as a spellcasting focus."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"spellcasting focus"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Rations",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 2 lb.",
+			"property | Value | 5 sp",
+			"rule",
+			"text | Rations consist of travel-ready food, including jerky, dried fruit, hardtack, and nuts. See \"Malnutrition\" for the risks of not eating."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Rapier",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d8 Piercing",
+			"property | Properties | Finesse",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"vex_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Vex</span>",
+			"property | Type | Martial weapon, melee weapon",
+			"property | Weight | 2 lb.",
+			"property | Value | 25 gp",
+			"rule",
+			"description | Finesse | When making an attack with a Finesse weapon, use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Quiver",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 1 lb.",
+			"property | Value | 1 gp",
+			"rule",
+			"text | A Quiver holds up to 20 Arrows."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Quarterstaff",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d6 Bludgeoning",
+			"property | Properties | Versatile (1d8)",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"topple_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Topple</span>",
+			"property | Type | Simple weapon, melee weapon",
+			"property | Weight | 4 lb.",
+			"property | Value | 2 sp",
+			"rule",
+			"description | Versatile | A Versatile weapon can be used with one or two hands. A damage value in parentheses appears with the property. The weapon deals that damage when used with two hands to make a melee attack."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"simple weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Psychic Blade",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d6 Psychic",
+			"property | Properties | Finesse, Thrown (60/120 ft.)",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"vex_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Vex</span>",
+			"property | Type | Simple weapon, melee weapon",
+			"rule",
+			"description | Finesse | When making an attack with a Finesse weapon, use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.",
+			"description | Thrown | If a weapon has the Thrown property, you can throw the weapon to make a ranged attack, and you can draw that weapon as part of the attack. If the weapon is a Melee weapon, use the same ability modifier for the attack and damage rolls that you use for a melee attack with that weapon."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"simple weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Priest's Pack",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 29 lb.",
+			"property | Value | 33 gp",
+			"rule",
+			"text | A Priest's Pack contains the following items: Backpack, Blanket, Holy Water, Lamp, 7 days of Rations, Robe, and Tinderbox."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Pouch",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 1 lb.",
+			"property | Value | 5 sp",
+			"rule",
+			"text | A Pouch holds up to 6 pounds within one-fifth of a cubic foot."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Potter's Tools",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Artisan's tools",
+			"property | Weight | 3 lb.",
+			"property | Value | 10 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Intelligence",
+			"bullet | <b>text | Utilize:</b> Discern what a ceramic object held in the past 24 hours (DC 15)",
+			"bullet | <b>text | Craft:</b> Jug, Lamp",
+			"text | Artisan's Tools are each focused on crafting items and pursuing a trade. Each type of Artisan's Tools tools requires a separate proficiency.",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"artisan's tools"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Potion of Healing",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Potion, common",
+			"property | Weight | ½ lb.",
+			"property | Value | 50 gp",
+			"rule",
+			"text | This potion is a magic item. As a Bonus Action, you can drink it or administer it to another creature within 5 feet of yourself. The creature that drinks the magical red fluid in this vial regains 2d4 + 2 Hit Points."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"potion"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Portable Ram",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 35 lb.",
+			"property | Value | 4 gp",
+			"rule",
+			"text | You can use a Portable Ram to break down doors. When doing so, you gain a +4 bonus to the Strength check. One other character can help you use the ram, giving you Advantage on this check."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Pony",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Mount",
+			"property | Damage | Speed: 40, Carrying Capacity: 225 lb.",
+			"property | Value | 30 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"mount"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Pole",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 7 lb.",
+			"property | Value | 5 cp",
+			"rule",
+			"text | A Pole is 10 feet long. You can use it to touch something up to 10 feet away. If you must make a Strength (Athletics) check as part of a High or Long Jump, you can use the Pole to vault, giving yourself Advantage on the check."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Poisoner's Kit",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Tool",
+			"property | Weight | 2 lb.",
+			"property | Value | 50 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Intelligence",
+			"bullet | <b>text | Utilize:</b> Detect a poisoned object (DC 10)",
+			"bullet | <b>text | Craft:</b> Basic Poison",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"tool"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Playing Cards",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Gaming set",
+			"property | Value | 5 sp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Wisdom",
+			"bullet | <b>text | Utilize:</b> Discern whether someone is cheating (DC 10), or win the game (DC 20)",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"gaming set"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Plate Armor",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Heavy armor",
+			"property | Armor Class | AC 18",
+			"property | Weight | 65 lb.",
+			"property | Value | 1,500 gp",
+			"rule",
+			"text | Disadvantage on Stealth (Dexterity) checks.",
+			"text | Speed reduced by 10 feet if Strength score less than 15."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"heavy armor"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Pistol",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d10 Piercing",
+			"property | Properties | Ammunition (Range 30/90 ft.; Firearm Bullet), Loading",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"vex_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Vex</span>",
+			"property | Type | Martial weapon, ranged weapon, firearm",
+			"property | Weight | 3 lb.",
+			"property | Value | 250 gp",
+			"rule",
+			"description | Range | Given as two numbers; normal and max. Attacks beyond normal range have disadvantage.",
+			"description | Ammunition | You can use a weapon that has the Ammunition property to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon's range. Each attack expends one piece of ammunition. Drawing the ammunition is part of the attack (you need a free hand to load a one-handed weapon). After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost.",
+			"description | Loading | You can fire only one piece of ammunition from a Loading weapon when you use an action, a Bonus Action, or a Reaction to fire it, regardless of the number of attacks you can normally make."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"ranged weapon",
+			"firearm"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Pike",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d10 Piercing",
+			"property | Properties | Heavy, Reach, Two‑Handed",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"push_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Push</span>",
+			"property | Type | Martial weapon, melee weapon",
+			"property | Weight | 18 lb.",
+			"property | Value | 5 gp",
+			"rule",
+			"description | Heavy | You have Disadvantage on attack rolls with a Heavy weapon if it's a Melee weapon and your Strength score isn't at least 13 or if it's a Ranged weapon and your Dexterity score isn't at least 13.",
+			"description | Reach | A Reach weapon adds 5 feet to your reach when you attack with it, as well as when determining your reach for Opportunity Attacks with it.",
+			"description | Two-Handed | A Two-Handed weapon requires two hands when you attack with it."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Perfume",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Value | 5 gp",
+			"rule",
+			"text | Perfume comes in a 4-ounce vial. For 1 hour after applying Perfume to yourself, you have Advantage on Charisma (Persuasion) checks made to influence an Indifferent Humanoid within 5 feet of yourself."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Parchment",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Value | 1 sp",
+			"rule",
+			"text | One sheet of Parchment can hold about 250 handwritten words."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Paper",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Value | 2 sp",
+			"rule",
+			"text | One sheet of Paper can hold about 250 handwritten words."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Pan Flute",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Instrument",
+			"property | Weight | 2 lb.",
+			"property | Value | 12 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Charisma",
+			"bullet | <b>text | Utilize:</b> Play a known tune (DC 10), or improvise a song (DC 15)",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"instrument"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Painter's Supplies",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Artisan's tools",
+			"property | Weight | 5 lb.",
+			"property | Value | 10 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Wisdom",
+			"bullet | <b>text | Utilize:</b> Paint a recognizable image of something you've seen (DC 10)",
+			"bullet | <b>text | Craft:</b> Druidic Focus, Holy Symbol",
+			"text | Artisan's Tools are each focused on crafting items and pursuing a trade. Each type of Artisan's Tools tools requires a separate proficiency.",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"artisan's tools"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Padded Armor",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Light armor",
+			"property | Armor Class | AC 11 + Dex",
+			"property | Weight | 8 lb.",
+			"property | Value | 5 gp",
+			"rule",
+			"text | Disadvantage on Stealth (Dexterity) checks."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"light armor"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Orb",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Spellcasting focus",
+			"property | Weight | 3 lb.",
+			"property | Value | 20 gp",
+			"rule",
+			"text | A sorcerer, warlock, or wizard can use this item as a spellcasting focus."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"spellcasting focus"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Oil",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 1 lb.",
+			"property | Value | 1 sp",
+			"rule",
+			"text | You can douse a creature, object, or space with Oil or use it as fuel, as detailed below.",
+			"description | Dousing a Creature or an Object | When you take the Attack action, you can replace one of your attacks with throwing an Oil flask. Target one creature or object within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or be covered in oil. If the target takes Fire damage before the oil dries (after 1 minute), the target takes an extra 5 Fire damage from burning oil.",
+			"description | Dousing a Space | You can take the Utilize action to pour an Oil flask on level ground to cover a 5-foot-square area within 5 feet of yourself. If lit, the oil burns until the end of the turn 2 rounds from when the oil was lit (or 12 seconds) and deals 5 Fire damage to any creature that enters the area or ends its turn there. A creature can take this damage only once per turn.",
+			"description | Fuel | Oil serves as fuel for Lamps and Lanterns. Once lit, a flask of Oil burns for 6 hours in a Lamp or Lantern. That duration doesn't need to be consecutive; you can extinguish the burning Oil (as a Utilize action) and rekindle it again until it has burned for a total of 6 hours."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Net",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 3 lb.",
+			"property | Value | 1 gp",
+			"rule",
+			"text | When you take the Attack action, you can replace one of your attacks with throwing a Net. Target a creature you can see within 15 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or have the Restrained condition until it escapes. The target succeeds automatically if it is Huge or larger.",
+			"text | To escape, the target or a creature within 5 feet of it must take an action to make a DC 10 Strength (Athletics) check, freeing the Restrained creature on a success. Destroying the Net (AC 10; 5 HP; Immunity to Bludgeoning, Poison, and Psychic damage) also frees the target, ending the effect."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Needles (50)",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Ammunition",
+			"property | Weight | 1 lb.",
+			"property | Value | 1 gp",
+			"rule",
+			"text | Blowgun needles are used with a weapon that has the ammunition property to make a ranged attack. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack (you need a free hand to load a one-handed weapon). At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield.",
+			"text | Needles are typically stored in a Pouch (bought separately)."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"ammunition"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Needle",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Ammunition",
+			"property | Weight | 0.32 oz.",
+			"property | Value | 2 cp",
+			"rule",
+			"text | Blowgun needles are used with a weapon that has the ammunition property to make a ranged attack. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack (you need a free hand to load a one-handed weapon). At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield.",
+			"text | Needles are typically stored in a Pouch (bought separately)."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"ammunition"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Navigator's Tools",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Tool",
+			"property | Weight | 2 lb.",
+			"property | Value | 25 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Wisdom",
+			"bullet | <b>text | Utilize:</b> Plot a course (DC 10), or determine position by stargazing (DC 15)",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"tool"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Musket",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d12 Piercing",
+			"property | Properties | Ammunition (Range 40/120 ft.; Firearm Bullet), Loading, Two‑Handed",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"slow_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Slow</span>",
+			"property | Type | Martial weapon, ranged weapon, firearm",
+			"property | Weight | 10 lb.",
+			"property | Value | 500 gp",
+			"rule",
+			"description | Range | Given as two numbers; normal and max. Attacks beyond normal range have disadvantage.",
+			"description | Ammunition | You can use a weapon that has the Ammunition property to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon's range. Each attack expends one piece of ammunition. Drawing the ammunition is part of the attack (you need a free hand to load a one-handed weapon). After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost.",
+			"description | Loading | You can fire only one piece of ammunition from a Loading weapon when you use an action, a Bonus Action, or a Reaction to fire it, regardless of the number of attacks you can normally make.",
+			"description | Two-Handed | A Two-Handed weapon requires two hands when you attack with it."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"ranged weapon",
+			"firearm"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Musical Instrument",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Instrument",
+			"rule",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"instrument"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Mule",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Mount",
+			"property | Damage | Speed: 40, Carrying Capacity: 420 lb.",
+			"property | Value | 8 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"mount"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Morningstar",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d8 Piercing",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"sap_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Sap</span>",
+			"property | Type | Martial weapon, melee weapon",
+			"property | Weight | 4 lb.",
+			"property | Value | 15 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Mirror",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | ½ lb.",
+			"property | Value | 5 gp",
+			"rule",
+			"text | A handheld steel Mirror is useful for personal cosmetics but also for peeking around corners and reflecting light as a signal."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Military Saddle",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Tack and harness",
+			"property | Weight | 30 lb.",
+			"property | Value | 20 gp",
+			"rule",
+			"text | A saddle comes with a bit, a bridle, reins, and any other equipment needed to use the saddle. A Military Saddle gives Advantage on any ability check you make to remain mounted."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"tack and harness"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Maul",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 2d6 Bludgeoning",
+			"property | Properties | Heavy, Two‑Handed",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"topple_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Topple</span>",
+			"property | Type | Martial weapon, melee weapon",
+			"property | Weight | 10 lb.",
+			"property | Value | 10 gp",
+			"rule",
+			"description | Heavy | You have Disadvantage on attack rolls with a Heavy weapon if it's a Melee weapon and your Strength score isn't at least 13 or if it's a Ranged weapon and your Dexterity score isn't at least 13.",
+			"description | Two-Handed | A Two-Handed weapon requires two hands when you attack with it."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Mastiff",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Mount",
+			"property | Damage | Speed: 40, Carrying Capacity: 195 lb.",
+			"property | Value | 25 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"mount"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Mason's Tools",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Artisan's tools",
+			"property | Weight | 8 lb.",
+			"property | Value | 10 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Strength",
+			"bullet | <b>text | Utilize:</b> Chisel a symbol or hole in stone (DC 10)",
+			"bullet | <b>text | Craft:</b> Block and Tackle",
+			"text | Artisan's Tools are each focused on crafting items and pursuing a trade. Each type of Artisan's Tools tools requires a separate proficiency.",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"artisan's tools"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Map or Scroll Case",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 1 lb.",
+			"property | Value | 1 gp",
+			"rule",
+			"text | A Map or Scroll Case holds up to 10 sheets of paper or 5 sheets of parchment."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Map",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Value | 1 gp",
+			"rule",
+			"text | If you consult an accurate Map, you gain a +5 bonus to Wisdom (Survival) checks you make to find your way in the place represented on it."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Manacles",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 6 lb.",
+			"property | Value | 2 gp",
+			"rule",
+			"text | As a Utilize action, you can use Manacles to bind an unwilling Small or Medium creature within 5 feet of yourself that has the Grappled, Incapacitated, or Restrained condition if you succeed on a DC 13 Dexterity (Sleight of Hand) check. While bound, a creature has Disadvantage on attack rolls, and the creature is Restrained if the Manacles are attached to a chain or hook that is fixed in place. Escaping the Manacles requires a successful DC 20 Dexterity (Sleight of Hand) check as an action. Bursting them requires a successful DC 25 Strength (Athletics) check as an action.",
+			"text | Each set of Manacles comes with a key. Without the key, a creature can use Thieves' Tools to pick the Manacles' lock with a successful DC 15 Dexterity (Sleight of Hand) check."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Magnifying Glass",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Value | 100 gp",
+			"rule",
+			"text | A Magnifying Glass grants Advantage on any ability check made to appraise or inspect a highly detailed item. Lighting a fire with a Magnifying Glass requires light as bright as sunlight to focus, tinder to ignite, and about 5 minutes for the fire to ignite."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Mace",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d6 Bludgeoning",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"sap_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Sap</span>",
+			"property | Type | Simple weapon, melee weapon",
+			"property | Weight | 4 lb.",
+			"property | Value | 5 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"simple weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Lyre",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Instrument",
+			"property | Weight | 2 lb.",
+			"property | Value | 30 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Charisma",
+			"bullet | <b>text | Utilize:</b> Play a known tune (DC 10), or improvise a song (DC 15)",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"instrument"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Lute",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Instrument",
+			"property | Weight | 2 lb.",
+			"property | Value | 35 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Charisma",
+			"bullet | <b>text | Utilize:</b> Play a known tune (DC 10), or improvise a song (DC 15)",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"instrument"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Longsword",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d8 Slashing",
+			"property | Properties | Versatile (1d10)",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"sap_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Sap</span>",
+			"property | Type | Martial weapon, melee weapon",
+			"property | Weight | 3 lb.",
+			"property | Value | 15 gp",
+			"rule",
+			"description | Versatile | A Versatile weapon can be used with one or two hands. A damage value in parentheses appears with the property. The weapon deals that damage when used with two hands to make a melee attack."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Longship",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Vehicle (water)",
+			"property | Damage | Speed: 3 mphCarrying Capacity: 10 tons cargo, 150 passengersCrew 40, AC 15, HP 300, Damage Threshold 15",
+			"property | Value | 10,000 gp",
+			"rule",
+			"description | Speed | A ship sailing against a strong wind moves at half speed. In a dead calm (no wind), waterborne ships can't move under sail and must be rowed. Keelboats and Rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can't be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A Rowboat can be carried and weighs 100 pounds.",
+			"description | Crew | A ship larger than a Keelboat or Rowboat needs a crew of skilled hirelings (see \"Services\") to function. The minimum number of skilled hirelings needed to crew a ship depends on the type of ship.",
+			"description | Passengers | The number of Small and Medium passengers the ship can accommodate using hammocks. A ship outfitted with private accommodations can carry one-fifth as many passengers. A passenger usually pays 5 SP per day for a hammock, but prices can vary from ship to ship. A small private cabin usually costs 2 GP per day.",
+			"description | Damage Threshold | See the rules glossary.",
+			"description | Ship Repair | Repairs to a damaged ship can be made while the vessel is berthed. Repairing 1 Hit Point of damage requires 1 day and costs 20 GP for materials and labor. If the repairs are made in a location where supplies and skilled labor are abundant, such as a city shipyard, the repair time and cost are halved."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"vehicle (water)"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Longbow",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d8 Piercing",
+			"property | Properties | Ammunition (Range 150/600 ft.; Arrow), Heavy, Two‑Handed",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"slow_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Slow</span>",
+			"property | Type | Martial weapon, ranged weapon",
+			"property | Weight | 2 lb.",
+			"property | Value | 50 gp",
+			"rule",
+			"description | Range | Given as two numbers; normal and max. Attacks beyond normal range have disadvantage.",
+			"description | Ammunition | You can use a weapon that has the Ammunition property to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon's range. Each attack expends one piece of ammunition. Drawing the ammunition is part of the attack (you need a free hand to load a one-handed weapon). After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost.",
+			"description | Heavy | You have Disadvantage on attack rolls with a Heavy weapon if it's a Melee weapon and your Strength score isn't at least 13 or if it's a Ranged weapon and your Dexterity score isn't at least 13.",
+			"description | Two-Handed | A Two-Handed weapon requires two hands when you attack with it."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"ranged weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Lock",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 1 lb.",
+			"property | Value | 10 gp",
+			"rule",
+			"text | A Lock comes with a key. Without the key, a creature can use Thieves' Tools to pick this Lock with a successful DC 15 Dexterity (Sleight of Hand) check."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Light Hammer",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d4 Bludgeoning",
+			"property | Properties | Light, Thrown (20/60 ft.)",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"nick_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Nick</span>",
+			"property | Type | Simple weapon, melee weapon",
+			"property | Weight | 2 lb.",
+			"property | Value | 2 gp",
+			"rule",
+			"description | Light | When you take the Attack action on your turn and attack with a Light weapon, you can make one extra attack as a Bonus Action later on the same turn. That extra attack must be made with a different Light weapon, and you don't add your ability modifier to the extra attack's damage unless that modifier is negative. For example, you can attack with a Shortsword in one hand and a Dagger in the other using the Attack action and a Bonus Action, but you don't add your Strength or Dexterity modifier to the damage roll of the Bonus Action unless that modifier is negative.",
+			"description | Thrown | If a weapon has the Thrown property, you can throw the weapon to make a ranged attack, and you can draw that weapon as part of the attack. If the weapon is a Melee weapon, use the same ability modifier for the attack and damage rolls that you use for a melee attack with that weapon."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"simple weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Light Crossbow",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d8 Piercing",
+			"property | Properties | Ammunition (Range 80/320 ft.; Bolt), Loading, Two‑Handed",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"slow_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Slow</span>",
+			"property | Type | Simple weapon, ranged weapon",
+			"property | Weight | 5 lb.",
+			"property | Value | 25 gp",
+			"rule",
+			"description | Range | Given as two numbers; normal and max. Attacks beyond normal range have disadvantage.",
+			"description | Ammunition | You can use a weapon that has the Ammunition property to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon's range. Each attack expends one piece of ammunition. Drawing the ammunition is part of the attack (you need a free hand to load a one-handed weapon). After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost.",
+			"description | Loading | You can fire only one piece of ammunition from a Loading weapon when you use an action, a Bonus Action, or a Reaction to fire it, regardless of the number of attacks you can normally make.",
+			"description | Two-Handed | A Two-Handed weapon requires two hands when you attack with it."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"simple weapon",
+			"ranged weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Leatherworker's Tools",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Artisan's tools",
+			"property | Weight | 5 lb.",
+			"property | Value | 5 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Dexterity",
+			"bullet | <b>text | Utilize:</b> Add a design to a leather item (DC 10)",
+			"bullet | <b>text | Craft:</b> Sling, Whip, Hide Armor, Leather Armor, Studded Leather Armor, Backpack, Crossbow Bolt Case, Map or Scroll Case, Parchment, Pouch, Quiver, Waterskin",
+			"text | Artisan's Tools are each focused on crafting items and pursuing a trade. Each type of Artisan's Tools tools requires a separate proficiency.",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"artisan's tools"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Leather Armor",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Light armor",
+			"property | Armor Class | AC 11 + Dex",
+			"property | Weight | 10 lb.",
+			"property | Value | 10 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"light armor"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Lance",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d10 Piercing",
+			"property | Properties | Heavy, Reach, Two‑Handed",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"topple_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Topple</span>",
+			"property | Type | Martial weapon, melee weapon",
+			"property | Weight | 6 lb.",
+			"property | Value | 10 gp",
+			"rule",
+			"text | A Lance requires two hands to wield when you aren't mounted.",
+			"description | Heavy | You have Disadvantage on attack rolls with a Heavy weapon if it's a Melee weapon and your Strength score isn't at least 13 or if it's a Ranged weapon and your Dexterity score isn't at least 13.",
+			"description | Reach | A Reach weapon adds 5 feet to your reach when you attack with it, as well as when determining your reach for Opportunity Attacks with it.",
+			"description | Two-Handed | A Two-Handed weapon requires two hands when you attack with it."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Lamp",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 1 lb.",
+			"property | Value | 5 sp",
+			"rule",
+			"text | A Lamp burns Oil as fuel to cast Bright Light in a 15-foot radius and Dim Light for an additional 30 feet."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Ladder",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 25 lb.",
+			"property | Value | 1 sp",
+			"rule",
+			"text | A Ladder is 10 feet tall. You must climb to move up or down it."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Keelboat",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Vehicle (water)",
+			"property | Damage | Speed: 1 mphCarrying Capacity: 1/2 ton cargo, 6 passengersCrew 1, AC 15, HP 100, Damage Threshold 10",
+			"property | Value | 3,000 gp",
+			"rule",
+			"description | Speed | A ship sailing against a strong wind moves at half speed. In a dead calm (no wind), waterborne ships can't move under sail and must be rowed. Keelboats and Rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can't be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A Rowboat can be carried and weighs 100 pounds.",
+			"description | Crew | A ship larger than a Keelboat or Rowboat needs a crew of skilled hirelings (see \"Services\") to function. The minimum number of skilled hirelings needed to crew a ship depends on the type of ship.",
+			"description | Passengers | The number of Small and Medium passengers the ship can accommodate using hammocks. A ship outfitted with private accommodations can carry one-fifth as many passengers. A passenger usually pays 5 SP per day for a hammock, but prices can vary from ship to ship. A small private cabin usually costs 2 GP per day.",
+			"description | Damage Threshold | See the rules glossary.",
+			"description | Ship Repair | Repairs to a damaged ship can be made while the vessel is berthed. Repairing 1 Hit Point of damage requires 1 day and costs 20 GP for materials and labor. If the repairs are made in a location where supplies and skilled labor are abundant, such as a city shipyard, the repair time and cost are halved."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"vehicle (water)"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Jug",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 4 lb.",
+			"property | Value | 2 cp",
+			"rule",
+			"text | A Jug holds up to 1 gallon."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Jeweler's Tools",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Artisan's tools",
+			"property | Weight | 2 lb.",
+			"property | Value | 25 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Intelligence",
+			"bullet | <b>text | Utilize:</b> Discern a gem's value (DC 15)",
+			"bullet | <b>text | Craft:</b> Arcane Focus, Holy Symbol",
+			"text | Artisan's Tools are each focused on crafting items and pursuing a trade. Each type of Artisan's Tools tools requires a separate proficiency.",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"artisan's tools"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Javelin",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d6 Piercing",
+			"property | Properties | Thrown (30/120 ft.)",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"slow_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Slow</span>",
+			"property | Type | Simple weapon, melee weapon",
+			"property | Weight | 2 lb.",
+			"property | Value | 5 sp",
+			"rule",
+			"description | Thrown | If a weapon has the Thrown property, you can throw the weapon to make a ranged attack, and you can draw that weapon as part of the attack. If the weapon is a Melee weapon, use the same ability modifier for the attack and damage rolls that you use for a melee attack with that weapon."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"simple weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Iron Spikes",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 5 lb.",
+			"property | Value | 1 gp",
+			"rule",
+			"text | Iron Spikes come in bundles of ten. As a Utilize action, you can use a blunt object, such as a Light Hammer, to hammer a spike into wood, earth, or a similar material. You can do so to jam a door shut or to then tie a Rope or Chain to the Spike."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Iron Spike",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | ½ lb.",
+			"property | Value | 1 sp",
+			"rule",
+			"text | Iron Spikes come in bundles of ten. As a Utilize action, you can use a blunt object, such as a Light Hammer, to hammer a spike into wood, earth, or a similar material. You can do so to jam a door shut or to then tie a Rope or Chain to the Spike."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Iron Pot",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 10 lb.",
+			"property | Value | 2 gp",
+			"rule",
+			"text | An Iron Pot holds up to 1 gallon."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Ink Pen",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Value | 2 cp",
+			"rule",
+			"text | Using Ink, an Ink Pen is used to write or draw."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Ink",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Value | 10 gp",
+			"rule",
+			"text | Ink comes in a 1-ounce bottle, which provides enough ink to write about 500 pages."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Hunting Trap",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 25 lb.",
+			"property | Value | 5 gp",
+			"rule",
+			"text | As a Utilize action, you can set a Hunting Trap, which is a sawtooth steel ring that snaps shut when a creature steps on a pressure plate in the center. The trap is affixed by a heavy chain to an immobile object, such as a tree or a spike driven into the ground. A creature that steps on the plate must succeed on a DC 13 Dexterity saving throw or take 1d4 Piercing damage and have its Speed reduced to 0 until the start of its next turn. Thereafter, until the creature breaks free of the trap, its movement is limited by the length of the chain (typically 3 feet). A creature can use its action to make a DC 13 Strength (Athletics) check, freeing itself or another creature within its reach on a success. Each failed check deals 1 Piercing damage to the trapped creature."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Horn",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Instrument",
+			"property | Weight | 2 lb.",
+			"property | Value | 3 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Charisma",
+			"bullet | <b>text | Utilize:</b> Play a known tune (DC 10), or improvise a song (DC 15)",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"instrument"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Hooded Lantern",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 2 lb.",
+			"property | Value | 5 gp",
+			"rule",
+			"text | A Hooded Lantern burns Oil as fuel to cast Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. As a Bonus Action, you can lower the hood, reducing the light to Dim Light in a 5-foot radius, or raise it again."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Holy Water",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 1 lb.",
+			"property | Value | 25 gp",
+			"rule",
+			"text | When you take the Attack action, you can replace one of your attacks with throwing a flask of Holy Water. Target one creature you can see within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or take 2d8 Radiant damage if it is a Fiend or an Undead."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Holy Symbol",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Spellcasting focus",
+			"rule",
+			"text | A cleric or paladin can use this item as a spellcasting focus."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"spellcasting focus"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Hide Armor",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Medium armor",
+			"property | Armor Class | AC 12 + Dex (max 2)",
+			"property | Weight | 12 lb.",
+			"property | Value | 10 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"medium armor"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Herbalism Kit",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Tool",
+			"property | Weight | 3 lb.",
+			"property | Value | 5 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Intelligence",
+			"bullet | <b>text | Utilize:</b> Identify a plant (DC 10)",
+			"bullet | <b>text | Craft:</b> Antitoxin, Candle, Healer's Kit, Potion of Healing",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"tool"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Heavy Crossbow",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d10 Piercing",
+			"property | Properties | Ammunition (Range 100/400 ft.; Bolt), Heavy, Loading, Two‑Handed",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"push_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Push</span>",
+			"property | Type | Martial weapon, ranged weapon",
+			"property | Weight | 18 lb.",
+			"property | Value | 50 gp",
+			"rule",
+			"description | Range | Given as two numbers; normal and max. Attacks beyond normal range have disadvantage.",
+			"description | Ammunition | You can use a weapon that has the Ammunition property to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon's range. Each attack expends one piece of ammunition. Drawing the ammunition is part of the attack (you need a free hand to load a one-handed weapon). After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost.",
+			"description | Heavy | You have Disadvantage on attack rolls with a Heavy weapon if it's a Melee weapon and your Strength score isn't at least 13 or if it's a Ranged weapon and your Dexterity score isn't at least 13.",
+			"description | Loading | You can fire only one piece of ammunition from a Loading weapon when you use an action, a Bonus Action, or a Reaction to fire it, regardless of the number of attacks you can normally make.",
+			"description | Two-Handed | A Two-Handed weapon requires two hands when you attack with it."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"ranged weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Healer's Kit",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 3 lb.",
+			"property | Value | 5 gp",
+			"rule",
+			"text | A Healer's Kit has ten uses. As a Utilize action, you can expend one of its uses to stabilize an Unconscious creature that has 0 Hit Points without needing to make a Wisdom (Medicine) check."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Handaxe",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d6 Slashing",
+			"property | Properties | Light, Thrown (20/60 ft.)",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"vex_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Vex</span>",
+			"property | Type | Simple weapon, melee weapon",
+			"property | Weight | 2 lb.",
+			"property | Value | 5 gp",
+			"rule",
+			"description | Light | When you take the Attack action on your turn and attack with a Light weapon, you can make one extra attack as a Bonus Action later on the same turn. That extra attack must be made with a different Light weapon, and you don't add your ability modifier to the extra attack's damage unless that modifier is negative. For example, you can attack with a Shortsword in one hand and a Dagger in the other using the Attack action and a Bonus Action, but you don't add your Strength or Dexterity modifier to the damage roll of the Bonus Action unless that modifier is negative.",
+			"description | Thrown | If a weapon has the Thrown property, you can throw the weapon to make a ranged attack, and you can draw that weapon as part of the attack. If the weapon is a Melee weapon, use the same ability modifier for the attack and damage rolls that you use for a melee attack with that weapon."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"simple weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Hand Crossbow",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d6 Piercing",
+			"property | Properties | Ammunition (Range 30/120 ft.; Bolt), Light, Loading",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"vex_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Vex</span>",
+			"property | Type | Martial weapon, ranged weapon",
+			"property | Weight | 3 lb.",
+			"property | Value | 75 gp",
+			"rule",
+			"description | Range | Given as two numbers; normal and max. Attacks beyond normal range have disadvantage.",
+			"description | Ammunition | You can use a weapon that has the Ammunition property to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon's range. Each attack expends one piece of ammunition. Drawing the ammunition is part of the attack (you need a free hand to load a one-handed weapon). After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost.",
+			"description | Light | When you take the Attack action on your turn and attack with a Light weapon, you can make one extra attack as a Bonus Action later on the same turn. That extra attack must be made with a different Light weapon, and you don't add your ability modifier to the extra attack's damage unless that modifier is negative. For example, you can attack with a Shortsword in one hand and a Dagger in the other using the Attack action and a Bonus Action, but you don't add your Strength or Dexterity modifier to the damage roll of the Bonus Action unless that modifier is negative.",
+			"description | Loading | You can fire only one piece of ammunition from a Loading weapon when you use an action, a Bonus Action, or a Reaction to fire it, regardless of the number of attacks you can normally make."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"ranged weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Half Plate Armor",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Medium armor",
+			"property | Armor Class | AC 15 + Dex (max 2)",
+			"property | Weight | 40 lb.",
+			"property | Value | 750 gp",
+			"rule",
+			"text | Disadvantage on Stealth (Dexterity) checks."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"medium armor"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Halberd",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d10 Slashing",
+			"property | Properties | Heavy, Reach, Two‑Handed",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"cleave_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Cleave</span>",
+			"property | Type | Martial weapon, melee weapon",
+			"property | Weight | 6 lb.",
+			"property | Value | 20 gp",
+			"rule",
+			"description | Heavy | You have Disadvantage on attack rolls with a Heavy weapon if it's a Melee weapon and your Strength score isn't at least 13 or if it's a Ranged weapon and your Dexterity score isn't at least 13.",
+			"description | Reach | A Reach weapon adds 5 feet to your reach when you attack with it, as well as when determining your reach for Opportunity Attacks with it.",
+			"description | Two-Handed | A Two-Handed weapon requires two hands when you attack with it."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Greatsword",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 2d6 Slashing",
+			"property | Properties | Heavy, Two‑Handed",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"graze_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Graze</span>",
+			"property | Type | Martial weapon, melee weapon",
+			"property | Weight | 6 lb.",
+			"property | Value | 50 gp",
+			"rule",
+			"description | Heavy | You have Disadvantage on attack rolls with a Heavy weapon if it's a Melee weapon and your Strength score isn't at least 13 or if it's a Ranged weapon and your Dexterity score isn't at least 13.",
+			"description | Two-Handed | A Two-Handed weapon requires two hands when you attack with it."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Greatclub",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d8 Bludgeoning",
+			"property | Properties | Two‑Handed",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"push_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Push</span>",
+			"property | Type | Simple weapon, melee weapon",
+			"property | Weight | 10 lb.",
+			"property | Value | 2 sp",
+			"rule",
+			"description | Two-Handed | A Two-Handed weapon requires two hands when you attack with it."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"simple weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Greataxe",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d12 Slashing",
+			"property | Properties | Heavy, Two‑Handed",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"cleave_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Cleave</span>",
+			"property | Type | Martial weapon, melee weapon",
+			"property | Weight | 7 lb.",
+			"property | Value | 30 gp",
+			"rule",
+			"description | Heavy | You have Disadvantage on attack rolls with a Heavy weapon if it's a Melee weapon and your Strength score isn't at least 13 or if it's a Ranged weapon and your Dexterity score isn't at least 13.",
+			"description | Two-Handed | A Two-Handed weapon requires two hands when you attack with it."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Grappling Hook",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 4 lb.",
+			"property | Value | 2 gp",
+			"rule",
+			"text | As a Utilize action, you can throw the Grappling Hook at a railing, a ledge, or another catch within 50 feet of yourself, and the hook catches on if you succeed on a DC 13 Dexterity (Acrobatics) check. If you tied a Rope to the hook, you can then climb it."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Glassblower's Tools",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Artisan's tools",
+			"property | Weight | 5 lb.",
+			"property | Value | 30 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Intelligence",
+			"bullet | <b>text | Utilize:</b> Discern what a glass object held in the past 24 hours (DC 15)",
+			"bullet | <b>text | Craft:</b> Glass Bottle, Magnifying Glass, Spyglass, Vial",
+			"text | Artisan's Tools are each focused on crafting items and pursuing a trade. Each type of Artisan's Tools tools requires a separate proficiency.",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"artisan's tools"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Glass Bottle",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 2 lb.",
+			"property | Value | 2 gp",
+			"rule",
+			"text | A Glass Bottle holds up to 1½ pints."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Glaive",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d10 Slashing",
+			"property | Properties | Heavy, Reach, Two‑Handed",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"graze_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Graze</span>",
+			"property | Type | Martial weapon, melee weapon",
+			"property | Weight | 6 lb.",
+			"property | Value | 20 gp",
+			"rule",
+			"description | Heavy | You have Disadvantage on attack rolls with a Heavy weapon if it's a Melee weapon and your Strength score isn't at least 13 or if it's a Ranged weapon and your Dexterity score isn't at least 13.",
+			"description | Reach | A Reach weapon adds 5 feet to your reach when you attack with it, as well as when determining your reach for Opportunity Attacks with it.",
+			"description | Two-Handed | A Two-Handed weapon requires two hands when you attack with it."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Gaming Set",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Gaming set",
+			"rule",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"gaming set"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Galley",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Vehicle (water)",
+			"property | Damage | Speed: 4 mphCarrying Capacity: 150 tons cargoCrew 80, AC 15, HP 500, Damage Threshold 20",
+			"property | Value | 30,000 gp",
+			"rule",
+			"description | Speed | A ship sailing against a strong wind moves at half speed. In a dead calm (no wind), waterborne ships can't move under sail and must be rowed. Keelboats and Rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can't be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A Rowboat can be carried and weighs 100 pounds.",
+			"description | Crew | A ship larger than a Keelboat or Rowboat needs a crew of skilled hirelings (see \"Services\") to function. The minimum number of skilled hirelings needed to crew a ship depends on the type of ship.",
+			"description | Passengers | The number of Small and Medium passengers the ship can accommodate using hammocks. A ship outfitted with private accommodations can carry one-fifth as many passengers. A passenger usually pays 5 SP per day for a hammock, but prices can vary from ship to ship. A small private cabin usually costs 2 GP per day.",
+			"description | Damage Threshold | See the rules glossary.",
+			"description | Ship Repair | Repairs to a damaged ship can be made while the vessel is berthed. Repairing 1 Hit Point of damage requires 1 day and costs 20 GP for materials and labor. If the repairs are made in a location where supplies and skilled labor are abundant, such as a city shipyard, the repair time and cost are halved."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"vehicle (water)"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Forgery Kit",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Tool",
+			"property | Weight | 5 lb.",
+			"property | Value | 15 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Dexterity",
+			"bullet | <b>text | Utilize:</b> Mimic 10 or fewer words of someone else's handwriting (DC 15), or duplicate a wax seal (DC 20)",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"tool"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Flute",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Instrument",
+			"property | Weight | 1 lb.",
+			"property | Value | 2 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Charisma",
+			"bullet | <b>text | Utilize:</b> Play a known tune (DC 10), or improvise a song (DC 15)",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"instrument"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Flask",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 1 lb.",
+			"property | Value | 2 cp",
+			"rule",
+			"text | A Flask holds up to 1 pint."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Flail",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d8 Bludgeoning",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"sap_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Sap</span>",
+			"property | Type | Martial weapon, melee weapon",
+			"property | Weight | 2 lb.",
+			"property | Value | 10 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Firearm Bullets (10)",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Ammunition",
+			"property | Weight | 2 lb.",
+			"property | Value | 3 gp",
+			"rule",
+			"text | The ammunition of a firearm is destroyed upon use.",
+			"text | Firearm Bullets are typically stored in a Pouch (bought separately)."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"ammunition"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Firearm Bullet",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Ammunition",
+			"property | Weight | ⅕ lb.",
+			"property | Value | 3 sp",
+			"rule",
+			"text | The ammunition of a firearm is destroyed upon use.",
+			"text | Firearm Bullets are typically stored in a Pouch (bought separately)."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"ammunition"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Fine Wine (bottle)",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Food and drink",
+			"property | Value | 10 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"food and drink"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Fine Clothes",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 6 lb.",
+			"property | Value | 15 gp",
+			"rule",
+			"text | Fine Clothes are made of expensive fabrics and adorned with expertly crafted details. Some events and locations admit only people wearing these clothes."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Feed (per day)",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Tack and harness",
+			"property | Weight | 10 lb.",
+			"property | Value | 5 cp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"tack and harness"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Explorer's Pack",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 55 lb.",
+			"property | Value | 10 gp",
+			"rule",
+			"text | An Explorer's Pack contains the following items: Backpack, Bedroll, 2 flasks of Oil, 10 days of Rations, Rope, Tinderbox, 10 Torches, and Waterskin."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Exotic Saddle",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Tack and harness",
+			"property | Weight | 40 lb.",
+			"property | Value | 60 gp",
+			"rule",
+			"text | A saddle comes with a bit, a bridle, reins, and any other equipment needed to use the saddle. An Exotic Saddle is required for riding an aquatic or a flying mount."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"tack and harness"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Entertainer's Pack",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 58½ lb.",
+			"property | Value | 40 gp",
+			"rule",
+			"text | An Entertainer's Pack contains the following items: Backpack, Bedroll, Bell, Bullseye Lantern, 3 Costumes, Mirror, 8 flasks of Oil, 9 days of Rations, Tinderbox, and Waterskin."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Emblem",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Spellcasting focus",
+			"property | Value | 5 gp",
+			"rule",
+			"text | For an Emblem to be an effective Holy Symbol, it must be borne on fabric (such as a tabard or banner) or a Shield.",
+			"text | A cleric or paladin can use this item as a spellcasting focus."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"spellcasting focus"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Elephant",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Mount",
+			"property | Damage | Speed: 40, Carrying Capacity: 1320 lb.",
+			"property | Value | 200 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"mount"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Dungeoneer's Pack",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 55 lb.",
+			"property | Value | 12 gp",
+			"rule",
+			"text | A Dungeoneer's Pack contains the following items: Backpack, Caltrops, Crowbar, 2 flasks of Oil, 10 days of Rations, Rope, Tinderbox, 10 Torches, and Waterskin."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Dulcimer",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Instrument",
+			"property | Weight | 10 lb.",
+			"property | Value | 25 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Charisma",
+			"bullet | <b>text | Utilize:</b> Play a known tune (DC 10), or improvise a song (DC 15)",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"instrument"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Drum",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Instrument",
+			"property | Weight | 3 lb.",
+			"property | Value | 6 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Charisma",
+			"bullet | <b>text | Utilize:</b> Play a known tune (DC 10), or improvise a song (DC 15)",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"instrument"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Druidic Focus",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Spellcasting focus",
+			"rule",
+			"text | A druid can use this item as a spellcasting focus."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"spellcasting focus"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Dragonchess Set",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Gaming set",
+			"property | Value | 1 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Wisdom",
+			"bullet | <b>text | Utilize:</b> Discern whether someone is cheating (DC 10), or win the game (DC 20)",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"gaming set"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Draft Horse",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Mount",
+			"property | Damage | Speed: 40, Carrying Capacity: 540 lb.",
+			"property | Value | 50 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"mount"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Disguise Kit",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Tool",
+			"property | Weight | 3 lb.",
+			"property | Value | 25 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Charisma",
+			"bullet | <b>text | Utilize:</b> Apply makeup (DC 10)",
+			"bullet | <b>text | Craft:</b> Costume",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"tool"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Diplomat's Pack",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 39 lb.",
+			"property | Value | 39 gp",
+			"rule",
+			"text | A Diplomat's Pack contains the following items: Chest, Fine Clothes, Ink, 5 Ink Pens, Lamp, 2 Map or Scroll Cases, 4 flasks of Oil, 5 sheets of Paper, 5 sheets of Parchment, Perfume, and Tinderbox."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Dice Set",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Gaming set",
+			"property | Value | 1 sp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Wisdom",
+			"bullet | <b>text | Utilize:</b> Discern whether someone is cheating (DC 10), or win the game (DC 20)",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"gaming set"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Dart",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d4 Piercing",
+			"property | Properties | Finesse, Thrown (20/60 ft.)",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"vex_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Vex</span>",
+			"property | Type | Simple weapon, ranged weapon",
+			"property | Weight | ¼ lb.",
+			"property | Value | 5 cp",
+			"rule",
+			"description | Range | Given as two numbers; normal and max. Attacks beyond normal range have disadvantage.",
+			"description | Finesse | When making an attack with a Finesse weapon, use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.",
+			"description | Thrown | If a weapon has the Thrown property, you can throw the weapon to make a ranged attack, and you can draw that weapon as part of the attack. If the weapon is a Melee weapon, use the same ability modifier for the attack and damage rolls that you use for a melee attack with that weapon."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"simple weapon",
+			"ranged weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Dagger",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d4 Piercing",
+			"property | Properties | Finesse, Light, Thrown (20/60 ft.)",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"nick_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Nick</span>",
+			"property | Type | Simple weapon, melee weapon",
+			"property | Weight | 1 lb.",
+			"property | Value | 2 gp",
+			"rule",
+			"description | Finesse | When making an attack with a Finesse weapon, use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.",
+			"description | Light | When you take the Attack action on your turn and attack with a Light weapon, you can make one extra attack as a Bonus Action later on the same turn. That extra attack must be made with a different Light weapon, and you don't add your ability modifier to the extra attack's damage unless that modifier is negative. For example, you can attack with a Shortsword in one hand and a Dagger in the other using the Attack action and a Bonus Action, but you don't add your Strength or Dexterity modifier to the damage roll of the Bonus Action unless that modifier is negative.",
+			"description | Thrown | If a weapon has the Thrown property, you can throw the weapon to make a ranged attack, and you can draw that weapon as part of the attack. If the weapon is a Melee weapon, use the same ability modifier for the attack and damage rolls that you use for a melee attack with that weapon."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"simple weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Crystal",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Spellcasting focus",
+			"property | Weight | 1 lb.",
+			"property | Value | 10 gp",
+			"rule",
+			"text | A sorcerer, warlock, or wizard can use this item as a spellcasting focus."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"spellcasting focus"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Crowbar",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 5 lb.",
+			"property | Value | 2 gp",
+			"rule",
+			"text | Using a Crowbar gives you Advantage on Strength checks where the Crowbar's leverage can be applied."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Crossbow Bolt Case",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 1 lb.",
+			"property | Value | 1 gp",
+			"rule",
+			"text | A Crossbow Bolt Case holds up to 20 Bolts."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Costume",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 4 lb.",
+			"property | Value | 5 gp",
+			"rule",
+			"text | While wearing a Costume, you have Advantage on any ability check you make to impersonate the person or type of person it represents."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Cook's Utensils",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Artisan's tools",
+			"property | Weight | 8 lb.",
+			"property | Value | 1 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Wisdom",
+			"bullet | <b>text | Utilize:</b> Improve food's flavor (DC 10), or detect spoiled or poisoned food (DC 15)",
+			"bullet | <b>text | Craft:</b> Rations",
+			"text | Artisan's Tools are each focused on crafting items and pursuing a trade. Each type of Artisan's Tools tools requires a separate proficiency.",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"artisan's tools"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Component Pouch",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 2 lb.",
+			"property | Value | 25 gp",
+			"rule",
+			"text | A Component Pouch is watertight and filled with compartments that hold all the free Material components of your spells."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Common Wine (bottle)",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Food and drink",
+			"property | Value | 2 sp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"food and drink"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Cobbler's Tools",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Artisan's tools",
+			"property | Weight | 5 lb.",
+			"property | Value | 5 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Dexterity",
+			"bullet | <b>text | Utilize:</b> Modify footwear to give Advantage on the wearer's next Dexterity (Acrobatics) check (DC 10)",
+			"bullet | <b>text | Craft:</b> Climber's Kit",
+			"text | Artisan's Tools are each focused on crafting items and pursuing a trade. Each type of Artisan's Tools tools requires a separate proficiency.",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"artisan's tools"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Club",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d4 Bludgeoning",
+			"property | Properties | Light",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"slow_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Slow</span>",
+			"property | Type | Simple weapon, melee weapon",
+			"property | Weight | 2 lb.",
+			"property | Value | 1 sp",
+			"rule",
+			"description | Light | When you take the Attack action on your turn and attack with a Light weapon, you can make one extra attack as a Bonus Action later on the same turn. That extra attack must be made with a different Light weapon, and you don't add your ability modifier to the extra attack's damage unless that modifier is negative. For example, you can attack with a Shortsword in one hand and a Dagger in the other using the Attack action and a Bonus Action, but you don't add your Strength or Dexterity modifier to the damage roll of the Bonus Action unless that modifier is negative."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"simple weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Climber's Kit",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 12 lb.",
+			"property | Value | 25 gp",
+			"rule",
+			"text | A Climber's Kit includes boot tips, gloves, pitons, and a harness. As a Utilize action, you can use the Climber's Kit to anchor yourself; when you do, you can't fall more than 25 feet from the anchor point, and you can't move more than 25 feet from there without undoing the anchor as a Bonus Action."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Chest",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 25 lb.",
+			"property | Value | 5 gp",
+			"rule",
+			"text | A Chest holds up to 12 cubic feet of contents."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Cheese (wedge)",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Food and drink",
+			"property | Value | 1 sp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"food and drink"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Chariot",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Vehicle (land)",
+			"property | Weight | 100 lb.",
+			"property | Value | 250 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"vehicle (land)"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Chain Shirt",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Medium armor",
+			"property | Armor Class | AC 13 + Dex (max 2)",
+			"property | Weight | 20 lb.",
+			"property | Value | 50 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"medium armor"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Chain Mail",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Heavy armor",
+			"property | Armor Class | AC 16",
+			"property | Weight | 55 lb.",
+			"property | Value | 75 gp",
+			"rule",
+			"text | Disadvantage on Stealth (Dexterity) checks.",
+			"text | Speed reduced by 10 feet if Strength score less than 13."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"heavy armor"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Chain",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 10 lb.",
+			"property | Value | 5 gp",
+			"rule",
+			"text | As a Utilize action, you can wrap a Chain around an unwilling creature within 5 feet of yourself that has the Grappled, Incapacitated, or Restrained condition if you succeed on a DC 13 Strength (Athletics) check. If the creature's legs are bound, the creature has the Restrained condition until it escapes. Escaping the Chain requires the creature to make a successful DC 18 Dexterity (Acrobatics) check as an action. Bursting the Chain requires a successful DC 20 Strength (Athletics) check as an action."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Cartographer's Tools",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Artisan's tools",
+			"property | Weight | 6 lb.",
+			"property | Value | 15 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Wisdom",
+			"bullet | <b>text | Utilize:</b> Draft a map of a small area (DC 15)",
+			"bullet | <b>text | Craft:</b> Map",
+			"text | Artisan's Tools are each focused on crafting items and pursuing a trade. Each type of Artisan's Tools tools requires a separate proficiency.",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"artisan's tools"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Cart",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Vehicle (land)",
+			"property | Weight | 200 lb.",
+			"property | Value | 15 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"vehicle (land)"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Carriage",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Vehicle (land)",
+			"property | Weight | 600 lb.",
+			"property | Value | 100 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"vehicle (land)"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Carpenter's Tools",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Artisan's tools",
+			"property | Weight | 6 lb.",
+			"property | Value | 8 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Strength",
+			"bullet | <b>text | Utilize:</b> Seal or pry open a door or container (DC 20)",
+			"bullet | <b>text | Craft:</b> Club, Greatclub, Quarterstaff, Barrel, Chest, Ladder, Pole, Portable Ram, Torch",
+			"text | Artisan's Tools are each focused on crafting items and pursuing a trade. Each type of Artisan's Tools tools requires a separate proficiency.",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"artisan's tools"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Candle",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Value | 1 cp",
+			"rule",
+			"text | For 1 hour, a lit Candle sheds Bright Light in a 5-foot radius and Dim Light for an additional 5 feet."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Camel",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Mount",
+			"property | Damage | Speed: 50, Carrying Capacity: 450 lb.",
+			"property | Value | 50 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"mount"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Caltrops",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 2 lb.",
+			"property | Value | 1 gp",
+			"rule",
+			"text | As a Utilize action, you can spread Caltrops from their bag to cover a 5-foot-square area within 5 feet of yourself. A creature that enters this area for the first time on a turn must succeed on a DC 15 Dexterity saving throw or take 1 Piercing damage and have its Speed reduced to 0 until the start of its next turn. It takes 10 minutes to recover the Caltrops."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Calligrapher's Supplies",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Artisan's tools",
+			"property | Weight | 5 lb.",
+			"property | Value | 10 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Dexterity",
+			"bullet | <b>text | Utilize:</b> Write text with impressive flourishes that guard against forgery (DC 15)",
+			"bullet | <b>text | Craft:</b> Ink, Spell Scroll",
+			"text | Artisan's Tools are each focused on crafting items and pursuing a trade. Each type of Artisan's Tools tools requires a separate proficiency.",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"artisan's tools"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Burglar's Pack",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 47½ lb.",
+			"property | Value | 16 gp",
+			"rule",
+			"text | A Burglar's Pack contains the following items: Backpack, Ball Bearings, Bell, 10 Candles, Crowbar, Hooded Lantern, 7 flasks of Oil, 5 days of Rations, Rope, Tinderbox, and Waterskin."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Bullseye Lantern",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 2 lb.",
+			"property | Value | 10 gp",
+			"rule",
+			"text | A Bullseye Lantern burns Oil as fuel to cast Bright Light in a 60-foot Cone and Dim Light for an additional 60 feet."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Bucket",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 2 lb.",
+			"property | Value | 5 cp",
+			"rule",
+			"text | A Bucket holds up to half a cubic foot of contents."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Brewer's Supplies",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Artisan's tools",
+			"property | Weight | 9 lb.",
+			"property | Value | 20 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Intelligence",
+			"bullet | <b>text | Utilize:</b> Detect poisoned drink (DC 15), or identify alcohol (DC 10)",
+			"bullet | <b>text | Craft:</b> Antitoxin",
+			"text | Artisan's Tools are each focused on crafting items and pursuing a trade. Each type of Artisan's Tools tools requires a separate proficiency.",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"artisan's tools"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Breastplate",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Medium armor",
+			"property | Armor Class | AC 14 + Dex (max 2)",
+			"property | Weight | 20 lb.",
+			"property | Value | 400 gp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"medium armor"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Bread (loaf)",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Food and drink",
+			"property | Value | 2 cp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"food and drink"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Book",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 5 lb.",
+			"property | Value | 25 gp",
+			"rule",
+			"text | A Book contains fiction or nonfiction. If you consult an accurate nonfiction Book about its topic, you gain a +5 bonus to Intelligence (Arcana, History, Nature, or Religion) checks you make about that topic."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Bolts (20)",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Ammunition",
+			"property | Weight | 1½ lb.",
+			"property | Value | 1 gp",
+			"rule",
+			"text | Crossbow bolts are used with a weapon that has the ammunition property to make a ranged attack. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack (you need a free hand to load a one-handed weapon). At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield.",
+			"text | Bolts are typically stored in a Crossbow Bolt Case (bought separately)."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"ammunition"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Bolt",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Ammunition",
+			"property | Weight | 1.2 oz.",
+			"property | Value | 5 cp",
+			"rule",
+			"text | Crossbow bolts are used with a weapon that has the ammunition property to make a ranged attack. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack (you need a free hand to load a one-handed weapon). At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield.",
+			"text | Bolts are typically stored in a Crossbow Bolt Case (bought separately)."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"ammunition"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Blowgun",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1 Piercing",
+			"property | Properties | Ammunition (Range 25/100 ft.; Needle), Loading",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"vex_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Vex</span>",
+			"property | Type | Martial weapon, ranged weapon",
+			"property | Weight | 1 lb.",
+			"property | Value | 10 gp",
+			"rule",
+			"description | Range | Given as two numbers; normal and max. Attacks beyond normal range have disadvantage.",
+			"description | Ammunition | You can use a weapon that has the Ammunition property to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon's range. Each attack expends one piece of ammunition. Drawing the ammunition is part of the attack (you need a free hand to load a one-handed weapon). After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost.",
+			"description | Loading | You can fire only one piece of ammunition from a Loading weapon when you use an action, a Bonus Action, or a Reaction to fire it, regardless of the number of attacks you can normally make."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"ranged weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Block and Tackle",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 5 lb.",
+			"property | Value | 1 gp",
+			"rule",
+			"text | A Block and Tackle allows you to hoist up to four times the weight you can normally lift."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Blanket",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 3 lb.",
+			"property | Value | 5 sp",
+			"rule",
+			"text | While wrapped in a blanket, you have Advantage on saving throws against extreme cold (see the Dungeon Master's Guide)."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Bell",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Value | 1 gp",
+			"rule",
+			"text | When rung as a Utilize action, a Bell produces a sound that can be heard up to 60 feet away."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Bedroll",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 7 lb.",
+			"property | Value | 1 gp",
+			"rule",
+			"text | A Bedroll sleeps one Small or Medium creature. While in a Bedroll, you automatically succeed on saving throws against extreme cold (see the Dungeon Master's Guide)."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Battleaxe",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Weapon",
+			"property | Damage | 1d8 Slashing",
+			"property | Properties | Versatile (1d10)",
+			"property | Mastery | <span class=\"help help--hover\" onmouseover=\"Renderer.hover.pHandleLinkMouseOver(event, this)\" onmouseleave=\"Renderer.hover.handleLinkMouseLeave(event, this)\" onmousemove=\"Renderer.hover.handleLinkMouseMove(event, this)\" onclick=\"Renderer.hover.handleLinkClick(event, this)\" ondragstart=\"Renderer.hover.handleLinkDragStart(event, this)\" data-vet-page=\"itemMastery\" data-vet-source=\"XPHB\" data-vet-hash=\"topple_xphb\" data-vet-is-faux-page=\"true\" ontouchstart=\"Renderer.hover.handleTouchStart(event, this)\" >Topple</span>",
+			"property | Type | Martial weapon, melee weapon",
+			"property | Weight | 4 lb.",
+			"property | Value | 10 gp",
+			"rule",
+			"description | Versatile | A Versatile weapon can be used with one or two hands. A damage value in parentheses appears with the property. The weapon deals that damage when used with two hands to make a melee attack."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"martial weapon",
+			"melee weapon"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Basket",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 2 lb.",
+			"property | Value | 4 sp",
+			"rule",
+			"text | A Basket holds up to 40 pounds within 2 cubic feet."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Basic Poison",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear, poison",
+			"property | Value | 100 gp",
+			"rule",
+			"text | As a Bonus Action, you can use a vial of Basic Poison to coat one weapon or up to three pieces of ammunition. A creature that takes Piercing or Slashing damage from the poisoned weapon or ammunition takes an extra 1d4 Poison damage. Once applied, the poison retains potency for 1 minute or until its damage is dealt, whichever comes first."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear",
+			"poison"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Barrel",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 70 lb.",
+			"property | Value | 2 gp",
+			"rule",
+			"text | A Barrel holds up to 40 gallons of liquid or up to 4 cubic feet of dry goods."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Ball Bearings",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 2 lb.",
+			"property | Value | 1 gp",
+			"rule",
+			"text | As a Utilize action, you can spill Ball Bearings from their pouch. They spread to cover a level, 10-foot-square area within 10 feet of yourself. A creature that enters this area for the first time on a turn must succeed on a DC 10 Dexterity saving throw or have the Prone condition. It takes 10 minutes to recover the Ball Bearings."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Bagpipes",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Instrument",
+			"property | Weight | 6 lb.",
+			"property | Value | 30 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Charisma",
+			"bullet | <b>text | Utilize:</b> Play a known tune (DC 10), or improvise a song (DC 15)",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"instrument"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Backpack",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 5 lb.",
+			"property | Value | 2 gp",
+			"rule",
+			"text | A Backpack holds up to 30 pounds within 1 cubic foot. It can also serve as a saddlebag."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Artisan's Tools",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Artisan's tools",
+			"rule",
+			"text | Artisan's Tools are each focused on crafting items and pursuing a trade. Each type of Artisan's Tools tools requires a separate proficiency.",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"artisan's tools"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Arrows (20)",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Ammunition",
+			"property | Weight | 1 lb.",
+			"property | Value | 1 gp",
+			"rule",
+			"text | Arrows are used with a weapon that has the ammunition property to make a ranged attack. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack (you need a free hand to load a one-handed weapon). At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield.",
+			"text | Arrows are typically stored in a Quiver (bought separately)."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"ammunition"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Arrow",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Ammunition",
+			"property | Weight | 0.8 oz.",
+			"property | Value | 5 cp",
+			"rule",
+			"text | Arrows are used with a weapon that has the ammunition property to make a ranged attack. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack (you need a free hand to load a one-handed weapon). At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield.",
+			"text | Arrows are typically stored in a Quiver (bought separately)."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"ammunition"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Arcane Focus",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Spellcasting focus",
+			"rule",
+			"text | A sorcerer, warlock, or wizard can use this item as a spellcasting focus."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"spellcasting focus"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Antitoxin",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Value | 50 gp",
+			"rule",
+			"text | As a Bonus Action, you can drink a vial of Antitoxin to gain Advantage on saving throws to avoid or end the Poisoned condition for 1 hour."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Amulet",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Spellcasting focus",
+			"property | Weight | 1 lb.",
+			"property | Value | 5 gp",
+			"rule",
+			"text | For an Amulet to be an effective Holy Symbol, it must be worn or held.",
+			"text | A cleric or paladin can use this item as a spellcasting focus."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"spellcasting focus"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Ale (mug)",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Food and drink",
+			"property | Value | 4 cp"
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"food and drink"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Alchemist's Supplies",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Artisan's tools",
+			"property | Weight | 8 lb.",
+			"property | Value | 50 gp",
+			"rule",
+			"bullet | <b>text | Ability:</b> Intelligence",
+			"bullet | <b>text | Utilize:</b> Identify a substance (DC 15), or start a fire (DC 15)",
+			"bullet | <b>text | Craft:</b> Acid, Alchemist's Fire, Component Pouch, Oil, Paper, Perfume",
+			"text | Artisan's Tools are each focused on crafting items and pursuing a trade. Each type of Artisan's Tools tools requires a separate proficiency.",
+			"text | If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that's used with that check, you have Advantage on the check too."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"artisan's tools"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Alchemist's Fire",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 1 lb.",
+			"property | Value | 50 gp",
+			"rule",
+			"text | When you take the Attack action, you can replace one of your attacks with throwing a flask of Alchemist's Fire. Target one creature or object you can see within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or take 1d4 Fire damage and start burning."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Airship",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Vehicle (air)",
+			"property | Damage | Speed: 8 mphCarrying Capacity: 1 ton cargo, 20 passengersCrew 10, AC 13, HP 300",
+			"property | Value | 40,000 gp",
+			"rule",
+			"description | Speed | A ship sailing against a strong wind moves at half speed. In a dead calm (no wind), waterborne ships can't move under sail and must be rowed. Keelboats and Rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can't be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A Rowboat can be carried and weighs 100 pounds.",
+			"description | Crew | A ship larger than a Keelboat or Rowboat needs a crew of skilled hirelings (see \"Services\") to function. The minimum number of skilled hirelings needed to crew a ship depends on the type of ship.",
+			"description | Passengers | The number of Small and Medium passengers the ship can accommodate using hammocks. A ship outfitted with private accommodations can carry one-fifth as many passengers. A passenger usually pays 5 SP per day for a hammock, but prices can vary from ship to ship. A small private cabin usually costs 2 GP per day.",
+			"description | Damage Threshold | See the rules glossary.",
+			"description | Ship Repair | Repairs to a damaged ship can be made while the vessel is berthed. Repairing 1 Hit Point of damage requires 1 day and costs 20 GP for materials and labor. If the repairs are made in a location where supplies and skilled labor are abundant, such as a city shipyard, the repair time and cost are halved."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"vehicle (air)"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Acid",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Adventuring gear",
+			"property | Weight | 1 lb.",
+			"property | Value | 25 gp",
+			"rule",
+			"text | When you take the Attack action, you can replace one of your attacks with throwing a vial of Acid. Target one creature or object you can see within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or take 2d6 Acid damage."
+		],
+		"tags": [
+			"item",
+			"PHB'24",
+			"adventuring gear"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Sending Stones",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Wondrous item, uncommon",
+			"rule",
+			"text | Sending Stones come in pairs, with each stone carved to match the other so the pairing is easily recognized. While you touch one stone, you can cast Sending from it. The target is the bearer of the other stone. If no creature bears the other stone, you know that fact as soon as you use the stone, and you don't cast the spell.",
+			"text | Once Sending is cast using either stone, the stones can't be used again until the next dawn. If one of the stones in a pair is destroyed, the other one becomes nonmagical."
+		],
+		"tags": [
+			"item",
+			"DMG'24",
+			"wondrous item"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Cloak of Invisibility",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Wondrous item, legendary (requires attunement)",
+			"rule",
+			"text | This cloak has 3 charges and regains 1d3 expended charges daily at dawn. While wearing the cloak, you can take a Magic action to pull its hood over your head and expend 1 charge to give yourself the Invisible condition for 1 hour. The effect ends early if you pull the hood down (no action required) or cease wearing the hood.",
+			"boxes | 3 | 1.2"
+		],
+		"tags": [
+			"item",
+			"DMG'24",
+			"wondrous item"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Boots of Elvenkind",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Wondrous item, uncommon",
+			"rule",
+			"text | While you wear these boots, your steps make no sound, regardless of the surface you are moving across. You also have Advantage on Dexterity (Stealth) checks."
+		],
+		"tags": [
+			"item",
+			"DMG'24",
+			"wondrous item"
+		]
+	},
+	{
+		"count": 1,
+		"color": "#696969",
+		"title": "Bead of Force",
+		"icon": "crossed-swords",
+		"icon_back": "crossed-swords",
+		"contents": [
+			"subtitle | Wondrous item, rare",
+			"rule",
+			"text | This small black sphere measures 3/4 of an inch in diameter and weighs an ounce. Typically, 1d4 + 4 Beads of Force are found together.",
+			"text | You can take a Magic action to throw the bead up to 60 feet. The bead explodes in a 10-foot-radius Sphere on impact and is destroyed. Each creature in the Sphere must succeed on a DC 15 Dexterity saving throw or take 5d4 Force damage. A sphere of transparent force then encloses the area for 1 minute. Any creature that failed the save and is completely within the area is trapped inside this sphere. Creatures that succeeded on the save or are partially within the area are pushed away from the center of the sphere until they are no longer inside it. Only breathable air can pass through the sphere's wall. No attack or other effect can pass through.",
+			"text | An enclosed creature can take a Utilize action to push against the sphere's wall, moving the sphere up to half the creature's Speed. The sphere can be picked up, and its magic causes it to weigh only 1 pound, regardless of the weight of creatures inside."
+		],
+		"tags": [
+			"item",
+			"DMG'24",
+			"wondrous item"
+		]
+	}
+]

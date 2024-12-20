@@ -1,0 +1,6 @@
+{
+    "title": "Speak With Animals",
+    "cost": "1",
+    "preSaveNormalText": "You gain the ability to comprehend and verbally communicate with beasts for 10 minutes.",
+    "isSpell": true
+}

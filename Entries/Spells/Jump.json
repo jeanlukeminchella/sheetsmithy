@@ -1,0 +1,15 @@
+{
+    "title": "Jump",
+    "damage": "",
+    "rang": 0,
+    "cost": "1",
+    "duration": "1 min",
+    "conc": false,
+    "modiferIndex": -1,
+    "preSaveNormalText": "Once per turn, target can jump 30ft with 10ft of movement.",
+    "postSaveNormalText": "",
+    "preSaveItalicText": "",
+    "postSaveItalicText": "",
+    "castTime": "ba",
+    "ritual": false
+}

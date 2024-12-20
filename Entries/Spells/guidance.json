@@ -1,0 +1,15 @@
+{
+    "title": "Guidance",
+    "damage": "",
+    "rang": 0,
+    "cost": "",
+    "duration": "1 min",
+    "conc": true,
+    "modiferIndex": -1,
+    "postSaveNormalText": "",
+    "preSaveNormalText": "The target may add a d4 to an ability check they make. The spell then ends.",
+    "preSaveItalicText": "",
+    "postSaveItalicText": "",
+    "castTime": "a",
+    "isSpell": true
+}

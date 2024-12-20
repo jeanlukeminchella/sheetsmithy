@@ -1,0 +1,9 @@
+{
+    "title": "Command",
+    "cost": "1",
+    "rang": 60,
+    "preSaveNormalText": "One word command must be followed by target. WIS",
+    "postSaveNormalText": " to resist.",
+    "preSaveItalicText": " eg. Drop, Fall Prone, Flee etc.",
+    "isSpell": true
+}

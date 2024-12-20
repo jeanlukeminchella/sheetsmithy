@@ -1,0 +1,249 @@
+{
+    "blank": [
+        "",
+        "&nbsp;",
+        ""
+    ],
+    "stow": [
+        "Draw/Stow Weapon.",
+        "&nbsp;",
+        "You may drop weapons at any time."
+    ],
+    "offhandPunchLevel1": [
+        "Offhand Punch.",
+        "",
+        " You must have performed a melee attack this turn."
+    ],
+    "wildHeartAspects": [
+        "",
+        "Choose one of the following effects whenever your finish a long rest: <br><br><strong>Owl</strong> - 60ft Darkvision <br><strong>Panther</strong> - Climb Speed <br><strong>Salmon</strong> - Swim Speed",
+        ""
+    ],
+    "steadyAim": [
+        "Steady Aim.",
+        "Gain advantage on your next attack this turn.",
+        "You must not move this turn."
+    ],
+    "regainSpellSlots": [
+        "",
+        "Regain all your spell slots",
+        ""
+    ],
+    "bearWildHeart": [
+        "Bear.",
+        "You take half damage unless it is Force, Necrotic, Psychic, and Radiant damage.",
+        ""
+    ],
+    "wolfWildHeart": [
+        "Wolf.",
+        "Allies get advantage on enemies within 5ft of you.",
+        ""
+    ],
+    "eagleWildHeart": [
+        "Eagle.",
+        "You may use your Bonus Action to Dash or Disengage, and do so for free when entering Rage.",
+        ""
+    ],
+    "offhandPunch": [
+        "Offhand Punch.",
+        "",
+        " You must have performed a melee attack or spent Ki this turn."
+    ],
+    "Dash": [
+        "Dash. ",
+        "Move up to your speed.",
+        ""
+    ],
+    "Hide": [
+        "Hide. ",
+        "Must be out of sight. On a success, target is unaware where you move, giving advantage on attacks. ",
+        "Stealth Check."
+    ],
+    "Dodge": [
+        "Dodge. ",
+        "You are attacked with disadvantage until your next turn. Advantage on Dex saves.",
+        ""
+    ],
+    "Barbarian Dodge": [
+        "Dodge. ",
+        "You are attacked with disadvantage until your next turn.",
+        ""
+    ],
+    "Ready": [
+        "Ready. ",
+        "Choose a circumstance to wait for before acting, and what you will do if it happens.",
+        "Responding to the trigger requires a Reaction."
+    ],
+    "Disengage": [
+        "Disengage. ",
+        "",
+        "See Opportunity Attack."
+    ],
+    "trance": [
+        "Fey Ancenstry. ",
+        "Magic cannot put you to sleep, and you can finish a Long Rest in 4 hours if you spend them in trancelike meditation.",
+        ""
+    ],
+    "oppAttack": [
+        "Opportunity Attack. ",
+        "When a creature leaves your reach without taking the Disengage action, you make a melee attack on them.",
+        ""
+    ],
+    "channelDiv": [
+        "Channel Divinity. ",
+        "",
+        "See Channel Divinity Actions."
+    ],
+    "senseMagicItem": [
+        "Sense Magic. ",
+        "For one round, you can tell if anything you see is magical.",
+        "(Wild Magic)"
+    ],
+    "Leave Wild Shape": [
+        "Leave Wild Shape.",
+        "",
+        ""
+    ],
+    "Riding Horse": [
+        "Riding Horse. ",
+        "60ft speed, AC11, Large, Hoof attack: +5 to hit, d8+3 damage.",
+        ""
+    ],
+    "Spider": [
+        "Spider. ",
+        "20ft climb speed, Tiny, AC12, Bite: +4 to hit, 1 damage + d4 poison damage.",
+        ""
+    ],
+    "Wolf": [
+        "Wolf. ",
+        "40ft speed, Medium, AC12, Bite action: +4 to hit, d6+2 damage, adv on distracted enemies <em>(Pack Tactics)</em>, targets are knocked Prone on a hit (if Medium or smaller).",
+        ""
+    ],
+    "Panther": [
+        "Panther. ",
+        "50ft speed, 40ft climb, Medium, AC12, +6 Stealth, Pounce action: +4 to hit, d4+2 damage, +d4 damage if adv. on attack and can Prowl 25ft away after (no opp. attacks) - then Hide. ",
+        ""
+    ],
+    "Black Bear": [
+        "Black Bear. ",
+        "30ft climb, swim & walk speed, AC11, Medium, +5 Perception, Rend action - x2 attacks: +4 to hit, d6+2 damage",
+        ""
+    ],
+    "Crocodile": [
+        "Crocodile. ",
+        "20ft walk, 30ft swim speed, AC12, Large, +2 Stealth, Bite action: +4 to hit, d8+2 damage, Medium or smaller targets are Grappled (DC12) and Restrained",
+        ""
+    ],
+    "Other Form 1": [
+        "Other Form. ",
+        "Choose another non-flying Beast, CR 1/4",
+        ""
+    ],
+    "Other Form 2": [
+        "3 x Other Forms. ",
+        "Choose non-flying Beasts, CR1/2",
+        ""
+    ],
+    "reckless": [
+        "Reckless Attack. ",
+        "Attack with advantage. All attacks against you and (STR based) attacks from you have adv. until your next turn.",
+        "See attack options below."
+    ],
+    "extraAttackHighlighted": [
+        "Attack. ",
+        "Make two highlighted attacks.",
+        ""
+    ],
+    "actionSurge": [
+        "Action Surge. ",
+        "Take two actions.",
+        "You must rest before doing this again. </em>O"
+    ],
+    "conc": [
+        "",
+        "",
+        "\u00a9 Requires Concentration, which may be broken upon taking damage. You may only Concentrate on one spell at a time."
+    ],
+    "uncannyDodge": [
+        "Uncanny Dodge. ",
+        "Half the damage of an incoming attack you can see.",
+        ""
+    ],
+    "useObject": [
+        "Utilize an Object. ",
+        "",
+        "eg. tie some rope."
+    ],
+    "sleightOfHandThief": [
+        "Use Sleight of Hand. ",
+        "Try picking a lock or pocket, or attempt to disarm a trap with Thieves' Tools. ",
+        "(Thief)"
+    ],
+    "ritual": [
+        "",
+        "⌆ Some spells can be cast as a 10 minute ritual, without having to spend a spell slot.",
+        ""
+    ],
+    "magicalUnarmedStrike": [
+        "",
+        "Your Punches deal Bludgeoning or Force damage ",
+        ""
+    ],
+    "lucky": [
+        "Lucky. ",
+        "Reroll 1s on your d20.",
+        ""
+    ],
+    "haflingNimbleness": [
+        "Halfling Nimbleness. ",
+        "You can move through the space of larger creatures.",
+        ""
+    ],
+    "resPoison": [
+        "",
+        "You have resistance to poison damage.",
+        ""
+    ],
+    "resFire": [
+        "",
+        "You have resistance to fire damage.",
+        ""
+    ],
+    "savageAttacks": [
+        "Savage Attacks.",
+        "When you critically hit with a melee weapon, you can roll an extra one of the weapon's damage dice.",
+        ""
+    ],
+    "naturallyStealthy": [
+        "",
+        "You can attempt to hide behind larger creatures.",
+        ""
+    ],
+    "Wild Resurgence": [
+        "",
+        "If you are out of Wild Shapes, you can expend a spell slot to regain one once per turn.",
+        ""
+    ],
+    "Wild Resurgence 2": [
+        "Wild Resurgence.",
+        "You can regain a level 1 spell slot by spending a Wild Shape. O",
+        ""
+    ],
+    "Wild Companion": [
+        "Wild Companion (Wild Shape).",
+        "Find a Familiar. ",
+        "See PHB for more details. </em>O<em>"
+    ],
+    "Natural Recovery - arid": [
+        "Circle of the Land - Arid.",
+        "You get one free casting of either Fireball, Burning Hands or Blur. O ",
+        ""
+    ],
+    "relentlessEndurance": [
+        "Relentless Endurance",
+        "Upon taking damage, drop to 1 hit point instead of 0. You can do this once per Long Rest - O",
+        ""
+    ]
+    
+     
+}

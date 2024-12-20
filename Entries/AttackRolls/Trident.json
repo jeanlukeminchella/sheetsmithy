@@ -1,0 +1,10 @@
+{
+    "title": "Trident",
+    "addModToDamage": true,
+    "forcedMod": 0,
+    "damageType": "Piercing",
+    "damage": "d8",
+    "thrown": 20,
+    "versatile": "d10",
+    "mastery": "Topple"
+}

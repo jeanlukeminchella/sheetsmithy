@@ -1,0 +1,8 @@
+{
+    "name": "Hide",
+    "base": 12,
+    "addDex": true,
+    "stealthDisadvantage": false,
+    "category": "Medium",
+    "maxTwo": true
+}

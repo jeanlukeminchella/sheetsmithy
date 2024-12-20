@@ -1,0 +1,1191 @@
+{
+    "shield": {
+        "key": "shield",
+        "name": "Shield",
+        "price": 10
+    },
+    "potion of healing": {
+        "key": "potion of healing",
+        "name": "Potion of Healing",
+        "entryCommand": "Potion of Healing",
+        "price": 50
+    },
+    "studded leather armor": {
+        "key": "studded leather armor",
+        "name": "Studded Leather Armor",
+        "price": 45
+    },
+    "splint armor": {
+        "key": "splint armor",
+        "name": "Splint Armor",
+        "price": 200
+    },
+    "scale mail": {
+        "key": "scale mail",
+        "name": "Scale Mail",
+        "price": 50
+    },
+    "ring mail": {
+        "key": "ring mail",
+        "name": "Ring Mail",
+        "price": 30
+    },
+    "plate armor": {
+        "key": "plate armor",
+        "name": "Plate Armor",
+        "price": 1500
+    },
+    "padded armor": {
+        "key": "padded armor",
+        "name": "Padded Armor",
+        "price": 5
+    },
+    "leather armor": {
+        "key": "leather armor",
+        "name": "Leather Armor",
+        "price": 10
+    },
+    "hide armor": {
+        "key": "hide armor",
+        "name": "Hide Armor",
+        "price": 10
+    },
+    "half plate armor": {
+        "key": "half plate armor",
+        "name": "Half Plate Armor",
+        "price": 750
+    },
+    "chain shirt": {
+        "key": "chain shirt",
+        "name": "Chain Shirt",
+        "price": 50
+    },
+    "chain mail": {
+        "key": "chain mail",
+        "name": "Chain Mail",
+        "price": 75
+    },
+    "breastplate": {
+        "key": "breastplate",
+        "name": "Breastplate",
+        "price": 400
+    },
+    "yew wand": {
+        "key": "yew wand",
+        "name": "Yew Wand",
+        "price": 10
+    },
+    "wooden staff": {
+        "key": "wooden staff",
+        "name": "Wooden Staff",
+        "entryCommand": "Wooden Staff",
+        "price": 5
+    },
+    "woodcarver's tools": {
+        "key": "woodcarver's tools",
+        "name": "Woodcarver's Tools",
+        "price": 1
+    },
+    "whip": {
+        "key": "whip",
+        "name": "Whip",
+        "entryCommand": "Whip",
+        "price": 2
+    },
+    "weaver's tools": {
+        "key": "weaver's tools",
+        "name": "Weaver's Tools",
+        "price": 1
+    },
+    "waterskin": {
+        "key": "waterskin",
+        "name": "Waterskin",
+        "price": 0.2
+    },
+    "warship": {
+        "key": "warship",
+        "name": "Warship",
+        "price": 25000
+    },
+    "warhorse": {
+        "key": "warhorse",
+        "name": "Warhorse",
+        "price": 400
+    },
+    "warhammer": {
+        "key": "warhammer",
+        "name": "Warhammer",
+        "entryCommand": "Warhammer",
+        "price": 15
+    },
+    "war pick": {
+        "key": "war pick",
+        "name": "War Pick",
+        "entryCommand": "War Pick",
+        "price": 5
+    },
+    "wand": {
+        "key": "wand",
+        "name": "Wand",
+        "price": 10
+    },
+    "wagon": {
+        "key": "wagon",
+        "name": "Wagon",
+        "price": 35
+    },
+    "viol": {
+        "key": "viol",
+        "name": "Viol",
+        "price": 30
+    },
+    "vial": {
+        "key": "vial",
+        "name": "Vial",
+        "price": 1
+    },
+    "trinket": {
+        "key": "trinket",
+        "name": "Trinket"
+    },
+    "trident": {
+        "key": "trident",
+        "name": "Trident",
+        "entryCommand": "Trident",
+        "price": 5
+    },
+    "traveler's clothes": {
+        "key": "traveler's clothes",
+        "name": "Traveler's Clothes",
+        "price": 2
+    },
+    "torch": {
+        "key": "torch",
+        "name": "Torch",
+        "price": 0.01
+    },
+    "tinker's tools": {
+        "key": "tinker's tools",
+        "name": "Tinker's Tools",
+        "price": 50
+    },
+    "tinderbox": {
+        "key": "tinderbox",
+        "name": "Tinderbox",
+        "price": 0.5
+    },
+    "three-dragon ante set": {
+        "key": "three-dragon ante set",
+        "name": "Three-Dragon Ante Set",
+        "price": 1
+    },
+    "thieves' tools": {
+        "key": "thieves' tools",
+        "name": "Thieves' Tools",
+        "price": 25
+    },
+    "tent": {
+        "key": "tent",
+        "name": "Tent",
+        "price": 2
+    },
+    "string": {
+        "key": "string",
+        "name": "String",
+        "price": 0.1
+    },
+    "staff": {
+        "key": "staff",
+        "name": "Staff",
+        "entryCommand": "Staff",
+        "price": 5
+    },
+    "stabling (per day)": {
+        "key": "stabling (per day)",
+        "name": "Stabling (per day)",
+        "price": 0.05
+    },
+    "spyglass": {
+        "key": "spyglass",
+        "name": "Spyglass",
+        "price": 1000
+    },
+    "sprig of mistletoe": {
+        "key": "sprig of mistletoe",
+        "name": "Sprig of Mistletoe",
+        "price": 1
+    },
+    "spell scroll (level 1)": {
+        "key": "spell scroll (level 1)",
+        "name": "Spell Scroll (Level 1)",
+        "price": 50
+    },
+    "spell scroll (cantrip)": {
+        "key": "spell scroll (cantrip)",
+        "name": "Spell Scroll (Cantrip)",
+        "price": 30
+    },
+    "spell scroll": {
+        "key": "spell scroll",
+        "name": "Spell Scroll"
+    },
+    "spear": {
+        "key": "spear",
+        "name": "Spear",
+        "entryCommand": "Spear",
+        "price": 1
+    },
+    "smith's tools": {
+        "key": "smith's tools",
+        "name": "Smith's Tools",
+        "price": 20
+    },
+    "sling bullets (20)": {
+        "key": "sling bullets (20)",
+        "name": "Sling Bullets (20)",
+        "price": 0.04
+    },
+    "sling bullet": {
+        "key": "sling bullet",
+        "name": "Sling Bullet"
+    },
+    "sling": {
+        "key": "sling",
+        "name": "Sling",
+        "entryCommand": "Sling",
+        "price": 0.1
+    },
+    "sled": {
+        "key": "sled",
+        "name": "Sled",
+        "price": 20
+    },
+    "signal whistle": {
+        "key": "signal whistle",
+        "name": "Signal Whistle",
+        "price": 0.05
+    },
+    "sickle": {
+        "key": "sickle",
+        "name": "Sickle",
+        "entryCommand": "Sickle",
+        "price": 1
+    },
+    "shovel": {
+        "key": "shovel",
+        "name": "Shovel",
+        "price": 2
+    },
+    "shortsword": {
+        "key": "shortsword",
+        "name": "Shortsword",
+        "entryCommand": "Shortsword",
+        "price": 10
+    },
+    "offhand shortsword": {
+        "key": "offhand shortsword",
+        "name": "Shortsword",
+        "entryCommand": "Shortsword (Offhand)",
+        "price": 10
+    },
+    "shortbow": {
+        "key": "shortbow",
+        "name": "Shortbow",
+        "entryCommand": "Shortbow",
+        "price": 25
+    },
+    "shawm": {
+        "key": "shawm",
+        "name": "Shawm",
+        "price": 2
+    },
+    "scimitar": {
+        "key": "scimitar",
+        "name": "Scimitar",
+        "entryCommand": "Scimitar",
+        "price": 25
+    },
+    "scholar's pack": {
+        "key": "scholar's pack",
+        "name": "Scholar's Pack",
+        "price": 40
+    },
+    "sailing ship": {
+        "key": "sailing ship",
+        "name": "Sailing Ship",
+        "price": 10000
+    },
+    "sack": {
+        "key": "sack",
+        "name": "Sack",
+        "price": 0.01
+    },
+    "rowboat": {
+        "key": "rowboat",
+        "name": "Rowboat",
+        "price": 50
+    },
+    "rope": {
+        "key": "rope",
+        "name": "Rope (50ft)",
+        "price": 1
+    },
+    "rod": {
+        "key": "rod",
+        "name": "Rod",
+        "price": 10
+    },
+    "robe": {
+        "key": "robe",
+        "name": "Robe",
+        "price": 1
+    },
+    "riding saddle": {
+        "key": "riding saddle",
+        "name": "Riding Saddle",
+        "price": 10
+    },
+    "riding horse": {
+        "key": "riding horse",
+        "name": "Riding Horse",
+        "price": 75
+    },
+    "reliquary": {
+        "key": "reliquary",
+        "name": "Reliquary",
+        "price": 5
+    },
+    "rations": {
+        "key": "rations",
+        "name": "Rations",
+        "price": 0.5
+    },
+    "rapier": {
+        "key": "rapier",
+        "name": "Rapier",
+        "entryCommand": "Rapier",
+        "price": 25
+    },
+    "quiver": {
+        "key": "quiver",
+        "name": "Quiver",
+        "price": 1
+    },
+    "quarterstaff": {
+        "key": "quarterstaff",
+        "name": "Quarterstaff",
+        "entryCommand": "Quarterstaff",
+        "price": 0.2
+    },
+    "psychic blade": {
+        "key": "psychic blade",
+        "name": "Psychic Blade",
+        "entryCommand": "Psychic Blade"
+    },
+    "priest's pack": {
+        "key": "priest's pack",
+        "name": "Priest's Pack",
+        "price": 33
+    },
+    "pouch": {
+        "key": "pouch",
+        "name": "Pouch",
+        "price": 0.5
+    },
+    "potter's tools": {
+        "key": "potter's tools",
+        "name": "Potter's Tools",
+        "price": 10
+    },
+    "portable ram": {
+        "key": "portable ram",
+        "name": "Portable Ram",
+        "price": 4
+    },
+    "pony": {
+        "key": "pony",
+        "name": "Pony",
+        "price": 30
+    },
+    "pole": {
+        "key": "pole",
+        "name": "Pole",
+        "price": 0.05
+    },
+    "poisoner's kit": {
+        "key": "poisoner's kit",
+        "name": "Poisoner's Kit",
+        "price": 50
+    },
+    "playing cards": {
+        "key": "playing cards",
+        "name": "Playing Cards",
+        "price": 0.5
+    },
+    "pistol": {
+        "key": "pistol",
+        "name": "Pistol",
+        "entryCommand": "Pistol",
+        "price": 250
+    },
+    "pike": {
+        "key": "pike",
+        "name": "Pike",
+        "entryCommand": "Pike",
+        "price": 5
+    },
+    "perfume": {
+        "key": "perfume",
+        "name": "Perfume",
+        "price": 5
+    },
+    "parchment": {
+        "key": "parchment",
+        "name": "Parchment",
+        "price": 0.1
+    },
+    "paper": {
+        "key": "paper",
+        "name": "Paper",
+        "price": 0.2
+    },
+    "pan flute": {
+        "key": "pan flute",
+        "name": "Pan Flute",
+        "price": 12
+    },
+    "painter's supplies": {
+        "key": "painter's supplies",
+        "name": "Painter's Supplies",
+        "price": 10
+    },
+    "orb": {
+        "key": "orb",
+        "name": "Orb",
+        "price": 20
+    },
+    "oil": {
+        "key": "oil",
+        "name": "Oil",
+        "price": 0.1
+    },
+    "net": {
+        "key": "net",
+        "name": "Net",
+        "price": 1
+    },
+    "needles (50)": {
+        "key": "needles (50)",
+        "name": "Needles (50)",
+        "price": 1
+    },
+    "needle": {
+        "key": "needle",
+        "name": "Needle",
+        "price": 0.02
+    },
+    "navigator's tools": {
+        "key": "navigator's tools",
+        "name": "Navigator's Tools",
+        "price": 25
+    },
+    "musket": {
+        "key": "musket",
+        "name": "Musket",
+        "entryCommand": "Musket",
+        "price": 500
+    },
+    "musical instrument": {
+        "key": "musical instrument",
+        "name": "Musical Instrument"
+    },
+    "mule": {
+        "key": "mule",
+        "name": "Mule",
+        "price": 8
+    },
+    "morningstar": {
+        "key": "morningstar",
+        "name": "Morningstar",
+        "entryCommand": "Morningstar",
+        "price": 15
+    },
+    "mirror": {
+        "key": "mirror",
+        "name": "Mirror",
+        "price": 5
+    },
+    "military saddle": {
+        "key": "military saddle",
+        "name": "Military Saddle",
+        "price": 20
+    },
+    "maul": {
+        "key": "maul",
+        "name": "Maul",
+        "entryCommand": "Maul",
+        "price": 10
+    },
+    "mastiff": {
+        "key": "mastiff",
+        "name": "Mastiff",
+        "price": 25
+    },
+    "mason's tools": {
+        "key": "mason's tools",
+        "name": "Mason's Tools",
+        "price": 10
+    },
+    "map or scroll case": {
+        "key": "map or scroll case",
+        "name": "Map or Scroll Case",
+        "price": 1
+    },
+    "map": {
+        "key": "map",
+        "name": "Map",
+        "price": 1
+    },
+    "manacles": {
+        "key": "manacles",
+        "name": "Manacles",
+        "price": 2
+    },
+    "magnifying glass": {
+        "key": "magnifying glass",
+        "name": "Magnifying Glass",
+        "price": 100
+    },
+    "mace": {
+        "key": "mace",
+        "name": "Mace",
+        "entryCommand": "Mace",
+        "price": 5
+    },
+    "lyre": {
+        "key": "lyre",
+        "name": "Lyre",
+        "price": 30
+    },
+    "lute": {
+        "key": "lute",
+        "name": "Lute",
+        "price": 35
+    },
+    "longsword": {
+        "key": "longsword",
+        "name": "Longsword",
+        "entryCommand": "Longsword",
+        "price": 15
+    },
+    "longship": {
+        "key": "longship",
+        "name": "Longship",
+        "price": 10000
+    },
+    "longbow": {
+        "key": "longbow",
+        "name": "Longbow",
+        "entryCommand": "Longbow",
+        "price": 50
+    },
+    "lock": {
+        "key": "lock",
+        "name": "Lock",
+        "price": 10
+    },
+    "light hammer": {
+        "key": "light hammer",
+        "name": "Light Hammer",
+        "entryCommand": "Light Hammer",
+        "price": 2
+    },
+    "light crossbow": {
+        "key": "light crossbow",
+        "name": "Light Crossbow",
+        "entryCommand": "Light Crossbow",
+        "price": 25
+    },
+    "leatherworker's tools": {
+        "key": "leatherworker's tools",
+        "name": "Leatherworker's Tools",
+        "price": 5
+    },
+    "lance": {
+        "key": "lance",
+        "name": "Lance",
+        "entryCommand": "Lance",
+        "price": 10
+    },
+    "lamp": {
+        "key": "lamp",
+        "name": "Lamp",
+        "price": 0.5
+    },
+    "ladder": {
+        "key": "ladder",
+        "name": "Ladder",
+        "price": 0.1
+    },
+    "keelboat": {
+        "key": "keelboat",
+        "name": "Keelboat",
+        "price": 3000
+    },
+    "jug": {
+        "key": "jug",
+        "name": "Jug",
+        "price": 0.02
+    },
+    "jeweler's tools": {
+        "key": "jeweler's tools",
+        "name": "Jeweler's Tools",
+        "price": 25
+    },
+    "javelin": {
+        "key": "javelin",
+        "name": "Javelin",
+        "entryCommand": "Javelin",
+        "price": 0.5
+    },
+    "iron spikes": {
+        "key": "iron spikes",
+        "name": "Iron Spikes",
+        "price": 1
+    },
+    "iron spike": {
+        "key": "iron spike",
+        "name": "Iron Spike",
+        "price": 0.1
+    },
+    "iron pot": {
+        "key": "iron pot",
+        "name": "Iron Pot",
+        "price": 2
+    },
+    "ink pen": {
+        "key": "ink pen",
+        "name": "Ink Pen",
+        "price": 0.02
+    },
+    "ink": {
+        "key": "ink",
+        "name": "Ink",
+        "price": 10
+    },
+    "hunting trap": {
+        "key": "hunting trap",
+        "name": "Hunting Trap",
+        "price": 5
+    },
+    "horn": {
+        "key": "horn",
+        "name": "Horn",
+        "price": 3
+    },
+    "hooded lantern": {
+        "key": "hooded lantern",
+        "name": "Hooded Lantern",
+        "price": 5
+    },
+    "holy water": {
+        "key": "holy water",
+        "name": "Holy Water",
+        "price": 25
+    },
+    "holy symbol": {
+        "key": "holy symbol",
+        "name": "Holy Symbol"
+    },
+    "herbalism kit": {
+        "key": "herbalism kit",
+        "name": "Herbalism Kit",
+        "price": 5
+    },
+    "heavy crossbow": {
+        "key": "heavy crossbow",
+        "name": "Heavy Crossbow",
+        "entryCommand": "Heavy Crossbow",
+        "price": 50
+    },
+    "healer's kit": {
+        "key": "healer's kit",
+        "name": "Healer's Kit",
+        "price": 5
+    },
+    "handaxe": {
+        "key": "handaxe",
+        "name": "Handaxe",
+        "entryCommand": "Handaxe",
+        "price": 5
+    },
+    "hand crossbow": {
+        "key": "hand crossbow",
+        "name": "Hand Crossbow",
+        "entryCommand": "Hand Crossbow",
+        "price": 75
+    },
+    "halberd": {
+        "key": "halberd",
+        "name": "Halberd",
+        "entryCommand": "Halberd",
+        "price": 20
+    },
+    "greatsword": {
+        "key": "greatsword",
+        "name": "Greatsword",
+        "entryCommand": "Greatsword",
+        "price": 50
+    },
+    "greatclub": {
+        "key": "greatclub",
+        "name": "Greatclub",
+        "entryCommand": "Greatclub",
+        "price": 0.2
+    },
+    "greataxe": {
+        "key": "greataxe",
+        "name": "Greataxe",
+        "entryCommand": "Greataxe",
+        "price": 30
+    },
+    "grappling hook": {
+        "key": "grappling hook",
+        "name": "Grappling Hook",
+        "price": 2
+    },
+    "glassblower's tools": {
+        "key": "glassblower's tools",
+        "name": "Glassblower's Tools",
+        "price": 30
+    },
+    "glass bottle": {
+        "key": "glass bottle",
+        "name": "Glass Bottle",
+        "price": 2
+    },
+    "glaive": {
+        "key": "glaive",
+        "name": "Glaive",
+        "entryCommand": "Glaive",
+        "price": 20
+    },
+    "gaming set": {
+        "key": "gaming set",
+        "name": "Gaming Set"
+    },
+    "galley": {
+        "key": "galley",
+        "name": "Galley",
+        "price": 30000
+    },
+    "forgery kit": {
+        "key": "forgery kit",
+        "name": "Forgery Kit",
+        "price": 15
+    },
+    "flute": {
+        "key": "flute",
+        "name": "Flute",
+        "price": 2
+    },
+    "flask": {
+        "key": "flask",
+        "name": "Flask",
+        "price": 0.02
+    },
+    "flail": {
+        "key": "flail",
+        "name": "Flail",
+        "entryCommand": "Flail",
+        "price": 10
+    },
+    "firearm bullets (10)": {
+        "key": "firearm bullets (10)",
+        "name": "Firearm Bullets (10)",
+        "price": 3
+    },
+    "firearm bullet": {
+        "key": "firearm bullet",
+        "name": "Firearm Bullet",
+        "price": 0.3
+    },
+    "fine wine (bottle)": {
+        "key": "fine wine (bottle)",
+        "name": "Fine Wine (bottle)",
+        "price": 10
+    },
+    "fine clothes": {
+        "key": "fine clothes",
+        "name": "Fine Clothes",
+        "price": 15
+    },
+    "feed (per day)": {
+        "key": "feed (per day)",
+        "name": "Feed (per day)",
+        "price": 0.05
+    },
+    "explorer's pack": {
+        "key": "explorer's pack",
+        "name": "Explorer's Pack",
+        "price": 10
+    },
+    "exotic saddle": {
+        "key": "exotic saddle",
+        "name": "Exotic Saddle",
+        "price": 60
+    },
+    "entertainer's pack": {
+        "key": "entertainer's pack",
+        "name": "Entertainer's Pack",
+        "price": 40
+    },
+    "emblem": {
+        "key": "emblem",
+        "name": "Emblem",
+        "price": 5
+    },
+    "elephant": {
+        "key": "elephant",
+        "name": "Elephant",
+        "price": 200
+    },
+    "dungeoneer's pack": {
+        "key": "dungeoneer's pack",
+        "name": "Dungeoneer's Pack",
+        "price": 12
+    },
+    "dulcimer": {
+        "key": "dulcimer",
+        "name": "Dulcimer",
+        "price": 25
+    },
+    "drum": {
+        "key": "drum",
+        "name": "Drum",
+        "price": 6
+    },
+    "druidic focus": {
+        "key": "druidic focus",
+        "name": "Druidic Focus"
+    },
+    "dragonchess set": {
+        "key": "dragonchess set",
+        "name": "Dragonchess Set",
+        "price": 1
+    },
+    "draft horse": {
+        "key": "draft horse",
+        "name": "Draft Horse",
+        "price": 50
+    },
+    "disguise kit": {
+        "key": "disguise kit",
+        "name": "Disguise Kit",
+        "price": 25
+    },
+    "diplomat's pack": {
+        "key": "diplomat's pack",
+        "name": "Diplomat's Pack",
+        "price": 39
+    },
+    "dice set": {
+        "key": "dice set",
+        "name": "Dice Set",
+        "price": 0.1
+    },
+    "dart": {
+        "key": "dart",
+        "name": "Dart",
+        "entryCommand": "Dart",
+        "price": 0.05
+    },
+    "dagger": {
+        "key": "dagger",
+        "name": "Dagger",
+        "entryCommand": "Dagger",
+        "price": 2
+    },
+    "crystal": {
+        "key": "crystal",
+        "name": "Crystal",
+        "price": 10
+    },
+    "crowbar": {
+        "key": "crowbar",
+        "name": "Crowbar",
+        "price": 2
+    },
+    "crossbow bolt case": {
+        "key": "crossbow bolt case",
+        "name": "Crossbow Bolt Case",
+        "price": 1
+    },
+    "costume": {
+        "key": "costume",
+        "name": "Costume",
+        "price": 5
+    },
+    "cook's utensils": {
+        "key": "cook's utensils",
+        "name": "Cook's Utensils",
+        "price": 1
+    },
+    "component pouch": {
+        "key": "component pouch",
+        "name": "Component Pouch",
+        "price": 25
+    },
+    "common wine (bottle)": {
+        "key": "common wine (bottle)",
+        "name": "Common Wine (bottle)",
+        "price": 0.2
+    },
+    "cobbler's tools": {
+        "key": "cobbler's tools",
+        "name": "Cobbler's Tools",
+        "price": 5
+    },
+    "club": {
+        "key": "club",
+        "name": "Club",
+        "entryCommand": "Club",
+        "price": 0.1
+    },
+    "climber's kit": {
+        "key": "climber's kit",
+        "name": "Climber's Kit",
+        "price": 25
+    },
+    "chest": {
+        "key": "chest",
+        "name": "Chest",
+        "price": 5
+    },
+    "cheese (wedge)": {
+        "key": "cheese (wedge)",
+        "name": "Cheese (wedge)",
+        "price": 0.1
+    },
+    "chariot": {
+        "key": "chariot",
+        "name": "Chariot",
+        "price": 250
+    },
+    "chain": {
+        "key": "chain",
+        "name": "Chain",
+        "price": 5
+    },
+    "cartographer's tools": {
+        "key": "cartographer's tools",
+        "name": "Cartographer's Tools",
+        "price": 15
+    },
+    "cart": {
+        "key": "cart",
+        "name": "Cart",
+        "price": 15
+    },
+    "carriage": {
+        "key": "carriage",
+        "name": "Carriage",
+        "price": 100
+    },
+    "carpenter's tools": {
+        "key": "carpenter's tools",
+        "name": "Carpenter's Tools",
+        "price": 8
+    },
+    "candle": {
+        "key": "candle",
+        "name": "Candle",
+        "price": 0.01
+    },
+    "camel": {
+        "key": "camel",
+        "name": "Camel",
+        "price": 50
+    },
+    "caltrops": {
+        "key": "caltrops",
+        "name": "Caltrops",
+        "price": 1
+    },
+    "calligrapher's supplies": {
+        "key": "calligrapher's supplies",
+        "name": "Calligrapher's Supplies",
+        "price": 10
+    },
+    "burglar's pack": {
+        "key": "burglar's pack",
+        "name": "Burglar's Pack",
+        "price": 16
+    },
+    "bullseye lantern": {
+        "key": "bullseye lantern",
+        "name": "Bullseye Lantern",
+        "price": 10
+    },
+    "bucket": {
+        "key": "bucket",
+        "name": "Bucket",
+        "price": 0.05
+    },
+    "brewer's supplies": {
+        "key": "brewer's supplies",
+        "name": "Brewer's Supplies",
+        "price": 20
+    },
+    "bread (loaf)": {
+        "key": "bread (loaf)",
+        "name": "Bread (loaf)",
+        "price": 0.02
+    },
+    "book": {
+        "key": "book",
+        "name": "Book",
+        "price": 25
+    },
+    "bolts (20)": {
+        "key": "bolts (20)",
+        "name": "Bolts (20)",
+        "price": 1
+    },
+    "bolt": {
+        "key": "bolt",
+        "name": "Bolt",
+        "price": 0.05
+    },
+    "blowgun": {
+        "key": "blowgun",
+        "name": "Blowgun",
+        "entryCommand": "Blowgun",
+        "price": 10
+    },
+    "block and tackle": {
+        "key": "block and tackle",
+        "name": "Block and Tackle",
+        "price": 1
+    },
+    "blanket": {
+        "key": "blanket",
+        "name": "Blanket",
+        "price": 0.5
+    },
+    "bell": {
+        "key": "bell",
+        "name": "Bell",
+        "price": 1
+    },
+    "bedroll": {
+        "key": "bedroll",
+        "name": "Bedroll",
+        "price": 1
+    },
+    "battleaxe": {
+        "key": "battleaxe",
+        "name": "Battleaxe",
+        "entryCommand": "Battleaxe",
+        "price": 10
+    },
+    "basket": {
+        "key": "basket",
+        "name": "Basket",
+        "price": 0.4
+    },
+    "basic poison": {
+        "key": "basic poison",
+        "name": "Basic Poison",
+        "price": 100
+    },
+    "barrel": {
+        "key": "barrel",
+        "name": "Barrel",
+        "price": 2
+    },
+    "ball bearings": {
+        "key": "ball bearings",
+        "name": "Ball Bearings",
+        "price": 1
+    },
+    "bagpipes": {
+        "key": "bagpipes",
+        "name": "Bagpipes",
+        "price": 30
+    },
+    "backpack": {
+        "key": "backpack",
+        "name": "Backpack",
+        "price": 2
+    },
+    "artisan's tools": {
+        "key": "artisan's tools",
+        "name": "Artisan's Tools"
+    },
+    "arrows (20)": {
+        "key": "arrows (20)",
+        "name": "Arrows (20)",
+        "price": 1
+    },
+    "arrow": {
+        "key": "arrow",
+        "name": "Arrow",
+        "price": 0.05
+    },
+    "arcane focus": {
+        "key": "arcane focus",
+        "name": "Arcane Focus"
+    },
+    "antitoxin": {
+        "key": "antitoxin",
+        "name": "Antitoxin",
+        "price": 50
+    },
+    "amulet": {
+        "key": "amulet",
+        "name": "Amulet",
+        "price": 5
+    },
+    "ale (mug)": {
+        "key": "ale (mug)",
+        "name": "Ale (mug)",
+        "price": 0.04
+    },
+    "alchemist's supplies": {
+        "key": "alchemist's supplies",
+        "name": "Alchemist's Supplies",
+        "price": 50
+    },
+    "alchemist's fire": {
+        "key": "alchemist's fire",
+        "name": "Alchemist's Fire",
+        "price": 50
+    },
+    "airship": {
+        "key": "airship",
+        "name": "Airship",
+        "price": 40000
+    },
+    "acid": {
+        "key": "acid",
+        "name": "Acid",
+        "price": 25
+    },
+    "sending stones": {
+        "key": "sending stones",
+        "name": "Sending Stones"
+    },
+    "cloak of invisibility": {
+        "key": "cloak of invisibility",
+        "name": "Cloak of Invisibility"
+    },
+    "boots of elvenkind": {
+        "key": "boots of elvenkind",
+        "name": "Boots of Elvenkind"
+    },
+    "bead of force": {
+        "key": "bead of force",
+        "name": "Bead of Force"
+    }
+}

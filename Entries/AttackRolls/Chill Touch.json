@@ -1,0 +1,17 @@
+{
+    "title": "Chill Touch",
+    "damage": "d10",
+    "rang": 0,
+    "cost": "",
+    "duration": "",
+    "conc": false,
+    "addModToDamage": false,
+    "damageType": "Necrotic",
+    "forcedMod": -1,
+    "cantripScaling": true,
+    "saveNotAttack": false,
+    "resistAttributeText": "",
+    "resistText": "",
+    "note": "Target cannot regain hit points until the end of your next turn.",
+    "isSpell": true
+}

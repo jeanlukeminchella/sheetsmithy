@@ -1,0 +1,8 @@
+{
+    "title": "Mace",
+    "addModToDamage": true,
+    "forcedMod": 0,
+    "damageType": "Bludgeoning",
+    "damage": "d6",
+    "mastery": "Sap"
+}

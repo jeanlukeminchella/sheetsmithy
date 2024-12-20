@@ -1,0 +1,16 @@
+{
+    "title": "Sanctuary",
+    "damage": "",
+    "rang": 30,
+    "cost": "1",
+    "duration": "1 min",
+    "conc": false,
+    "modiferIndex": -1,
+    "preSaveNormalText": " Enemies who try to harm target must first pass a WIS",
+    "postSaveNormalText": " save or choose a new target.",
+    "preSaveItalicText": "Spell ends if target harms a foe.",
+    "postSaveItalicText": "",
+    "castTime": "ba",
+    "ritual": false,
+    "isSpell": true
+}

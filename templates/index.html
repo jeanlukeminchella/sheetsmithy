@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sheet Smithy</title>
+    <style>
+
+  /* Basic Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Body Styling */
+  body {
+    background-color: #ffffff;
+    color: #333;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    min-height: 100vh;
+    width:66%;
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+
+    /* Set additional styling options for the columns*/
+    .column {
+    float: left;
+    width: 16%;
+    }
+
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+  /* Container Styling */
+  .container {
+    max-width: 500px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 30px;
+    
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+
+  /* Link Styling */
+  a {
+    color: #a0917e;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Header Styling */
+  h1 {
+    font-size: 1.8em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* Paragraph Styling */
+  p {
+    margin-bottom: 20px;
+    color: #555;
+  }
+
+  /* Form Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Label Styling */
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #444;
+  }
+
+  /* Input, Select, and Button Styling */
+  input[type="text"], select, button {
+    background-color: #efeae5;
+    text-align: center;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #a0917e;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    width: 100%;
+    accent-color: #7c6e5c;
+  }
+
+  /* Focus Styling */
+  input[type="text"]:focus, select:focus {
+    border-color: #978875;
+    outline: none;
+    accent-color: #7c6e5c;
+  }
+
+  /* Focus Styling */
+  input[type="number"]:focus, select:focus {
+    background-color: #efeae5;
+    border-color: #978875;
+    outline: none;
+    accent-color: #978875;
+  }
+
+  /* Button Styling */
+  button {
+    
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+
+  button:hover {
+    background-color: #b0a89f;
+  }
+
+        body {
+            font-family: Helvetica;
+            padding: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+        select, input[type="number"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .startInvisible{
+            display:none;
+        }
+        
+
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1891215579396755"
+    crossorigin="anonymous"></script>
+    <script>
+        function showRacialChoices() {
+            
+            const racialChoicesIds = ["goliathSubrace","humanFeatChoice","tieflingSubrace","size","gnomeSubrace","elfSubrace"]
+            racialChoicesIds.forEach(hide);
+            function hide(value, index, array) {
+                document.getElementById(value).style.display='none'
+            }
+            
+            const race = document.getElementById("race").value
+            
+            if (race=="goliath"){
+                document.getElementById("goliathSubrace").style.display='block'
+            };
+            if (race=="human"){
+                document.getElementById("humanFeatChoice").style.display='block'
+            };
+            if (race=="tiefling"){
+                document.getElementById("tieflingSubrace").style.display='block'
+                document.getElementById("size").style.display='block'
+            };
+            if (race=="aasimar"){
+                document.getElementById("size").style.display='block'
+            };
+            if (race=="gnome"){
+                document.getElementById("gnomeSubrace").style.display='block'
+            };
+            if (race=="elf"){
+                document.getElementById("elfSubrace").style.display='block'
+            };
+        };
+        function showClassChoices() {
+            const racialChoicesIds = ["barbarianSubclass","fighterSubclass","rogueSubclass","rangerSubclass","divineOrder"]
+            racialChoicesIds.forEach(hide);
+            function hide(value, index, array) {
+                document.getElementById(value).style.display='none'
+            }
+            
+            const cls = document.getElementById("classAsString").value
+            if (cls=="Cleric"){
+                document.getElementById("divineOrder").style.display='block'
+            }
+            if (document.getElementById("level").value>2){
+                
+                if (cls=="Barbarian"){
+                    document.getElementById("barbarianSubclass").style.display='block'
+                }
+                if (cls=="Fighter"){
+                    document.getElementById("fighterSubclass").style.display='block'
+                }
+                if (cls=="Rogue"){
+                    document.getElementById("rogueSubclass").style.display='block'
+                }
+                if (cls=="Ranger"){
+                    document.getElementById("rangerSubclass").style.display='block'
+                }
+            }
+        }
+        
+    </script>
+</head>
+<body onload="showRacialChoices();showClassChoices()">
+    <form id="characterForm" method="post">
+        <div>
+
+            Welcome adventurer, to Sheet Smithy! Lets put hammer to steel and forge your first character! Give your new hero a great name below. Use <a href="https://www.fantasynamegenerators.com" target="_blank">this&nbsp;website</a> if you're stuck!
+        </div>
+        <label for="name">Character name:</label>
+        <input type="text" id="name" name="name" value="">
+        <em>Tip: Ask your Game Master if you're not sure what level you are playing at. </em>
+        <label for="level">Level:</label>
+        <select id="level" name="level" onchange="showClassChoices()">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+            <option value=6>6</option>
+        </select>
+        
+        <label for="classAsString">Class:</label>
+        <select id="classAsString" name="classAsString" onchange="showClassChoices()">
+            <option value="">Select a class</option>
+            <option value="Barbarian">Barbarian</option>
+            <option value="Cleric">Cleric</option>
+            <option value="Druid">Druid</option>
+            <option value="Fighter">Fighter</option>
+            <option value="Monk">Monk</option>
+            <option value="Paladin">Paladin</option>
+            <option value="Ranger">Ranger</option>
+            <option value="Rogue">Rogue</option>
+
+        </select>
+        
+        <select id="divineOrder" name="divineOrder" onchange="showClassChoices()">
+            <option value="">Select a Divine Order</option>
+            <option value="thaumaturge">Thaumaturge</option>
+            <option value="protector">Protector</option>
+        </select>
+
+        <select id="barbarianSubclass" name="barbarianSubclass" onchange="showClassChoices()">
+            <option value="">Select a subclass</option>
+            <option value="wildHeart">Wild Heart</option>
+            <option value="wildMagic">Wild Magic</option>
+        </select>
+        
+        <select id="rangerSubclass" name="rangerSubclass" onchange="showClassChoices()">
+            <option value="">Select a subclass</option>
+            <option value="monster slayer">Monster Slayer</option>
+            <option value="hunter">Hunter</option>
+        </select>
+        
+        <select id="fighterSubclass" name="fighterSubclass" onchange="showClassChoices()">
+            <option value="">Select a subclass</option>
+            <option value="champion">Champion</option>
+            <option value="rune">Rune Knight</option>
+        </select>
+        
+        <select id="rogueSubclass" name="rogueSubclass" onchange="showClassChoices()">
+            <option value="">Select a subclass</option>
+            <option value="swash">Swashbuckler</option>
+            <option value="thief">Thief</option>
+        </select>
+        
+        <!-- Race Dropdown -->
+        <label for="race">Race:</label>
+        <select id="race" name="race" onchange="showRacialChoices()">
+            <option value="">Select a race</option>
+            <option value="aasimar">Aasimar</option>
+            <option value="dwarf">Dwarf</option>
+            <option value="elf">Elf</option>
+            <option value="gnome">Gnome</option>
+            <option value="halfling">Halfling</option>
+            <option value="tiefling">Tiefling</option>
+            <option value="orc">Orc</option>
+            <option value="human">Human</option>
+            <option value="goliath">Goliath</option>
+        </select>
+        
+        <select id="size" name="size" class="startInvisible">
+            <option value="">Select a size</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+        </select>
+
+        <select id="goliathSubrace" class="startInvisible" name="goliathSubrace">
+            <option value="">Select a subrace</option>
+            <option value="Storm">Storm</option>
+            <option value="Stone">Stone</option>
+            <option value="Hill">Hill</option>
+            <option value="Frost">Frost</option>
+            <option value="Fire">Fire</option>
+            <option value="Stone">Stone</option>
+        </select>
+
+        <select id="elfSubrace" class="startInvisible" name="elfSubrace">
+            <option value="">Select a subrace</option>
+            <option value="Wood">Wood</option>
+            <option value="High">High</option>
+            <option value="Drow">Drow</option>
+           
+        </select>
+        <select id="gnomeSubrace" class="startInvisible" name="gnomeSubrace">
+            <option value="">Select a subrace</option>
+            <option value="Rock">Rock</option>
+            <option value="Forest">Forest</option>
+        </select>
+        
+        <select id="tieflingSubrace" class="startInvisible" name="tieflingSubrace">
+            <option value="">Select a subrace</option>
+            <option value="Infernal">Infernal</option>
+            <option value="Abyssal">Abyssal</option>
+            <option value="Chthonic">Chthonic</option>
+
+        </select>
+        
+        <select id="humanFeatChoice" class="startInvisible" name="humanFeatChoice">
+            <option value="">Select a Feat</option>
+            <option value="skilled">Skilled</option>
+            <option value="savageAttacker">Savage Attacker</option>
+            <option value="tough">Tough</option>
+            <option value="alert">Alert</option>
+        </select>
+        
+        <!-- Background Dropdown -->
+        <label for="background">Background:</label>
+        <select id="background" name="background">
+            <option value="">Select a background</option>
+            <option value="Farmer">Farmer</option>
+            <option value="Sage">Sage</option>
+            <option value="Criminal">Criminal</option>
+            <option value="Noble">Noble</option>
+            <option value="Merchant">Merchant</option>
+            <option value="Soldier">Soldier</option>
+            <option value="Scribe">Scribe</option>
+            <option value="Wayfarer">Wayfarer</option>
+            <option value="Guard">Guard</option>
+        </select>
+        <br>
+        <button type="submit" value=""  style="background-color: #56524d;">Create my character!</button>
+        <br>
+        These following questions are optional. If this is your first character, just ignore this. 
+        <br>
+        <label for="showScores">
+        <input type="checkbox" id="showScores" name="showScores">Show Scores on Sheet?
+        </label>
+        
+        <label for="showShortRest">
+        <input type="checkbox" id="showShortRest" name="showShortRest" checked>Show what to do after a Short Rest ?
+        </label>
+        
+        <label for="showLongRest">
+        <input type="checkbox" id="showLongRest" name="showLongRest">Show what to do after a Long Rest ?
+        </label>
+        
+        <br>
+        <div id="showScoresButton">
+            <button type="button" style="color: #56524d;" onclick="document.getElementById('abilityScores').style.display='block'; document.getElementById('showScoresButton').style.display='none'; document.getElementById('hideScoresButton').style.display='block'; document.getElementById('pickedScores').value=1">Customise ability scores?</button>
+            
+        
+        </div>
+        <input type="hidden" id="pickedScores" name="pickedScores" value=0>
+        <div id="hideScoresButton" class="startInvisible">
+            <button  type="button" style="color: #56524d;" onclick="document.getElementById('abilityScores').style.display='none'; document.getElementById('showScoresButton').style.display='block'; document.getElementById('hideScoresButton').style.display='none';document.getElementById('pickedScores').value=0">Hide scores</button>
+        </div>    
+        
+        <div id="abilityScores" class="startInvisible">
+            <br>
+            Distribute your ability scores from the Standard Array [15,14,13,12,10,8] or use a Point Buy method to get a different array <a href="https://chicken-dinner.com/5e/5e-point-buy.html" target="_blank">here</a> (ignore Race). Legends even speak of some who roll dice for their scores, but check this with your DM first :) 
+            <div class="row">
+            <div class="column">
+            <label for="Strength">Strength:</label>
+            <input type="number" id="Strength" name="Strength" min="1" max="20" value=10>
+            </div>
+            
+            <div class="column" style="left:15%">
+            <label for="Dexterity">Dexterity:</label>
+            <input type="number" id="Dexterity" name="Dexterity" min="1" max="20" value=10>
+            </div>
+            
+            <div class="column"><label for="constitution">Constitution:</label><input type="number" id="Constitution" name="Constitution" min="1" max="20" value=10>
+            </div>
+            
+            <div class="column">
+            <label for="Intelligence">Intelligence:</label>
+            <input type="number" id="Intelligence" name="Intelligence" min="1" max="20" value=10>
+            </div>
+            
+            <div class="column">
+            <label for="Wisdom">Wisdom:</label>
+            <input type="number" id="Wisdom" name="Wisdom" min="1" max="20" value=10>
+            </div>
+            <div class="column">
+            <label for="Charisma">Charisma:</label>
+            <input type="number" id="Charisma" name="Charisma" min="1" max="20" value=10>
+            </div>
+        </div>
+            
+            <em>Hiding the scores will choose for you from the array [15,14,13,10,10,10]. </em>
+            <br>
+            <br>
+
+            
+        </div>
+
+        <div id="showInventoryButton">
+            <button type="button" style="color: #56524d;" onclick="document.getElementById('considerInventory').value=1;document.getElementById('inventory').style.display='block'; document.getElementById('showInventoryButton').style.display='none'; document.getElementById('hideInventoryButton').style.display='block';">Add to inventory?</button>
+            
+        </div>
+        <input type="hidden" id="considerInventory" name="considerInventory" value=0>
+        <div id="hideInventoryButton" class="startInvisible">
+            <button  type="button" style="color: #56524d;" onclick="document.getElementById('considerInventory').value=0;document.getElementById('inventory').style.display='none'; document.getElementById('showInventoryButton').style.display='block'; document.getElementById('hideInventoryButton').style.display='none';">Hide inventory</button>
+        </div> 
+
+        <div id="inventory" class="startInvisible">
+            We send out our heroes with armor, a minimal set of weapons and 50ft of rope. If you want them to buy more gear before battle, list the items below separating them with a comma. For example: 
+            <em>
+                shield, potion of healing, whip
+            </em>
+
+
+            <label for="shoppingList">Shopping List:</label>
+            <input type="text" id="shoppingList" name="shoppingList" value="">
+
+
+            If you are allowed to add some gear for free, add it below. For example: 
+            <em>
+                psychic blade, plate armor
+            </em>
+            <label for="gearList">Free Gear:</label>
+            <input type="text" id="gearList" name="gearList" value="">    
+        </div>
+
+
+
+        <button type="submit" value=""  style="background-color: #56524d;">Create my character!</button>
+        <div id="showMoreInfoButton">
+            <button type="button" style="color: #56524d;" onclick="document.getElementById('info').style.display='block'; document.getElementById('showMoreInfoButton').style.display='none';">Show more info about Sheet Smithy?</button>
+            
+        </div>
+        <div id="info" class="startInvisible">
+            <button type="button" style="color: #56524d;" onclick="document.getElementById('info').style.display='none'; document.getElementById('showMoreInfoButton').style.display='block';">Show less info about Sheet Smithy?</button>
+            Hi! My name is Luke! I'm a GM and coder from Newcastle (UK) and have built Sheet Smithy to create easy to read, beginner friendly character sheets.
+            For more customisability, checkout other sites like Fast Character, DM's vault or of course, D&D Beyond. 
+            
+            <br><br>Alternatively, if there is a feature you want to see built into Sheet Smithy, <a href="https://www.paypal.com/donate/?hosted_button_id=TDSH2JPEGA4UL" target="_blank"> toss a coin to your coder</a> and ill build it for you :). Thanks!   
+        </div>
+        
+        
+    </form>
+
+
+
+</body>
+</html>

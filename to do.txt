@@ -1,0 +1,15 @@
+
+ - action entries could just be "actions" but this would take a lot of renaming!
+
+  - validate string, string list
+  - dictionary even? thats done in character creation choices. get rid of the separate file then :)
+    - consolidate item class, ccc function file ect
+  
+  - handle spell commands that dont match, let users input?
+  
+   - barbarain dodge - advantage on dex saves?
+
+   - more backgroundds obviously
+   - sort out the ranger feats
+
+    - cause an issue when we have 2h weapon and a shield

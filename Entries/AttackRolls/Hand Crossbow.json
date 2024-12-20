@@ -1,0 +1,9 @@
+{
+    "title": "Hand Crossbow",
+    "addModToDamage": true,
+    "forcedMod": 1,
+    "damageType": "Piercing",
+    "damage": "d6",
+    "rang": 30,
+    "mastery": "Vex"
+}

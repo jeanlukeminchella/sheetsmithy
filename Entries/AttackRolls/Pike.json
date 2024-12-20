@@ -1,0 +1,9 @@
+{
+    "title": "Pike",
+    "addModToDamage": true,
+    "forcedMod": 0,
+    "damageType": "Piercing",
+    "damage": "d10",
+    "reach": true,
+    "mastery": "Push"
+}

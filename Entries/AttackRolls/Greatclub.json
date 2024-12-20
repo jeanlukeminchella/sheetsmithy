@@ -1,0 +1,8 @@
+{
+    "title": "Greatclub",
+    "addModToDamage": true,
+    "forcedMod": 0,
+    "damageType": "Bludgeoning",
+    "damage": "d8",
+    "mastery": "Push"
+}

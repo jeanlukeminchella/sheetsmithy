@@ -1,0 +1,8 @@
+{
+    "title": "Morningstar",
+    "addModToDamage": true,
+    "forcedMod": 0,
+    "damageType": "Piercing",
+    "damage": "d8",
+    "mastery": "Sap"
+}

@@ -1,0 +1,10 @@
+{
+    "title": "Whip",
+    "addModToDamage": true,
+    "forcedMod": 0,
+    "damageType": "Slashing",
+    "damage": "d4",
+    "finesse": true,
+    "reach": true,
+    "mastery": "Slow"
+}

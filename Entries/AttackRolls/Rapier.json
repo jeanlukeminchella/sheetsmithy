@@ -1,0 +1,9 @@
+{
+    "title": "Rapier",
+    "addModToDamage": true,
+    "forcedMod": 0,
+    "damageType": "Piercing",
+    "damage": "d8",
+    "finesse": true,
+    "mastery": "Vex"
+}

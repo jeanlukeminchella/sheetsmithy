@@ -1,0 +1,17 @@
+{
+    "title": "Sacred Flame",
+    "damage": "d8",
+    "rang": 60,
+    "cost": "",
+    "duration": "",
+    "conc": false,
+    "addModToDamage": false,
+    "damageType": null,
+    "forcedMod": -1,
+    "cantripScaling": true,
+    "saveNotAttack": true,
+    "resistAttributeText": "DEX",
+    "resistText": " to dodge",
+    "note": "Ignores Cover.",
+    "isSpell":true
+}

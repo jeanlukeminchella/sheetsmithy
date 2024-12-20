@@ -1,0 +1,8 @@
+{
+    "name": "Scale Mail",
+    "base": 14,
+    "addDex": true,
+    "stealthDisadvantage": true,
+    "category": "Medium",
+    "maxTwo": true
+}

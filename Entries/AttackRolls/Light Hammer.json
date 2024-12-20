@@ -1,0 +1,9 @@
+{
+    "title": "Light Hammer",
+    "addModToDamage": true,
+    "forcedMod": 0,
+    "damageType": "Bludgeoning",
+    "damage": "d4",
+    "thrown": 20,
+    "mastery": "Nick"
+}

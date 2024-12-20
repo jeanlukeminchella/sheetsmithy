@@ -1,0 +1,8 @@
+{
+    "name": "Plate",
+    "base": 18,
+    "addDex": false,
+    "stealthDisadvantage": true,
+    "category": "Heavy",
+    "maxTwo": false
+}

@@ -1,0 +1,9 @@
+{
+    "title": "Pistol",
+    "addModToDamage": true,
+    "forcedMod": 1,
+    "damageType": "Piercing",
+    "damage": "d10",
+    "rang": 30,
+    "mastery": "Vex"
+}

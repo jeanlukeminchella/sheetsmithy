@@ -1,0 +1,14 @@
+{
+    "title": "Cure Wounds",
+    "damage": "",
+    "rang": 0,
+    "cost": "1",
+    "duration": "",
+    "conc": false,
+    "preHealText": "Heal a target 2d8",
+    "postHealText": " hp",
+    "modiferIndex": -1,
+    "castTime": "a",
+    "ritual": false,
+    "isSpell": true
+}

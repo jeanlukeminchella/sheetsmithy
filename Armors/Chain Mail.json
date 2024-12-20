@@ -1,0 +1,8 @@
+{
+    "name": "Chain Mail",
+    "base": 16,
+    "addDex": false,
+    "stealthDisadvantage": true,
+    "category": "Heavy",
+    "maxTwo": false
+}

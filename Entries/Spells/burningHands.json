@@ -1,0 +1,8 @@
+{
+    "title": "Burning Hands",
+    "cost": "1",
+    "preSaveNormalText": "Unleash a 15ft cone of 2d6 fire damage. ",
+    "preSaveItalicText": "DEX",
+    "postSaveItalicText": " to half damage.",
+    "isSpell": true
+}

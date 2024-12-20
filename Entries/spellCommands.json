@@ -1,0 +1,630 @@
+{
+    "Focused Aim": {
+        "type": "spell",
+        "code": "focusedAim"
+    },
+    "Command": {
+        "type": "spell",
+        "code": "command"
+    },
+    "Bane": {
+        "type": "spell",
+        "code": "bane"
+    },
+    "Moonbeam": {
+        "type": "spell",
+        "code": "moonbeam"
+    },
+    "Hunter's Mark": {
+        "type": "spell",
+        "code": "huntersMark"
+    },
+    "Hold Person": {
+        "type": "spell",
+        "code": "holdPerson"
+    },
+    "Protection from Evil and Good": {
+        "type": "spell",
+        "code": "protectionFromEvilAndGood"
+    },
+    "Spike Growth": {
+        "type": "spell",
+        "code": "spikeGrowth"
+    },
+    "Revivify": {
+        "type": "spell",
+        "code": "revivify"
+    },
+    "Mass Healing Word": {
+        "type": "heal",
+        "code": "massHealingWord"
+    },
+    "Hellish Rebuke ": {
+        "type": "spell",
+        "code": "tieflingRebuke"
+    },
+    "Throw 15ft": {
+        "type": "spell",
+        "code": "throwMonk"
+    },
+    "Speak With Animals": {
+        "type": "spell",
+        "code": "swAnimals"
+    },
+    "Guidance": {
+        "type": "spell",
+        "code": "guidance"
+    },
+    "Lay on Hands": {
+        "type": "spell",
+        "code": "layHands"
+    },
+    "Shield of Faith": {
+        "type": "spell",
+        "code": "shieldOfFaith"
+    },
+    "Misty Step": {
+        "type": "spell",
+        "code": "mistyStep"
+    },
+    "Thunderous Smite": {
+        "type": "spell",
+        "code": "thunderousSmite"
+    },
+    "Bless": {
+        "type": "spell",
+        "code": "bless"
+    },
+    "Dispel Magic": {
+        "type": "spell",
+        "code": "dispelMagic"
+    },
+    "Spirit Shroud": {
+        "type": "spell",
+        "code": "spiritShroud"
+    },
+    "Divine Sense": {
+        "type": "spell",
+        "code": "divineSense"
+    },
+    "Stun": {
+        "type": "spell",
+        "code": "stunningStrike"
+    },
+    "Ensnaring Strike": {
+        "type": "spell",
+        "code": "ensnaringStrike"
+    },
+    "Healing Word": {
+        "type": "heal",
+        "code": "healingWord"
+    },
+    "Zone of Truth": {
+        "type": "spell",
+        "code": "zoneOfTruth"
+    },
+    "Burning Hands": {
+        "type": "spell",
+        "code": "Burning Hands"
+    },
+    "Entangle": {
+        "type": "spell",
+        "code": "entangle"
+    },
+    "Knock Prone": {
+        "type": "spell",
+        "code": "knockProneMonk"
+    },
+    "": {
+        "type": "attackRoll",
+        "code": "blank"
+    },
+    "Herosim": {
+        "type": "spell",
+        "code": "heroism"
+    },
+    "Sanctuary": {
+        "type": "spell",
+        "code": "sanctuary"
+    },
+    "Wrathful Smite": {
+        "type": "spell",
+        "code": "wrathfulSmite"
+    },
+    "Lesser Restoration": {
+        "type": "spell",
+        "code": "lesserRestoration"
+    },
+    "Detect Magic": {
+        "type": "spell",
+        "code": "detectMagic"
+    },
+    "Thaumaturgy": {
+        "type": "spell",
+        "code": "thaumaturgy"
+    },
+    "Aid": {
+        "type": "spell",
+        "code": "aid"
+    },
+    "Necrotic Shroud": {
+        "type": "spell",
+        "code": "necroticShroud"
+    },
+    "Create Minor Illusion": {
+        "type": "spell",
+        "code": "minorIllusion"
+    },
+    "Mending": {
+        "type": "spell",
+        "code": "mending"
+    },
+    "Prestidigitation": {
+        "type": "spell",
+        "code": "prestidigitation"
+    },
+    "Grapple": {
+        "type": "spell",
+        "code": "grapple"
+    },
+    "Shove": {
+        "type": "spell",
+        "code": "shove"
+    },
+    "Potion of Healing": {
+        "type": "spell",
+        "code": "potionOfHealing"
+    },
+    "False Life": {
+        "type": "spell",
+        "code": "False Life"
+    },
+    "Hellish Rebuke": {
+        "type": "spell",
+        "code": "Hellish Rebuke"
+    },
+    "Darkness": {
+        "type": "spell",
+        "code": "Darkness"
+    },
+    "Ray of Enfeeblement": {
+        "type": "spell",
+        "code": "Ray of Enfeeblement"
+    },
+    "Faerie Fire": {
+        "type": "spell",
+        "code": "Faerie Fire"
+    },
+    "Longstrider": {
+        "type": "spell",
+        "code": "Longstrider"
+    },
+    "Pass without Trace": {
+        "type": "spell",
+        "code": "Pass without Trace"
+    },
+    "Druidcraft": {
+        "type": "spell",
+        "code": "Druidcraft"
+    },
+    "Dancing Lights": {
+        "type": "spell",
+        "code": "Dancing Lights"
+    },
+    "Goodberry": {
+        "type": "spell",
+        "code": "Goodberry"
+    },
+    "Thunderwave": {
+        "type": "spell",
+        "code": "Thunderwave"
+    },
+    "Assume Wild Shape (Wild Shape)": {
+        "type": "spell",
+        "code": "Assume Wild Shape (Wild Shape)"
+    },
+    "Jump": {
+        "type": "spell",
+        "code": "Jump"
+    },
+    "Blur": {
+        "type": "spell",
+        "code": "Blur"
+    },
+    "Fireball": {
+        "type": "spell",
+        "code": "Fireball"
+    },
+    "Barkskin": {
+        "type": "spell",
+        "code": "Barkskin"
+    },
+    "Sacred Flame": {
+        "type": "attackRoll",
+        "code": "sacredFlame"
+    },
+    "Spiritual Weapon": {
+        "type": "attackRoll",
+        "code": "spiritualWeapon"
+    },
+    "Punch": {
+        "type": "attackRoll",
+        "code": "punch"
+    },
+    "Guiding Bolt": {
+        "type": "attackRoll",
+        "code": "guidingBolt"
+    },
+    "Wooden Staff": {
+        "type": "attackRoll",
+        "code": "Wooden Staff"
+    },
+    "Whip": {
+        "type": "attackRoll",
+        "code": "Whip"
+    },
+    "Warhammer": {
+        "type": "attackRoll",
+        "code": "Warhammer"
+    },
+    "War Pick": {
+        "type": "attackRoll",
+        "code": "War Pick"
+    },
+    "Trident": {
+        "type": "attackRoll",
+        "code": "Trident"
+    },
+    "Staff": {
+        "type": "attackRoll",
+        "code": "Staff"
+    },
+    "Spear": {
+        "type": "attackRoll",
+        "code": "Spear"
+    },
+    "Sling": {
+        "type": "attackRoll",
+        "code": "Sling"
+    },
+    "Sickle": {
+        "type": "attackRoll",
+        "code": "Sickle"
+    },
+    "Shortsword": {
+        "type": "attackRoll",
+        "code": "Shortsword"
+    },
+    "Shortbow": {
+        "type": "attackRoll",
+        "code": "Shortbow"
+    },
+    "Scimitar": {
+        "type": "attackRoll",
+        "code": "Scimitar"
+    },
+    "Rapier": {
+        "type": "attackRoll",
+        "code": "Rapier"
+    },
+    "Quarterstaff": {
+        "type": "attackRoll",
+        "code": "Quarterstaff"
+    },
+    "Psychic Blade": {
+        "type": "attackRoll",
+        "code": "Psychic Blade"
+    },
+    "Pistol": {
+        "type": "attackRoll",
+        "code": "Pistol"
+    },
+    "Pike": {
+        "type": "attackRoll",
+        "code": "Pike"
+    },
+    "Musket": {
+        "type": "attackRoll",
+        "code": "Musket"
+    },
+    "Morningstar": {
+        "type": "attackRoll",
+        "code": "Morningstar"
+    },
+    "Maul": {
+        "type": "attackRoll",
+        "code": "Maul"
+    },
+    "Mace": {
+        "type": "attackRoll",
+        "code": "Mace"
+    },
+    "Longsword": {
+        "type": "attackRoll",
+        "code": "Longsword"
+    },
+    "Longbow": {
+        "type": "attackRoll",
+        "code": "Longbow"
+    },
+    "Light Hammer": {
+        "type": "attackRoll",
+        "code": "Light Hammer"
+    },
+    "Light Crossbow": {
+        "type": "attackRoll",
+        "code": "Light Crossbow"
+    },
+    "Lance": {
+        "type": "attackRoll",
+        "code": "Lance"
+    },
+    "Javelin": {
+        "type": "attackRoll",
+        "code": "Javelin"
+    },
+    "Heavy Crossbow": {
+        "type": "attackRoll",
+        "code": "Heavy Crossbow"
+    },
+    "Handaxe": {
+        "type": "attackRoll",
+        "code": "Handaxe"
+    },
+    "Hand Crossbow": {
+        "type": "attackRoll",
+        "code": "Hand Crossbow"
+    },
+    "Halberd": {
+        "type": "attackRoll",
+        "code": "Halberd"
+    },
+    "Greatsword": {
+        "type": "attackRoll",
+        "code": "Greatsword"
+    },
+    "Greatclub": {
+        "type": "attackRoll",
+        "code": "Greatclub"
+    },
+    "Greataxe": {
+        "type": "attackRoll",
+        "code": "Greataxe"
+    },
+    "Glaive": {
+        "type": "attackRoll",
+        "code": "Glaive"
+    },
+    "Flail": {
+        "type": "attackRoll",
+        "code": "Flail"
+    },
+    "Dart": {
+        "type": "attackRoll",
+        "code": "Dart"
+    },
+    "Dagger": {
+        "type": "attackRoll",
+        "code": "Dagger"
+    },
+    "Club": {
+        "type": "attackRoll",
+        "code": "Club"
+    },
+    "Blowgun": {
+        "type": "attackRoll",
+        "code": "Blowgun"
+    },
+    "Battleaxe": {
+        "type": "attackRoll",
+        "code": "Battleaxe"
+    },
+    "Shortsword (Offhand)": {
+        "type": "attackRoll",
+        "code": "Shortsword (offhand)"
+    },
+    "Fire Bolt": {
+        "type": "attackRoll",
+        "code": "Fire Bolt"
+    },
+    "Chill Touch": {
+        "type": "attackRoll",
+        "code": "Chill Touch"
+    },
+    "Poison Spray": {
+        "type": "attackRoll",
+        "code": "Poison Spray"
+    },
+    "Ray of Sickness": {
+        "type": "attackRoll",
+        "code": "Ray of Sickness"
+    },
+    "Toll the Dead": {
+        "type": "attackRoll",
+        "code": "Toll the Dead"
+    },
+    "Produce Flame": {
+        "type": "attackRoll",
+        "code": "Produce Flame"
+    },
+    "Create Bonfire": {
+        "type": "attackRoll",
+        "code": "Create Bonfire"
+    },
+    "Cure Wounds": {
+        "type": "heal",
+        "code": "cureWounds"
+    },
+    "blank": {
+        "type": "text",
+        "code": "blank"
+    },
+    "stow": {
+        "type": "text",
+        "code": "stow"
+    },
+    "offhandPunchLevel1": {
+        "type": "text",
+        "code": "offhandPunchLevel1"
+    },
+    "wildHeartAspects": {
+        "type": "text",
+        "code": "wildHeartAspects"
+    },
+    "steadyAim": {
+        "type": "text",
+        "code": "steadyAim"
+    },
+    "regainSpellSlots": {
+        "type": "text",
+        "code": "regainSpellSlots"
+    },
+    "bearWildHeart": {
+        "type": "text",
+        "code": "bearWildHeart"
+    },
+    "wolfWildHeart": {
+        "type": "text",
+        "code": "wolfWildHeart"
+    },
+    "eagleWildHeart": {
+        "type": "text",
+        "code": "eagleWildHeart"
+    },
+    "offhandPunch": {
+        "type": "text",
+        "code": "offhandPunch"
+    },
+    "Dash": {
+        "type": "text",
+        "code": "Dash"
+    },
+    "Hide": {
+        "type": "text",
+        "code": "Hide"
+    },
+    "Dodge": {
+        "type": "text",
+        "code": "Dodge"
+    },
+    "Ready": {
+        "type": "text",
+        "code": "Ready"
+    },
+    "Disengage": {
+        "type": "text",
+        "code": "Disengage"
+    },
+    "trance": {
+        "type": "text",
+        "code": "trance"
+    },
+    "oppAttack": {
+        "type": "text",
+        "code": "oppAttack"
+    },
+    "channelDiv": {
+        "type": "text",
+        "code": "channelDiv"
+    },
+    "senseMagicItem": {
+        "type": "text",
+        "code": "senseMagicItem"
+    },
+    "Leave Wild Shape": {
+        "type": "text",
+        "code": "Leave Wild Shape"
+    },
+    "Riding Horse": {
+        "type": "text",
+        "code": "Riding Horse"
+    },
+    "Spider": {
+        "type": "text",
+        "code": "Spider"
+    },
+    "Wolf": {
+        "type": "text",
+        "code": "Wolf"
+    },
+    "Panther": {
+        "type": "text",
+        "code": "Panther"
+    },
+    "reckless": {
+        "type": "text",
+        "code": "reckless"
+    },
+    "extraAttackHighlighted": {
+        "type": "text",
+        "code": "extraAttackHighlighted"
+    },
+    "actionSurge": {
+        "type": "text",
+        "code": "actionSurge"
+    },
+    "conc": {
+        "type": "text",
+        "code": "conc"
+    },
+    "uncannyDodge": {
+        "type": "text",
+        "code": "uncannyDodge"
+    },
+    "useObject": {
+        "type": "text",
+        "code": "useObject"
+    },
+    "sleightOfHandThief": {
+        "type": "text",
+        "code": "sleightOfHandThief"
+    },
+    "ritual": {
+        "type": "text",
+        "code": "ritual"
+    },
+    "magicalUnarmedStrike": {
+        "type": "text",
+        "code": "magicalUnarmedStrike"
+    },
+    "lucky": {
+        "type": "text",
+        "code": "lucky"
+    },
+    "haflingNimbleness": {
+        "type": "text",
+        "code": "haflingNimbleness"
+    },
+    "resPoison": {
+        "type": "text",
+        "code": "resPoison"
+    },
+    "resFire": {
+        "type": "text",
+        "code": "resFire"
+    },
+    "savageAttacks": {
+        "type": "text",
+        "code": "savageAttacks"
+    },
+    "naturallyStealthy": {
+        "type": "text",
+        "code": "naturallyStealthy"
+    },
+    "Wild Resurgence": {
+        "type": "text",
+        "code": "Wild Resurgence"
+    },
+    "Wild Resurgence 2": {
+        "type": "text",
+        "code": "Wild Resurgence 2"
+    },
+    "Wild Companion": {
+        "type": "text",
+        "code": "Wild Companion"
+    },
+    "relentlessEndurance": {
+        "type": "text",
+        "code": "relentlessEndurance"
+    }
+}

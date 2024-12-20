@@ -1,0 +1,16 @@
+{
+    "title": "Ensnaring Strike",
+    "damage": "",
+    "rang": 0,
+    "cost": "1",
+    "duration": "1 min",
+    "conc": true,
+    "modiferIndex": -1,
+    "preSaveNormalText": " The next target you hit with a weapon is restrained by vines. STR",
+    "postSaveNormalText": " to resist. A creature can use an action to break the vines (Strength check).",
+    "preSaveItalicText": " While restrained, targets take d6 damage at the start of their turns. Large targets have advantage on their saves. ",
+    "postSaveItalicText": "",
+    "castTime": "ba",
+    "ritual": false,
+    "isSpell": true
+}

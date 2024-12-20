@@ -1,0 +1,9 @@
+{
+    "title": "Shortsword",
+    "addModToDamage": true,
+    "forcedMod": 0,
+    "damageType": "Piercing",
+    "damage": "d6",
+    "finesse": true,
+    "mastery": "Vex"
+}

@@ -1,0 +1,18 @@
+{
+    "title": "Spiritual Weapon",
+    "damage": "d8",
+    "rang": 60,
+    "cost": "2",
+    "duration": "1 min",
+    "conc": true,
+    "addModToDamage": true,
+    "damageType": null,
+    "forcedMod": -1,
+    "cantripScaling": false,
+    "saveNotAttack": false,
+    "resistAttributeText": "",
+    "resistText": "",
+    "castTime": "ba",
+    "note": "Can be commanded to move 20ft and attack again with a Bonus Action.",
+    "isSpell": true
+}

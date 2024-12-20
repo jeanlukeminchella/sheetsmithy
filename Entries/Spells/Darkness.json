@@ -1,0 +1,15 @@
+{
+    "title": "Darkness",
+    "damage": "",
+    "rang": 60,
+    "cost": "2",
+    "duration": "",
+    "conc": true,
+    "modiferIndex": -1,
+    "preSaveNormalText": "Magical darkness spreads from a point or object.",
+    "postSaveNormalText": "",
+    "preSaveItalicText": "Dispels light from weaker spells.",
+    "postSaveItalicText": "",
+    "castTime": "a",
+    "ritual": false
+}

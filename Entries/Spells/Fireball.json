@@ -1,0 +1,14 @@
+{
+    "title": "Fireball",
+    "rang": 150,
+    "cost": "3",
+    "duration": "",
+    "conc": false,
+    "modiferIndex": -1,
+    "preSaveNormalText": "Unleash a 40ft ball of 8d6 fire damage. DEX",
+    "postSaveNormalText": " to half damage.",
+    "preSaveItalicText": "",
+    "postSaveItalicText": "",
+    "castTime": "a",
+    "ritual": false
+}

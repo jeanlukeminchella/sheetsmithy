@@ -1,0 +1,8 @@
+{
+    "name": "Chain Shirt",
+    "base": 13,
+    "addDex": true,
+    "stealthDisadvantage": false,
+    "category": "Medium",
+    "maxTwo": true
+}

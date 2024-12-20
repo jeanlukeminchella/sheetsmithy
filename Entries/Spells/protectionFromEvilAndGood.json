@@ -1,0 +1,16 @@
+{
+    "title": "Protection from Evil and Good",
+    "damage": "",
+    "rang": 0,
+    "cost": "1",
+    "duration": "10 min",
+    "conc": true,
+    "modiferIndex": -1,
+    "preSaveNormalText": "Aberrations, celestials, elementals, fey, fiends, and undead attack target with disadvantage, and cannot charm, frighten, or possess target.",
+    "postSaveNormalText": "",
+    "preSaveItalicText": "If the target is already under an affect, they have adv. on new saving throws against it. Consumes Holy Water.",
+    "postSaveItalicText": "",
+    "castTime": "a",
+    "ritual": false,
+    "isSpell": true
+}

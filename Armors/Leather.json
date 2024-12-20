@@ -1,0 +1,8 @@
+{
+    "name": "Leather",
+    "base": 11,
+    "addDex": true,
+    "stealthDisadvantage": false,
+    "category": "Light",
+    "maxTwo": false
+}

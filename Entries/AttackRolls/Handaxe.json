@@ -1,0 +1,9 @@
+{
+    "title": "Handaxe",
+    "addModToDamage": true,
+    "forcedMod": 0,
+    "damageType": "Slashing",
+    "damage": "d6",
+    "thrown": 20,
+    "mastery": "Vex"
+}

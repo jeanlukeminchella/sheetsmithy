@@ -1,0 +1,15 @@
+{
+    "title": "Druidcraft",
+    "damage": "",
+    "rang": 30,
+    "cost": "",
+    "duration": "",
+    "conc": false,
+    "modiferIndex": -1,
+    "preSaveNormalText": "Whisper to the spirits of nature, and fortel the weather, light a fire, make a flower bloom or cause some other minor effect.",
+    "postSaveNormalText": "",
+    "preSaveItalicText": "",
+    "postSaveItalicText": "",
+    "castTime": "a",
+    "ritual": false
+}

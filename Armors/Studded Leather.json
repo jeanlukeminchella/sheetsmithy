@@ -1,0 +1,8 @@
+{
+    "name": "Studded Leather",
+    "base": 12,
+    "addDex": true,
+    "stealthDisadvantage": false,
+    "category": "Light",
+    "maxTwo": false
+}

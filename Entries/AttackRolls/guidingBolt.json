@@ -1,0 +1,17 @@
+{
+    "title": "Guiding Bolt",
+    "damage": "3d8",
+    "rang": 120,
+    "cost": "1",
+    "duration": "",
+    "conc": false,
+    "addModToDamage": false,
+    "damageType": null,
+    "forcedMod": -1,
+    "cantripScaling": false,
+    "saveNotAttack": false,
+    "resistAttributeText": "",
+    "resistText": "",
+    "note": " Grants adv. to the next attack on a hit.",
+    "isSpell": true
+}

@@ -1,0 +1,15 @@
+{
+    "title": "Ray of Enfeeblement",
+    "damage": "",
+    "rang": 60,
+    "cost": "2",
+    "duration": "1 min",
+    "conc": true,
+    "modiferIndex": -1,
+    "preSaveNormalText": "Target reduces their damage rolls by d8 and has disadv. on STR based d20 rolls. CON",
+    "postSaveNormalText": " to resist.",
+    "preSaveItalicText": " If target resists, they still have disadv. on their next attack roll. Target repeats save at the end of its turns.  ",
+    "postSaveItalicText": "",
+    "castTime": "a",
+    "ritual": false
+}

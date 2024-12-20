@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+table1
+<ul>
+{% for result in results %}
+<li>{{result.name}},{{result.height}}</li>
+{% endfor %}
+</ul>
+<a href="insert">insert</a>,&nbsp
+<a href="update">update</a>,&nbsp
+<a href="delete">delete</a>
+{% endblock %}

@@ -1,0 +1,8 @@
+{
+    "name": "Splint",
+    "base": 17,
+    "addDex": false,
+    "stealthDisadvantage": true,
+    "category": "Heavy",
+    "maxTwo": false
+}

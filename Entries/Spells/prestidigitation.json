@@ -1,0 +1,16 @@
+{
+    "title": "Prestidigitation",
+    "damage": "",
+    "rang": 10,
+    "cost": "",
+    "duration": "",
+    "conc": false,
+    "modiferIndex": -1,
+    "preSaveNormalText": "Create a minor, harmless magical effect, like leaving a mark, cleaning a surface or flavouring food. You can also briefly summon a trinket or a shower of sparks.",
+    "postSaveNormalText": "",
+    "preSaveItalicText": "",
+    "postSaveItalicText": "",
+    "castTime": "a",
+    "ritual": false,
+    "isSpell": true
+}

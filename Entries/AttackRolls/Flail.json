@@ -1,0 +1,8 @@
+{
+    "title": "Flail",
+    "addModToDamage": true,
+    "forcedMod": 0,
+    "damageType": "Bludgeoning",
+    "damage": "d8",
+    "mastery": "Sap"
+}

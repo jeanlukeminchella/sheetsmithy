@@ -1,0 +1,8 @@
+{
+    "name": "Ring Mail",
+    "base": 14,
+    "addDex": false,
+    "stealthDisadvantage": true,
+    "category": "Heavy",
+    "maxTwo": false
+}

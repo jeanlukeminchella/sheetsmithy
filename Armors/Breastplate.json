@@ -1,0 +1,8 @@
+{
+    "name": "Breastplate",
+    "base": 14,
+    "addDex": true,
+    "stealthDisadvantage": false,
+    "category": "Medium",
+    "maxTwo": true
+}
