@@ -1,7 +1,7 @@
 import Class as c
 import featFunctions as feats
 
-defaultRageTexts = ["• You take half physical damage.","• You may enter Rage as a Bonus Action.","• You have advantage on Athletics checks and Strength saving throws.","• You may add 2 to weapon damage.","• Rages last one minute, but end early if you fall unconcious. You must also attack or take damage each round."]
+defaultRageTexts = ["• You take half physical damage.","• You may enter Rage as a Bonus Action.","• You have advantage on Athletics checks and Strength saving throws.","• You may add 2 to weapon damage.","• Rages last one minute, but end early if you fall unconcious. You must also attack or spend a Bonus Action to extend your rage each round."]
 
 class Barbarian(c.Sheet):
     def __init__(self, inp):
@@ -39,7 +39,8 @@ class Barbarian(c.Sheet):
         self.addHighlightedEntry("Grapple")
         
         rageTitle = "RAGE - "+"O "*getRageCount(level)
-        
+        self.longRestEntries.append(c.e.Entry("Regain all your uses of <strong>RAGE</strong>"))
+        self.shortRestEntries.append(c.e.Entry("Regain one use of <strong>RAGE</strong>"))
         
         subclassChoice = None
         
@@ -67,7 +68,23 @@ class Barbarian(c.Sheet):
                     bolsterTitle = "<strong>Bolster.</strong> Add a d3 to target's ability checks and attack for 10 minutes, or have them regain a level d3 spell slot. O"+" O"*(self.profBonus-1)
                     bolsterEntry = c.e.Entry(bolsterTitle)
                     self.actionEntries.append(bolsterEntry)
-       
+
+                wildMagicEntries = []
+
+                prefix = "Wild Magic "
+                for i in range(1,9):
+                    effect = c.e.SpellEntry(prefix+str(i))
+                    effect.title=str(i)
+                    effect.forcedMod=2
+                    wildMagicEntries.append(effect)
+                    
+                wildMagicEntries.append(c.e.Entry("<em>* You may repeat this with another Bonus Action during Rage.</em>"))
+
+                
+                
+                wildMagicBlock = c.e.Block(wildMagicEntries,"WILD MAGIC EFFECTS")
+                self.rightColumnBlocks.append(wildMagicBlock)
+
                 
             elif self.subclass  == "wildHeart" or not chosen:
                 self.subclass = "wildHeart"

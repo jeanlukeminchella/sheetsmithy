@@ -1,0 +1,14 @@
+{
+    "title": "Wild Magic 1",
+    "rang": 0,
+    "cost": "",
+    "duration": "",
+    "conc": false,
+    "modiferIndex": -1,
+    "preSaveNormalText": "Enemies within 30ft take d12 necrotic damage CON",
+    "postSaveNormalText": " to resist.",
+    "preSaveItalicText": "You also gain d12 temporary hit points.",
+    "postSaveItalicText": "",
+    "castTime": "a",
+    "ritual": false
+}

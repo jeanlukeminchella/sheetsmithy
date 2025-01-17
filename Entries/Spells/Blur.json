@@ -6,9 +6,9 @@
     "duration": "1 min",
     "conc": true,
     "modiferIndex": -1,
-    "preSaveNormalText": "Attacks against you have disadvantage.",
+    "preSaveNormalText": "Attacks against you have disadv.",
     "postSaveNormalText": "",
-    "preSaveItalicText": "Does not affect attackers with Truesight or Blindsight.",
+    "preSaveItalicText": "Ineffective vs. Truesight or Blindsight.",
     "postSaveItalicText": "",
     "castTime": "a",
     "ritual": false

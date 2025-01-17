@@ -423,5 +423,17 @@ def getEntryWithSpellCommand(inp):
     elif commandType=="attackRoll":
         return AttackRollEntry(commandCode)
 
+
+def getHTML(e):
+    if type(e)==str:
+        return e
+    elif type(e)!=dict:
+        try:
+            return str(e)
+        except:
+            return ""
+    # ok so type is dictionary
+
+    keys = list(e.keys())
     
    

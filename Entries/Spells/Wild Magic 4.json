@@ -1,0 +1,14 @@
+{
+    "title": "Wild Magic 4",
+    "rang": 0,
+    "cost": "",
+    "duration": "",
+    "conc": false,
+    "modiferIndex": -1,
+    "preSaveNormalText": "During rage, one of your weapons gains the Light and Thrown (20ft/60ft) properties, and returns to your hand if thrown.",
+    "postSaveNormalText": "",
+    "preSaveItalicText": "",
+    "postSaveItalicText": "",
+    "castTime": "a",
+    "ritual": false
+}

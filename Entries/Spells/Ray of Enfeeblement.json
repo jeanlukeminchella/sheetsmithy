@@ -6,9 +6,9 @@
     "duration": "1 min",
     "conc": true,
     "modiferIndex": -1,
-    "preSaveNormalText": "Target reduces their damage rolls by d8 and has disadv. on STR based d20 rolls. CON",
-    "postSaveNormalText": " to resist.",
-    "preSaveItalicText": " If target resists, they still have disadv. on their next attack roll. Target repeats save at the end of its turns.  ",
+    "preSaveNormalText": "Target has -d8 on damage rolls and disadv. on STR based d20 rolls. CON",
+    "postSaveNormalText": " to only have disadv. on next attack roll.",
+    "preSaveItalicText": "Target repeats save at the end of its turns.  ",
     "postSaveItalicText": "",
     "castTime": "a",
     "ritual": false

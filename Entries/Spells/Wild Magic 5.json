@@ -1,0 +1,14 @@
+{
+    "title": "Wild Magic 5",
+    "rang": 0,
+    "cost": "",
+    "duration": "",
+    "conc": false,
+    "modiferIndex": -1,
+    "preSaveNormalText": "During rage, when you are hit with an attack, the attacker takes d6 force damage.",
+    "postSaveNormalText": "",
+    "preSaveItalicText": "",
+    "postSaveItalicText": "",
+    "castTime": "a",
+    "ritual": false
+}

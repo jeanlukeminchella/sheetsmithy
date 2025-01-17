@@ -191,6 +191,6 @@ class Paladin(c.Sheet):
         
         #lets make the spellcasting block
         self.spellsKnown = c.gf.getNumberFromRange(level, [0,1,2,3,4])
-        self.makeSpellcastingBlock()
+
         
         

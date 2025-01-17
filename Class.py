@@ -68,8 +68,6 @@ class Sheet:
         self.preferredLanguages = []
         self.numberOfLanguages = 3
         
-        
-        
         # class specific booleans
         self.ritualCaster = False
         self.proficientWithShields = False
@@ -455,7 +453,8 @@ class Sheet:
         
         # bit of compiling to do at the start
         
-        
+        self.makeSpellcastingBlock()
+
         if self.showUseObject:
             self.actionEntries.append(e.TextEntry("useObject"))
         
@@ -497,9 +496,9 @@ class Sheet:
         while len(self.languages)<self.numberOfLanguages:
             
             if len(userLanguages)>0:
-                self.languages.append(userLanguages.pop().title())
+                self.languages.append(userLanguages.pop())
             elif len(self.preferredLanguages)>0:
-                self.languages.append(self.preferredLanguages.pop().title())
+                self.languages.append(self.preferredLanguages.pop())
             else:
                 l = self.pickRandomLanguage()
                 if l != None:

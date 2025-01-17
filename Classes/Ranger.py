@@ -1,6 +1,8 @@
 import Class as c
 import featFunctions as feats
 
+import globalFunctions as gf
+
 
 class Ranger(c.Sheet):
     def __init__(self, inp):
@@ -62,9 +64,10 @@ class Ranger(c.Sheet):
             }
         
         self.spellSlotResourceTuples=resourceDictionary[self.level]
-        
+        self.spellsKnown = gf.getNumberFromRange(self.level,[0,0,1,2,3,4])
+        self.spellcasting = True
+
         if level>1:
-            self.spellcasting = True
             fightStyle = None
             if "l2-fightStyle" in self.choices.keys():
                 fightStyle = self.choices["l2-fightStyle"]
@@ -125,6 +128,7 @@ class Ranger(c.Sheet):
         if level>5:
             self.speed+=5
             self.charInfos.append(c.e.Entry(" • Your speed is for walking, climbing or swimming."))
+            self.showDodge=False
             
 
         # Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, and Survival.
@@ -138,7 +142,5 @@ class Ranger(c.Sheet):
         else:
             self.skillExpertises.append(self.skillProficiencies[0])
             
-        
-        self.spellsKnown = c.gf.getNumberFromRange(level, [1,1,2,4])
         
         

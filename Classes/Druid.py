@@ -37,14 +37,18 @@ class Druid(c.Sheet):
 
         else:
             c.item.buyItem(self,"Sprig of Mistletoe")
-            self.wishlist.append("Dagger")
 
         self.gp+=50
         self.spellcasting = True
         self.proficientWithShields = True
         self.lightArmorProficiency = True
         
-        self.addEntry("Produce Flame")
+        if self.level<6:
+
+            self.addEntry("Produce Flame")
+        else:
+            # we need the entry to only take up one line really
+            self.actionEntries.append(c.e.AttackRollEntry("Produce Flame"))
         self.addEntry("Guidance",False)
         self.addEntry("Speak With Animals")
 
@@ -71,7 +75,7 @@ class Druid(c.Sheet):
         elif self.level in [3,4]:
             self.spellPriorityList = ["Spike Growth","Faerie Fire","Healing Word","Barkskin","Lesser Restoration","Jump","Thunderwave","Entangle","Cure Wounds","Goodberry","Protection from Evil and Good"]
         elif self.level in [5,6]:
-            self.spellPriorityList = ["Revivify","Spike Growth","Faerie Fire","Barkskin","Jump","Healing Word","Lesser Restoration","Thunderwave","Entangle","Cure Wounds","Protection from Evil and Good","Goodberry"]
+            self.spellPriorityList = ["Revivify","Spike Growth","Barkskin","Jump","Healing Word","Lesser Restoration","Entangle","Cure Wounds","Protection from Poison","Other Druidic Spell","Faerie Fire","Goodberry","Thunderwave"]
 
         resourceDictionary = {
             1:[["Spell",2]],
@@ -104,11 +108,15 @@ class Druid(c.Sheet):
             knownForms.append(c.e.TextEntry("Wolf"))
             knownForms.append(c.e.TextEntry("Spider"))
             knownForms.append(c.e.TextEntry("Other Form 1"))
-        else:
+        elif self.level==5:
             knownForms.append(c.e.TextEntry("Black Bear"))
             knownForms.append(c.e.TextEntry("Crocodile"))
             knownForms.append(c.e.TextEntry("Spider"))
             knownForms.append(c.e.TextEntry("Other Form 2"))
+        else:            
+            knownForms.append(c.e.TextEntry("Black Bear"))
+            knownForms.append(c.e.TextEntry("Crocodile"))
+            knownForms.append(c.e.TextEntry("Other Form 3"))
             
 
 
@@ -135,7 +143,7 @@ class Druid(c.Sheet):
 
                 landsAid = c.e.SpellEntry("blank")
                 landsAid.title = "Land's Aid (Wild Shape, 60ft)"
-                landsAid.preSaveNormalText = "20ft sphere of flowers and thorns deal 2d6 necrotic damage to enemies. CON"
+                landsAid.preSaveNormalText = "20ft sphere deals 2d6 necrotic damage to enemies. CON"
                 landsAid.postSaveNormalText = " to half damage."
                 landsAid.preSaveItalicText = " Choose an ally within sphere to regain 2d6 hp. "
                 self.actionEntries.append(landsAid)
@@ -172,14 +180,23 @@ class Druid(c.Sheet):
             self.notesForSpellCastingBlock.append(c.e.TextEntry("Wild Resurgence"))
             self.notesForSpellCastingBlock.append(c.e.TextEntry("Wild Resurgence 2"))
             longRestRegainString = "Regain your uses of <strong>Wild Companion</strong> and <strong>Wild Resurgence</strong>."
-            
-        if self.level>5:
             self.showDash = False
-
+            
         if longRestRegainString:
             self.longRestEntries.append(c.e.Entry(longRestRegainString))
+        
+        if self.martialProficiency:
+            if strengthOverDex:
+                self.wishlist.append("Longsword")
+            else:
+                self.wishlist.append("Rapier")
+        else:
+            if strengthOverDex:
+                self.wishlist.append("Mace")
+                
+            else:
+                self.wishlist.append("Dagger")
 
-        self.makeSpellcastingBlock()
         # History, Insight, Medicine, Persuasion, and Religion.
         self.skillProficiencies.append(self.pickSkillProficiency([1,2,6,9,10,11,14,17]))
         self.skillProficiencies.append(self.pickSkillProficiency([1,2,6,9,10,11,14,17]))

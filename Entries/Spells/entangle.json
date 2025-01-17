@@ -3,6 +3,7 @@
     "title": "Entangle",
     "cost": "1",
     "rang": 90,
+    "duration":"1 min",
     "preSaveNormalText": "Cause a 20ft square of vines, restraining occupants.",
     "preSaveItalicText": "STR",
     "postSaveItalicText": " to resist.",

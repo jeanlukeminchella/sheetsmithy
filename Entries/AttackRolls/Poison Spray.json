@@ -6,7 +6,7 @@
     "duration": "",
     "conc": false,
     "addModToDamage": false,
-    "damageType": "Poison",
+    "damageType": "poison",
     "forcedMod": -1,
     "cantripScaling": true,
     "saveNotAttack": false,

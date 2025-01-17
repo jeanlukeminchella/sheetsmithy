@@ -12,6 +12,6 @@
     "saveNotAttack": false,
     "resistAttributeText": "",
     "resistText": "",
-    "note": "Target cannot regain hit points until the end of your next turn.",
+    "note": "Target cannot regain hp until end of your next turn.",
     "isSpell": true
 }

@@ -16,7 +16,7 @@ def tiefling(c,choice):
     
     spellcastingMods = c.modifiers[3:]
     bestMod =3+spellcastingMods.index(max(spellcastingMods))
-    c.addEntry("Thaumaturgy",False)    
+    c.addEntry("Thaumaturgy",False)   
     
     if "size" in keys:
         if choice["size"]=="Small":
@@ -62,9 +62,9 @@ def tiefling(c,choice):
         fireBolt.forcedMod = bestMod
         c.actionEntries.append(fireBolt)
         if c.level>2:
-            hRebuke = e.SpellEntry("Ray of Sickness")
-            hRebuke.preSaveItalicText+=freeCastText
-            c.actionEntries.append(hRebuke)
+            x = e.AttackRollEntry("Ray of Sickness")
+            x.note=x.note+freeCastText
+            c.actionEntries.append(x)
         if c.level>4:
             d  = e.SpellEntry("holdPerson")
             d.preSaveItalicText += freeCastText
@@ -76,6 +76,9 @@ def elf(c,choice):
     c.raceString = "Elf"
     c.darkvision=60
     
+
+    c.preferredLanguages.append("elven") 
+
     spellcastingMods = c.modifiers[3:]
     bestMod =3+spellcastingMods.index(max(spellcastingMods))
     
@@ -171,6 +174,8 @@ def orc(c, choice):
     c.speed = 30
     c.raceString = "Orc"
     c.darkvision=120
+
+    c.preferredLanguages.append("orc")
     
     adrenalineRushText = "<strong>Adrenaline Rush. </strong> Take the Dash action, and gain "
     adrenalineRushText += gf.getSignedStringFromInt(c.profBonus)
@@ -194,6 +199,8 @@ def dwarf(c, choice):
     c.addResistance("Poison")
     c.saveNotes.append([2,"(adv. poison)"])
     c.hp+=c.level
+
+    c.preferredLanguages.append("dwarven")
     
     stoneCunningText = "<strong>Stonecunning (10 min). </strong> Gain Tremorsense out to 60ft on stone surfaces."
     for i in range(c.profBonus):
@@ -208,6 +215,8 @@ def gnome(c, choice):
     c.saveNotes.append([4,"(advantage)"])
     c.saveNotes.append([3,"(advantage)"])
     c.saveNotes.append([5,"(advantage)"])
+
+    c.preferredLanguages.append("gnomish")
     
     if not "subrace" in choice.keys():
         choice["subrace"]="Rock"
@@ -235,6 +244,9 @@ def goliath(c, choice):
     c.raceString = "Goliath"
     
     count = "O "*c.profBonus
+
+
+    c.preferredLanguages.append("giant")
     
     subraces = ["Cloud","Fire","Frost","Hill","Stone","Storm"]
 
@@ -243,25 +255,30 @@ def goliath(c, choice):
     if not choice["subrace"] in subraces:
         choice["subrace"]="Storm"
 
-        
     if choice["subrace"]=="Cloud":
         c.raceString = "Goliath (Cloud)"
         c.bonusActionEntries.append(e.Entry("Teleport 30ft "+count))
+        c.longRestEntries.append(e.Entry("Regain all uses of your uses of Teleport. <em>(Cloud Goliath)</em>"))
     elif choice["subrace"]=="Fire":
         c.raceString = "Goliath (Fire)"
         c.charInfos.append(e.Entry("Boost any damage roll with d10 fire damage. "+count))
+        c.longRestEntries.append(e.Entry("Regain all uses of your fire damage boosts. <em>(Fire Goliath)</em>"))
     elif choice["subrace"]=="Frost":
         c.raceString = "Goliath (Frost)"
         c.charInfos.append(e.Entry("Boost any damage roll with d6 cold damage and reduce target's speed by 10 for one round. "+count))
+        c.longRestEntries.append(e.Entry("Regain all uses of your cold damage boosts. <em>(Frost Goliath)</em>"))
     elif choice["subrace"]=="Hill":
         c.raceString = "Goliath (Hill)"
         c.charInfos.append(e.Entry("Knock a Large or smaller target Prone when you land an attack. "+count))
+        c.longRestEntries.append(e.Entry("Regain all uses of your uses of Knocking targets Prone <em>(Hill Goliath)</em>"))
     elif choice["subrace"]=="Stone":
         c.raceString = "Goliath (Stone)"
         c.reactions.append(e.Entry("<strong>Stone's Endurance. </strong>Reduce incoming damage by d12"+gf.getSignedStringFromInt(c.modifiers[2])+" "+count))
+        c.longRestEntries.append(e.Entry("Regain all uses of your <strong>Stone's Endurance </strong>"))
     elif choice["subrace"]=="Storm":
         c.raceString = "Goliath (Storm)"
         c.reactions.append(e.Entry("<strong>Storm's Thunder. </strong> Deal d8 thunder damage to a creature that has just damaged you. "+count))
+        c.longRestEntries.append(e.Entry("Regain all uses of your <strong>Storm's Thunder </strong>"))
       
     if c.modifiers[0]>c.modifiers[1]:
         c.skillNotes.append([3,"(adv. v grappled)"])
@@ -307,6 +324,8 @@ def halfling(c, choice):
     c.size="Small"
     c.speed = 30
     c.raceString = "Halfling"
+
+    c.preferredLanguages.append("halfling")
     c.charInfos.append(e.Entry("You can move through the space of larger creatures, and Hide behind them."))
     c.charInfos.append(e.Entry("When you roll a 1 on a d20, re-roll the die once."))
     c.saveNotes.append([4,"(adv. frightened)"])

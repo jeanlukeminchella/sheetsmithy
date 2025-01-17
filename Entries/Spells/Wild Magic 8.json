@@ -1,0 +1,14 @@
+{
+    "title": "Wild Magic 8",
+    "rang": 0,
+    "cost": "",
+    "duration": "",
+    "conc": false,
+    "modiferIndex": -1,
+    "preSaveNormalText": "Blind a creature within 30ft. CON",
+    "postSaveNormalText": " to resist*",
+    "preSaveItalicText": "",
+    "postSaveItalicText": "",
+    "castTime": "a",
+    "ritual": false
+}

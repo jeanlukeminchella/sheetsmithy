@@ -191,7 +191,7 @@
             };
         };
         function showClassChoices() {
-            const racialChoicesIds = ["barbarianSubclass","fighterSubclass","rogueSubclass","rangerSubclass","divineOrder"]
+            const racialChoicesIds = ["barbarianSubclass","fighterSubclass","rogueSubclass","rangerSubclass","divineOrder","primalOrder"]
             racialChoicesIds.forEach(hide);
             function hide(value, index, array) {
                 document.getElementById(value).style.display='none'
@@ -200,6 +200,9 @@
             const cls = document.getElementById("classAsString").value
             if (cls=="Cleric"){
                 document.getElementById("divineOrder").style.display='block'
+            };
+            if (cls=="Druid"){
+                document.getElementById("primalOrder").style.display='block'
             }
             if (document.getElementById("level").value>2){
                 
@@ -257,6 +260,11 @@
             <option value="">Select a Divine Order</option>
             <option value="thaumaturge">Thaumaturge</option>
             <option value="protector">Protector</option>
+        </select>
+        <select id="primalOrder" name="primalOrder" onchange="showClassChoices()">
+            <option value="">Select a Primal Order</option>
+            <option value="magician">Magician</option>
+            <option value="warden">Warden</option>
         </select>
 
         <select id="barbarianSubclass" name="barbarianSubclass" onchange="showClassChoices()">
@@ -366,18 +374,17 @@
         <input type="checkbox" id="showScores" name="showScores">Show Scores on Sheet?
         </label>
         
+    
         <label for="showShortRest">
         <input type="checkbox" id="showShortRest" name="showShortRest" checked>Show what to do after a Short Rest ?
         </label>
         
         <label for="showLongRest">
-        <input type="checkbox" id="showLongRest" name="showLongRest">Show what to do after a Long Rest ?
+        <input type="checkbox" id="showLongRest" name="showLongRest" checked>Show what to do after a Long Rest ?
         </label>
-        
         <br>
         <div id="showScoresButton">
             <button type="button" style="color: #56524d;" onclick="document.getElementById('abilityScores').style.display='block'; document.getElementById('showScoresButton').style.display='none'; document.getElementById('hideScoresButton').style.display='block'; document.getElementById('pickedScores').value=1">Customise ability scores?</button>
-            
         
         </div>
         <input type="hidden" id="pickedScores" name="pickedScores" value=0>
@@ -385,6 +392,8 @@
             <button  type="button" style="color: #56524d;" onclick="document.getElementById('abilityScores').style.display='none'; document.getElementById('showScoresButton').style.display='block'; document.getElementById('hideScoresButton').style.display='none';document.getElementById('pickedScores').value=0">Hide scores</button>
         </div>    
         
+        
+
         <div id="abilityScores" class="startInvisible">
             <br>
             Distribute your ability scores from the Standard Array [15,14,13,12,10,8] or use a Point Buy method to get a different array <a href="https://chicken-dinner.com/5e/5e-point-buy.html" target="_blank">here</a> (ignore Race). Legends even speak of some who roll dice for their scores, but check this with your DM first :) 
@@ -423,6 +432,27 @@
 
             
         </div>
+    
+        <input type="hidden" id="considerLangs" name="considerLangs" value=0>
+
+        <div id="showLangsButton">
+            <button type="button" style="color: #56524d;" onclick="document.getElementById('considerLangs').value=1;document.getElementById('langs').style.display='block'; document.getElementById('showLangsButton').style.display='none'; document.getElementById('hideLangsButton').style.display='block';">Customise languages?</button>
+            
+        </div>
+        <div id="hideLangsButton" class="startInvisible">
+            <button type="button" style="color: #56524d;" onclick="document.getElementById('considerLangs').value=0;document.getElementById('langs').style.display='none'; document.getElementById('showLangsButton').style.display='block'; document.getElementById('hideLangsButton').style.display='none';">Close languages?</button>
+            
+        </div>
+
+        <div id="langs" class="startInvisible">
+
+            Extra languages are normally picked randomly, but if you would like to choose what they are list them below. <em>Eg. giant</em>
+            
+            <label for="name">Preferred Extra Languages:</label>
+            <input type="text" id="languages" name="languages" value="">
+            
+            </div>
+    
 
         <div id="showInventoryButton">
             <button type="button" style="color: #56524d;" onclick="document.getElementById('considerInventory').value=1;document.getElementById('inventory').style.display='block'; document.getElementById('showInventoryButton').style.display='none'; document.getElementById('hideInventoryButton').style.display='block';">Add to inventory?</button>

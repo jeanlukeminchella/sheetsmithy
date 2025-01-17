@@ -239,6 +239,42 @@
         "type": "spell",
         "code": "Barkskin"
     },
+    "Protection from Poison": {
+        "type": "spell",
+        "code": "Protection from Poison"
+    },
+    "Wild Magic 1": {
+        "type": "spell",
+        "code": "Wild Magic 1"
+    },
+    "Wild Magic 2": {
+        "type": "spell",
+        "code": "Wild Magic 2"
+    },
+    "Wild Magic 3": {
+        "type": "spell",
+        "code": "Wild Magic 3"
+    },
+    "Wild Magic 4": {
+        "type": "spell",
+        "code": "Wild Magic 4"
+    },
+    "Wild Magic 5": {
+        "type": "spell",
+        "code": "Wild Magic 5"
+    },
+    "Wild Magic 6": {
+        "type": "spell",
+        "code": "Wild Magic 6"
+    },
+    "Wild Magic 7": {
+        "type": "spell",
+        "code": "Wild Magic 7"
+    },
+    "Wild Magic 8": {
+        "type": "spell",
+        "code": "Wild Magic 8"
+    },
     "Sacred Flame": {
         "type": "attackRoll",
         "code": "sacredFlame"
@@ -507,6 +543,10 @@
         "type": "text",
         "code": "Dodge"
     },
+    "Barbarian Dodge": {
+        "type": "text",
+        "code": "Barbarian Dodge"
+    },
     "Ready": {
         "type": "text",
         "code": "Ready"
@@ -550,6 +590,26 @@
     "Panther": {
         "type": "text",
         "code": "Panther"
+    },
+    "Black Bear": {
+        "type": "text",
+        "code": "Black Bear"
+    },
+    "Crocodile": {
+        "type": "text",
+        "code": "Crocodile"
+    },
+    "Other Form 1": {
+        "type": "text",
+        "code": "Other Form 1"
+    },
+    "Other Form 2": {
+        "type": "text",
+        "code": "Other Form 2"
+    },
+    "Other Form 3": {
+        "type": "text",
+        "code": "Other Form 3"
     },
     "reckless": {
         "type": "text",
@@ -623,8 +683,16 @@
         "type": "text",
         "code": "Wild Companion"
     },
+    "Natural Recovery - arid": {
+        "type": "text",
+        "code": "Natural Recovery - arid"
+    },
     "relentlessEndurance": {
         "type": "text",
         "code": "relentlessEndurance"
+    },
+    "Other Druidic Spell": {
+        "type": "text",
+        "code": "Other Druidic Spell"
     }
 }

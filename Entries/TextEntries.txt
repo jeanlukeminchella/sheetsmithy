@@ -80,7 +80,7 @@
         "See Opportunity Attack."
     ],
     "trance": [
-        "Fey Ancenstry. ",
+        "Fey Ancestry. ",
         "Magic cannot put you to sleep, and you can finish a Long Rest in 4 hours if you spend them in trancelike meditation.",
         ""
     ],
@@ -141,6 +141,11 @@
     ],
     "Other Form 2": [
         "3 x Other Forms. ",
+        "Choose non-flying Beasts, CR1/2",
+        ""
+    ],
+    "Other Form 3": [
+        "4 x Other Forms. ",
         "Choose non-flying Beasts, CR1/2",
         ""
     ],
@@ -242,6 +247,11 @@
     "relentlessEndurance": [
         "Relentless Endurance",
         "Upon taking damage, drop to 1 hit point instead of 0. You can do this once per Long Rest - O",
+        ""
+    ],
+    "Other Druidic Spell": [
+        "Other Druidic Spell.",
+        "Choose one to have prepared.",
         ""
     ]
     

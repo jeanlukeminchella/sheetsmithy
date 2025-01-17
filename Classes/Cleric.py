@@ -179,7 +179,6 @@ class Cleric(c.Sheet):
                 self.rightColumnBlocks.append(channelBlock)
                 self.actionEntries.append(c.e.TextEntry("channelDiv"))
 
-        self.makeSpellcastingBlock()
         # History, Insight, Medicine, Persuasion, and Religion.
         self.skillProficiencies.append(self.pickSkillProficiency([5,6,9,13,14]))
         self.skillProficiencies.append(self.pickSkillProficiency([5,6,9,13,14]))

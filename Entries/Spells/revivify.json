@@ -6,8 +6,8 @@
     "duration": "",
     "conc": true,
     "modiferIndex": -1,
-    "preSaveNormalText": "You touch a creature that has died within the last minute. They return to life with 1 hit point.",
-    "preSaveItalicText": " Cannot revive death from old age or restore limbs. Requires a 300gp diamond.",
+    "preSaveNormalText": "You touch a creature that has died within the last minute. They return to life with 1 hp.",
+    "preSaveItalicText": "Requires a 300gp diamond.",
     "castTime": "a",
     "isSpell": true
 }
