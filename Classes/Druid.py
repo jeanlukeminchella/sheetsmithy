@@ -43,14 +43,8 @@ class Druid(c.Sheet):
         self.proficientWithShields = True
         self.lightArmorProficiency = True
         
-        if self.level<6:
-
-            self.addEntry("Produce Flame")
-        else:
-            # we need the entry to only take up one line really
-            self.actionEntries.append(c.e.AttackRollEntry("Produce Flame"))
-        self.addEntry("Guidance",False)
-        self.addEntry("Speak With Animals")
+        
+        
 
         primalOrders = ["magician","warden"]
         primalOrder = primalOrders[0]
@@ -63,12 +57,22 @@ class Druid(c.Sheet):
             self.martialProficiency = True
             self.mediumArmorProficiency = True
         else: 
-            thaum = self.addEntry("Create Bonfire")
-            # if the class already has thaumaturgy
-            if not thaum:
+            bon = self.addEntry("Create Bonfire")
+            # if the class already has create bon
+            if not bon:
                 self.addEntry("Druidcraft")
             self.skillBoosts.append([2,self.modifiers[4]])
             self.skillBoosts.append([10,self.modifiers[4]])
+
+        if self.level<6:
+
+            self.addEntry("Produce Flame")
+        else:
+            # we need the entry to only take up one line really
+            self.actionEntries.append(c.e.AttackRollEntry("Produce Flame"))
+
+        self.addEntry("Guidance",False)
+        self.addEntry("Speak With Animals")
 
         if self.level in [1,2]:
             self.spellPriorityList = ["Faerie Fire","Healing Word","Jump","Thunderwave","Entangle","Cure Wounds","Goodberry","Protection from Evil and Good"]
@@ -104,19 +108,19 @@ class Druid(c.Sheet):
         knownForms = []
         
         if self.level<4:
-            knownForms.append(c.e.TextEntry("Riding Horse"))
-            knownForms.append(c.e.TextEntry("Wolf"))
-            knownForms.append(c.e.TextEntry("Spider"))
-            knownForms.append(c.e.TextEntry("Other Form 1"))
+            knownForms.append({"type":"text","id":"Riding Horse"})
+            knownForms.append({"type":"text","id":"Wolf"})
+            knownForms.append({"type":"text","id":"Spider"})
+            knownForms.append({"type":"text","id":"Other Form 1"})
         elif self.level==5:
-            knownForms.append(c.e.TextEntry("Black Bear"))
-            knownForms.append(c.e.TextEntry("Crocodile"))
-            knownForms.append(c.e.TextEntry("Spider"))
-            knownForms.append(c.e.TextEntry("Other Form 2"))
+            knownForms.append({"type":"text","id":"Black Bear"})
+            knownForms.append({"type":"text","id":"Crocodile"})
+            knownForms.append({"type":"text","id":"Spider"})
+            knownForms.append({"type":"text","id":"Other Form 2"})
         else:            
-            knownForms.append(c.e.TextEntry("Black Bear"))
-            knownForms.append(c.e.TextEntry("Crocodile"))
-            knownForms.append(c.e.TextEntry("Other Form 3"))
+            knownForms.append({"type":"text","id":"Black Bear"})
+            knownForms.append({"type":"text","id":"Crocodile"})
+            knownForms.append({"type":"text","id":"Other Form 3"})
             
 
 
@@ -126,10 +130,10 @@ class Druid(c.Sheet):
         if self.level>1:
 
             self.bonusActionEntries.insert(0,wildshapeAction)
-            self.bonusActionEntries.insert(1,c.e.TextEntry("Leave Wild Shape"))
+            self.bonusActionEntries.insert(1,{"type":"text","id":"Leave Wild Shape"})
             self.rightColumnBlocks.append(c.e.Block(knownForms,"WILD SHAPE FORMS"))
-            self.shortRestEntries.append(c.e.Entry("Regain a use of Wild Shape"))
-            self.actionEntries.append(c.e.TextEntry("Wild Companion"))
+            self.shortRestEntries.append("Regain a use of Wild Shape")
+            self.actionEntries.append({"type":"text","id":"Wild Companion"})
             longRestRegainString = "Regain your use of <strong>Wild Companion</strong>."
             
         
@@ -162,13 +166,13 @@ class Druid(c.Sheet):
                     if self.level>4:
                         self.addEntry("Fireball")
                     if self.level>5:
-                        self.notesForSpellCastingBlock.append(c.e.TextEntry("Natural Recovery - arid"))
+                        self.notesForSpellCastingBlock.append({"type":"text","id":"Natural Recovery - arid"})
 
                 else: 
                     pass
 
                 if self.level>5:
-                    self.longRestEntries.append(c.e.Entry("Regain your <strong>Circle of the Land</strong> free casting."))
+                    self.longRestEntries.append("Regain your <strong>Circle of the Land</strong> free casting.")
         
 
         
@@ -177,13 +181,13 @@ class Druid(c.Sheet):
             self.showDisengage = False
             self.showDodge = False
             self.showUseObject=False
-            self.notesForSpellCastingBlock.append(c.e.TextEntry("Wild Resurgence"))
-            self.notesForSpellCastingBlock.append(c.e.TextEntry("Wild Resurgence 2"))
+            self.notesForSpellCastingBlock.append({"type":"text","id":"Wild Resurgence"})
+            self.notesForSpellCastingBlock.append({"type":"text","id":"Wild Resurgence 2"})
             longRestRegainString = "Regain your uses of <strong>Wild Companion</strong> and <strong>Wild Resurgence</strong>."
             self.showDash = False
             
         if longRestRegainString:
-            self.longRestEntries.append(c.e.Entry(longRestRegainString))
+            self.longRestEntries.append(longRestRegainString)
         
         if self.martialProficiency:
             if strengthOverDex:

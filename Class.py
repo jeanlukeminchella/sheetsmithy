@@ -184,10 +184,18 @@ class Sheet:
         allEntries.extend(self.reactions[:])
 
         for ent in allEntries:
-            
-            if ent.title == command.title:
-                weHaveThisEntryAlready = True
+            if "Entry" in str(type(ent)):
 
+                if ent.title == command.title:
+                    weHaveThisEntryAlready = True
+            elif type(ent)==dict:
+                if not "id" in ent.keys():
+                    ent = e.ne.getExpandedDictionary(ent)
+                if ent["id"]==command.title:
+                    weHaveThisEntryAlready = True
+                if "title" in ent.keys():
+                    if ent["title"]==command["title"]:
+                        weHaveThisEntryAlready = True
         if not weHaveThisEntryAlready:
             if command.castTime=="a":
                 if command.cost=="" and highlight:

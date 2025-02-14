@@ -1,6 +1,6 @@
 import globalFunctions as gf
 import json
-import os
+import newEntry as ne
 
 fileExtension = ".json"
 standardEntryStart = "<p>"
@@ -396,7 +396,12 @@ class Block():
             result += "<div id='"+self.divID+"'>\n"
             
         for e in self.entries:
-            result += e.getHTML(c)
+            #surely there is another way?
+            if "Entry" in str(type(e)):
+
+                result += e.getHTML(c)
+            else:
+                result += ne.getHTML(e)
         
         if self.divID !="":
             result += "</div>\n"

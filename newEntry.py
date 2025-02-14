@@ -1,6 +1,7 @@
 import globalFunctions as gf
 import json
 textEntries = {}
+spellEntries = {}
 
 fileExtension = ".json"
 standardEntryStart = "<p>"
@@ -8,6 +9,8 @@ standardEntryEnd = "</p>\n"
 
 with open(gf.pathToSource+"Entries/TextEntries.txt", 'r') as file:
     textEntries = json.load(file)
+
+
 
 def getHTMLfromThruple(thruple):
     boldBit = thruple[0]
@@ -59,35 +62,55 @@ def getHTMLfromThruple(thruple):
 
 # this funciton fills out the entry into a dictionary that has all the keys it needs to make hmtl, including "castTime", "id" and "type"
 # returns a blank thruple dictionary if theres an error
+# id is used to expand the dictionay, and also identify if a character already has a certain entry
 def getExpandedDictionary(e):
 
-    blankDictionary = {
+    defaultDictionary = {
         "castTime":"a",
-        "title":"",
         "id":"",
         "type":"thruple",
-        "contents":["","",""],
-        "expanded":True
+        "expanded":True,
+        # contents is required for thruple types
+        "contents":["","",""]
     }
     
-    #
+    #were now trying to parse different inputs, like strings or lists
     if type(e)==str:
-        blankDictionary["contents"][1]=e
-        return blankDictionary
-    elif type(e)!=dict:
+        defaultDictionary["contents"][1]=e
+        return defaultDictionary
+
+    if type(e)==list:
+        if len(e)<4:
+            onlyLists = True
+            for i in range (len(e)):
+                if type(e[i])!=str:
+                    try:
+                       e[i]=str(e[i]) 
+                    except:
+                        onlyLists = False
+            if onlyLists:
+                while len(e)<3:
+                    e.append("")
+                defaultDictionary["contents"]=e
+                return defaultDictionary
+    
+
+    
+    if type(e)!=dict:
+        # if its an int or boolean ect. we can make a string out of it and still display that info
         try:
-            blankDictionary["contents"][1]=str(e)
-            return blankDictionary
+            defaultDictionary["contents"][1]=str(e)
+            return defaultDictionary
         except:
-            return blankDictionary
+            return defaultDictionary
         
     
         
-    # ok so type(e) is definitely dictionary now
+    # type(e) is definitely dictionary now
 
     keys = list(e.keys())
 
-    # these types do not reflect the rules definitions. spells have saves and do not necessarily do damage, attacks do damage.
+    # these types do not reflect the 5e rules definitions. in this program spells have saves and do not necessarily do damage, attacks do damage.
     # 
     entryTypes= ["text","spell","attack","thruple"]
 
@@ -99,29 +122,27 @@ def getExpandedDictionary(e):
     if badEntry:
         print("weve got a bad entry here - ")
         print(e)
-        return blankDictionary
+        return defaultDictionary
     
     # ok now weve got a dictionary with a "type" key that is in the accepted entryTypes, and an "id" key as well
     
-    #lets see if any of these keys are in our input, and add them to the entry to return. These are all valid keys (values might not be?)
+    #lets see if any of these keys are in our input, and add them to the entry to return. These are all valid keys (though their values might not be)
     keysToClone = ["castTime","cost","duration"]
     for key in keysToClone:
         if key in keys:
-            blankDictionary[key]=e[key]
+            defaultDictionary[key]=e[key]
                 
     if e["type"]=="text":
-        print("weve been asked to expand a text entry ",e)
+        #print("weve been asked to expand a text entry ",e)
         if not e["id"] in textEntries.keys():
             print("bad key for text entry", e["id"])
-            blankDictionary["contents"][1] = e["id"]
-            return blankDictionary
+            defaultDictionary["contents"][1] = e["id"]
+            return defaultDictionary
         else:
-            blankDictionary["contents"] = textEntries[e["id"]]
-            blankDictionary["id"]=e["id"]
+            defaultDictionary["contents"] = textEntries[e["id"]]
+            defaultDictionary["id"]=e["id"]
             
-            #title doesnt matter really with text entries, but lets set it anyway?
-            blankDictionary["title"] = textEntries[e["id"]][0]
-            return blankDictionary
+            return defaultDictionary
 
             
     elif e["type"]=="spell":
@@ -172,11 +193,7 @@ print(getHTML(4))
 print()
 print(getHTML(False))
 print()
-r = {
-    "type":"text",
-    "castTime":"ba",
-    "id":"Disengage"
-}
+r = {"type":"text","id":"Disengage"}
 print(getHTML(r))
 
 
