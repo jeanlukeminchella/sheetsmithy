@@ -22,9 +22,7 @@ class Monk(c.Sheet):
 
         self.actionEntries.append(c.e.TextEntry("Hide"))
         self.actionEntries.append(c.e.TextEntry("useObject"))
-        staff = c.e.AttackRollEntry("Quarterstaff")
-        staff.forcedMod=1
-        self.highlightedEntries.append(staff)
+
         c.item.buyItem(self,"Quarterstaff")
         self.wishlist.append("Shortbow")
         self.wishlist.append("Dart")
@@ -52,13 +50,13 @@ class Monk(c.Sheet):
         subclassChoice = None
         
         # ki block is initalised here so sublass & levelling can affect it
-        kiEntry = c.e.Entry("<strong>Focus -</strong> "+(" O"*(level)))
+        kiEntry = "<strong>Focus -</strong> "+(" O"*(level))
         kiBlock = c.e.Block([kiEntry],"FOCUS")
         if self.showShortRest:
             if self.level>1:
-                self.shortRestEntries.append(c.e.Entry("Regain all your <strong>Focus</strong>."))
+                self.shortRestEntries.append("Regain all your <strong>Focus</strong>.")
         else:
-            kiBlock.addEntry(c.e.Entry("<em>You regain all Focus after a rest.</em> "))
+            kiBlock.addEntry("<em>You regain all Focus after a rest.</em> ")
         
         
         if level>1:
@@ -68,8 +66,8 @@ class Monk(c.Sheet):
             self.showDisengage = False
             self.actionEntries.append(c.e.TextEntry("Ready"))
             
-            fastActions.append(c.e.Entry("<strong>Disengage.</strong> <em>See Opportunity Attack. Spend 1 Focus to also Dodge or Dash.</em>"))
-            fastActions.append(c.e.TextEntry("Dash"))
+            fastActions.append("<strong>Disengage.</strong> <em>See Opportunity Attack. Spend 1 Focus to also Dodge or Dash.</em>")
+            fastActions.append({"id":"Dash"})
             
             self.speed+=getSpeedBonus(self.level)
             
@@ -92,21 +90,21 @@ class Monk(c.Sheet):
             uncannyMetabolismText = "<strong>Uncanny Metabolism. </strong> When you roll initiative, regain"
             uncannyMetabolismText += " all Focus and "+getMartialArtsDie(self.level)+"+"+str(self.level)+" hp."
             if self.showLongRest:
-                self.longRestEntries.append(c.e.Entry("Regain your use of <strong>Uncanny Metabolism</strong>."))
+                self.longRestEntries.append("Regain your use of <strong>Uncanny Metabolism</strong>.")
             else:
                 uncannyMetabolismText += " <em>You must take a Long Rest before doing this again.</em>"
                 
             uncannyMetabolismText += " O"
-            self.charInfos.append(c.e.Entry(uncannyMetabolismText))
+            self.charInfos.append(uncannyMetabolismText)
             
             chosen = False
             if self.subclass == "openHand" or not chosen:
                 self.subclass = "openHand"
                 self.classAsString="Monk (Way of the Open Hand)"
-                e1 = c.e.Entry("*When you hit with a Flurry of Blows attack, subject the target to one of the below effects.")
+                e1 = "*When you hit with a Flurry of Blows attack, subject the target to one of the below effects."
                 flurryOfBlowsAstricks = True
-                e2 = c.e.SpellEntry("knockProneMonk")
-                e3 = c.e.SpellEntry("throwMonk")
+                e2 = {"id":"Knock Prone"}
+                e3 = {"id":"Throw 15ft"}
 
                 e4 = c.e.Entry("<strong>Addle.</strong> Target cannot take Opportunity Attacks until its turn.")
                 b = c.e.Block([e1,e2,e3,e4],"WAY OF THE OPEN HAND")

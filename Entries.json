@@ -1,0 +1,917 @@
+{
+    "Focused Aim": {
+        "preSaveNormalText": " When you miss with an attack roll, you can spend 1 to 3 ki points to increase your attack roll by 2 for each.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Command": {
+        "cost": "1",
+        "rang": 60,
+        "preSaveNormalText": "One word command must be followed by target. WIS",
+        "postSaveNormalText": " to resist.",
+        "preSaveItalicText": " eg. Drop, Fall Prone, Flee etc.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Bane": {
+        "rang": 30,
+        "cost": "1",
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": "Up to three targets must subtract a d4 from attacks and saving throws. CHAR",
+        "postSaveNormalText": " to resist.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Moonbeam": {
+        "rang": 120,
+        "cost": "2",
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": " 0ft beam of moonlight deals 2d8+2 radiant damage to creatures starting their turn there. CON",
+        "postSaveNormalText": " to half damage.",
+        "preSaveItalicText": " Can be moved with an action.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Hunter's Mark": {
+        "cost": "1",
+        "preSaveNormalText": "Deal an extra d6 damage to target. ",
+        "conc": true,
+        "castTime": "ba",
+        "preSaveItalicText": " Can be moved with a Bonus Action.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Hold Person": {
+        "rang": 60,
+        "cost": "2",
+        "duration": "10 min",
+        "conc": true,
+        "preSaveNormalText": " A humanoid target is paralysed. WIS",
+        "postSaveNormalText": " to resist.",
+        "preSaveItalicText": "Target can retry save at the end of their turns.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Protection from Evil and Good": {
+        "cost": "1",
+        "duration": "10 min",
+        "conc": true,
+        "preSaveNormalText": "Aberrations, celestials, elementals, fey, fiends, and undead attack target with disadvantage, and cannot charm, frighten, or possess target.",
+        "preSaveItalicText": "If the target is already under an affect, they have adv. on new saving throws against it. Consumes Holy Water.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Spike Growth": {
+        "conc": true,
+        "cost": "2",
+        "preSaveNormalText": "20ft square of thorns erupt from the ground as difficult terrain, dealing 2d4 poison damage for every 5ft travelled across it.",
+        "preSaveItalicText": "STR",
+        "postSaveItalicText": " to resist.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Revivify": {
+        "cost": "3",
+        "conc": true,
+        "preSaveNormalText": "You touch a creature that has died within the last minute. They return to life with 1 hp.",
+        "preSaveItalicText": "Requires a 300gp diamond.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Mass Healing Word": {
+        "rang": 60,
+        "cost": "3",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Hellish Rebuke ": {
+        "rang": 60,
+        "modifierIndex": 5,
+        "preSaveNormalText": "A creature that just damaged you takes 3d10 fire damage. DEX",
+        "postSaveNormalText": " to half damage.",
+        "preSaveItalicText": "(Tiefling) One use per Long Rest - </em>O<em> ",
+        "castTime": "r",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Throw 15ft": {
+        "preSaveNormalText": "STR",
+        "postSaveNormalText": " to resist.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Speak With Animals": {
+        "cost": "1",
+        "preSaveNormalText": "You can comprehend and verbally communicate with beasts for 10 mins.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Guidance": {
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": "The target may add a d4 to an ability check they make. The spell then ends.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Lay on Hands": {
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Shield of Faith": {
+        "conc": true,
+        "cost": "1",
+        "preSaveNormalText": "A shimmering field appears and surrounds a creature of your choice within range, granting it +2 AC.",
+        "rang": 60,
+        "duration": "10 min",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Misty Step": {
+        "rang": 30,
+        "cost": "2",
+        "preSaveNormalText": "Teleport",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Thunderous Smite": {
+        "conc": true,
+        "duration": "1 min",
+        "cost": "1",
+        "preSaveNormalText": "Your next melee hit deals an extra 2d6 thunder damage, STR",
+        "postSaveNormalText": " to resist being thrown 10ft and knocked prone.",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Bless": {
+        "rang": 30,
+        "cost": "1",
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": "Three targets add a d4 to their d20s for the duration.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Dispel Magic": {
+        "rang": 120,
+        "cost": "3",
+        "preSaveNormalText": "A spell <4th level on the target ends. Make a spell attack to dispel higher levels. ",
+        "preSaveItalicText": "DC: 10 + the spell's level.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Spirit Shroud": {
+        "cost": "3",
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": "Any attack you make deals 1d8 extra damage when you hit a creature within 10 feet of you, and target cannot heal until your next turn.",
+        "preSaveItalicText": "When cast, foes within 10ft have 10ft less speed until your next turn.",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Divine Sense": {
+        "preSaveNormalText": "You know the location of any celestial, fiend, or undead within 60 feet, or any area that is desecrated or concecrated.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Stun": {
+        "preSaveNormalText": "When you hit with a melee attack, spend 1 Focus to Stun target until your next turn. CON",
+        "postSaveNormalText": " to resist.",
+        "preSaveItalicText": "Targets that resist still have their speed halved, and the next attack against them is with advantage. ",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Ensnaring Strike": {
+        "cost": "1",
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": " The next target you hit with a weapon is restrained by vines. STR",
+        "postSaveNormalText": " to resist. A creature can use an action to break the vines (Strength check).",
+        "preSaveItalicText": " While restrained, targets take d6 damage at the start of their turns. Large targets have advantage on their saves. ",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Healing Word": {
+        "rang": 60,
+        "cost": "1",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Zone of Truth": {
+        "rang": 60,
+        "cost": "2",
+        "duration": "10 min",
+        "preSaveNormalText": " Creatures in a 30ft sphere cannot lie. CHAR",
+        "postSaveNormalText": " to resist, and you know if targets have passed.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Burning Hands": {
+        "cost": "1",
+        "preSaveNormalText": "Unleash a 15ft cone of fire. 3d6 damage, DEX",
+        "postSaveNormalText": "  to half damage",
+        "type": "spell"
+    },
+    "Entangle": {
+        "conc": true,
+        "cost": "1",
+        "rang": 90,
+        "duration": "1 min",
+        "preSaveNormalText": "Cause a 20ft square of vines, restraining occupants.",
+        "preSaveItalicText": "STR",
+        "postSaveItalicText": " to resist.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Knock Prone": {
+        "preSaveNormalText": "DEX",
+        "postSaveNormalText": " to resist.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "": {
+        "castTime": "action",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Herosim": {
+        "cost": "1",
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": "A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to being frightened and gains ___ temporary hit points at the start of each of its turns ",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Sanctuary": {
+        "rang": 30,
+        "cost": "1",
+        "duration": "1 min",
+        "preSaveNormalText": " Enemies who try to harm target must first pass a WIS",
+        "postSaveNormalText": " save or choose a new target.",
+        "preSaveItalicText": "Spell ends if target harms a foe.",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Wrathful Smite": {
+        "conc": true,
+        "duration": "1 min",
+        "cost": "1",
+        "preSaveNormalText": "Your next melee hit deals an extra d6 psychic damage, WIS",
+        "postSaveNormalText": " to resist being frightened of you until the spell ends.",
+        "castTime": "ba",
+        "preSaveItalicText": "As an action, the creature can make another save to steel its resolve and end this spell.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Lesser Restoration": {
+        "cost": "2",
+        "preSaveNormalText": "Target is cured of a disease or condition (blinded, deafened, paralyzed, or poisoned).",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Detect Magic": {
+        "cost": "1",
+        "duration": "10 min",
+        "conc": true,
+        "preSaveNormalText": "Sense the presence of magic within 30 feet of you, and learn its school of magic.",
+        "ritual": true,
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Thaumaturgy": {
+        "rang": 30,
+        "duration": "1 min",
+        "preSaveNormalText": "You manifest a minor wonder, like altered ayes, a booming voice (adv. Intimidation), tremors, fire play or slamming a door",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Aid": {
+        "rang": 30,
+        "cost": "2",
+        "duration": "8 hour",
+        "preSaveNormalText": "Increase up to three creatures hp and hp max by 5.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Necrotic Shroud": {
+        "rang": 10,
+        "modifierIndex": 5,
+        "preSaveNormalText": "Enemies become frightened of you. CHAR",
+        "postSaveNormalText": " to resist.",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Create Minor Illusion": {
+        "rang": 30,
+        "duration": "1 min",
+        "preSaveNormalText": "5ft, silent.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Mending": {
+        "preSaveNormalText": "Repairs less than 1ft of damage on an object.",
+        "preSaveItalicText": "Takes 10 actions (1 min) to cast.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Prestidigitation": {
+        "rang": 10,
+        "preSaveNormalText": "Create a minor, harmless magical effect, like leaving a mark, cleaning a surface or flavouring food. You can also briefly summon a trinket or a shower of sparks.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Grapple": {
+        "preSaveNormalText": "Target's speed is 0, and moves with you. STR/DEX",
+        "postSaveNormalText": " to resist / break grapple.",
+        "preSaveItalicText": " Targets of a similar size half your speed. You must have a free hand for grappling.",
+        "type": "spell"
+    },
+    "Shove": {
+        "preSaveNormalText": "Target is pushed 5ft or knocked Prone. STR/DEX",
+        "postSaveNormalText": " to resist.",
+        "preSaveItalicText": " Targets can still move or get up on their turn.",
+        "modifierIndex": 0,
+        "type": "spell"
+    },
+    "Potion of Healing": {
+        "preSaveNormalText": "Heal 2d4+2 hp.",
+        "preSaveItalicText": "Can be used on a creature within 5ft.",
+        "castTime": "ba",
+        "type": "spell"
+    },
+    "False Life": {
+        "cost": "1",
+        "preSaveNormalText": "Gain 2d4+4 temporary hp.",
+        "type": "spell"
+    },
+    "Hellish Rebuke": {
+        "damage": "2d10",
+        "rang": 60,
+        "cost": "1",
+        "preSaveNormalText": "A creature that just damaged you takes 2d10 Fire damage. DEX",
+        "postSaveNormalText": " to half damage.",
+        "castTime": "re",
+        "type": "spell"
+    },
+    "Darkness": {
+        "rang": 60,
+        "cost": "2",
+        "conc": true,
+        "preSaveNormalText": "Magical darkness spreads from a point or object.",
+        "preSaveItalicText": "Dispels light from weaker spells.",
+        "type": "spell"
+    },
+    "Ray of Enfeeblement": {
+        "rang": 60,
+        "cost": "2",
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": "Target has -d8 on damage rolls and disadv. on STR based d20 rolls. CON",
+        "postSaveNormalText": " to only have disadv. on next attack roll.",
+        "preSaveItalicText": "Target repeats save at the end of its turns.  ",
+        "type": "spell"
+    },
+    "Faerie Fire": {
+        "rang": 60,
+        "cost": "1",
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": "Creatures in a 20ft cube are outlined with arcane light. Attacks against them are with advantage. DEX",
+        "postSaveNormalText": " to dodge.",
+        "type": "spell"
+    },
+    "Longstrider": {
+        "cost": "1",
+        "duration": "1 hour",
+        "preSaveNormalText": "Target has +10ft speed.",
+        "type": "spell"
+    },
+    "Pass without Trace": {
+        "rang": 30,
+        "cost": "2",
+        "duration": "1 hour",
+        "conc": true,
+        "preSaveNormalText": "Radiating aura conceals allies (+10 Stealth) and tracks.",
+        "type": "spell"
+    },
+    "Druidcraft": {
+        "rang": 30,
+        "preSaveNormalText": "Whisper to the spirits of nature, and fortel the weather, light a fire, make a flower bloom or cause some other minor effect.",
+        "type": "spell"
+    },
+    "Dancing Lights": {
+        "rang": 120,
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": "Create up to four small lights, that each shed dim light out to 10ft. ",
+        "preSaveItalicText": "Lights can be moved 60ft with a Bonus Action, but must stay within 20ft of another light and within range.",
+        "type": "spell"
+    },
+    "Goodberry": {
+        "cost": "1",
+        "duration": "24 hours",
+        "preSaveNormalText": "Ten berries appear in your hand and are infused with magic for the duration. A creature can take a Bonus Action to eat one berry. Eating a berry restores 1 Hit Point, and the berry provides enough nourishment to sustain a creature for one day. ",
+        "type": "spell"
+    },
+    "Thunderwave": {
+        "cost": "1",
+        "preSaveNormalText": "Creatures in a 15ft cube next to you take 2d8 thunder damage and are pushed 10ft away from you. CON",
+        "postSaveNormalText": " to half damage and stay put.",
+        "type": "spell"
+    },
+    "Assume Wild Shape (Wild Shape)": {
+        "preSaveNormalText": "Choose from your Wild Shape Forms.",
+        "castTime": "ba",
+        "type": "spell"
+    },
+    "Jump": {
+        "cost": "1",
+        "duration": "1 min",
+        "preSaveNormalText": "Once per turn, target can jump 30ft with 10ft of movement.",
+        "castTime": "ba",
+        "type": "spell"
+    },
+    "Blur": {
+        "cost": "2",
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": "Attacks against you have disadv.",
+        "preSaveItalicText": "Ineffective vs. Truesight or Blindsight.",
+        "type": "spell"
+    },
+    "Fireball": {
+        "rang": 150,
+        "cost": "3",
+        "preSaveNormalText": "Unleash a 40ft ball of 8d6 fire damage. DEX",
+        "postSaveNormalText": " to half damage.",
+        "type": "spell"
+    },
+    "Barkskin": {
+        "cost": "2",
+        "duration": "1 hour",
+        "preSaveNormalText": "Target's AC is 17.",
+        "castTime": "ba",
+        "type": "spell"
+    },
+    "Protection from Poison": {
+        "cost": "2",
+        "duration": "1 hour",
+        "preSaveNormalText": "Target has resistance and adv. on saves vs. poison.",
+        "type": "spell"
+    },
+    "Wild Magic 1": {
+        "preSaveNormalText": "Enemies within 30ft take d12 necrotic damage CON",
+        "postSaveNormalText": " to resist.",
+        "preSaveItalicText": "You also gain d12 temporary hit points.",
+        "type": "spell"
+    },
+    "Wild Magic 2": {
+        "preSaveNormalText": "Teleport 30ft*",
+        "type": "spell"
+    },
+    "Wild Magic 3": {
+        "preSaveNormalText": "Summon a spirit within 5ft of an enemy. At the end of your turn, it explodes dealing d6 force damage. DEX",
+        "postSaveNormalText": " to resist*",
+        "type": "spell"
+    },
+    "Wild Magic 4": {
+        "preSaveNormalText": "During rage, one of your weapons gains the Light and Thrown (20ft/60ft) properties, and returns to your hand if thrown.",
+        "type": "spell"
+    },
+    "Wild Magic 5": {
+        "preSaveNormalText": "During rage, when you are hit with an attack, the attacker takes d6 force damage.",
+        "type": "spell"
+    },
+    "Wild Magic 6": {
+        "preSaveNormalText": "During rage, you and allies within 10ft get +1 AC.",
+        "type": "spell"
+    },
+    "Wild Magic 7": {
+        "preSaveNormalText": "During rage, ground within 15ft of you is difficult terrain for enemies.",
+        "type": "spell"
+    },
+    "Wild Magic 8": {
+        "preSaveNormalText": "Blind a creature within 30ft. CON",
+        "postSaveNormalText": " to resist*",
+        "type": "spell"
+    },
+    "blank": {
+        "type": "text",
+        "contents": [
+            "",
+            "&nbsp;",
+            ""
+        ]
+    },
+    "stow": {
+        "type": "text",
+        "contents": [
+            "Draw/Stow Weapon.",
+            "&nbsp;",
+            "You may drop weapons at any time."
+        ]
+    },
+    "offhandPunchLevel1": {
+        "type": "text",
+        "contents": [
+            "Offhand Punch.",
+            "",
+            " You must have performed a melee attack this turn."
+        ]
+    },
+    "wildHeartAspects": {
+        "type": "text",
+        "contents": [
+            "",
+            "Choose one of the following effects whenever your finish a long rest: <br><br><strong>Owl</strong> - 60ft Darkvision <br><strong>Panther</strong> - Climb Speed <br><strong>Salmon</strong> - Swim Speed",
+            ""
+        ]
+    },
+    "steadyAim": {
+        "type": "text",
+        "contents": [
+            "Steady Aim.",
+            "Gain advantage on your next attack this turn.",
+            "You must not move this turn."
+        ]
+    },
+    "regainSpellSlots": {
+        "type": "text",
+        "contents": [
+            "",
+            "Regain all your spell slots",
+            ""
+        ]
+    },
+    "bearWildHeart": {
+        "type": "text",
+        "contents": [
+            "Bear.",
+            "You take half damage unless it is Force, Necrotic, Psychic, and Radiant damage.",
+            ""
+        ]
+    },
+    "wolfWildHeart": {
+        "type": "text",
+        "contents": [
+            "Wolf.",
+            "Allies get advantage on enemies within 5ft of you.",
+            ""
+        ]
+    },
+    "eagleWildHeart": {
+        "type": "text",
+        "contents": [
+            "Eagle.",
+            "You may use your Bonus Action to Dash or Disengage, and do so for free when entering Rage.",
+            ""
+        ]
+    },
+    "offhandPunch": {
+        "type": "text",
+        "contents": [
+            "Offhand Punch.",
+            "",
+            " You must have performed a melee attack or spent Ki this turn."
+        ]
+    },
+    "Dash": {
+        "type": "text",
+        "contents": [
+            "Dash. ",
+            "Move up to your speed.",
+            ""
+        ]
+    },
+    "Hide": {
+        "type": "text",
+        "contents": [
+            "Hide. ",
+            "Must be out of sight. On a success, target is unaware where you move, giving advantage on attacks. ",
+            "Stealth Check."
+        ]
+    },
+    "Dodge": {
+        "type": "text",
+        "contents": [
+            "Dodge. ",
+            "You are attacked with disadvantage until your next turn. Advantage on Dex saves.",
+            ""
+        ]
+    },
+    "Barbarian Dodge": {
+        "type": "text",
+        "contents": [
+            "Dodge. ",
+            "You are attacked with disadvantage until your next turn.",
+            ""
+        ]
+    },
+    "Ready": {
+        "type": "text",
+        "contents": [
+            "Ready. ",
+            "Choose a circumstance to wait for before acting, and what you will do if it happens.",
+            "Responding to the trigger requires a Reaction."
+        ]
+    },
+    "Disengage": {
+        "type": "text",
+        "contents": [
+            "Disengage. ",
+            "",
+            "See Opportunity Attack."
+        ]
+    },
+    "trance": {
+        "type": "text",
+        "contents": [
+            "Fey Ancestry. ",
+            "Magic cannot put you to sleep, and you can finish a Long Rest in 4 hours if you spend them in trancelike meditation.",
+            ""
+        ]
+    },
+    "oppAttack": {
+        "type": "text",
+        "contents": [
+            "Opportunity Attack. ",
+            "When a creature leaves your reach without taking the Disengage action, you make a melee attack on them.",
+            ""
+        ]
+    },
+    "channelDiv": {
+        "type": "text",
+        "contents": [
+            "Channel Divinity. ",
+            "",
+            "See Channel Divinity Actions."
+        ]
+    },
+    "senseMagicItem": {
+        "type": "text",
+        "contents": [
+            "Sense Magic. ",
+            "For one round, you can tell if anything you see is magical.",
+            "(Wild Magic)"
+        ]
+    },
+    "Leave Wild Shape": {
+        "type": "text",
+        "contents": [
+            "Leave Wild Shape.",
+            "",
+            ""
+        ]
+    },
+    "Riding Horse": {
+        "type": "text",
+        "contents": [
+            "Riding Horse. ",
+            "60ft speed, AC11, Large, Hoof attack: +5 to hit, d8+3 damage.",
+            ""
+        ]
+    },
+    "Spider": {
+        "type": "text",
+        "contents": [
+            "Spider. ",
+            "20ft climb speed, Tiny, AC12, Bite: +4 to hit, 1 damage + d4 poison damage.",
+            ""
+        ]
+    },
+    "Wolf": {
+        "type": "text",
+        "contents": [
+            "Wolf. ",
+            "40ft speed, Medium, AC12, Bite action: +4 to hit, d6+2 damage, adv on distracted enemies <em>(Pack Tactics)</em>, targets are knocked Prone on a hit (if Medium or smaller).",
+            ""
+        ]
+    },
+    "Panther": {
+        "type": "text",
+        "contents": [
+            "Panther. ",
+            "50ft speed, 40ft climb, Medium, AC12, +6 Stealth, Pounce action: +4 to hit, d4+2 damage, +d4 damage if adv. on attack and can Prowl 25ft away after (no opp. attacks) - then Hide. ",
+            ""
+        ]
+    },
+    "Black Bear": {
+        "type": "text",
+        "contents": [
+            "Black Bear. ",
+            "30ft climb, swim & walk speed, AC11, Medium, +5 Perception, Rend action - x2 attacks: +4 to hit, d6+2 damage",
+            ""
+        ]
+    },
+    "Crocodile": {
+        "type": "text",
+        "contents": [
+            "Crocodile. ",
+            "20ft walk, 30ft swim speed, AC12, Large, +2 Stealth, Bite action: +4 to hit, d8+2 damage, Medium or smaller targets are Grappled (DC12) and Restrained",
+            ""
+        ]
+    },
+    "Other Form 1": {
+        "type": "text",
+        "contents": [
+            "Other Form. ",
+            "Choose another non-flying Beast, CR 1/4",
+            ""
+        ]
+    },
+    "Other Form 2": {
+        "type": "text",
+        "contents": [
+            "3 x Other Forms. ",
+            "Choose non-flying Beasts, CR1/2",
+            ""
+        ]
+    },
+    "Other Form 3": {
+        "type": "text",
+        "contents": [
+            "4 x Other Forms. ",
+            "Choose non-flying Beasts, CR1/2",
+            ""
+        ]
+    },
+    "reckless": {
+        "type": "text",
+        "contents": [
+            "Reckless Attack. ",
+            "Attack with advantage. All attacks against you and (STR based) attacks from you have adv. until your next turn.",
+            "See attack options below."
+        ]
+    },
+    "extraAttackHighlighted": {
+        "type": "text",
+        "contents": [
+            "Attack. ",
+            "Make two highlighted attacks.",
+            ""
+        ]
+    },
+    "actionSurge": {
+        "type": "text",
+        "contents": [
+            "Action Surge. ",
+            "Take two actions.",
+            "You must rest before doing this again. </em>O"
+        ]
+    },
+    "conc": {
+        "type": "text",
+        "contents": [
+            "",
+            "",
+            "\u00a9 Requires Concentration, which may be broken upon taking damage. You may only Concentrate on one spell at a time."
+        ]
+    },
+    "uncannyDodge": {
+        "type": "text",
+        "contents": [
+            "Uncanny Dodge. ",
+            "Half the damage of an incoming attack you can see.",
+            ""
+        ]
+    },
+    "useObject": {
+        "type": "text",
+        "contents": [
+            "Utilize an Object. ",
+            "",
+            "eg. tie some rope."
+        ]
+    },
+    "sleightOfHandThief": {
+        "type": "text",
+        "contents": [
+            "Use Sleight of Hand. ",
+            "Try picking a lock or pocket, or attempt to disarm a trap with Thieves' Tools. ",
+            "(Thief)"
+        ]
+    },
+    "ritual": {
+        "type": "text",
+        "contents": [
+            "",
+            "\u2306 Some spells can be cast as a 10 minute ritual, without having to spend a spell slot.",
+            ""
+        ]
+    },
+    "magicalUnarmedStrike": {
+        "type": "text",
+        "contents": [
+            "",
+            "Your Punches deal Bludgeoning or Force damage ",
+            ""
+        ]
+    },
+    "lucky": {
+        "type": "text",
+        "contents": [
+            "Lucky. ",
+            "Reroll 1s on your d20.",
+            ""
+        ]
+    },
+    "haflingNimbleness": {
+        "type": "text",
+        "contents": [
+            "Halfling Nimbleness. ",
+            "You can move through the space of larger creatures.",
+            ""
+        ]
+    },
+    "resPoison": {
+        "type": "text",
+        "contents": [
+            "",
+            "You have resistance to poison damage.",
+            ""
+        ]
+    },
+    "resFire": {
+        "type": "text",
+        "contents": [
+            "",
+            "You have resistance to fire damage.",
+            ""
+        ]
+    },
+    "savageAttacks": {
+        "type": "text",
+        "contents": [
+            "Savage Attacks.",
+            "When you critically hit with a melee weapon, you can roll an extra one of the weapon's damage dice.",
+            ""
+        ]
+    },
+    "naturallyStealthy": {
+        "type": "text",
+        "contents": [
+            "",
+            "You can attempt to hide behind larger creatures.",
+            ""
+        ]
+    },
+    "Wild Resurgence": {
+        "type": "text",
+        "contents": [
+            "",
+            "If you are out of Wild Shapes, you can expend a spell slot to regain one once per turn.",
+            ""
+        ]
+    },
+    "Wild Resurgence 2": {
+        "type": "text",
+        "contents": [
+            "Wild Resurgence.",
+            "You can regain a level 1 spell slot by spending a Wild Shape. O",
+            ""
+        ]
+    },
+    "Wild Companion": {
+        "type": "text",
+        "contents": [
+            "Wild Companion (Wild Shape).",
+            "Find a Familiar. ",
+            "See PHB for more details. </em>O<em>"
+        ]
+    },
+    "Natural Recovery - arid": {
+        "type": "text",
+        "contents": [
+            "Circle of the Land - Arid.",
+            "You get one free casting of either Fireball, Burning Hands or Blur. O ",
+            ""
+        ]
+    },
+    "relentlessEndurance": {
+        "type": "text",
+        "contents": [
+            "Relentless Endurance",
+            "Upon taking damage, drop to 1 hit point instead of 0. You can do this once per Long Rest - O",
+            ""
+        ]
+    },
+    "Other Druidic Spell": {
+        "type": "text",
+        "contents": [
+            "Other Druidic Spell.",
+            "Choose one to have prepared.",
+            ""
+        ]
+    }
+}

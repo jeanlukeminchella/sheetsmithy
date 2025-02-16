@@ -626,6 +626,7 @@ class Sheet:
         result += "<!DOCTYPE html>\n"
         result += "<html>\n"
         result += "<head><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>\n"
+        result += "<link rel='icon' href='/static/favicon.ico' type='image/x-icon'>"
         result += "<title>"+self.classAsString+"</title>\n"
         result += writeStyle()
         result += self.generateHeaderHTML()

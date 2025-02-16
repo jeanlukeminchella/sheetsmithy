@@ -401,7 +401,7 @@ class Block():
 
                 result += e.getHTML(c)
             else:
-                result += ne.getHTML(e)
+                result += ne.getHTML(e,c)
         
         if self.divID !="":
             result += "</div>\n"

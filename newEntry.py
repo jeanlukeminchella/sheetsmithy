@@ -10,74 +10,28 @@ standardEntryEnd = "</p>\n"
 with open(gf.pathToSource+"Entries/TextEntries.txt", 'r') as file:
     textEntries = json.load(file)
 
+allEntries = json.load(open(gf.pathToSource+"Entries.json", 'r'))
 
-
-def getHTMLfromThruple(thruple):
-    boldBit = thruple[0]
-    normalBit = thruple[1]
-    italicBit = thruple[2]
-    result = standardEntryStart
-    if boldBit!= "":
-        result+="<strong>"+boldBit+"</strong> "
-    
-    if normalBit!= "":
-        result+=normalBit+" "
-    
-    
-    if italicBit!= "":
-        result+="<em>"+italicBit+"</em>"
-        
-    return result+standardEntryEnd
-
-"""def getBoldText():
-    
-    
-    boldBit = self.title
-    
-    if self.rang > 0 or self.duration!="" or self.cost!="":
-        boldBit+=" ("
-        prior = False
-        
-        if self.cost!="":
-            boldBit+= str(c.costDic[str(self.cost)])
-            prior = True
-        if self.rang>0 :
-            if prior:
-                boldBit+=", "
-            boldBit+=gf.getDistanceString(self.rang)
-            prior = True
-        if self.duration!="":
-            if prior:
-                boldBit+=", "
-                prior = True
-            boldBit+= self.duration
-        boldBit+=")"
-    
-    if self.conc:
-        boldBit+=" ©. "
-    else:
-        boldBit+=". "
-    
-    return boldBit"""
 
 # this funciton fills out the entry into a dictionary that has all the keys it needs to make hmtl, including "castTime", "id" and "type"
 # returns a blank thruple dictionary if theres an error
 # id is used to expand the dictionay, and also identify if a character already has a certain entry
 def getExpandedDictionary(e):
 
-    defaultDictionary = {
+    # start with the expanded dictionary being a blank thruple
+    expandedDictionary = {
         "castTime":"a",
-        "id":"",
-        "type":"thruple",
+        "id":"blank",
+        "type":"text",
         "expanded":True,
-        # contents is required for thruple types
+        # contents is required for text types
         "contents":["","",""]
     }
     
     #were now trying to parse different inputs, like strings or lists
     if type(e)==str:
-        defaultDictionary["contents"][1]=e
-        return defaultDictionary
+        expandedDictionary["contents"][1]=e
+        return expandedDictionary
 
     if type(e)==list:
         if len(e)<4:
@@ -91,18 +45,18 @@ def getExpandedDictionary(e):
             if onlyLists:
                 while len(e)<3:
                     e.append("")
-                defaultDictionary["contents"]=e
-                return defaultDictionary
+                expandedDictionary["contents"]=e
+                return expandedDictionary
     
 
     
     if type(e)!=dict:
         # if its an int or boolean ect. we can make a string out of it and still display that info
         try:
-            defaultDictionary["contents"][1]=str(e)
-            return defaultDictionary
+            expandedDictionary["contents"][1]=str(e)
+            return expandedDictionary
         except:
-            return defaultDictionary
+            return expandedDictionary
         
     
         
@@ -110,43 +64,32 @@ def getExpandedDictionary(e):
 
     keys = list(e.keys())
 
-    # these types do not reflect the 5e rules definitions. in this program spells have saves and do not necessarily do damage, attacks do damage.
-    # 
-    entryTypes= ["text","spell","attack","thruple"]
 
-    badEntry = not ("type" in keys and  "id" in keys)
-    if "type" in keys:
-        if not e["type"] in entryTypes:
-            badEntry = True
-
-    if badEntry:
-        print("weve got a bad entry here - ")
+    if not "id" in keys:
+        print("weve got a bad entry here with no id- ")
         print(e)
-        return defaultDictionary
+        return expandedDictionary
     
-    # ok now weve got a dictionary with a "type" key that is in the accepted entryTypes, and an "id" key as well
-    
-    #lets see if any of these keys are in our input, and add them to the entry to return. These are all valid keys (though their values might not be)
-    keysToClone = ["castTime","cost","duration"]
-    for key in keysToClone:
-        if key in keys:
-            defaultDictionary[key]=e[key]
-                
-    if e["type"]=="text":
-        #print("weve been asked to expand a text entry ",e)
-        if not e["id"] in textEntries.keys():
-            print("bad key for text entry", e["id"])
-            defaultDictionary["contents"][1] = e["id"]
-            return defaultDictionary
-        else:
-            defaultDictionary["contents"] = textEntries[e["id"]]
-            defaultDictionary["id"]=e["id"]
-            
-            return defaultDictionary
+    # ok now weve got a dictionary with an "id" key
 
+    if not e["id"]in allEntries.keys():
+        #got an id here that doesnt 
+        print("given ID here that doesnt load an entry",e["id"]," by entry ",e)
+    else:
+
+        expandedDictionary = allEntries[e["id"]]
+
+        # lets load anything from our bank of entries to see if that can help us flesh out the entry
+
+                
             
-    elif e["type"]=="spell":
-        pass
+    keysToKeep = ["id","castTime","cost","duration","title","rang","cost","duration","conc","castTime","modifierIndex","preHealText","postHealText","healingBonus","damage","addModToDamage","damageType","cantripScaling","saveNotAttack","resistAttributeText","resistText","note","finesse","reach","versatile","thrown","mastery","preSaveNormalText","postSaveNormalText","preSaveItalicText","postSaveItalicText","ritual","useSpellcastingMod"]
+    # if this input already has some info about useful attributes lets keep them and use them instead of anything loaded from file
+    for key in keysToKeep:
+        if key in keys:
+            expandedDictionary[key]=e[key]
+        
+    return expandedDictionary
 
 def getHTMLfromThruple(thruple):
     boldBit = thruple[0]
@@ -165,8 +108,9 @@ def getHTMLfromThruple(thruple):
         
     return result+standardEntryEnd
 
-def getHTML(e):
-    print("input to get hmtl: ",e)
+def getHTML(e,c=None):
+    
+    #print("input to get hmtl: ",e)
     expanded = False
     if type(e)==dict:
         if "expanded" in e.keys():
@@ -175,25 +119,116 @@ def getHTML(e):
     if not expanded:
         e = getExpandedDictionary(e)
 
-    print("should be expanded now: ",e)
+    #print("should be expanded now: ",e)
     
-    if e["type"]=="thruple":
+    keys = e.keys()
+
+    if e["type"]=="text":
         return getHTMLfromThruple(e["contents"])
+    else:
+
+
+        defaultBlankStringKeys = ["cost","duration","preHealText","postHealText","damage","resistAttributeText","resistText","note","versatile","mastery","preSaveNormalText","postSaveNormalText","preSaveItalicText","postSaveItalicText"]
+        for k in defaultBlankStringKeys:
+            if not k in keys:
+                e[k]=""
+
+
+        defaultZeroKeys = ["rang","healingBonus","thrown"]
+        for k in defaultZeroKeys:
+            if not k in keys:
+                e[k]=0
+
+        defaultFalseKeys = ["conc","addModToDamage","cantripScaling","saveNotAttack","finesse","reach","ritual","useSpellcastingMod"]
+        for k in defaultFalseKeys:
+            if not k in keys:
+                e[k]=False
+        
+        if not "damageType" in keys:
+            e["damageType"]=None
+        
+        if not "castTime" in keys:
+            e["castTime"]="a"
+        
+        if not "modifierIndex" in keys:
+            e["modifierIndex"]=-1
+
+        # we now have every attribute in this large dictionary we need to generate html
+        
+        modifier = c.modifiers[c.defaultMod]
+        if e["useSpellcastingMod"]:
+            modifier = c.modifiers[c.spellcastingMod]
+        if e["modifierIndex"]!=-1:
+            modifier=c.modifiers[e["modifierIndex"]]
+
+        boldBit = getBoldText(e,c)
+        
+        normalBit = e["preSaveNormalText"]
+        if e["postSaveNormalText"]!="":
+            
+            normalBit += str(8+c.profBonus+modifier)
+            normalBit += e["postSaveNormalText"]
+            
+        italicBit = e["preSaveItalicText"]
+        if e["postSaveItalicText"]!="":
+            
+            italicBit += str(8+c.profBonus+modifier)
+            italicBit += e["postSaveItalicText"]
+            
+        if e["ritual"] and c.ritualCaster:
+            italicBit += "</em> ⌆<em>"
+        return getHTMLfromThruple([boldBit,normalBit,italicBit])
+        
+
+
+def getBoldText(e,c):
+    
+    
+    boldBit = e["id"]
+
+    rang = e["rang"]
+    duration = e["duration"]
+    cost = e["cost"]
+    conc = e["conc"]
+    
+    if rang > 0 or duration!="" or cost!="":
+        boldBit+=" ("
+        prior = False
+        
+        if cost!="":
+            boldBit+= str(c.costDic[str(cost)])
+            prior = True
+        if rang>0 :
+            if prior:
+                boldBit+=", "
+            boldBit+=gf.getDistanceString(rang)
+            prior = True
+        if duration!="":
+            if prior:
+                boldBit+=", "
+                prior = True
+            boldBit+= duration
+        boldBit+=")"
+    
+    if conc:
+        boldBit+=" ©. "
+    else:
+        boldBit+=". "
+    
+    return boldBit
 
 
 
 
 
 
-
-
-print(getHTML("wagwan"))
+"""print(getHTML("wagwan"))
 print()
 print(getHTML(4))
 print()
 print(getHTML(False))
 print()
 r = {"type":"text","id":"Disengage"}
-print(getHTML(r))
+print(getHTML(r))"""
 
 
