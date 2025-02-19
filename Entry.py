@@ -271,7 +271,7 @@ class AttackRollEntry(Entry):
                 italicBit +="Deal "+str(attributeModifier)+" damage on a miss."
             elif self.mastery == "Cleave":
                 added = True
-                italicBit +="On a hit, you may make a free attack with this weapon on an enemy within 5ft of you and the target. This free attack can only happen once per turn and its damage is "+self.damage1
+                italicBit +="On a hit, you may make a free attack with this weapon on an enemy within 5ft of you and the target. This free attack can only happen once per turn and its damage is "+self.damage
 
                 
             

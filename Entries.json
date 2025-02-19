@@ -1,358 +1,584 @@
 {
-    "Focused Aim": {
-        "preSaveNormalText": " When you miss with an attack roll, you can spend 1 to 3 ki points to increase your attack roll by 2 for each.",
-        "useSpellcastingMod": true,
-        "type": "spell"
+    "Battleaxe": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Slashing",
+        "damage": "d8",
+        "versatile": "d10",
+        "mastery": "Topple",
+        "type": "attack"
     },
-    "Command": {
-        "cost": "1",
+    "Blowgun": {
+        "addModToDamage": true,
+        "modifierIndex": 1,
+        "damageType": "Piercing",
+        "damage": "1",
+        "rang": 25,
+        "mastery": "Vex",
+        "type": "attack"
+    },
+    "Chill Touch": {
+        "damage": "d10",
+        "addModToDamage": false,
+        "damageType": "Necrotic",
+        "cantripScaling": true,
+        "saveNotAttack": false,
+        "note": "Target cannot regain hp until end of your next turn.",
+        "useSpellcastingMod": true,
+        "type": "attack"
+    },
+    "Club": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Bludgeoning",
+        "damage": "d4",
+        "mastery": "Slow",
+        "type": "attack"
+    },
+    "Create Bonfire": {
+        "damage": "d8",
         "rang": 60,
-        "preSaveNormalText": "One word command must be followed by target. WIS",
-        "postSaveNormalText": " to resist.",
-        "preSaveItalicText": " eg. Drop, Fall Prone, Flee etc.",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Bane": {
-        "rang": 30,
-        "cost": "1",
         "duration": "1 min",
         "conc": true,
-        "preSaveNormalText": "Up to three targets must subtract a d4 from attacks and saving throws. CHAR",
-        "postSaveNormalText": " to resist.",
+        "addModToDamage": false,
+        "damageType": "fire",
+        "cantripScaling": true,
+        "saveNotAttack": true,
+        "resistAttributeText": "DEX",
+        "resistText": " to dodge",
+        "note": " Bonfire fills a 5ft square.",
         "useSpellcastingMod": true,
-        "type": "spell"
+        "type": "attack"
     },
-    "Moonbeam": {
+    "Dagger": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Piercing",
+        "damage": "d4",
+        "thrown": 20,
+        "finesse": true,
+        "mastery": "Nick",
+        "type": "attack"
+    },
+    "Dart": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Piercing",
+        "damage": "d4",
+        "thrown": 20,
+        "finesse": true,
+        "mastery": "Vex",
+        "type": "attack"
+    },
+    "Fire Bolt": {
+        "damage": "d10",
         "rang": 120,
-        "cost": "2",
-        "duration": "1 min",
-        "conc": true,
-        "preSaveNormalText": " 0ft beam of moonlight deals 2d8+2 radiant damage to creatures starting their turn there. CON",
-        "postSaveNormalText": " to half damage.",
-        "preSaveItalicText": " Can be moved with an action.",
+        "addModToDamage": false,
+        "damageType": "Fire",
+        "cantripScaling": true,
+        "saveNotAttack": false,
         "useSpellcastingMod": true,
-        "type": "spell"
+        "type": "attack"
     },
-    "Hunter's Mark": {
-        "cost": "1",
-        "preSaveNormalText": "Deal an extra d6 damage to target. ",
-        "conc": true,
-        "castTime": "ba",
-        "preSaveItalicText": " Can be moved with a Bonus Action.",
-        "useSpellcastingMod": true,
-        "type": "spell"
+    "Flail": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Bludgeoning",
+        "damage": "d8",
+        "mastery": "Sap",
+        "type": "attack"
     },
-    "Hold Person": {
-        "rang": 60,
-        "cost": "2",
-        "duration": "10 min",
-        "conc": true,
-        "preSaveNormalText": " A humanoid target is paralysed. WIS",
-        "postSaveNormalText": " to resist.",
-        "preSaveItalicText": "Target can retry save at the end of their turns.",
-        "useSpellcastingMod": true,
-        "type": "spell"
+    "Glaive": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Slashing",
+        "damage": "d10",
+        "reach": true,
+        "mastery": "Graze",
+        "type": "attack"
     },
-    "Protection from Evil and Good": {
-        "cost": "1",
-        "duration": "10 min",
-        "conc": true,
-        "preSaveNormalText": "Aberrations, celestials, elementals, fey, fiends, and undead attack target with disadvantage, and cannot charm, frighten, or possess target.",
-        "preSaveItalicText": "If the target is already under an affect, they have adv. on new saving throws against it. Consumes Holy Water.",
-        "useSpellcastingMod": true,
-        "type": "spell"
+    "Greataxe": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Slashing",
+        "damage": "d12",
+        "mastery": "Cleave",
+        "type": "attack"
     },
-    "Spike Growth": {
-        "conc": true,
-        "cost": "2",
-        "preSaveNormalText": "20ft square of thorns erupt from the ground as difficult terrain, dealing 2d4 poison damage for every 5ft travelled across it.",
-        "preSaveItalicText": "STR",
-        "postSaveItalicText": " to resist.",
-        "useSpellcastingMod": true,
-        "type": "spell"
+    "Greatclub": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Bludgeoning",
+        "damage": "d8",
+        "mastery": "Push",
+        "type": "attack"
     },
-    "Revivify": {
-        "cost": "3",
-        "conc": true,
-        "preSaveNormalText": "You touch a creature that has died within the last minute. They return to life with 1 hp.",
-        "preSaveItalicText": "Requires a 300gp diamond.",
-        "useSpellcastingMod": true,
-        "type": "spell"
+    "Greatsword": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Slashing",
+        "damage": "2d6",
+        "mastery": "Graze",
+        "type": "attack"
     },
-    "Mass Healing Word": {
-        "rang": 60,
-        "cost": "3",
-        "castTime": "ba",
-        "useSpellcastingMod": true,
-        "type": "spell"
+    "Halberd": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Slashing",
+        "damage": "d10",
+        "reach": true,
+        "mastery": "Cleave",
+        "type": "attack"
     },
-    "Hellish Rebuke ": {
-        "rang": 60,
-        "modifierIndex": 5,
-        "preSaveNormalText": "A creature that just damaged you takes 3d10 fire damage. DEX",
-        "postSaveNormalText": " to half damage.",
-        "preSaveItalicText": "(Tiefling) One use per Long Rest - </em>O<em> ",
-        "castTime": "r",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Throw 15ft": {
-        "preSaveNormalText": "STR",
-        "postSaveNormalText": " to resist.",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Speak With Animals": {
-        "cost": "1",
-        "preSaveNormalText": "You can comprehend and verbally communicate with beasts for 10 mins.",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Guidance": {
-        "duration": "1 min",
-        "conc": true,
-        "preSaveNormalText": "The target may add a d4 to an ability check they make. The spell then ends.",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Lay on Hands": {
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Shield of Faith": {
-        "conc": true,
-        "cost": "1",
-        "preSaveNormalText": "A shimmering field appears and surrounds a creature of your choice within range, granting it +2 AC.",
-        "rang": 60,
-        "duration": "10 min",
-        "castTime": "ba",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Misty Step": {
+    "Hand Crossbow": {
+        "addModToDamage": true,
+        "modifierIndex": 1,
+        "damageType": "Piercing",
+        "damage": "d6",
         "rang": 30,
-        "cost": "2",
-        "preSaveNormalText": "Teleport",
-        "castTime": "ba",
-        "useSpellcastingMod": true,
-        "type": "spell"
+        "mastery": "Vex",
+        "type": "attack"
     },
-    "Thunderous Smite": {
-        "conc": true,
-        "duration": "1 min",
-        "cost": "1",
-        "preSaveNormalText": "Your next melee hit deals an extra 2d6 thunder damage, STR",
-        "postSaveNormalText": " to resist being thrown 10ft and knocked prone.",
-        "castTime": "ba",
-        "useSpellcastingMod": true,
-        "type": "spell"
+    "Handaxe": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Slashing",
+        "damage": "d6",
+        "thrown": 20,
+        "mastery": "Vex",
+        "type": "attack"
     },
-    "Bless": {
+    "Heavy Crossbow": {
+        "addModToDamage": true,
+        "modifierIndex": 1,
+        "damageType": "Piercing",
+        "damage": "d10",
+        "rang": 100,
+        "mastery": "Push",
+        "type": "attack"
+    },
+    "Javelin": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Piercing",
+        "damage": "d6",
+        "thrown": 30,
+        "mastery": "Slow",
+        "type": "attack"
+    },
+    "Lance": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Piercing",
+        "damage": "d10",
+        "reach": true,
+        "mastery": "Topple",
+        "type": "attack"
+    },
+    "Light Crossbow": {
+        "addModToDamage": true,
+        "modifierIndex": 1,
+        "damageType": "Piercing",
+        "damage": "d8",
+        "rang": 80,
+        "mastery": "Slow",
+        "type": "attack"
+    },
+    "Light Hammer": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Bludgeoning",
+        "damage": "d4",
+        "thrown": 20,
+        "mastery": "Nick",
+        "type": "attack"
+    },
+    "Longbow": {
+        "addModToDamage": true,
+        "modifierIndex": 1,
+        "damageType": "Piercing",
+        "damage": "d8",
+        "rang": 150,
+        "mastery": "Slow",
+        "type": "attack"
+    },
+    "Longsword": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Slashing",
+        "damage": "d8",
+        "versatile": "d10",
+        "mastery": "Sap",
+        "type": "attack"
+    },
+    "Mace": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Bludgeoning",
+        "damage": "d6",
+        "mastery": "Sap",
+        "type": "attack"
+    },
+    "Maul": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Bludgeoning",
+        "damage": "2d6",
+        "mastery": "Topple",
+        "type": "attack"
+    },
+    "Morningstar": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Piercing",
+        "damage": "d8",
+        "mastery": "Sap",
+        "type": "attack"
+    },
+    "Musket": {
+        "addModToDamage": true,
+        "modifierIndex": 1,
+        "damageType": "Piercing",
+        "damage": "d12",
+        "rang": 40,
+        "mastery": "Slow",
+        "type": "attack"
+    },
+    "Pike": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Piercing",
+        "damage": "d10",
+        "reach": true,
+        "mastery": "Push",
+        "type": "attack"
+    },
+    "Pistol": {
+        "addModToDamage": true,
+        "modifierIndex": 1,
+        "damageType": "Piercing",
+        "damage": "d10",
         "rang": 30,
+        "mastery": "Vex",
+        "type": "attack"
+    },
+    "Poison Spray": {
+        "damage": "d12",
+        "rang": 30,
+        "addModToDamage": false,
+        "damageType": "poison",
+        "cantripScaling": true,
+        "saveNotAttack": false,
+        "useSpellcastingMod": true,
+        "type": "attack"
+    },
+    "Produce Flame": {
+        "damage": "d8",
+        "rang": 60,
+        "addModToDamage": false,
+        "damageType": "fire",
+        "cantripScaling": true,
+        "saveNotAttack": false,
+        "useSpellcastingMod": true,
+        "type": "attack"
+    },
+    "Psychic Blade": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Psychic",
+        "damage": "d6",
+        "thrown": 60,
+        "finesse": true,
+        "mastery": "Vex",
+        "type": "attack"
+    },
+    "Quarterstaff": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Bludgeoning",
+        "damage": "d6",
+        "versatile": "d8",
+        "mastery": "Topple",
+        "type": "attack"
+    },
+    "Rapier": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Piercing",
+        "damage": "d8",
+        "finesse": true,
+        "mastery": "Vex",
+        "type": "attack"
+    },
+    "Ray of Sickness": {
+        "damage": "2d8",
+        "rang": 60,
         "cost": "1",
-        "duration": "1 min",
-        "conc": true,
-        "preSaveNormalText": "Three targets add a d4 to their d20s for the duration.",
+        "addModToDamage": false,
+        "damageType": "Poison",
+        "cantripScaling": false,
+        "saveNotAttack": false,
+        "note": "On a hit, target is also Poisoned until the end of your next turn.",
+        "useSpellcastingMod": true,
+        "type": "attack"
+    },
+    "Scimitar": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Slashing",
+        "damage": "d6",
+        "finesse": true,
+        "mastery": "Nick",
+        "type": "attack"
+    },
+    "Shortbow": {
+        "addModToDamage": true,
+        "modifierIndex": 1,
+        "damageType": "Piercing",
+        "damage": "d6",
+        "rang": 80,
+        "mastery": "Vex",
+        "type": "attack"
+    },
+    "Shortsword (Offhand)": {
+        "castTime": "ba",
+        "addModToDamage": false,
+        "modifierIndex": 0,
+        "damageType": "Slashing",
+        "damage": "d6",
+        "finesse": true,
+        "note": "You must have already made a Shortsword attack this turn.",
+        "type": "attack"
+    },
+    "Shortsword": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Piercing",
+        "damage": "d6",
+        "finesse": true,
+        "mastery": "Vex",
+        "type": "attack"
+    },
+    "Sickle": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Slashing",
+        "damage": "d4",
+        "mastery": "Nick",
+        "type": "attack"
+    },
+    "Sling": {
+        "addModToDamage": true,
+        "modifierIndex": 1,
+        "damageType": "Bludgeoning",
+        "damage": "d4",
+        "rang": 30,
+        "mastery": "Slow",
+        "type": "attack"
+    },
+    "Spear": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Piercing",
+        "damage": "d6",
+        "thrown": 20,
+        "versatile": "d8",
+        "mastery": "Sap",
+        "type": "attack"
+    },
+    "Staff": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Bludgeoning",
+        "damage": "d6",
+        "versatile": "d8",
+        "type": "attack"
+    },
+    "Toll the Dead": {
+        "damage": "d8",
+        "rang": 60,
+        "addModToDamage": false,
+        "damageType": "necrotic",
+        "cantripScaling": true,
+        "saveNotAttack": true,
+        "resistAttributeText": "WIS",
+        "resistText": " to resist",
+        "note": "For wounded targets, swap the damage dice for d12.",
+        "useSpellcastingMod": true,
+        "type": "attack"
+    },
+    "Trident": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Piercing",
+        "damage": "d8",
+        "thrown": 20,
+        "versatile": "d10",
+        "mastery": "Topple",
+        "type": "attack"
+    },
+    "War Pick": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Piercing",
+        "damage": "d8",
+        "versatile": "d10",
+        "mastery": "Sap",
+        "type": "attack"
+    },
+    "Warhammer": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Bludgeoning",
+        "damage": "d8",
+        "versatile": "d10",
+        "mastery": "Push",
+        "type": "attack"
+    },
+    "Whip": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Slashing",
+        "damage": "d4",
+        "finesse": true,
+        "reach": true,
+        "mastery": "Slow",
+        "type": "attack"
+    },
+    "Wooden Staff": {
+        "addModToDamage": true,
+        "modifierIndex": 0,
+        "damageType": "Bludgeoning",
+        "damage": "d6",
+        "versatile": "d8",
+        "type": "attack"
+    },
+    "": {
         "useSpellcastingMod": true,
         "type": "spell"
     },
-    "Dispel Magic": {
+    "Guiding Bolt": {
+        "damage": "3d8",
         "rang": 120,
-        "cost": "3",
-        "preSaveNormalText": "A spell <4th level on the target ends. Make a spell attack to dispel higher levels. ",
-        "preSaveItalicText": "DC: 10 + the spell's level.",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Spirit Shroud": {
-        "cost": "3",
-        "duration": "1 min",
-        "conc": true,
-        "preSaveNormalText": "Any attack you make deals 1d8 extra damage when you hit a creature within 10 feet of you, and target cannot heal until your next turn.",
-        "preSaveItalicText": "When cast, foes within 10ft have 10ft less speed until your next turn.",
-        "castTime": "ba",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Divine Sense": {
-        "preSaveNormalText": "You know the location of any celestial, fiend, or undead within 60 feet, or any area that is desecrated or concecrated.",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Stun": {
-        "preSaveNormalText": "When you hit with a melee attack, spend 1 Focus to Stun target until your next turn. CON",
-        "postSaveNormalText": " to resist.",
-        "preSaveItalicText": "Targets that resist still have their speed halved, and the next attack against them is with advantage. ",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Ensnaring Strike": {
         "cost": "1",
-        "duration": "1 min",
-        "conc": true,
-        "preSaveNormalText": " The next target you hit with a weapon is restrained by vines. STR",
-        "postSaveNormalText": " to resist. A creature can use an action to break the vines (Strength check).",
-        "preSaveItalicText": " While restrained, targets take d6 damage at the start of their turns. Large targets have advantage on their saves. ",
-        "castTime": "ba",
+        "addModToDamage": false,
+        "damageType": null,
+        "cantripScaling": false,
+        "saveNotAttack": false,
+        "note": " Grants adv. to the next attack on a hit.",
         "useSpellcastingMod": true,
-        "type": "spell"
+        "type": "attack"
     },
-    "Healing Word": {
+    "Punch": {
+        "damage": "1",
+        "addModToDamage": true,
+        "damageType": null,
+        "cantripScaling": false,
+        "saveNotAttack": false,
+        "type": "attack"
+    },
+    "Sacred Flame": {
+        "damage": "d8",
         "rang": 60,
-        "cost": "1",
-        "castTime": "ba",
+        "addModToDamage": false,
+        "damageType": null,
+        "cantripScaling": true,
+        "saveNotAttack": true,
+        "resistAttributeText": "DEX",
+        "resistText": " to dodge",
+        "note": "Ignores Cover.",
         "useSpellcastingMod": true,
-        "type": "spell"
+        "type": "attack"
     },
-    "Zone of Truth": {
+    "Spiritual Weapon": {
+        "damage": "d8",
         "rang": 60,
         "cost": "2",
-        "duration": "10 min",
-        "preSaveNormalText": " Creatures in a 30ft sphere cannot lie. CHAR",
-        "postSaveNormalText": " to resist, and you know if targets have passed.",
+        "duration": "1 min",
+        "conc": true,
+        "addModToDamage": true,
+        "damageType": null,
+        "cantripScaling": false,
+        "saveNotAttack": false,
+        "castTime": "ba",
+        "note": "Can be commanded to move 20ft and attack again with a Bonus Action.",
         "useSpellcastingMod": true,
+        "type": "attack"
+    },
+    "Assume Wild Shape (Wild Shape)": {
+        "preSaveNormalText": "Choose from your Wild Shape Forms.",
+        "castTime": "ba",
+        "type": "spell"
+    },
+    "Barkskin": {
+        "cost": "2",
+        "duration": "1 hour",
+        "preSaveNormalText": "Target's AC is 17.",
+        "castTime": "ba",
+        "type": "spell"
+    },
+    "Blur": {
+        "cost": "2",
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": "Attacks against you have disadv.",
+        "preSaveItalicText": "Ineffective vs. Truesight or Blindsight.",
         "type": "spell"
     },
     "Burning Hands": {
         "cost": "1",
-        "preSaveNormalText": "Unleash a 15ft cone of fire. 3d6 damage, DEX",
-        "postSaveNormalText": "  to half damage",
-        "type": "spell"
-    },
-    "Entangle": {
-        "conc": true,
-        "cost": "1",
-        "rang": 90,
-        "duration": "1 min",
-        "preSaveNormalText": "Cause a 20ft square of vines, restraining occupants.",
-        "preSaveItalicText": "STR",
-        "postSaveItalicText": " to resist.",
+        "preSaveNormalText": "Unleash a 15ft cone of 2d6 fire damage. ",
+        "preSaveItalicText": "DEX",
+        "postSaveItalicText": " to half damage.",
         "useSpellcastingMod": true,
         "type": "spell"
     },
-    "Knock Prone": {
-        "preSaveNormalText": "DEX",
-        "postSaveNormalText": " to resist.",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "": {
-        "castTime": "action",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Herosim": {
-        "cost": "1",
+    "Dancing Lights": {
+        "rang": 120,
         "duration": "1 min",
         "conc": true,
-        "preSaveNormalText": "A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to being frightened and gains ___ temporary hit points at the start of each of its turns ",
-        "useSpellcastingMod": true,
+        "preSaveNormalText": "Create up to four small lights, that each shed dim light out to 10ft. ",
+        "preSaveItalicText": "Lights can be moved 60ft with a Bonus Action, but must stay within 20ft of another light and within range.",
         "type": "spell"
     },
-    "Sanctuary": {
-        "rang": 30,
-        "cost": "1",
-        "duration": "1 min",
-        "preSaveNormalText": " Enemies who try to harm target must first pass a WIS",
-        "postSaveNormalText": " save or choose a new target.",
-        "preSaveItalicText": "Spell ends if target harms a foe.",
-        "castTime": "ba",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Wrathful Smite": {
-        "conc": true,
-        "duration": "1 min",
-        "cost": "1",
-        "preSaveNormalText": "Your next melee hit deals an extra d6 psychic damage, WIS",
-        "postSaveNormalText": " to resist being frightened of you until the spell ends.",
-        "castTime": "ba",
-        "preSaveItalicText": "As an action, the creature can make another save to steel its resolve and end this spell.",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Lesser Restoration": {
+    "Darkness": {
+        "rang": 60,
         "cost": "2",
-        "preSaveNormalText": "Target is cured of a disease or condition (blinded, deafened, paralyzed, or poisoned).",
-        "castTime": "ba",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Detect Magic": {
-        "cost": "1",
-        "duration": "10 min",
         "conc": true,
-        "preSaveNormalText": "Sense the presence of magic within 30 feet of you, and learn its school of magic.",
-        "ritual": true,
-        "useSpellcastingMod": true,
+        "preSaveNormalText": "Magical darkness spreads from a point or object.",
+        "preSaveItalicText": "Dispels light from weaker spells.",
         "type": "spell"
     },
-    "Thaumaturgy": {
+    "Druidcraft": {
         "rang": 30,
+        "preSaveNormalText": "Whisper to the spirits of nature, and fortel the weather, light a fire, make a flower bloom or cause some other minor effect.",
+        "type": "spell"
+    },
+    "Faerie Fire": {
+        "rang": 60,
+        "cost": "1",
         "duration": "1 min",
-        "preSaveNormalText": "You manifest a minor wonder, like altered ayes, a booming voice (adv. Intimidation), tremors, fire play or slamming a door",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Aid": {
-        "rang": 30,
-        "cost": "2",
-        "duration": "8 hour",
-        "preSaveNormalText": "Increase up to three creatures hp and hp max by 5.",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Necrotic Shroud": {
-        "rang": 10,
-        "modifierIndex": 5,
-        "preSaveNormalText": "Enemies become frightened of you. CHAR",
-        "postSaveNormalText": " to resist.",
-        "castTime": "ba",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Create Minor Illusion": {
-        "rang": 30,
-        "duration": "1 min",
-        "preSaveNormalText": "5ft, silent.",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Mending": {
-        "preSaveNormalText": "Repairs less than 1ft of damage on an object.",
-        "preSaveItalicText": "Takes 10 actions (1 min) to cast.",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Prestidigitation": {
-        "rang": 10,
-        "preSaveNormalText": "Create a minor, harmless magical effect, like leaving a mark, cleaning a surface or flavouring food. You can also briefly summon a trinket or a shower of sparks.",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Grapple": {
-        "preSaveNormalText": "Target's speed is 0, and moves with you. STR/DEX",
-        "postSaveNormalText": " to resist / break grapple.",
-        "preSaveItalicText": " Targets of a similar size half your speed. You must have a free hand for grappling.",
-        "type": "spell"
-    },
-    "Shove": {
-        "preSaveNormalText": "Target is pushed 5ft or knocked Prone. STR/DEX",
-        "postSaveNormalText": " to resist.",
-        "preSaveItalicText": " Targets can still move or get up on their turn.",
-        "modifierIndex": 0,
-        "type": "spell"
-    },
-    "Potion of Healing": {
-        "preSaveNormalText": "Heal 2d4+2 hp.",
-        "preSaveItalicText": "Can be used on a creature within 5ft.",
-        "castTime": "ba",
+        "conc": true,
+        "preSaveNormalText": "Creatures in a 20ft cube are outlined with arcane light. Attacks against them are with advantage. DEX",
+        "postSaveNormalText": " to dodge.",
         "type": "spell"
     },
     "False Life": {
         "cost": "1",
         "preSaveNormalText": "Gain 2d4+4 temporary hp.",
+        "type": "spell"
+    },
+    "Fireball": {
+        "rang": 150,
+        "cost": "3",
+        "preSaveNormalText": "Unleash a 40ft ball of 8d6 fire damage. DEX",
+        "postSaveNormalText": " to half damage.",
+        "type": "spell"
+    },
+    "Goodberry": {
+        "cost": "1",
+        "duration": "24 hours",
+        "preSaveNormalText": "Ten berries appear in your hand and are infused with magic for the duration. A creature can take a Bonus Action to eat one berry. Eating a berry restores 1 Hit Point, and the berry provides enough nourishment to sustain a creature for one day. ",
         "type": "spell"
     },
     "Hellish Rebuke": {
@@ -364,31 +590,11 @@
         "castTime": "re",
         "type": "spell"
     },
-    "Darkness": {
-        "rang": 60,
-        "cost": "2",
-        "conc": true,
-        "preSaveNormalText": "Magical darkness spreads from a point or object.",
-        "preSaveItalicText": "Dispels light from weaker spells.",
-        "type": "spell"
-    },
-    "Ray of Enfeeblement": {
-        "rang": 60,
-        "cost": "2",
-        "duration": "1 min",
-        "conc": true,
-        "preSaveNormalText": "Target has -d8 on damage rolls and disadv. on STR based d20 rolls. CON",
-        "postSaveNormalText": " to only have disadv. on next attack roll.",
-        "preSaveItalicText": "Target repeats save at the end of its turns.  ",
-        "type": "spell"
-    },
-    "Faerie Fire": {
-        "rang": 60,
+    "Jump": {
         "cost": "1",
         "duration": "1 min",
-        "conc": true,
-        "preSaveNormalText": "Creatures in a 20ft cube are outlined with arcane light. Attacks against them are with advantage. DEX",
-        "postSaveNormalText": " to dodge.",
+        "preSaveNormalText": "Once per turn, target can jump 30ft with 10ft of movement.",
+        "castTime": "ba",
         "type": "spell"
     },
     "Longstrider": {
@@ -405,69 +611,26 @@
         "preSaveNormalText": "Radiating aura conceals allies (+10 Stealth) and tracks.",
         "type": "spell"
     },
-    "Druidcraft": {
-        "rang": 30,
-        "preSaveNormalText": "Whisper to the spirits of nature, and fortel the weather, light a fire, make a flower bloom or cause some other minor effect.",
+    "Protection from Poison": {
+        "cost": "2",
+        "duration": "1 hour",
+        "preSaveNormalText": "Target has resistance and adv. on saves vs. poison.",
         "type": "spell"
     },
-    "Dancing Lights": {
-        "rang": 120,
+    "Ray of Enfeeblement": {
+        "rang": 60,
+        "cost": "2",
         "duration": "1 min",
         "conc": true,
-        "preSaveNormalText": "Create up to four small lights, that each shed dim light out to 10ft. ",
-        "preSaveItalicText": "Lights can be moved 60ft with a Bonus Action, but must stay within 20ft of another light and within range.",
-        "type": "spell"
-    },
-    "Goodberry": {
-        "cost": "1",
-        "duration": "24 hours",
-        "preSaveNormalText": "Ten berries appear in your hand and are infused with magic for the duration. A creature can take a Bonus Action to eat one berry. Eating a berry restores 1 Hit Point, and the berry provides enough nourishment to sustain a creature for one day. ",
+        "preSaveNormalText": "Target has -d8 on damage rolls and disadv. on STR based d20 rolls. CON",
+        "postSaveNormalText": " to only have disadv. on next attack roll.",
+        "preSaveItalicText": "Target repeats save at the end of its turns.  ",
         "type": "spell"
     },
     "Thunderwave": {
         "cost": "1",
         "preSaveNormalText": "Creatures in a 15ft cube next to you take 2d8 thunder damage and are pushed 10ft away from you. CON",
         "postSaveNormalText": " to half damage and stay put.",
-        "type": "spell"
-    },
-    "Assume Wild Shape (Wild Shape)": {
-        "preSaveNormalText": "Choose from your Wild Shape Forms.",
-        "castTime": "ba",
-        "type": "spell"
-    },
-    "Jump": {
-        "cost": "1",
-        "duration": "1 min",
-        "preSaveNormalText": "Once per turn, target can jump 30ft with 10ft of movement.",
-        "castTime": "ba",
-        "type": "spell"
-    },
-    "Blur": {
-        "cost": "2",
-        "duration": "1 min",
-        "conc": true,
-        "preSaveNormalText": "Attacks against you have disadv.",
-        "preSaveItalicText": "Ineffective vs. Truesight or Blindsight.",
-        "type": "spell"
-    },
-    "Fireball": {
-        "rang": 150,
-        "cost": "3",
-        "preSaveNormalText": "Unleash a 40ft ball of 8d6 fire damage. DEX",
-        "postSaveNormalText": " to half damage.",
-        "type": "spell"
-    },
-    "Barkskin": {
-        "cost": "2",
-        "duration": "1 hour",
-        "preSaveNormalText": "Target's AC is 17.",
-        "castTime": "ba",
-        "type": "spell"
-    },
-    "Protection from Poison": {
-        "cost": "2",
-        "duration": "1 hour",
-        "preSaveNormalText": "Target has resistance and adv. on saves vs. poison.",
         "type": "spell"
     },
     "Wild Magic 1": {
@@ -504,6 +667,346 @@
     "Wild Magic 8": {
         "preSaveNormalText": "Blind a creature within 30ft. CON",
         "postSaveNormalText": " to resist*",
+        "type": "spell"
+    },
+    "Aid": {
+        "rang": 30,
+        "cost": "2",
+        "duration": "8 hour",
+        "preSaveNormalText": "Increase up to three creatures hp and hp max by 5.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Bane": {
+        "rang": 30,
+        "cost": "1",
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": "Up to three targets must subtract a d4 from attacks and saving throws. CHAR",
+        "postSaveNormalText": " to resist.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Bless": {
+        "rang": 30,
+        "cost": "1",
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": "Three targets add a d4 to their d20s for the duration.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Command": {
+        "cost": "1",
+        "rang": 60,
+        "preSaveNormalText": "One word command must be followed by target. WIS",
+        "postSaveNormalText": " to resist.",
+        "preSaveItalicText": " eg. Drop, Fall Prone, Flee etc.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Detect Magic": {
+        "cost": "1",
+        "duration": "10 min",
+        "conc": true,
+        "preSaveNormalText": "Sense the presence of magic within 30 feet of you, and learn its school of magic.",
+        "ritual": true,
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Dispel Magic": {
+        "rang": 120,
+        "cost": "3",
+        "preSaveNormalText": "A spell <4th level on the target ends. Make a spell attack to dispel higher levels. ",
+        "preSaveItalicText": "DC: 10 + the spell's level.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Divine Sense": {
+        "preSaveNormalText": "You know the location of any celestial, fiend, or undead within 60 feet, or any area that is desecrated or concecrated.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Ensnaring Strike": {
+        "cost": "1",
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": " The next target you hit with a weapon is restrained by vines. STR",
+        "postSaveNormalText": " to resist. A creature can use an action to break the vines (Strength check).",
+        "preSaveItalicText": " While restrained, targets take d6 damage at the start of their turns. Large targets have advantage on their saves. ",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Entangle": {
+        "conc": true,
+        "cost": "1",
+        "rang": 90,
+        "duration": "1 min",
+        "preSaveNormalText": "Cause a 20ft square of vines, restraining occupants.",
+        "preSaveItalicText": "STR",
+        "postSaveItalicText": " to resist.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Focused Aim": {
+        "preSaveNormalText": " When you miss with an attack roll, you can spend 1 to 3 ki points to increase your attack roll by 2 for each.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Grapple": {
+        "preSaveNormalText": "Target's speed is 0, and moves with you. STR/DEX",
+        "postSaveNormalText": " to resist / break grapple.",
+        "preSaveItalicText": " Targets of a similar size half your speed. You must have a free hand for grappling.",
+        "type": "spell"
+    },
+    "Guidance": {
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": "The target may add a d4 to an ability check they make. The spell then ends.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Healing Word": {
+        "rang": 60,
+        "cost": "1",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Herosim": {
+        "cost": "1",
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": "A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to being frightened and gains ___ temporary hit points at the start of each of its turns ",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Hold Person": {
+        "rang": 60,
+        "cost": "2",
+        "duration": "10 min",
+        "conc": true,
+        "preSaveNormalText": " A humanoid target is paralysed. WIS",
+        "postSaveNormalText": " to resist.",
+        "preSaveItalicText": "Target can retry save at the end of their turns.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Hunter's Mark": {
+        "cost": "1",
+        "preSaveNormalText": "Deal an extra d6 damage to target. ",
+        "conc": true,
+        "castTime": "ba",
+        "preSaveItalicText": " Can be moved with a Bonus Action.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Knock Prone": {
+        "preSaveNormalText": "DEX",
+        "postSaveNormalText": " to resist.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Lay on Hands": {
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Lesser Restoration": {
+        "cost": "2",
+        "preSaveNormalText": "Target is cured of a disease or condition (blinded, deafened, paralyzed, or poisoned).",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Mass Healing Word": {
+        "rang": 60,
+        "cost": "3",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Mending": {
+        "preSaveNormalText": "Repairs less than 1ft of damage on an object.",
+        "preSaveItalicText": "Takes 10 actions (1 min) to cast.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Create Minor Illusion": {
+        "rang": 30,
+        "duration": "1 min",
+        "preSaveNormalText": "5ft, silent.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Misty Step": {
+        "rang": 30,
+        "cost": "2",
+        "preSaveNormalText": "Teleport",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Moonbeam": {
+        "rang": 120,
+        "cost": "2",
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": " 0ft beam of moonlight deals 2d8+2 radiant damage to creatures starting their turn there. CON",
+        "postSaveNormalText": " to half damage.",
+        "preSaveItalicText": " Can be moved with an action.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Necrotic Shroud": {
+        "rang": 10,
+        "modifierIndex": 5,
+        "preSaveNormalText": "Enemies become frightened of you. CHAR",
+        "postSaveNormalText": " to resist.",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Potion of Healing": {
+        "preSaveNormalText": "Heal 2d4+2 hp.",
+        "preSaveItalicText": "Can be used on a creature within 5ft.",
+        "castTime": "ba",
+        "type": "spell"
+    },
+    "Prestidigitation": {
+        "rang": 10,
+        "preSaveNormalText": "Create a minor, harmless magical effect, like leaving a mark, cleaning a surface or flavouring food. You can also briefly summon a trinket or a shower of sparks.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Protection from Evil and Good": {
+        "cost": "1",
+        "duration": "10 min",
+        "conc": true,
+        "preSaveNormalText": "Aberrations, celestials, elementals, fey, fiends, and undead attack target with disadvantage, and cannot charm, frighten, or possess target.",
+        "preSaveItalicText": "If the target is already under an affect, they have adv. on new saving throws against it. Consumes Holy Water.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Revivify": {
+        "cost": "3",
+        "conc": true,
+        "preSaveNormalText": "You touch a creature that has died within the last minute. They return to life with 1 hp.",
+        "preSaveItalicText": "Requires a 300gp diamond.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Sanctuary": {
+        "rang": 30,
+        "cost": "1",
+        "duration": "1 min",
+        "preSaveNormalText": " Enemies who try to harm target must first pass a WIS",
+        "postSaveNormalText": " save or choose a new target.",
+        "preSaveItalicText": "Spell ends if target harms a foe.",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Shield of Faith": {
+        "conc": true,
+        "cost": "1",
+        "preSaveNormalText": "A shimmering field appears and surrounds a creature of your choice within range, granting it +2 AC.",
+        "rang": 60,
+        "duration": "10 min",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Shove": {
+        "preSaveNormalText": "Target is pushed 5ft or knocked Prone. STR/DEX",
+        "postSaveNormalText": " to resist.",
+        "preSaveItalicText": " Targets can still move or get up on their turn.",
+        "modifierIndex": 0,
+        "type": "spell"
+    },
+    "Spike Growth": {
+        "conc": true,
+        "cost": "2",
+        "preSaveNormalText": "20ft square of thorns erupt from the ground as difficult terrain, dealing 2d4 poison damage for every 5ft travelled across it.",
+        "preSaveItalicText": "STR",
+        "postSaveItalicText": " to resist.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Spirit Shroud": {
+        "cost": "3",
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": "Any attack you make deals 1d8 extra damage when you hit a creature within 10 feet of you, and target cannot heal until your next turn.",
+        "preSaveItalicText": "When cast, foes within 10ft have 10ft less speed until your next turn.",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Stun": {
+        "preSaveNormalText": "When you hit with a melee attack, spend 1 Focus to Stun target until your next turn. CON",
+        "postSaveNormalText": " to resist.",
+        "preSaveItalicText": "Targets that resist still have their speed halved, and the next attack against them is with advantage. ",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Speak With Animals": {
+        "cost": "1",
+        "preSaveNormalText": "You can comprehend and verbally communicate with beasts for 10 mins.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Thaumaturgy": {
+        "rang": 30,
+        "duration": "1 min",
+        "preSaveNormalText": "You manifest a minor wonder, like altered ayes, a booming voice (adv. Intimidation), tremors, fire play or slamming a door",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Throw 15ft": {
+        "preSaveNormalText": "STR",
+        "postSaveNormalText": " to resist.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Thunderous Smite": {
+        "conc": true,
+        "duration": "1 min",
+        "cost": "1",
+        "preSaveNormalText": "Your next melee hit deals an extra 2d6 thunder damage, STR",
+        "postSaveNormalText": " to resist being thrown 10ft and knocked prone.",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Hellish Rebuke ": {
+        "rang": 60,
+        "modifierIndex": 5,
+        "preSaveNormalText": "A creature that just damaged you takes 3d10 fire damage. DEX",
+        "postSaveNormalText": " to half damage.",
+        "preSaveItalicText": "(Tiefling) One use per Long Rest - </em>O<em> ",
+        "castTime": "r",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Wrathful Smite": {
+        "conc": true,
+        "duration": "1 min",
+        "cost": "1",
+        "preSaveNormalText": "Your next melee hit deals an extra d6 psychic damage, WIS",
+        "postSaveNormalText": " to resist being frightened of you until the spell ends.",
+        "castTime": "ba",
+        "preSaveItalicText": "As an action, the creature can make another save to steel its resolve and end this spell.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Zone of Truth": {
+        "rang": 60,
+        "cost": "2",
+        "duration": "10 min",
+        "preSaveNormalText": " Creatures in a 30ft sphere cannot lie. CHAR",
+        "postSaveNormalText": " to resist, and you know if targets have passed.",
+        "useSpellcastingMod": true,
         "type": "spell"
     },
     "blank": {

@@ -1,5 +1,4 @@
 import Class as c
-import featFunctions as feats
 
 class Monk(c.Sheet):
     def __init__(self, inp):
@@ -20,9 +19,10 @@ class Monk(c.Sheet):
         
         
 
-        self.actionEntries.append(c.e.TextEntry("Hide"))
-        self.actionEntries.append(c.e.TextEntry("useObject"))
+        self.actionEntries.append({"id":"Hide"})
+        self.actionEntries.append({"id":"useObject"})
 
+        self.highlightedEntries.append({"id":"Quarterstaff","finesse":True})
         c.item.buyItem(self,"Quarterstaff")
         self.wishlist.append("Shortbow")
         self.wishlist.append("Dart")
@@ -34,20 +34,17 @@ class Monk(c.Sheet):
         
         fastActions = []
         
-        e = c.e.AttackRollEntry("punch")
-        e.damage = getMartialArtsDie(self.level)
+        e = {"id":"Punch","modifierIndex":1,"damage":getMartialArtsDie(self.level)}
         fastActions.append(e)
-        grapple = c.e.SpellEntry("grapple")
-        grapple.forcedMod=1
+        grapple = {"id":"Grapple","modifierIndex":1}
+        
         fastActions.append(grapple)
-        shove = c.e.SpellEntry("shove")
-        shove.forcedMod=1
+        shove = {"id":"Shove","modifierIndex":1}
         fastActions.append(shove)
 
         self.showDodge = False
-        self.actionEntries.append(c.e.TextEntry("Dodge"))
+        self.actionEntries.append({"id":"Dodge"})
         
-        subclassChoice = None
         
         # ki block is initalised here so sublass & levelling can affect it
         kiEntry = "<strong>Focus -</strong> "+(" O"*(level))
@@ -64,7 +61,7 @@ class Monk(c.Sheet):
             self.showDash = False
             self.showReady = False
             self.showDisengage = False
-            self.actionEntries.append(c.e.TextEntry("Ready"))
+            self.actionEntries.append({"id":"Ready"})
             
             fastActions.append("<strong>Disengage.</strong> <em>See Opportunity Attack. Spend 1 Focus to also Dodge or Dash.</em>")
             fastActions.append({"id":"Dash"})
@@ -74,18 +71,17 @@ class Monk(c.Sheet):
             
         if level>2:
   
-            class DeflectMissileEntry(c.e.Entry):
-                def getHTML(self,char):
-                    bold = "Deflect. "
-                    mid = "When hit with a physical attack, you may deflect d10"
-                    mid += c.gf.getSignedStringFromInt(char.level+char.modifiers[1])
-                    mid += " damage."
-                    
-                    it = "For 1 ki, redirect 2"+getMartialArtsDie(char.level)+"+"+str(char.modifiers[1])+" damage if incoming damage reduced to zero. DEX"+str(char.modifiers[4]+char.profBonus+8)+" to dodge. Ranged attacks can deflect within 60ft"
-                    
-                    return c.e.getHTMLfromThruple([bold,mid,it])
+            
+            bold = "Deflect. "
+            mid = "When hit with a physical attack, you may deflect d10"
+            mid += c.gf.getSignedStringFromInt(self.level+self.modifiers[1])
+            mid += " damage."
+            
+            it = "For 1 ki, redirect 2"+getMartialArtsDie(self.level)+"+"+str(self.modifiers[1])+" damage if incoming damage reduced to zero. DEX"+str(self.modifiers[4]+self.profBonus+8)+" to dodge. Ranged attacks can deflect within 60ft."
+            
+            deflectMissileEntry = [bold,mid,it]
         
-            self.reactions.append(DeflectMissileEntry(self))
+            self.reactions.append(deflectMissileEntry)
             
             uncannyMetabolismText = "<strong>Uncanny Metabolism. </strong> When you roll initiative, regain"
             uncannyMetabolismText += " all Focus and "+getMartialArtsDie(self.level)+"+"+str(self.level)+" hp."
@@ -106,36 +102,31 @@ class Monk(c.Sheet):
                 e2 = {"id":"Knock Prone"}
                 e3 = {"id":"Throw 15ft"}
 
-                e4 = c.e.Entry("<strong>Addle.</strong> Target cannot take Opportunity Attacks until its turn.")
+                e4 = "<strong>Addle.</strong> Target cannot take Opportunity Attacks until its turn."
                 b = c.e.Block([e1,e2,e3,e4],"WAY OF THE OPEN HAND")
                 self.rightColumnBlocks.append(b)
         
         if level>3:
             
-            slowFall = c.e.SpellEntry("blank")
-            slowFall.title="Slow Fall"
-            slowFall.preSaveNormalText="Reduce fall damage by "+str(5*level)
+            slowFall = ["Slow Fall.","Reduce fall damage by "+str(5*level)+". ",""]
             self.reactions.append(slowFall)
             
         if level>4:
             
-            extraAttackEntry = c.e.TextEntry("extraAttackHighlighted")
+            extraAttackEntry = {"id":"extraAttackHighlighted"}
             self.actionEntries.insert(self.highlightedBlockIndex,extraAttackEntry)
             self.highlightedBlockIndex+=1
             
-            stunEntry = c.e.SpellEntry("stunningStrike")
-            stunEntry.modifierIndex=4
-            kiBlock.entries.insert(0,stunEntry)
+            kiBlock.entries.insert(0,{"id":"Stun"})
             
         if level>5:
             
-            kiBlock.addEntry(c.e.TextEntry("magicalUnarmedStrike"))
+            kiBlock.addEntry({"id":"magicalUnarmedStrike"})
             
             if self.subclass == "openHand":
-                wholenessOfBody = c.e.SpellEntry("blank")
-                wholenessOfBody.title="Wholeness of Body"
-                wholenessOfBody.preSaveNormalText="Regain "+getMartialArtsDie(self.level)+"+"+str(self.modifiers[4])+" hp. "
-                wholenessOfBody.preSaveNormalText+=" O"*self.modifiers[4]
+                wholenessOfBody = {"id":"Wholeness of Body","type":"spell","expanded":True}
+                wholenessOfBody["preSaveNormalText"]="Regain "+getMartialArtsDie(self.level)+"+"+str(self.modifiers[4])+" hp. "
+                wholenessOfBody["preSaveNormalText"]+=" O"*self.modifiers[4]
                 if self.showLongRest:
                     self.longRestEntries.append(c.e.Entry("Regain all uses of <strong>Wholenes Of Body</strong>"))
                 else:
@@ -157,10 +148,9 @@ class Monk(c.Sheet):
                 flurryString += "*"
             
             
-            e = c.e.Entry(flurryString)
-            self.bonusActionEntries.append(e)
+            self.bonusActionEntries.append(flurryString)
         
-        fastAction = c.e.Entry("Take a <strong>Fast Action.</strong> <em>See Fast Actions.</em>")
+        fastAction = "Take a <strong>Fast Action.</strong> <em>See Fast Actions.</em>"
         self.actionEntries.append(fastAction)
         self.bonusActionEntries.append(fastAction)
         self.middleColumnBlocks.append(c.e.Block(fastActions,"FAST ACTIONS"))

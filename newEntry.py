@@ -118,9 +118,9 @@ def getHTML(e,c=None):
 
     if not expanded:
         e = getExpandedDictionary(e)
-
+    #print()
     #print("should be expanded now: ",e)
-    
+    #print()
     keys = e.keys()
 
     if e["type"]=="text":
@@ -154,27 +154,109 @@ def getHTML(e,c=None):
             e["modifierIndex"]=-1
 
         # we now have every attribute in this large dictionary we need to generate html
-        
+        #print("its very expanded now",e)
+        #print()
+
+        if e["thrown"]>0:
+            e["rang"]=e["thrown"]
+        if e["reach"]:
+            e["rang"]=10
+
         modifier = c.modifiers[c.defaultMod]
         if e["useSpellcastingMod"]:
             modifier = c.modifiers[c.spellcastingMod]
         if e["modifierIndex"]!=-1:
             modifier=c.modifiers[e["modifierIndex"]]
+        if e["finesse"]:
+            if c.modifiers[1]>modifier:
+                modifier = c.modifiers[1]
 
+        #print("modifier going forward is ",modifier)
+        #print()
         boldBit = getBoldText(e,c)
         
-        normalBit = e["preSaveNormalText"]
-        if e["postSaveNormalText"]!="":
+        normalBit = ""
+        italicBit = ""
+
+        if e["type"]=="spell":
+
+            normalBit = e["preSaveNormalText"]
+            if e["postSaveNormalText"]!="":
+                
+                normalBit += str(8+c.profBonus+modifier)
+                normalBit += e["postSaveNormalText"]
+                
+            italicBit = e["preSaveItalicText"]
             
-            normalBit += str(8+c.profBonus+modifier)
-            normalBit += e["postSaveNormalText"]
+            if e["postSaveItalicText"]!="":
+                
+                italicBit += str(8+c.profBonus+modifier)
+                italicBit += e["postSaveItalicText"]
+        elif e["type"]=="attack":
+
+            dmgString = e["damage"]
+            if not c.addedShield and e["versatile"]!="":
+                dmgString  = e["versatile"]
+            if e["cantripScaling"]:
+                #needs a fix
+                pre = int(c.level/5)
+                if pre>0:
+                    dmgString = str(pre+1)+dmgString
+            if e["addModToDamage"]:
+                dmgString += gf.getSignedStringFromInt(modifier,True)
+            if e["damageType"] is not None:
+                if c.showPhysicalDamageTypes or not (e["damageType"] in ["Bludgeoning","Piercing","Slashing"] ): 
+                    dmgString+=" "+e["damageType"]
+                    
+            dmgString+=" damage"
             
-        italicBit = e["preSaveItalicText"]
-        if e["postSaveItalicText"]!="":
+            if not e["saveNotAttack"]:
+                normalBit+="d20"+gf.getSignedStringFromInt(modifier+c.profBonus)+" to hit, "
+                normalBit+=dmgString+"."
+            else:
+                normalBit+=dmgString+", "
+                normalBit+=e["resistAttributeText"]+str(8+modifier+c.profBonus)+e["resistText"]+"."
             
-            italicBit += str(8+c.profBonus+modifier)
-            italicBit += e["postSaveItalicText"]
             
+            if c.masteries>0 and e["mastery"]!="":
+                
+                added = False
+                if e["mastery"] =="Push":
+                    italicBit +="On a hit, push a Large or smaller foe 10ft away from you."
+                    added = True
+                elif e["mastery"] == "Vex":
+                    added = True
+                    italicBit +="On a hit, your next attack against this target before the end of your next turn has advantage."
+                elif e["mastery"] == "Topple":
+                    added = True
+                    italicBit +="Target is knocked Prone on a hit, CON"
+                    italicBit += str(int(8+c.profBonus+modifier))
+                    italicBit +=" to resist."
+                elif e["mastery"] == "Slow":
+                    added = True
+                    italicBit +="On a hit, target's speed is reduced by 10 (can only apply once)"
+                elif e["mastery"] == "Sap":
+                    added = True
+                    italicBit +="On a hit, target has disadvantage on their next attack before your next turn."
+                elif e["mastery"] == "Nick":
+                    added = True
+                    italicBit +="Make an Offhand attack without spending your Bonus Action."
+                elif e["mastery"] == "Graze":
+                    added = True
+                    italicBit +="Deal "+str(modifier)+" damage on a miss."
+                elif e["mastery"] == "Cleave":
+                    added = True
+                    italicBit +="On a hit, you may make a free attack with this weapon on an enemy within 5ft of you and the target. This free attack can only happen once per turn and its damage is "+e["damage"]
+
+                    
+                
+
+                if added:
+                    c.masteries = c.masteries-1
+
+            italicBit += e["note"]
+
+                
         if e["ritual"] and c.ritualCaster:
             italicBit += "</em> ⌆<em>"
         return getHTMLfromThruple([boldBit,normalBit,italicBit])

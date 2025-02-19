@@ -3,6 +3,7 @@ import json
 import os
 textEntries = {}
 spellEntries = {}
+attackEntries = {}
 
 allEntries ={}
 
@@ -18,6 +19,7 @@ print(os.listdir("./Entries/Spells"))
 print()
 
 spellStrings = os.listdir("./Entries/Spells")
+spellStrings.sort()
 
 for spellString in spellStrings:
 
@@ -58,18 +60,71 @@ for spellString in spellStrings:
                     newValue[key]=value
     spellEntries[newKey]=newValue
 
+attackStrings = os.listdir("./Entries/AttackRolls")
+attackStrings.sort()
+
+for attackString in attackStrings:
+
+    d = json.load(open("./Entries/AttackRolls/"+attackString))
+    
+    newKey = d["title"]
+    newValue = {}
+
+    for key in d.keys():
+        if key!="title":
+            if d[key]!="":
+                value = d[key]
+                irreleventKey = False
+                if key=="conc" and d[key]==False:
+                    irreleventKey = True
+                if key=="modiferIndex":
+                    if d[key]==-1:
+                        irreleventKey = True
+                    key = "modifierIndex"
+                    
+                if key=="rang" and d[key]==0:
+                    irreleventKey = True
+                
+                if key=="forcedMod":
+                    if d[key]==-1:
+                        irreleventKey = True
+                    key = "modifierIndex"
+
+                if key=="castTime" and d[key]=="a":
+                    irreleventKey = True
+                if key=="ritual" and d[key]==False:
+                    irreleventKey = True
+                if key=="isSpell":
+                    key = "useSpellcastingMod"
+
+
+                if not irreleventKey:
+                    newValue[key]=value
+    attackEntries[newKey]=newValue
+
+
+print()
+for k in attackEntries.keys():
+    print(k, " ",attackEntries[k])
+    print()
+
+for key in attackEntries.keys():
+    value=  attackEntries[key]
+    value["type"]="attack"
+    allEntries[key]=value
+
+print()
+
 for k in spellEntries.keys():
     print(k, " ",spellEntries[k])
     print()
-
-print()
 
 for key in spellEntries.keys():
     value=  spellEntries[key]
     value["type"]="spell"
     allEntries[key]=value
 
-
+print()
 for key in textEntries.keys():
     value={}
 

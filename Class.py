@@ -826,7 +826,7 @@ class Sheet:
             result+= "<div class='topBanner wholeRightBanner bannerLabel' id='labelbackground'>BACKGROUND</div>\n"
             result+= "<div class='topBanner wholeRightBanner bannerValue' id='background'>"+self.backgroundAsString+"</div>\n"
         if len(self.languages)>0:
-            print(self.languages)
+            #print(self.languages)
             languagesString = self.languages[0].title()
             for i in range(1,len(self.languages)):
                 languagesString+=", "+self.languages[i].title()
