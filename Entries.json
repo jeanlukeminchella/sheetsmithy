@@ -1,4 +1,25 @@
 {
+    "Mass Healing Word": {
+        "rang": 60,
+        "cost": "3",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Healing Word": {
+        "rang": 60,
+        "cost": "1",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Cure Wounds": {
+        "cost": "1",
+        "preHealText": "Heal a target 2d8",
+        "postHealText": " hp",
+        "type": "heal",
+        "useSpellcastingMod": true
+    },
     "Battleaxe": {
         "addModToDamage": true,
         "modifierIndex": 0,
@@ -767,13 +788,6 @@
         "useSpellcastingMod": true,
         "type": "spell"
     },
-    "Healing Word": {
-        "rang": 60,
-        "cost": "1",
-        "castTime": "ba",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
     "Herosim": {
         "cost": "1",
         "duration": "1 min",
@@ -815,13 +829,6 @@
     "Lesser Restoration": {
         "cost": "2",
         "preSaveNormalText": "Target is cured of a disease or condition (blinded, deafened, paralyzed, or poisoned).",
-        "castTime": "ba",
-        "useSpellcastingMod": true,
-        "type": "spell"
-    },
-    "Mass Healing Word": {
-        "rang": 60,
-        "cost": "3",
         "castTime": "ba",
         "useSpellcastingMod": true,
         "type": "spell"

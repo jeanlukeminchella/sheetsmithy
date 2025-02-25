@@ -18,7 +18,7 @@ class Paladin(c.Sheet):
         
         super().__init__(inp)
         
-        
+        self.spellcastingMod = 5
         self.masteries+=2
         self.lightArmorProficiency = True
         self.mediumArmorProficiency = True
@@ -52,9 +52,8 @@ class Paladin(c.Sheet):
         #generate all the spells for easy reference
         
         # first level spells
-        cureWounds = c.e.HealingEntry("cureWounds")
-        healingWord = c.e.HealingEntry("healingWord")
-        command = c.e.SpellEntry("command")
+        cureWounds = {"type":"heal","id":"Cure Wounds"}
+        command = {"type":"spell","id":"Command"}
         shieldOfFaith = c.e.SpellEntry("shieldOfFaith")
         wrathfulSmite = c.e.SpellEntry("wrathfulSmite")
         heroism = c.e.SpellEntry("heroism")
@@ -78,7 +77,11 @@ class Paladin(c.Sheet):
         maxSpellSlot = str(c.gf.getNumberFromRange(self.level,[4]))
         self.spellPriorityList = priorityListByMaxSpellSlot[maxSpellSlot]
         for spell in self.spellPriorityList:
-            spell.modiferIndex=5
+            if "Entry" in str(type(spell)):
+
+                spell.modiferIndex=5
+            else:
+                spell["modifierIndex"]=5
             
         resourceDictionary = {
             1:[["Spell",0]],

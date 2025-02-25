@@ -234,6 +234,9 @@ class Sheet:
             for action in l:
                 if type(action) == e.SpellEntry or type(action)==e.AttackRollEntry or type(action)==e.HealingEntry:
                     spellTitlesKnownAlready.append(action.title)
+                else:
+                    l = e.ne.getExpandedDictionary(l)
+                    spellTitlesKnownAlready.append(l["id"])
             
             # for debugging
             pr = False
@@ -250,20 +253,33 @@ class Sheet:
             while spellsAdded<self.spellsKnown and nextSpellIndexToConsider<len(spellPriorityList):
                 
                 spell = spellPriorityList[nextSpellIndexToConsider]
-                if type(spell)==str:
-                    spell = e.getEntryWithSpellCommand(spell)
-                    # handle an error here?
+                title = None
+                if type(spell) == e.SpellEntry or type(spell)==e.AttackRollEntry or type(spell)==e.HealingEntry:
+                    title = spell.title
+                else:
+                    spell = e.ne.getExpandedDictionary(spell)
+                    title = spell["id"]
                 
                 
-                if not spell.title in spellTitlesKnownAlready:
+                if not title in spellTitlesKnownAlready:
                     if pr:
                         print("now trying to add ", spell.title," as we dont have it yet")
 
-                    if spell.castTime=="a":
+                    castTime = "a"
+                    if type(spell) == e.SpellEntry or type(spell)==e.AttackRollEntry or type(spell)==e.HealingEntry:
+                        castTime = spell.castTime
+                    else:
+                        spell = e.ne.getExpandedDictionary(spell)
+                        try:
+                            castTime = spell["castTime"]
+                        except:
+                            pass
+
+                    if castTime=="a":
                         self.actionEntries.append(spell)
-                    elif spell.castTime=="ba":
+                    elif castTime=="ba":
                         self.bonusActionEntries.append(spell)
-                    elif spell.castTime=="re":
+                    elif castTime=="re":
                         self.reactionEntries.append(spell)
                     else:
                         print("This cast time confused me: ",spellPriorityList[nextSpellIndexToConsider].castTime," in spell ",spellPriorityList[nextSpellIndexToConsider].title)

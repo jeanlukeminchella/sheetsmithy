@@ -102,6 +102,36 @@ for attackString in attackStrings:
                     newValue[key]=value
     attackEntries[newKey]=newValue
 
+cureWounds = {
+    "cost": "1",
+    "preHealText": "Heal a target 2d8",
+    "postHealText": " hp",
+    "type": "heal",
+    "useSpellcastingMod": True
+}
+hw = {
+    "cost": "1",
+    "preHealText": "Heal a target 2d4",
+    "postHealText": " hp",
+    "rang": 60,
+    "castTime": "ba",
+    "type": "heal",
+    "useSpellcastingMod": True
+}
+mhw = {
+    "title": "",
+    "cost": "3",
+    "preHealText": "Up to six creatures regain 2d4",
+    "postHealText": " hp",
+    "rang": 60,
+    "castTime": "ba",
+    "type": "heal",
+    "useSpellcastingMod": True
+}
+
+allEntries["Mass Healing Word"] = mhw
+allEntries["Healing Word"] = hw
+allEntries["Cure Wounds"] = cureWounds
 
 print()
 for k in attackEntries.keys():

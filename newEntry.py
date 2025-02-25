@@ -70,24 +70,32 @@ def getExpandedDictionary(e):
         print(e)
         return expandedDictionary
     
-    # ok now weve got a dictionary with an "id" key
+    #  weve now got a dictionary with an "id" key
+
 
     if not e["id"]in allEntries.keys():
-        #got an id here that doesnt 
+        #got an id here that doesnt work
         print("given ID here that doesnt load an entry",e["id"]," by entry ",e)
+        for k in keys:
+            expandedDictionary[k]=e[k]
+        print("so we will just return ",expandedDictionary)
+        return expandedDictionary
     else:
+        loadedDictionary = allEntries[e["id"]]
+        for k in loadedDictionary.keys():
+            expandedDictionary[k]=loadedDictionary[k]
 
-        expandedDictionary = allEntries[e["id"]]
-
-        # lets load anything from our bank of entries to see if that can help us flesh out the entry
-
-                
-            
+    # lets add everything useful from the entry into the expanded dictionary, overwriting anything loaded from allEntries
     keysToKeep = ["id","castTime","cost","duration","title","rang","cost","duration","conc","castTime","modifierIndex","preHealText","postHealText","healingBonus","damage","addModToDamage","damageType","cantripScaling","saveNotAttack","resistAttributeText","resistText","note","finesse","reach","versatile","thrown","mastery","preSaveNormalText","postSaveNormalText","preSaveItalicText","postSaveItalicText","ritual","useSpellcastingMod"]
-    # if this input already has some info about useful attributes lets keep them and use them instead of anything loaded from file
+    
     for key in keysToKeep:
         if key in keys:
             expandedDictionary[key]=e[key]
+
+    
+    
+
+    
         
     return expandedDictionary
 
@@ -255,6 +263,12 @@ def getHTML(e,c=None):
                     c.masteries = c.masteries-1
 
             italicBit += e["note"]
+        elif e["type"]=="heal":
+            normalBit = e["preHealText"]
+            if e["postHealText"]!="":
+            
+                normalBit += str(gf.getSignedStringFromInt(modifier+e["healingBonus"]))
+            normalBit += e["postHealText"]
 
                 
         if e["ritual"] and c.ritualCaster:

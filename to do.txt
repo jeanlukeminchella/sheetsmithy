@@ -7,7 +7,6 @@
   
   - handle spell commands that dont match, let users input?
   
-   - barbarain dodge - advantage on dex saves?
 
    - more backgroundds obviously
    - sort out the ranger feats
