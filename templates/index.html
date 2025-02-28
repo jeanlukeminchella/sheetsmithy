@@ -7,18 +7,15 @@
     <title>Sheet Smithy</title>
     <style>
 
-  /* Basic Reset */
-  * {
+    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-  }
+    }
 
-  
 
-  /* Body Styling */
-  body {
+    body {
     background-color: #ffffff;
     color: #333;
     font-size: 16px;
@@ -27,14 +24,12 @@
     text-align: center;
     align-items: center;
     min-height: 100vh;
-    width:66%;
+    width:70%;
     position:relative;
     margin-left:auto;
     margin-right:auto;
-  }
+    }
 
-
-    /* Set additional styling options for the columns*/
     .column {
     float: left;
     width: 16%;
@@ -46,59 +41,51 @@
     clear: both;
     }
 
-  /* Container Styling */
-  .container {
+    .container {
     max-width: 500px;
     width: 100%;
     background-color: #ffffff;
     padding: 30px;
-    
+
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+    }
 
-
-  /* Link Styling */
-  a {
+    a {
     color: #a0917e;
     text-decoration: none;
     white-space: nowrap;
     display: inline;
-  }
+    }
 
-  a:hover {
+    a:hover {
     text-decoration: underline;
-  }
-
-  /* Header Styling */
-  h1 {
+    }
+    h1 {
     font-size: 1.8em;
     color: #333;
     text-align: center;
     margin-bottom: 20px;
-  }
+    }
 
-  /* Paragraph Styling */
-  p {
+    p {
+    text-align: center;
     margin-bottom: 20px;
     color: #555;
-  }
+    }
 
-  /* Form Styling */
-  form {
+    form {
     display: flex;
     flex-direction: column;
-  }
+    }
 
-  /* Label Styling */
-  label {
+    label {
     font-weight: bold;
     margin-bottom: 5px;
     color: #444;
-  }
+    }
 
-  /* Input, Select, and Button Styling */
-  input[type="text"], select, button {
+    input[type="text"], select, button {
     background-color: #efeae5;
     text-align: center;
     padding: 10px;
@@ -108,125 +95,145 @@
     margin-bottom: 15px;
     width: 100%;
     accent-color: #7c6e5c;
-  }
+}
 
-  /* Focus Styling */
-  input[type="text"]:focus, select:focus {
+
+input[type="text"]:focus, select:focus {
     border-color: #978875;
     outline: none;
     accent-color: #7c6e5c;
-  }
+}
 
-  /* Focus Styling */
-  input[type="number"]:focus, select:focus {
+input[type="number"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    width:90%;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+}
+    input[type="number"]:focus, select:focus {
     background-color: #efeae5;
     border-color: #978875;
     outline: none;
     accent-color: #978875;
-  }
 
-  /* Button Styling */
-  button {
-    
+    }
+
+    button {
     color: white;
     cursor: pointer;
     border: none;
-  }
+    }
 
-  button:hover {
+    button:hover {
     background-color: #b0a89f;
-  }
+    }
 
-        body {
-            font-family: Helvetica;
-            padding: 20px;
-        }
-        label {
-            font-weight: bold;
-            display: block;
-            margin: 10px 0 5px;
-        }
-        select, input[type="number"] {
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-        }
-        input[type="checkbox"] {
-            margin-right: 10px;
-        }
-        .startInvisible{
-            display:none;
-        }
+    body {
+        font-family: Helvetica;
+        padding: 20px;
+    }
+    label {
+        font-weight: bold;
+        display: block;
+        margin: 10px 0 5px;
+    }
+    input[type="checkbox"] {
+        margin-right: 10px;
+    }
+    .startInvisible{
+        display:none;
+    }
         
 
     </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1891215579396755"
-    crossorigin="anonymous"></script>
     <script>
-        function showRacialChoices() {
+        function showID(id){
+            document.getElementById(id).style.display='block';
+            document.getElementById(id).disabled=false;
+        }; 
+
+        function showIDList(l){
+            l.forEach(showID)
+        }; 
+        
+        function hideID(id){
+            document.getElementById(id).style.display='none';
+            document.getElementById(id).disabled=true;
+        };
+        function hideIDList(l){
+            l.forEach(hideID)
+        }; 
+
+        const abilityIDs = ["Strength","Dexterity","Constitution","Intelligence","Wisdom","Charisma"]
+        function showAbilityScores(){
+            showIDList(abilityIDs);
+            showIDList(['abilityScores','hideScoresButton']); 
+            hideIDList(['showScoresButton']);
+
+        };
+        function hideAbilityScores(){
+            hideIDList(abilityIDs);
+            hideIDList(['abilityScores','hideScoresButton']); 
+            showIDList(['showScoresButton']);
+            
+        };
+        function loadSpeciesOptions() {
             
             const racialChoicesIds = ["goliathSubrace","humanFeatChoice","tieflingSubrace","size","gnomeSubrace","elfSubrace"]
-            racialChoicesIds.forEach(hide);
-            function hide(value, index, array) {
-                document.getElementById(value).style.display='none'
-            }
+            racialChoicesIds.forEach(hideID);
             
+            let racialChoices = {
+                "goliath":["goliathSubrace"],
+                "human":["humanFeatChoice"],
+                "aasimar":["size"],
+                "elf":["elfSubrace"],
+                "gnome":["gnomeSubrace"],
+                "tiefling":["size","tieflingSubrace"],
+                "":[]
+            };
             const race = document.getElementById("race").value
-            
-            if (race=="goliath"){
-                document.getElementById("goliathSubrace").style.display='block'
-            };
-            if (race=="human"){
-                document.getElementById("humanFeatChoice").style.display='block'
-            };
-            if (race=="tiefling"){
-                document.getElementById("tieflingSubrace").style.display='block'
-                document.getElementById("size").style.display='block'
-            };
-            if (race=="aasimar"){
-                document.getElementById("size").style.display='block'
-            };
-            if (race=="gnome"){
-                document.getElementById("gnomeSubrace").style.display='block'
-            };
-            if (race=="elf"){
-                document.getElementById("elfSubrace").style.display='block'
-            };
+            racialChoices[race].forEach(showID);
+
         };
-        function showClassChoices() {
-            const racialChoicesIds = ["barbarianSubclass","fighterSubclass","rogueSubclass","rangerSubclass","divineOrder","primalOrder"]
-            racialChoicesIds.forEach(hide);
-            function hide(value, index, array) {
-                document.getElementById(value).style.display='none'
-            }
+        function loadClassChoices() {
+            const classChoiceIDs = ["barbarianSubclass","fighterSubclass","rogueSubclass","paladinSubclass","rangerSubclass","divineOrder","primalOrder"]
+            classChoiceIDs.forEach(hideID);
             
-            const cls = document.getElementById("classAsString").value
-            if (cls=="Cleric"){
-                document.getElementById("divineOrder").style.display='block'
+            
+            /* multi dimensional array */
+            let allClassChoices = {
+                "Cleric":[["divineOrder"],[],[]],
+                "Druid":[["primalOrder"]],
+                "Barbarian":[[],[],["barbarianSubclass"]],
+                "Fighter":[[],[],["fighterSubclass"]],
+                "Rogue":[[],[],["rogueSubclass"]],
+                "Ranger":[[],[],["rangerSubclass"]],
+                "Paladin":[[],[],["paladinSubclass"]],
+                "Monk":[[],[],[]],
+                "":[]
             };
-            if (cls=="Druid"){
-                document.getElementById("primalOrder").style.display='block'
-            }
-            if (document.getElementById("level").value>2){
-                
-                if (cls=="Barbarian"){
-                    document.getElementById("barbarianSubclass").style.display='block'
-                }
-                if (cls=="Fighter"){
-                    document.getElementById("fighterSubclass").style.display='block'
-                }
-                if (cls=="Rogue"){
-                    document.getElementById("rogueSubclass").style.display='block'
-                }
-                if (cls=="Ranger"){
-                    document.getElementById("rangerSubclass").style.display='block'
+            const level = document.getElementById("level").value
+            const cls = document.getElementById("classAsString").value
+            
+            const thisClassChoices = allClassChoices[cls]
+            
+            thisClassChoices.forEach(considerShowingClassChoices)
+
+            function considerShowingClassChoices(value,index){
+                if (index<level){
+                    
+                    value.forEach(showID);
+                    
                 }
             }
         }
         
     </script>
 </head>
-<body onload="showRacialChoices();showClassChoices()">
+<body onload="loadSpeciesOptions();loadClassChoices();hideAbilityScores()">
     <form id="characterForm" method="post">
         <div>
 
@@ -236,7 +243,7 @@
         <input type="text" id="name" name="name" value="">
         <em>Tip: Ask your Game Master if you're not sure what level you are playing at. </em>
         <label for="level">Level:</label>
-        <select id="level" name="level" onchange="showClassChoices()">
+        <select id="level" name="level" onchange="loadClassChoices()">
             <option value=1>1</option>
             <option value=2>2</option>
             <option value=3>3</option>
@@ -246,7 +253,7 @@
         </select>
         
         <label for="classAsString">Class:</label>
-        <select id="classAsString" name="classAsString" onchange="showClassChoices()">
+        <select id="classAsString" name="classAsString" onchange="loadClassChoices()">
             <option value="">Select a class</option>
             <option value="Barbarian">Barbarian</option>
             <option value="Cleric">Cleric</option>
@@ -259,44 +266,50 @@
 
         </select>
         
-        <select id="divineOrder" name="divineOrder" onchange="showClassChoices()">
+        <select id="divineOrder" name="divineOrder" onchange="loadClassChoices()">
             <option value="">Select a Divine Order</option>
             <option value="thaumaturge">Thaumaturge</option>
             <option value="protector">Protector</option>
         </select>
-        <select id="primalOrder" name="primalOrder" onchange="showClassChoices()">
+        <select id="primalOrder" name="primalOrder" onchange="loadClassChoices()">
             <option value="">Select a Primal Order</option>
             <option value="magician">Magician</option>
             <option value="warden">Warden</option>
         </select>
 
-        <select id="barbarianSubclass" name="barbarianSubclass" onchange="showClassChoices()">
+        <select id="barbarianSubclass" name="barbarianSubclass" onchange="loadClassChoices()">
             <option value="">Select a subclass</option>
             <option value="wildHeart">Wild Heart</option>
             <option value="wildMagic">Wild Magic</option>
         </select>
         
-        <select id="rangerSubclass" name="rangerSubclass" onchange="showClassChoices()">
+        <select id="rangerSubclass" name="rangerSubclass" onchange="loadClassChoices()">
             <option value="">Select a subclass</option>
             <option value="monster slayer">Monster Slayer</option>
             <option value="hunter">Hunter</option>
         </select>
         
-        <select id="fighterSubclass" name="fighterSubclass" onchange="showClassChoices()">
+        <select id="fighterSubclass" name="fighterSubclass" onchange="loadClassChoices()">
             <option value="">Select a subclass</option>
             <option value="champion">Champion</option>
             <option value="rune">Rune Knight</option>
         </select>
         
-        <select id="rogueSubclass" name="rogueSubclass" onchange="showClassChoices()">
+        <select id="rogueSubclass" name="rogueSubclass" onchange="loadClassChoices()">
             <option value="">Select a subclass</option>
             <option value="swash">Swashbuckler</option>
             <option value="thief">Thief</option>
         </select>
         
+        <select id="paladinSubclass" name="paladinSubclass" onchange="loadClassChoices()">
+            <option value="">Select a subclass</option>
+            <option value="vengeance">Vengeance</option>
+            <option value="ancients">Ancients</option>
+        </select>
+        
         <!-- Race Dropdown -->
         <label for="race">Race:</label>
-        <select id="race" name="race" onchange="showRacialChoices()">
+        <select id="race" name="race" onchange="loadSpeciesOptions()">
             <option value="">Select a race</option>
             <option value="aasimar">Aasimar</option>
             <option value="dwarf">Dwarf</option>
@@ -387,17 +400,16 @@
         </label>
         <br>
         <div id="showScoresButton">
-            <button type="button" style="color: #56524d;" onclick="document.getElementById('abilityScores').style.display='block'; document.getElementById('showScoresButton').style.display='none'; document.getElementById('hideScoresButton').style.display='block'; document.getElementById('pickedScores').value=1">Customise ability scores?</button>
+            <button type="button" style="color: #56524d;" onclick="showAbilityScores(); ">Customise ability scores?</button>
         
         </div>
-        <input type="hidden" id="pickedScores" name="pickedScores" value=0>
-        <div id="hideScoresButton" class="startInvisible">
-            <button  type="button" style="color: #56524d;" onclick="document.getElementById('abilityScores').style.display='none'; document.getElementById('showScoresButton').style.display='block'; document.getElementById('hideScoresButton').style.display='none';document.getElementById('pickedScores').value=0">Hide scores</button>
-        </div>    
+        <div id="hideScoresButton" >
+            <button  type="button" style="color: #56524d;" onclick="hideAbilityScores();">Hide scores</button>
+        </div>
         
         
 
-        <div id="abilityScores" class="startInvisible">
+        <div id="abilityScores">
             <br>
             Distribute your ability scores from the Standard Array [15,14,13,12,10,8] or use a Point Buy method to get a different array <a href="https://chicken-dinner.com/5e/5e-point-buy.html" target="_blank">here</a> (ignore Race). Legends even speak of some who roll dice for their scores, but check this with your DM first :) 
             <div class="row">

@@ -24,6 +24,8 @@ def getExpandedDictionary(e):
         "id":"blank",
         "type":"text",
         "expanded":True,
+        "conc":False,
+        "ritual":False,
         # contents is required for text types
         "contents":["","",""]
     }
@@ -108,6 +110,7 @@ def getHTMLfromThruple(thruple):
         result+="<strong>"+boldBit+"</strong> "
     
     if normalBit!= "":
+        print(normalBit)
         result+=normalBit+" "
     
     
@@ -118,7 +121,7 @@ def getHTMLfromThruple(thruple):
 
 def getHTML(e,c=None):
     
-    #print("input to get hmtl: ",e)
+    print("input to get hmtl: ",e)
     expanded = False
     if type(e)==dict:
         if "expanded" in e.keys():
@@ -262,7 +265,7 @@ def getHTML(e,c=None):
                 if added:
                     c.masteries = c.masteries-1
 
-            italicBit += e["note"]
+            
         elif e["type"]=="heal":
             normalBit = e["preHealText"]
             if e["postHealText"]!="":
@@ -270,9 +273,11 @@ def getHTML(e,c=None):
                 normalBit += str(gf.getSignedStringFromInt(modifier+e["healingBonus"]))
             normalBit += e["postHealText"]
 
-                
+        italicBit += e["note"]
+
         if e["ritual"] and c.ritualCaster:
             italicBit += "</em> ⌆<em>"
+        
         return getHTMLfromThruple([boldBit,normalBit,italicBit])
         
 

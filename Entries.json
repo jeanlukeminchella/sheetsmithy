@@ -2,21 +2,24 @@
     "Mass Healing Word": {
         "rang": 60,
         "cost": "3",
+        "preHealText":"Up to six creatures regain 2d4",
         "castTime": "ba",
         "useSpellcastingMod": true,
-        "type": "spell"
+        "type": "heal"
     },
     "Healing Word": {
         "rang": 60,
         "cost": "1",
+        "preHealText": "Heal target 2d4",
+        "postHealText": " hp.",
         "castTime": "ba",
         "useSpellcastingMod": true,
-        "type": "spell"
+        "type": "heal"
     },
     "Cure Wounds": {
         "cost": "1",
-        "preHealText": "Heal a target 2d8",
-        "postHealText": " hp",
+        "preHealText": "Heal target 2d8",
+        "postHealText": " hp.",
         "type": "heal",
         "useSpellcastingMod": true
     },
@@ -654,38 +657,38 @@
         "postSaveNormalText": " to half damage and stay put.",
         "type": "spell"
     },
-    "Wild Magic 1": {
+    "1": {
         "preSaveNormalText": "Enemies within 30ft take d12 necrotic damage CON",
         "postSaveNormalText": " to resist.",
         "preSaveItalicText": "You also gain d12 temporary hit points.",
         "type": "spell"
     },
-    "Wild Magic 2": {
+    "2": {
         "preSaveNormalText": "Teleport 30ft*",
         "type": "spell"
     },
-    "Wild Magic 3": {
+    "3": {
         "preSaveNormalText": "Summon a spirit within 5ft of an enemy. At the end of your turn, it explodes dealing d6 force damage. DEX",
         "postSaveNormalText": " to resist*",
         "type": "spell"
     },
-    "Wild Magic 4": {
+    "4": {
         "preSaveNormalText": "During rage, one of your weapons gains the Light and Thrown (20ft/60ft) properties, and returns to your hand if thrown.",
         "type": "spell"
     },
-    "Wild Magic 5": {
+    "5": {
         "preSaveNormalText": "During rage, when you are hit with an attack, the attacker takes d6 force damage.",
         "type": "spell"
     },
-    "Wild Magic 6": {
+    "6": {
         "preSaveNormalText": "During rage, you and allies within 10ft get +1 AC.",
         "type": "spell"
     },
-    "Wild Magic 7": {
+    "7": {
         "preSaveNormalText": "During rage, ground within 15ft of you is difficult terrain for enemies.",
         "type": "spell"
     },
-    "Wild Magic 8": {
+    "8": {
         "preSaveNormalText": "Blind a creature within 30ft. CON",
         "postSaveNormalText": " to resist*",
         "type": "spell"
@@ -743,9 +746,11 @@
         "useSpellcastingMod": true,
         "type": "spell"
     },
-    "Divine Sense": {
-        "preSaveNormalText": "You know the location of any celestial, fiend, or undead within 60 feet, or any area that is desecrated or concecrated.",
-        "useSpellcastingMod": true,
+    "Divine Smite": {
+        "cost": "1",
+        "preSaveNormalText": " After hitting a target with a melee weapon, deal an extra 2d8 radiant damage to them. ",
+        "preSaveItalicText": " (+3d8 to Fiends or Undead)",
+        "castTime": "ba",
         "type": "spell"
     },
     "Ensnaring Strike": {
@@ -764,7 +769,7 @@
         "cost": "1",
         "rang": 90,
         "duration": "1 min",
-        "preSaveNormalText": "Cause a 20ft square of vines, restraining occupants.",
+        "preSaveNormalText": "20ft square of vines restrains occupants.",
         "preSaveItalicText": "STR",
         "postSaveItalicText": " to resist.",
         "useSpellcastingMod": true,
@@ -788,7 +793,7 @@
         "useSpellcastingMod": true,
         "type": "spell"
     },
-    "Herosim": {
+    "Heroism": {
         "cost": "1",
         "duration": "1 min",
         "conc": true,
@@ -849,7 +854,7 @@
     "Misty Step": {
         "rang": 30,
         "cost": "2",
-        "preSaveNormalText": "Teleport",
+        "preSaveNormalText": "Teleport.",
         "castTime": "ba",
         "useSpellcastingMod": true,
         "type": "spell"
@@ -859,7 +864,7 @@
         "cost": "2",
         "duration": "1 min",
         "conc": true,
-        "preSaveNormalText": " 0ft beam of moonlight deals 2d8+2 radiant damage to creatures starting their turn there. CON",
+        "preSaveNormalText": "10ft beam of moonlight deals 2d10 radiant damage to creatures inside the beam, or creatures that end their turn there. CON",
         "postSaveNormalText": " to half damage.",
         "preSaveItalicText": " Can be moved with an action.",
         "useSpellcastingMod": true,
@@ -897,11 +902,10 @@
     },
     "Revivify": {
         "cost": "3",
-        "conc": true,
         "preSaveNormalText": "You touch a creature that has died within the last minute. They return to life with 1 hp.",
         "preSaveItalicText": "Requires a 300gp diamond.",
         "useSpellcastingMod": true,
-        "type": "spell"
+        "type": "heal"
     },
     "Sanctuary": {
         "rang": 30,
@@ -977,11 +981,9 @@
         "type": "spell"
     },
     "Thunderous Smite": {
-        "conc": true,
-        "duration": "1 min",
         "cost": "1",
-        "preSaveNormalText": "Your next melee hit deals an extra 2d6 thunder damage, STR",
-        "postSaveNormalText": " to resist being thrown 10ft and knocked prone.",
+        "preSaveNormalText": " After hitting a target with a melee weapon, deal an extra 2d6 thunder damage to them. STR",
+        "postSaveNormalText": " to resist being thrown 10ft and knocked Prone.",
         "castTime": "ba",
         "useSpellcastingMod": true,
         "type": "spell"
@@ -997,13 +999,22 @@
         "type": "spell"
     },
     "Wrathful Smite": {
-        "conc": true,
-        "duration": "1 min",
         "cost": "1",
-        "preSaveNormalText": "Your next melee hit deals an extra d6 psychic damage, WIS",
+        "duration":"1 min",
+        "preSaveNormalText": " After hitting a target with a melee weapon, deal an extra d6 necrotic damage to them. WIS",
         "postSaveNormalText": " to resist being frightened of you until the spell ends.",
         "castTime": "ba",
-        "preSaveItalicText": "As an action, the creature can make another save to steel its resolve and end this spell.",
+        "preSaveItalicText": "Target repeats save at the end of its turns.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Shining Smite": {
+        "cost": "2",
+        "conc": true,
+        "duration":"1 min",
+        "preSaveNormalText": " After hitting a target with a melee weapon, deal an extra 2d6 radiant damage to them.",
+        "castTime": "ba",
+        "preSaveItalicText": "Target shines with bright light and is attacked with advantage for the duration.",
         "useSpellcastingMod": true,
         "type": "spell"
     },

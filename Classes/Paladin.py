@@ -2,7 +2,6 @@ import Class as c
 import featFunctions as feats
 
 channelDivinityText = "Channel Divinity"
-channelDivinityTextPlural = "Channel Divinities"
 
 
 class Paladin(c.Sheet):
@@ -39,49 +38,20 @@ class Paladin(c.Sheet):
         self.addHighlightedEntry("Grapple")
 
         if self.level<5:
-            
             self.addHighlightedEntry("Shove")
-        
-            
-        
-        
-        layOnHandsEntry =c.e.SpellEntry("layHands")
-        layOnHandsEntry.preSaveNormalText= "Restore hp to a touched creature from a pool of "+str(5*level)+ " hp"
-        self.bonusActionEntries.append(layOnHandsEntry)
-        
-        #generate all the spells for easy reference
-        
-        # first level spells
-        cureWounds = {"type":"heal","id":"Cure Wounds"}
-        command = {"type":"spell","id":"Command"}
-        shieldOfFaith = c.e.SpellEntry("shieldOfFaith")
-        wrathfulSmite = c.e.SpellEntry("wrathfulSmite")
-        heroism = c.e.SpellEntry("heroism")
-        heroism.applyCommandList([["preSaveNormalText","A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to being frightened and gains "+str(self.modifiers[5])+" temporary hit points at the start of each of its turns."]])
-        dm = c.e.SpellEntry("detectMagic")
-        ts = c.e.SpellEntry("thunderousSmite")
-        protectionFromEvilAndGood = c.e.SpellEntry("protectionFromEvilAndGood")
-        
-        # second level spells
-        lesserRestoration = c.e.SpellEntry("lesserRestoration")
-        
-        # subclass specific spells
-        es = c.e.SpellEntry("ensnaringStrike")
-        ms = c.e.SpellEntry("mistyStep")
 
+        self.bonusActionEntries.append("<strong>Lay on Hands. </strong>Restore hp to a touched creature from a pool of "+str(5*level)+ " hp")
+        
+        heroism = {"id":"Heroism","preSaveNormalText":"A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to being frightened and gains "+str(self.modifiers[5])+" temporary hit points at the start of each of its turns."} 
+        
         priorityListByMaxSpellSlot={
-            "1":[ts,command,shieldOfFaith,wrathfulSmite,dm,heroism,cureWounds,protectionFromEvilAndGood],
-            "2":[ts,lesserRestoration,command,wrathfulSmite,shieldOfFaith,cureWounds,heroism,dm,protectionFromEvilAndGood]
+            "1":[{"id":"Thunderous Smite"},{"id":"Command"},{"id":"Shield of Faith"},{"id":"Wrathful Smite"},{"id":"Detect Magic"},heroism,{"id":"Cure Wounds"}, {"id":"Protection from Evil and Good"}],
+            "2":[{"id":"Shining Smite"},{"id":"Thunderous Smite"},{"id":"Lesser Restoration"},{"id":"Command"},{"id":"Wrathful Smite"},{"id":"Shield of Faith"},heroism,{"id":"Cure Wounds"},{"id":"Detect Magic"}, {"id":"Protection from Evil and Good"}]
             }
 
         maxSpellSlot = str(c.gf.getNumberFromRange(self.level,[4]))
         self.spellPriorityList = priorityListByMaxSpellSlot[maxSpellSlot]
-        for spell in self.spellPriorityList:
-            if "Entry" in str(type(spell)):
-
-                spell.modiferIndex=5
-            else:
-                spell["modifierIndex"]=5
+        
             
         resourceDictionary = {
             1:[["Spell",0]],
@@ -107,75 +77,64 @@ class Paladin(c.Sheet):
                 feats.featFunctions[fightStyle](self)
             else:
                 feats.featFunctions["defence"](self)
+            self.bonusActionEntries.append({"id":"Divine Smite"})
             
         if level>2:
-            
-            
-            
-            divineSenseEntry = c.e.SpellEntry("divineSense")
-            divineSenseEntry.title+=" ("+channelDivinityText+", 10 mins)"
-            self.bonusActionEntries.append(divineSenseEntry)
+
+            self.bonusActionEntries.append("<strong>Divine Sense ("+channelDivinityText+", 10 mins) </strong> You know the location of any celestial, fiend, or undead within 60 feet, or any area that is desecrated or concecrated.")
             
             subclassChosen = False
             
             if self.subclass == "ancients":
                 self.classAsString="Paladin (Oath of the Ancients)"
                 subclassChosen = True
-                self.actionEntries.append(c.e.SpellEntry("swAnimals"))
-                self.bonusActionEntries.append(es)
+                self.actionEntries.append({"id":"Speak With Animals"})
+                self.bonusActionEntries.append({"id":"Ensnaring Strike"})
                 
-                naturesWrath = c.e.SpellEntry("blank")
-                naturesWrath.title = "Nature's Wrath ("+channelDivinityText+", 10ft)"
-                naturesWrath.preSaveNormalText = "Vines restrain a foe. STR/DEX"
-                naturesWrath.postSaveNormalText = " to resist."
-                naturesWrath.preSaveItalicText = "Target repeats save at the end of their turns."
-                naturesWrath.modiferIndex=5
+                naturesWrath = {}
+                naturesWrath["id"] = "Nature's Wrath ("+channelDivinityText+", 1 min)"
+                naturesWrath["type"]="spell"
+                naturesWrath["preSaveNormalText"] = "Vines restrain enemies within 15ft. STR"
+                naturesWrath["postSaveNormalText"] = " to resist."
+                naturesWrath["preSaveItalicText"] = "Target repeats save at the end of their turns."
+                naturesWrath["useSpellcastingMod"]=True
                 self.actionEntries.append(naturesWrath)
                 
-                mb = c.e.SpellEntry("moonbeam")
-                mb.modiferIndex=5
                 if level>4:
-                    self.actionEntries.append(mb)
-                    self.bonusActionEntries.append(ms)
+                    self.actionEntries.append({"id":"Moonbeam"})
+                    self.bonusActionEntries.append({"id":"Misty Step"})
                 
             if self.subclass == "vengeance" or not subclassChosen:
                 self.subclass = "vengeance"
                 self.classAsString="Paladin (Oath of Vengeance)"
                 
-                hm = c.e.SpellEntry("huntersMark")
-                self.bonusActionEntries.append(hm)
+                self.bonusActionEntries.append({"id":"Hunter's Mark"})
                  
-                bane = c.e.SpellEntry("bane")
-                bane.modiferIndex=5
-                self.actionEntries.append(bane)
+                self.actionEntries.append({"id":"Bane"})
                 
-                vowOfEmnity = c.e.SpellEntry("blank")
-                vowOfEmnity.title = "Vow of Emnity ("+channelDivinityText+", 10ft, 1 min)"
-                vowOfEmnity.preSaveNormalText = "You gain advantage on attack rolls against target."
-                self.bonusActionEntries.append(vowOfEmnity)
+                vowOfEmnity = {"id":"Vow of Emnity ("+channelDivinityText+", 10ft, 1 min)","type":"spell"}
+                vowOfEmnity["preSaveNormalText"] = "When you attack, vow emnity with a target and gain advantage on attack rolls against them."
+                self.notesForSpellCastingBlock.append(vowOfEmnity)
                 
-                abjureEnemy = c.e.SpellEntry("blank")
-                abjureEnemy.modiferIndex=5
-                abjureEnemy.title = "Abjure ("+channelDivinityText+", 60ft, 1 min)"
-                abjureEnemy.preSaveNormalText = "Target is frightened and its speed is 0. WIS"
-                abjureEnemy.postSaveNormalText = " to resist. Targets who resist still have their speed halved until they take damage."
-                abjureEnemy.preSaveItalicText = "Fiends and Undead have disadvantage on their saving throw. "
+                abjureEnemy = {"id":"Vow of Emnity ("+channelDivinityText+", 10ft, 1 min)","type":"spell","useSpellcastingMod":True}
+                
+                abjureEnemy["id"] = "Abjure ("+channelDivinityText+", 60ft, 1 min)"
+                abjureEnemy["preSaveNormalText"] = "Target is frightened and its speed is 0. WIS"
+                abjureEnemy["postSaveNormalText"] = " to resist. Targets who resist still have their speed halved until they take damage."
+                abjureEnemy["preSaveItalicText"] = "Fiends and Undead have disadvantage on their saving throw. "
                 self.actionEntries.append(abjureEnemy)
                 
                 if level>4:
-                    self.bonusActionEntries.append(ms)
+                    self.bonusActionEntries.append({"id":"Misty Step"})
+                    self.actionEntries.append({"id":"Hold Person"})
                     
-                    hp = c.e.SpellEntry("holdPerson")
-                    hp.modiferIndex=5
-                    self.actionEntries.append(hp)
-       
             
-            self.shortRestEntries.append(c.e.Entry("You regain one use of "+channelDivinityText+"."))
+            self.shortRestEntries.append("You regain one use of "+channelDivinityText+".")
             
 
    
         if level>4:
-            extraAttackEntry = c.e.TextEntry("extraAttackHighlighted")
+            extraAttackEntry = {"id":"extraAttackHighlighted"}
             self.actionEntries.insert(self.highlightedBlockIndex,extraAttackEntry)
             self.highlightedBlockIndex+=1
             
@@ -184,15 +143,12 @@ class Paladin(c.Sheet):
             char = max(1,self.modifiers[5])
             auraBoosts = [[0,char],[1,char],[2,char],[3,char],[4,char],[5,char]]
             self.saveBoosts.extend(auraBoosts)
-            auraText = c.e.SpellEntry("blank")
-            auraText.title = "</strong>Allies within "+c.gf.getDistanceString(10)+" gain "+c.gf.getSignedStringFromInt(char)+" to saving throws<strong>"
-            self.charInfos.append(auraText)
+            self.charInfos.append("</strong>Allies within "+c.gf.getDistanceString(10)+" gain "+c.gf.getSignedStringFromInt(char)+" to saving throws")
         
         # Athletics, Insight, Intimidation, Medicine, Persuasion, and Religion.
         self.skillProficiencies.append(self.pickSkillProficiency([3,6,7,9,13,14]))
         self.skillProficiencies.append(self.pickSkillProficiency([3,6,7,9,13,14]))
         
-        #lets make the spellcasting block
         self.spellsKnown = c.gf.getNumberFromRange(level, [0,1,2,3,4])
 
         

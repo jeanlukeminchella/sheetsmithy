@@ -20,7 +20,6 @@ class Monk(c.Sheet):
         
 
         self.actionEntries.append({"id":"Hide"})
-        self.actionEntries.append({"id":"useObject"})
 
         self.highlightedEntries.append({"id":"Quarterstaff","finesse":True})
         c.item.buyItem(self,"Quarterstaff")
@@ -62,6 +61,8 @@ class Monk(c.Sheet):
             self.showReady = False
             self.showDisengage = False
             self.actionEntries.append({"id":"Ready"})
+            self.actionEntries.append({"id":"useObject"})
+            self.showUseObject=False
             
             fastActions.append("<strong>Disengage.</strong> <em>See Opportunity Attack. Spend 1 Focus to also Dodge or Dash.</em>")
             fastActions.append({"id":"Dash"})

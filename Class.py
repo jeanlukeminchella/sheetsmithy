@@ -100,6 +100,7 @@ class Sheet:
             "1": "1st-level-spell",
             "2": "2nd-level-spell",
             "3": "3rd-level-spell",
+            "c":"Channel Divinity"
         }
         
         
@@ -222,6 +223,8 @@ class Sheet:
         
         if self.spellcasting:
             
+            weNeedToConcentrate = False
+            weNeedToExplainRituals= False
             self.longRestEntries.append(e.TextEntry("regainSpellSlots"))
             
             # lets load in the spells - ones we dont have already of course
@@ -234,6 +237,26 @@ class Sheet:
             for action in l:
                 if type(action) == e.SpellEntry or type(action)==e.AttackRollEntry or type(action)==e.HealingEntry:
                     spellTitlesKnownAlready.append(action.title)
+                    if action.conc:
+                        weNeedToConcentrate=True
+                    if action.ritual:
+                        weNeedToExplainRituals=True
+                elif type(action)==dict:
+                    expanded = False
+
+                    if "expanded"in action.keys():
+                        if action["expanded"]:
+                            expanded = True
+                    print("aciton is ",action)
+                    if not expanded:
+                        action = e.ne.getExpandedDictionary(action)
+                    
+                    print("aciton is ",action)
+                    spellTitlesKnownAlready.append(action["id"])
+                    if action["conc"]:
+                        weNeedToConcentrate = True
+                    if action["ritual"]:
+                        weNeedToExplainRituals = True
                 else:
                     l = e.ne.getExpandedDictionary(l)
                     spellTitlesKnownAlready.append(l["id"])
@@ -256,6 +279,8 @@ class Sheet:
                 title = None
                 if type(spell) == e.SpellEntry or type(spell)==e.AttackRollEntry or type(spell)==e.HealingEntry:
                     title = spell.title
+                elif type(spell)==str:
+                    title = spell
                 else:
                     spell = e.ne.getExpandedDictionary(spell)
                     title = spell["id"]
@@ -263,18 +288,25 @@ class Sheet:
                 
                 if not title in spellTitlesKnownAlready:
                     if pr:
-                        print("now trying to add ", spell.title," as we dont have it yet")
+                        print("now trying to add ", title," as we dont have it yet")
 
                     castTime = "a"
+                    if type(spell)==str:
+                        spell = {"id":spell}
                     if type(spell) == e.SpellEntry or type(spell)==e.AttackRollEntry or type(spell)==e.HealingEntry:
                         castTime = spell.castTime
+                        if spell.conc:
+                            weNeedToConcentrate=True
+                        if spell.ritual:
+                            weNeedToExplainRituals=True
                     else:
                         spell = e.ne.getExpandedDictionary(spell)
-                        try:
-                            castTime = spell["castTime"]
-                        except:
-                            pass
-
+                        castTime = spell["castTime"]
+                        if spell["conc"]:
+                            weNeedToConcentrate = True
+                        if spell["ritual"]:
+                            weNeedToExplainRituals = True
+                    
                     if castTime=="a":
                         self.actionEntries.append(spell)
                     elif castTime=="ba":
@@ -295,21 +327,6 @@ class Sheet:
             spellcastingBlockEntries = [resourceEntry]
             spellcastingBlockEntries.extend(self.notesForSpellCastingBlock)
             
-            #scan the actions,bonusactions, and reactions for a concentration mark
-            
-            weNeedToConcentrate = False
-            weNeedToExplainRituals= False
-            
-            l = self.actionEntries[:]
-            l.extend(self.reactions)
-            l.extend(self.bonusActionEntries)
-            
-            for action in l:
-                if type(action) == e.SpellEntry or type(action)==e.AttackRollEntry:
-                    if action.conc:
-                        weNeedToConcentrate=True
-                    if action.ritual:
-                        weNeedToExplainRituals=True
             
             if weNeedToConcentrate:
                 spellcastingBlockEntries.append(e.TextEntry("conc"))
@@ -480,18 +497,18 @@ class Sheet:
         self.makeSpellcastingBlock()
 
         if self.showUseObject:
-            self.actionEntries.append(e.TextEntry("useObject"))
+            self.actionEntries.append({"id":"useObject"})
         
         if self.showReady:
-            self.actionEntries.append(e.TextEntry("Ready"))
+            self.actionEntries.append({"id":"Ready"} )
             
         if self.showDisengage:
-            self.actionEntries.append(e.TextEntry("Disengage"))
+            self.actionEntries.append({"id":"Disengage"})
             
         if self.showDash:
-            self.actionEntries.append(e.TextEntry("Dash"))
+            self.actionEntries.append({"id":"Dash"})
         if self.showDodge:
-            self.actionEntries.append(e.TextEntry("Dodge"))    
+            self.actionEntries.append({"id":"Dodge"})    
             
         self.buildLog.insert(0,self.classAsString)
         if self.showBuildLog:

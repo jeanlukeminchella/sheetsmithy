@@ -8,7 +8,7 @@ def hello_world():
     if request.method == "POST":
         d = request.form
 
-        #print("This is what we got from the website: ",d)
+        print("This is what we got from the website: ",d)
         
         # changing form values into one thats readable by the generator
         # get better at javascript and make this pass a more compatible dictionary in the first place? 
@@ -35,7 +35,6 @@ def hello_world():
             if bools[i] in keys:
                 inp[bools[i]] = bool(d[bools[i]])
         if "name" in keys:
-
             if d["name"]:
                 inp["name"] = d["name"]
         
@@ -45,7 +44,6 @@ def hello_world():
                     "name":d["background"]
                 }
         try:
-
             if int(d["considerLangs"])>0:
                 if d["languages"]!="":
                     inp["languages"] = d["languages"]
@@ -88,6 +86,8 @@ def hello_world():
 
             if inp["classAsString"]=="Barbarian":
                 choicesDic["subclass"]=d["barbarianSubclass"]
+            if inp["classAsString"]=="Paladin":
+                choicesDic["subclass"]=d["paladinSubclass"]
             if inp["classAsString"]=="Fighter":
                 choicesDic["subclass"]=d["fighterSubclass"]
             if inp["classAsString"]=="Rogue":
