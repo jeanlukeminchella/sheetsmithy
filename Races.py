@@ -38,8 +38,9 @@ def tiefling(c,choice):
             hRebuke.preSaveItalicText+=freeCastText
             c.reactions.append(hRebuke)
         if c.level>4:
-            d  = e.SpellEntry("Darkness")
-            d.preSaveItalicText += freeCastText
+            d  = {"id":"Darkness"}
+            d = e.ne.getExpandedDictionary(d)
+            d["preSaveItalicText"] += freeCastText
             c.actionEntries.append(d)
     if choice["subrace"]=="Chthonic":
         c.addResistance("Necrotic")
@@ -262,11 +263,11 @@ def goliath(c, choice):
     elif choice["subrace"]=="Fire":
         c.raceString = "Goliath (Fire)"
         c.charInfos.append(e.Entry("Boost any damage roll with d10 fire damage. "+count))
-        c.longRestEntries.append(e.Entry("Regain all uses of your fire damage boosts. <em>(Fire Goliath)</em>"))
+        c.longRestEntries.append(e.Entry("Regain all of your fire damage boosts. <em>(Fire Goliath)</em>"))
     elif choice["subrace"]=="Frost":
         c.raceString = "Goliath (Frost)"
         c.charInfos.append(e.Entry("Boost any damage roll with d6 cold damage and reduce target's speed by 10 for one round. "+count))
-        c.longRestEntries.append(e.Entry("Regain all uses of your cold damage boosts. <em>(Frost Goliath)</em>"))
+        c.longRestEntries.append(e.Entry("Regain all of your cold damage boosts. <em>(Frost Goliath)</em>"))
     elif choice["subrace"]=="Hill":
         c.raceString = "Goliath (Hill)"
         c.charInfos.append(e.Entry("Knock a Large or smaller target Prone when you land an attack. "+count))

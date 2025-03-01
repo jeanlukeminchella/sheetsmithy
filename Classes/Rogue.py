@@ -29,8 +29,8 @@ class Rogue(c.Sheet):
         if not 18 in self.skillProficiencies:
             self.skillProficiencies.append(18)
 
-        evasiveMoveEntry = c.e.Entry("<strong>"+"Evasive Action."+"</strong> <em>See Evasive Actions.</em>")
-        evasiveMoveTitle="EVASIVE ACTIONS"
+        evasiveMoveEntry = "Take an <strong>"+"Evasive Action."+"</strong> <em>See Evasive Action Options.</em>"
+        evasiveMoveTitle="EVASIVE ACTION OPTIONS"
         evasiveMoves = []
         
         if self.level ==1:
@@ -62,15 +62,20 @@ class Rogue(c.Sheet):
             steadyAim = c.e.TextEntry("steadyAim")
             self.bonusActionEntries.append(steadyAim)
             
-            chosen = False
             if self.subclass == "thief":
                 self.classAsString ="Rogue (Thief)"
                 self.charInfos.append(c.e.Entry("Climbing costs you no extra movement <em>(Thief)</em>"))
                 self.showUseObject=False
                 evasiveMoves.append(c.e.TextEntry("useObject"))
                 evasiveMoves.append(c.e.TextEntry("sleightOfHandThief"))
-                
-            elif self.subclass  == "swash" or not chosen:
+
+            elif self.subclass == "assassin":
+                self.classAsString ="Rogue (Assassin)"
+                self.charInfos.append("On the first round of combat, you have adv. vs enemies that have not yet taken a turn, and your sneak attack deals +"+str(self.level)+" damage")
+                c.item.buyItem(self,"Disguise Kit",False)
+                c.item.buyItem(self,"Poisoner's Kit",False)
+
+            else:
                 
                 self.subclass = "swash"
                 self.classAsString ="Rogue (Swashbuckler)"

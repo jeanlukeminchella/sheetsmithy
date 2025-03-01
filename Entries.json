@@ -569,7 +569,7 @@
         "rang": 60,
         "cost": "2",
         "conc": true,
-        "preSaveNormalText": "Magical darkness spreads from a point or object.",
+        "preSaveNormalText": "Darkness spreads 15ft from a point or object.",
         "preSaveItalicText": "Dispels light from weaker spells.",
         "type": "spell"
     },
@@ -1043,6 +1043,14 @@
             "You may drop weapons at any time."
         ]
     },
+    "Shadow Step": {
+        "type": "text",
+        "contents": [
+            "Shadow Step.",
+            "While in Dim Light or Darkness, teleport to a space within 60ft also in Dim Light / Darkness.",
+            "You gain advantage on your next melee attack this turn."
+        ]
+    },
     "offhandPunchLevel1": {
         "type": "text",
         "contents": [
@@ -1055,7 +1063,7 @@
         "type": "text",
         "contents": [
             "",
-            "Choose one of the following effects whenever your finish a long rest: <br><br><strong>Owl</strong> - 60ft Darkvision <br><strong>Panther</strong> - Climb Speed <br><strong>Salmon</strong> - Swim Speed",
+            "Choose one of the following effects whenever your finish a long rest: <br><br><strong>Owl</strong> - 60ft Darkvision <br><strong>Panther</strong> - Climb Speed = Speed<br><strong>Salmon</strong> - Swim Speed  = Speed",
             ""
         ]
     },

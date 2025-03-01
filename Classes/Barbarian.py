@@ -1,7 +1,7 @@
 import Class as c
 import featFunctions as feats
 
-defaultRageTexts = ["• You take half physical damage.","• You may enter Rage as a Bonus Action.","• You have advantage on Athletics checks and Strength saving throws.","• You may add 2 to weapon damage.","• Rages last one minute, but end early if you fall unconcious. You must also attack or spend a Bonus Action to extend your rage each round."]
+defaultRageTexts = ["• You take half physical damage.","• You may enter Rage as a Bonus Action.","• You have advantage on Athletics checks and Strength saving throws.","• You may add <strong>2</strong> to all Strength-based damage.","• Rages last for a maximum of 10 mins."]
 
 class Barbarian(c.Sheet):
     def __init__(self, inp):
@@ -38,9 +38,11 @@ class Barbarian(c.Sheet):
         self.addHighlightedEntry("Shove")
         self.addHighlightedEntry("Grapple")
         
-        rageTitle = "RAGE - "+"O "*getRageCount(level)
+        rageTitle = "RAGE"
         self.longRestEntries.append("Regain all your uses of <strong>RAGE</strong>")
         self.shortRestEntries.append("Regain one use of <strong>RAGE</strong>")
+        self.bonusActionEntries.append(["Enter RAGE. ","See RAGE for the full effects."+" O"*getRageCount(level),""])
+        self.bonusActionEntries.append(["Maintain RAGE. ","","Not required if you have attacked or caused a saving throw this turn."])
         
         subclassChoice = None
         
@@ -80,6 +82,12 @@ class Barbarian(c.Sheet):
                 
                 wildMagicBlock = c.e.Block(wildMagicEntries,"WILD MAGIC EFFECTS")
                 self.rightColumnBlocks.append(wildMagicBlock)
+            elif self.subclass  == "berserker":
+                self.classAsString = "Barbarian (Berserker)"
+                rageTexts.append("• Once per turn when hitting an enemy with a Strength-based attack, you can <strong>boost the damage roll by 2d6</strong>.")
+                
+                if level>5:
+                    rageTexts.append("• You cannot be Charmed or Frightened while in a rage.")
 
                 
             elif self.subclass  == "wildHeart" or not chosen:

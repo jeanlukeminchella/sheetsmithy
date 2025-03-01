@@ -100,7 +100,7 @@ class Sheet:
             "1": "1st-level-spell",
             "2": "2nd-level-spell",
             "3": "3rd-level-spell",
-            "c":"Channel Divinity"
+            "c":"Channel Divinity",
         }
         
         
@@ -221,45 +221,43 @@ class Sheet:
         
         spellcastingTitle = "SPELLCASTING"
         
-        if self.spellcasting:
-            
-            weNeedToConcentrate = False
-            weNeedToExplainRituals= False
-            self.longRestEntries.append(e.TextEntry("regainSpellSlots"))
-            
-            # lets load in the spells - ones we dont have already of course
-            l = self.actionEntries[:]
-            l.extend(self.reactions)
-            l.extend(self.bonusActionEntries)
-            
-            spellTitlesKnownAlready = []
-            
-            for action in l:
-                if type(action) == e.SpellEntry or type(action)==e.AttackRollEntry or type(action)==e.HealingEntry:
-                    spellTitlesKnownAlready.append(action.title)
-                    if action.conc:
-                        weNeedToConcentrate=True
-                    if action.ritual:
-                        weNeedToExplainRituals=True
-                elif type(action)==dict:
-                    expanded = False
+        weNeedToConcentrate = False
+        weNeedToExplainRituals= False
+        self.longRestEntries.append(e.TextEntry("regainSpellSlots"))
+        
+        # lets load in the spells - ones we dont have already of course
+        l = self.actionEntries[:]
+        l.extend(self.reactions)
+        l.extend(self.bonusActionEntries)
+        
+        spellTitlesKnownAlready = []
+        
+        for action in l:
+            if type(action) == e.SpellEntry or type(action)==e.AttackRollEntry or type(action)==e.HealingEntry:
+                spellTitlesKnownAlready.append(action.title)
+                if action.conc:
+                    weNeedToConcentrate=True
+                if action.ritual:
+                    weNeedToExplainRituals=True
+            elif type(action)==dict:
+                expanded = False
 
-                    if "expanded"in action.keys():
-                        if action["expanded"]:
-                            expanded = True
-                    print("aciton is ",action)
-                    if not expanded:
-                        action = e.ne.getExpandedDictionary(action)
-                    
-                    print("aciton is ",action)
-                    spellTitlesKnownAlready.append(action["id"])
-                    if action["conc"]:
-                        weNeedToConcentrate = True
-                    if action["ritual"]:
-                        weNeedToExplainRituals = True
-                else:
-                    l = e.ne.getExpandedDictionary(l)
-                    spellTitlesKnownAlready.append(l["id"])
+                if "expanded"in action.keys():
+                    if action["expanded"]:
+                        expanded = True
+                if not expanded:
+                    action = e.ne.getExpandedDictionary(action)
+                
+                spellTitlesKnownAlready.append(action["id"])
+                if action["conc"]:
+                    weNeedToConcentrate = True
+                if action["ritual"]:
+                    weNeedToExplainRituals = True
+            else:
+                l = e.ne.getExpandedDictionary(l)
+                spellTitlesKnownAlready.append(l["id"])
+        
+        if self.spellcasting:
             
             # for debugging
             pr = False
@@ -336,6 +334,13 @@ class Sheet:
             
             spellBlock = e.Block(spellcastingBlockEntries,spellcastingTitle)
             self.rightColumnBlocks.append(spellBlock)
+        else:
+
+            if weNeedToConcentrate:
+                self.charInfos.append(e.TextEntry("conc"))
+            
+            if weNeedToExplainRituals and self.ritualCaster:
+                self.charInfos.append(e.TextEntry("ritual"))
     
     def addResistance(self,r):
         

@@ -68,7 +68,7 @@ class Druid(c.Sheet):
 
             self.addEntry("Produce Flame")
         else:
-            # we need the entry to only take up one line really
+            # we need the entry to only take up one line really - and not be highlighted
             self.actionEntries.append(c.e.AttackRollEntry("Produce Flame"))
 
         self.addEntry("Guidance",False)
@@ -122,9 +122,6 @@ class Druid(c.Sheet):
             knownForms.append({"type":"text","id":"Crocodile"})
             knownForms.append({"type":"text","id":"Other Form 3"})
             
-
-
-
         longRestRegainString = ""
 
         if self.level>1:
@@ -167,16 +164,12 @@ class Druid(c.Sheet):
                         self.addEntry("Fireball")
                     if self.level>5:
                         self.notesForSpellCastingBlock.append({"type":"text","id":"Natural Recovery - arid"})
-
                 else: 
                     pass
 
                 if self.level>5:
                     self.longRestEntries.append("Regain your <strong>Circle of the Land</strong> free casting.")
         
-
-        
-
         if self.level>4:
             self.showDisengage = False
             self.showDodge = False

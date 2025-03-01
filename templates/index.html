@@ -1,54 +1,20 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sheet Smithy</title>
     <style>
 
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    }
-
-
     body {
     background-color: #ffffff;
-    color: #333;
+    color: #000000;
     font-size: 16px;
-    display: flex;
-    justify-content: center;
     text-align: center;
-    align-items: center;
-    min-height: 100vh;
     width:70%;
     position:relative;
     margin-left:auto;
     margin-right:auto;
-    }
-
-    .column {
-    float: left;
-    width: 16%;
-    }
-
-    .row:after {
-    content: "";
-    display: table;
-    clear: both;
-    }
-
-    .container {
-    max-width: 500px;
-    width: 100%;
-    background-color: #ffffff;
-    padding: 30px;
-
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Helvetica;
+    padding: 20px;
     }
 
     a {
@@ -60,96 +26,90 @@
 
     a:hover {
     text-decoration: underline;
-    }
-    h1 {
-    font-size: 1.8em;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-    }
 
-    p {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #555;
-    }
-
-    form {
-    display: flex;
-    flex-direction: column;
     }
 
     label {
     font-weight: bold;
     margin-bottom: 5px;
-    color: #444;
+    display: block;
+    color: #333;
+    margin: 10px 0 5px;
     }
 
-    input[type="text"], select, button {
-    background-color: #efeae5;
+    select{
+        border-color: #978875;
+        background-color: #efeae5;
+    }
+    
+    input, select, button {
+    
+    border-radius: 5px;
     text-align: center;
     padding: 10px;
     font-size: 1em;
-    border: 1px solid #a0917e;
-    border-radius: 4px;
     margin-bottom: 15px;
     width: 100%;
-    accent-color: #7c6e5c;
-}
+    border-width: 0.5px;
+    
+    }   
 
-
-input[type="text"]:focus, select:focus {
-    border-color: #978875;
-    outline: none;
-    accent-color: #7c6e5c;
-}
-
-input[type="number"] {
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    width:90%;
-    text-align: center;
-    margin-left:auto;
-    margin-right:auto;
-}
-    input[type="number"]:focus, select:focus {
-    background-color: #efeae5;
-    border-color: #978875;
-    outline: none;
-    accent-color: #978875;
-
-    }
-
-    button {
-    color: white;
-    cursor: pointer;
-    border: none;
-    }
-
-    button:hover {
-    background-color: #b0a89f;
-    }
-
-    body {
-        font-family: Helvetica;
-        padding: 20px;
-    }
-    label {
-        font-weight: bold;
-        display: block;
-        margin: 10px 0 5px;
+    input[type="number"] {
+        width:90%;
+        margin-left:auto;
+        margin-right:auto;
     }
     input[type="checkbox"] {
-        margin-right: 10px;
+        width:30px;
     }
+    input:focus, select:focus {
+        background-color: #f6f2ed;
+    }
+    select:hover{
+        cursor:pointer;
+    }
+
+    .column {
+    float: left;
+    width: 16%;
+    }
+
     .startInvisible{
         display:none;
+    }
+    .minorButton{
+        border-color: #978875;
+        background-color: #efeae5;
+    }
+    .minorButton:hover{
+        background-color: #f6f2ed;
+        cursor:pointer;
+    }
+    .majorButton{
+        color: efeae5;   
+        background-color: #56524d;
+        
+    }
+    .majorButton:hover{
+        cursor:pointer;
+        background-color: #6a655f;
     }
         
 
     </style>
     <script>
+
+        function showLanguages(){
+            showIDList(["langs","hideLangsButton"]);
+            hideIDList(["showLangsButton"]);
+
+        };
+        function hideLanguages(){
+            hideIDList(["langs","hideLangsButton"]);
+            showIDList(["showLangsButton"]);
+
+        };
+
         function showID(id){
             document.getElementById(id).style.display='block';
             document.getElementById(id).disabled=false;
@@ -199,11 +159,11 @@ input[type="number"] {
 
         };
         function loadClassChoices() {
-            const classChoiceIDs = ["barbarianSubclass","fighterSubclass","rogueSubclass","paladinSubclass","rangerSubclass","divineOrder","primalOrder"]
+            const classChoiceIDs = ["barbarianSubclass","monkSubclass","fighterSubclass","rogueSubclass","paladinSubclass","rangerSubclass","divineOrder","primalOrder"]
             classChoiceIDs.forEach(hideID);
             
             
-            /* multi dimensional array */
+            /* multi dimensional array, showing what to display at what level. */
             let allClassChoices = {
                 "Cleric":[["divineOrder"],[],[]],
                 "Druid":[["primalOrder"]],
@@ -212,7 +172,7 @@ input[type="number"] {
                 "Rogue":[[],[],["rogueSubclass"]],
                 "Ranger":[[],[],["rangerSubclass"]],
                 "Paladin":[[],[],["paladinSubclass"]],
-                "Monk":[[],[],[]],
+                "Monk":[[],[],["monkSubclass"]],
                 "":[]
             };
             const level = document.getElementById("level").value
@@ -266,49 +226,56 @@ input[type="number"] {
 
         </select>
         
-        <select id="divineOrder" name="divineOrder" onchange="loadClassChoices()">
+        <select id="divineOrder" name="divineOrder" class="startInvisible" onchange="loadClassChoices()">
             <option value="">Select a Divine Order</option>
             <option value="thaumaturge">Thaumaturge</option>
             <option value="protector">Protector</option>
         </select>
-        <select id="primalOrder" name="primalOrder" onchange="loadClassChoices()">
+        <select id="primalOrder" name="primalOrder" class="startInvisible" onchange="loadClassChoices()">
             <option value="">Select a Primal Order</option>
             <option value="magician">Magician</option>
             <option value="warden">Warden</option>
         </select>
 
-        <select id="barbarianSubclass" name="barbarianSubclass" onchange="loadClassChoices()">
+        <select id="barbarianSubclass" name="barbarianSubclass" class="startInvisible" onchange="loadClassChoices()">
             <option value="">Select a subclass</option>
-            <option value="wildHeart">Wild Heart</option>
-            <option value="wildMagic">Wild Magic</option>
+            <option value="wildHeart">Path of the Wild Heart</option>
+            <option value="berserker">Path of the Berserker</option>
+            <option value="wildMagic">Path of Wild Magic</option>
         </select>
         
-        <select id="rangerSubclass" name="rangerSubclass" onchange="loadClassChoices()">
+        <select id="rangerSubclass" name="rangerSubclass" class="startInvisible" onchange="loadClassChoices()">
             <option value="">Select a subclass</option>
             <option value="monster slayer">Monster Slayer</option>
             <option value="hunter">Hunter</option>
         </select>
+
+        <select id="monkSubclass" name="monkSubclass" class="startInvisible" onchange="loadClassChoices()">
+            <option value="">Select a subclass</option>
+            <option value="openHand">Way of the Open Hand</option>
+            <option value="shadow">Way of the Shadow</option>
+        </select>
         
-        <select id="fighterSubclass" name="fighterSubclass" onchange="loadClassChoices()">
+        <select id="fighterSubclass" name="fighterSubclass" class="startInvisible" onchange="loadClassChoices()">
             <option value="">Select a subclass</option>
             <option value="champion">Champion</option>
             <option value="rune">Rune Knight</option>
         </select>
         
-        <select id="rogueSubclass" name="rogueSubclass" onchange="loadClassChoices()">
+        <select id="rogueSubclass" name="rogueSubclass" class="startInvisible" onchange="loadClassChoices()">
             <option value="">Select a subclass</option>
-            <option value="swash">Swashbuckler</option>
             <option value="thief">Thief</option>
+            <option value="assassin">Assassin</option>
+            <option value="swash">Swashbuckler</option>
         </select>
         
-        <select id="paladinSubclass" name="paladinSubclass" onchange="loadClassChoices()">
+        <select id="paladinSubclass" name="paladinSubclass" class="startInvisible" onchange="loadClassChoices()">
             <option value="">Select a subclass</option>
-            <option value="vengeance">Vengeance</option>
-            <option value="ancients">Ancients</option>
+            <option value="vengeance">Oath of Vengeance</option>
+            <option value="ancients">Oath of the Ancients</option>
         </select>
         
-        <!-- Race Dropdown -->
-        <label for="race">Race:</label>
+        <label for="race">Species:</label>
         <select id="race" name="race" onchange="loadSpeciesOptions()">
             <option value="">Select a race</option>
             <option value="aasimar">Aasimar</option>
@@ -382,7 +349,7 @@ input[type="number"] {
             <option value="Guard">Guard</option>
         </select>
         <br>
-        <button type="submit" value=""  style="background-color: #56524d;">Create my character!</button>
+        <button type="submit" value=""  class="majorButton">Create my character!</button>
         <br>
         These following questions are optional. If this is your first character, just ignore this. 
         <br>
@@ -400,18 +367,18 @@ input[type="number"] {
         </label>
         <br>
         <div id="showScoresButton">
-            <button type="button" style="color: #56524d;" onclick="showAbilityScores(); ">Customise ability scores?</button>
+            <button type="button" class="minorButton" onclick="showAbilityScores(); ">Customise ability scores?</button>
         
         </div>
         <div id="hideScoresButton" >
-            <button  type="button" style="color: #56524d;" onclick="hideAbilityScores();">Hide scores</button>
+            <button  type="button" class="minorButton" onclick="hideAbilityScores();">Hide scores</button>
         </div>
         
         
 
         <div id="abilityScores">
             <br>
-            Distribute your ability scores from the Standard Array [15,14,13,12,10,8] or use a Point Buy method to get a different array <a href="https://chicken-dinner.com/5e/5e-point-buy.html" target="_blank">here</a> (ignore Race). Legends even speak of some who roll dice for their scores, but check this with your DM first :) 
+            Distribute your ability scores from the Standard Array [15,14,13,12,10,8] or use a Point Buy method to get a different array <a href="https://chicken-dinner.com/5e/5e-point-buy.html" target="_blank">here</a> (ignore Race). Legends even speak of some who roll dice for their scores, but check this with your DM first. 
             <div class="row">
             <div class="column">
             <label for="Strength">Strength:</label>
@@ -448,14 +415,12 @@ input[type="number"] {
             
         </div>
     
-        <input type="hidden" id="considerLangs" name="considerLangs" value=0>
-
         <div id="showLangsButton">
-            <button type="button" style="color: #56524d;" onclick="document.getElementById('considerLangs').value=1;document.getElementById('langs').style.display='block'; document.getElementById('showLangsButton').style.display='none'; document.getElementById('hideLangsButton').style.display='block';">Customise languages?</button>
+            <button type="button" class="minorButton" onclick="showLanguages();">Customise languages?</button>
             
         </div>
         <div id="hideLangsButton" class="startInvisible">
-            <button type="button" style="color: #56524d;" onclick="document.getElementById('considerLangs').value=0;document.getElementById('langs').style.display='none'; document.getElementById('showLangsButton').style.display='block'; document.getElementById('hideLangsButton').style.display='none';">Close languages?</button>
+            <button type="button" class="minorButton" onclick="hideLanguages()">Close languages?</button>
             
         </div>
 
@@ -470,12 +435,12 @@ input[type="number"] {
     
 
         <div id="showInventoryButton">
-            <button type="button" style="color: #56524d;" onclick="document.getElementById('considerInventory').value=1;document.getElementById('inventory').style.display='block'; document.getElementById('showInventoryButton').style.display='none'; document.getElementById('hideInventoryButton').style.display='block';">Add to inventory?</button>
+            <button type="button" class="minorButton" onclick="document.getElementById('considerInventory').value=1;document.getElementById('inventory').style.display='block'; document.getElementById('showInventoryButton').style.display='none'; document.getElementById('hideInventoryButton').style.display='block';">Add to inventory?</button>
             
         </div>
         <input type="hidden" id="considerInventory" name="considerInventory" value=0>
         <div id="hideInventoryButton" class="startInvisible">
-            <button  type="button" style="color: #56524d;" onclick="document.getElementById('considerInventory').value=0;document.getElementById('inventory').style.display='none'; document.getElementById('showInventoryButton').style.display='block'; document.getElementById('hideInventoryButton').style.display='none';">Hide inventory</button>
+            <button  type="button" class="minorButton" onclick="document.getElementById('considerInventory').value=0;document.getElementById('inventory').style.display='none'; document.getElementById('showInventoryButton').style.display='block'; document.getElementById('hideInventoryButton').style.display='none';">Hide inventory</button>
         </div> 
 
         <div id="inventory" class="startInvisible">
@@ -499,13 +464,13 @@ input[type="number"] {
 
 
 
-        <button type="submit" value=""  style="background-color: #56524d;">Create my character!</button>
+        <button type="submit" value="" class="majorButton">Create my character!</button>
         <div id="showMoreInfoButton">
-            <button type="button" style="color: #56524d;" onclick="document.getElementById('info').style.display='block'; document.getElementById('showMoreInfoButton').style.display='none';">Show more info about Sheet Smithy?</button>
+            <button type="button" class="minorButton" onclick="document.getElementById('info').style.display='block'; document.getElementById('showMoreInfoButton').style.display='none';">Show more info about Sheet Smithy?</button>
             
         </div>
         <div id="info" class="startInvisible">
-            <button type="button" style="color: #56524d;" onclick="document.getElementById('info').style.display='none'; document.getElementById('showMoreInfoButton').style.display='block';">Show less info about Sheet Smithy?</button>
+            <button type="button" class="minorButton" onclick="document.getElementById('info').style.display='none'; document.getElementById('showMoreInfoButton').style.display='block';">Show less info about Sheet Smithy?</button>
             Hi! My name is Luke! I'm a GM and coder from Newcastle (UK) and have built Sheet Smithy to create easy to read, beginner friendly character sheets.
             For more customisability, checkout other sites like Fast Character, DM's vault or of course, D&D Beyond. 
             

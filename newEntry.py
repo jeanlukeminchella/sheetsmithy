@@ -110,7 +110,6 @@ def getHTMLfromThruple(thruple):
         result+="<strong>"+boldBit+"</strong> "
     
     if normalBit!= "":
-        print(normalBit)
         result+=normalBit+" "
     
     
@@ -121,7 +120,7 @@ def getHTMLfromThruple(thruple):
 
 def getHTML(e,c=None):
     
-    print("input to get hmtl: ",e)
+    #print("input to get hmtl: ",e)
     expanded = False
     if type(e)==dict:
         if "expanded" in e.keys():
