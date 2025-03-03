@@ -905,7 +905,7 @@
         "preSaveNormalText": "You touch a creature that has died within the last minute. They return to life with 1 hp.",
         "preSaveItalicText": "Requires a 300gp diamond.",
         "useSpellcastingMod": true,
-        "type": "heal"
+        "type": "spell"
     },
     "Sanctuary": {
         "rang": 30,

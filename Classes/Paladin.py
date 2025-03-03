@@ -71,8 +71,8 @@ class Paladin(c.Sheet):
         if level>1:
             self.spellcasting = True
             fightStyle = None
-            if "l2-fightStyle" in self.choices.keys():
-                fightStyle = self.choices["l2-fightStyle"]
+            if "fightStyle" in self.choices.keys():
+                fightStyle = self.choices["fightStyle"]
             if fightStyle in feats.featFunctions.keys():
                 feats.featFunctions[fightStyle](self)
             else:

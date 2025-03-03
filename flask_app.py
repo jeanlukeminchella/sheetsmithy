@@ -61,11 +61,10 @@ def hello_world():
     if request.method == "POST":
         d = request.form
 
-        print("This is what we got from the website: ",d)
+        print("This is what we got from the request: ",d)
         
         # changing form values into one thats readable by the generator
-        # get better at javascript and make this pass a more compatible dictionary in the first place? 
-        # surely make this more resilient to bad post requests as well? 
+        # this needs to be resilient to bad  requests as well
 
         keys = d.keys()
         inp = {}
@@ -100,14 +99,14 @@ def hello_world():
             if d["languages"]!="":
                 inp["languages"] = d["languages"]
         except:
-            print("we have a problem considering languages")
+            pass
+            #print("we have a problem considering languages")
         try:
-
-            if int(d["considerInventory"])>0:
-                inp["shoppingList"]=d["shoppingList"]
-                inp["gearList"]=d["gearList"]
+            inp["shoppingList"]=d["shoppingList"]
+            inp["gearList"]=d["gearList"]
         except:
-            print("we have a problem considering inventory")
+            pass
+            #print("we have a problem considering inventory")
 
         try:
             if d["race"]:
@@ -131,11 +130,21 @@ def hello_world():
                 
                 inp["race"] = raceDic
         except:
-            print("weve had an issue handing species") 
+            pass
+            #print("weve had an issue handing species") 
 
         choicesDic = {}
-        try:
 
+
+        possibleFeatChoices = ["fightStyle","l4-feat"]
+
+        for choice in possibleFeatChoices:
+
+            if choice in keys:
+                if d[choice]!="" and d[choice] in barb.c.feats.featFunctions.keys():
+                    choicesDic[choice]=d[choice]
+
+        try:
             if inp["classAsString"]=="Barbarian":
                 choicesDic["subclass"]=d["barbarianSubclass"]
             if inp["classAsString"]=="Monk":
@@ -172,7 +181,8 @@ def hello_world():
             if userHasChosenAScore:
                 inp["scores"]=scores
         except:
-            print("issue picking scores") 
+            pass
+            #print("issue picking scores") 
         
         return getHTMLFromInput(inp)
     else:

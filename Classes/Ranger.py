@@ -39,9 +39,9 @@ class Ranger(c.Sheet):
             self.wishlist.append("Shortsword")
             self.wishlist.append("offhand shortsword")
 
-        self.actionEntries.append(c.e.TextEntry("Hide"))
+        self.actionEntries.append({"id":"Hide"})
 
-        self.charInfos.append(c.e.Entry(" • Favoured Enemy: ___________________ <br><em>Adv. on tracking & lore checks.</em>"))
+        self.charInfos.append("Favoured Enemy: ___________________ <br><em>Adv. on tracking & lore checks.</em>")
         self.numberOfLanguages+=2
         
         if self.level in [1,2,3,4]:
@@ -69,8 +69,8 @@ class Ranger(c.Sheet):
 
         if level>1:
             fightStyle = None
-            if "l2-fightStyle" in self.choices.keys():
-                fightStyle = self.choices["l2-fightStyle"]
+            if "fightStyle" in self.choices.keys():
+                fightStyle = self.choices["fightStyle"]
             if fightStyle in feats.featFunctions.keys():
                 feats.featFunctions[fightStyle](self)
             else:
@@ -84,9 +84,9 @@ class Ranger(c.Sheet):
             if self.subclass == "hunter":
                 self.classAsString="Ranger (Hunter)"
                 
-                colSlayer = c.e.SpellEntry("blank")
-                colSlayer.preSaveNormalText = c.infoBullet + " Once per turn, you may deal an extra d8 damage to a wounded target you have hit."
-                colSlayer.preSaveItalicText = "<em> (Monster Slayer) </em>"
+                colSlayer = ["","",""]
+                colSlayer[1] = "Once per turn, you may deal an extra d8 damage to a wounded target you have hit."
+                colSlayer[2] = "<em> (Monster Slayer) </em>"
                 self.charInfos.append(colSlayer)
                 
                 subclassChosen = True

@@ -5,6 +5,7 @@ wildShapeText = "Wild Shape"
 wildShapeTextPlural = "Wild Shapes"
 
 class Druid(c.Sheet):
+    
     def __init__(self, inp):
         
         self.hitDie = 8
@@ -121,7 +122,7 @@ class Druid(c.Sheet):
             knownForms.append({"type":"text","id":"Black Bear"})
             knownForms.append({"type":"text","id":"Crocodile"})
             knownForms.append({"type":"text","id":"Other Form 3"})
-            
+
         longRestRegainString = ""
 
         if self.level>1:

@@ -35,7 +35,7 @@ class Rogue(c.Sheet):
         
         if self.level ==1:
             
-            self.actionEntries.append(c.e.TextEntry("Hide"))
+            self.actionEntries.append({"id":"Hide"})
         
         
         sneakAttackString = "Once per turn when you hit a target, you may add "
@@ -52,22 +52,20 @@ class Rogue(c.Sheet):
             
 
             
-            evasiveMoves.append(c.e.TextEntry("Dash"))
-            evasiveMoves.append(c.e.TextEntry("Disengage"))
-            evasiveMoves.append(c.e.TextEntry("Hide"))
-            
+            evasiveMoves.append({"id":"Dash"})
+            evasiveMoves.append({"id":"Disengage"})
+            evasiveMoves.append({"id":"Hide"})
             
         if level>2:
             
-            steadyAim = c.e.TextEntry("steadyAim")
-            self.bonusActionEntries.append(steadyAim)
+            self.bonusActionEntries.append({"id":"steadyAim"})
             
             if self.subclass == "thief":
                 self.classAsString ="Rogue (Thief)"
-                self.charInfos.append(c.e.Entry("Climbing costs you no extra movement <em>(Thief)</em>"))
+                self.charInfos.append("Climbing costs you no extra movement <em>(Thief)</em>")
                 self.showUseObject=False
-                evasiveMoves.append(c.e.TextEntry("useObject"))
-                evasiveMoves.append(c.e.TextEntry("sleightOfHandThief"))
+                evasiveMoves.append({"id":"useObject"})
+                evasiveMoves.append({"id":"sleightOfHandThief"})
 
             elif self.subclass == "assassin":
                 self.classAsString ="Rogue (Assassin)"
@@ -80,15 +78,15 @@ class Rogue(c.Sheet):
                 self.subclass = "swash"
                 self.classAsString ="Rogue (Swashbuckler)"
                 if self.modifiers[5]>0:
-                    self.charInfos.append(c.e.Entry("Your intiative rolls are "+c.gf.getSignedStringFromInt(self.modifiers[1]+self.modifiers[5])+" <em>(Swashbuckler)</em>"))
+                    self.charInfos.append("Your intiative rolls are "+c.gf.getSignedStringFromInt(self.modifiers[1]+self.modifiers[5])+" <em>(Swashbuckler)</em>")
                 sneakAttackString = "Once per turn when you hit a target, you may add "
                 sneakAttackString += "<strong>"+getSneakAttackString(level)+"</strong>"
                 sneakAttackString += "  to the damage if you have advantage on the attack roll, the target is distracted (has a hostile within 5ft), or you are in a duel <em>(Swashbuckler)</em>."
                 
-                self.charInfos.append(c.e.Entry("Targets of your Shortsword cannot make Opportunity Attacks on you for one turn. <em>(Swashbuckler)</em>"))
+                self.charInfos.append("Targets of your Shortsword cannot make Opportunity Attacks on you for one turn. <em>(Swashbuckler)</em>")
         if level>4:
             
-            self.reactions.append(c.e.TextEntry("uncannyDodge"))
+            self.reactions.append({"id":"uncannyDodge"})
 
         #  Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, and Stealth.
         self.skillProficiencies.append(self.pickSkillProficiency([0,3,4,6,7,8,11,12,13,15,16]))
@@ -116,8 +114,7 @@ class Rogue(c.Sheet):
                     numberChosen+=1
         
         
-        sneakEntry = c.e.Entry(sneakAttackString)
-        sneakBlock = c.e.Block([sneakEntry],"SNEAK ATTACK")
+        sneakBlock = c.e.Block([sneakAttackString],"SNEAK ATTACK")
         self.rightColumnBlocks.append(sneakBlock)
         
         if len(evasiveMoves)>0:

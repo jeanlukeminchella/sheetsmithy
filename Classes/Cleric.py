@@ -148,7 +148,7 @@ class Cleric(c.Sheet):
                     cureWounds["note"]="<em> You regain 3 hp.</em>"
                     healingWord["note"]="<em> You regain 3 hp.</em>"
                     masshw["note"]=".<em> You regain 5 hp</em>"
-                    revivify["note"]="You regain 5 hp."
+                    revivify["note"]=" You gain 5 hp."
                     
                 if self.level>4:
                     self.bonusActionEntries.append(masshw)

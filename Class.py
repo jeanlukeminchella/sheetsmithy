@@ -26,7 +26,7 @@ class Sheet:
         #cosmetics stuff & variants
         self.showScores = inp.showScores
         self.buildLog = []
-        self.showBuildLog = inp.showScores
+        self.showBuildLog = True
         self.showShortRest = inp.showShortRest
         self.showLongRest = inp.showLongRest
         self.showPhysicalDamageTypes = False
@@ -140,7 +140,7 @@ class Sheet:
         # hitDie is not initaliased here, type of sheet has to have already initalised it
         self.hp += getHp(self.hitDie,self.level,self.modifiers[2])
          
-        self.reactions.append(e.TextEntry("oppAttack"))
+        self.reactions.append({"id":"oppAttack"})
         hitDiceString = "Regain "+str(max(1,int(self.level/2)))+" hit di"
         if self.level>3:
             hitDiceString+="ce"
@@ -148,7 +148,7 @@ class Sheet:
             hitDiceString+="e"
             
         hitDiceString+=", and all your hp"
-        self.longRestEntries.append(e.Entry(hitDiceString))
+        self.longRestEntries.append(hitDiceString)
         
         class HitDiceEntry(e.Entry):
             
@@ -566,7 +566,7 @@ class Sheet:
                 if self.modifiers[1]<2:
                     # then our ac would benefit from heavy armor 
 
-                    if self.modifiers[1]>=0 and 16 in self.skillProficiencies:
+                    if self.modifiers[1]>=1 and 16 in self.skillProficiencies:
                         # we have proficiency in stealth and are still not that undexterous so lets stay stealthy
                         preferredArmor = "Chain Shirt"
                     else:

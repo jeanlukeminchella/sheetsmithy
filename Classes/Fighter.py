@@ -84,8 +84,8 @@ class Fighter(c.Sheet):
         
         
         fightStyle = None
-        if "l1-fightStyle" in self.choices.keys():
-            fightStyle = self.choices["l1-fightStyle"]
+        if "fightStyle" in self.choices.keys():
+            fightStyle = self.choices["fightStyle"]
         if fightStyle in feats.featFunctions.keys():
             feats.featFunctions[fightStyle](self)
         else:
