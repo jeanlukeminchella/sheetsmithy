@@ -80,7 +80,7 @@ class Cleric(c.Sheet):
         elif self.level in [3,4]:
             self.spellPriorityList = ["Bless",healingWord,"Aid","Spiritual Weapon", "Guiding Bolt","Hold Person","Sanctuary","Command","Shield of Faith","Lesser Restoration",cureWounds,"Detect Magic","Protection from Evil and Good","Zone of Truth"]
         elif self.level in [5,6]:
-            self.spellPriorityList = [masshw,"Spiritual Weapon","Dispel Magic",revivify, "Guiding Bolt","Aid","Shield of Faith","Detect Magic",healingWord,"Sanctuary","Hold Person","Lesser Restoration","Zone of Truth" ,"Command",cureWounds,"Protection from Evil and Good","Spirit Shroud","Bless"]
+            self.spellPriorityList = [masshw,"Spiritual Weapon","Command","Dispel Magic",revivify, "Guiding Bolt","Aid","Shield of Faith","Detect Magic",healingWord,"Sanctuary","Hold Person","Lesser Restoration","Zone of Truth" ,"Command",cureWounds,"Protection from Evil and Good","Spirit Shroud","Bless"]
         
         
         resourceDictionary = {
@@ -108,12 +108,12 @@ class Cleric(c.Sheet):
 
             turnUndead = {"type":"spell"}
             turnUndead["id"] = "Turn Undead ("+channelDivinityText+", "+c.gf.getDistanceString(30)+")"
-            turnUndead["preSaveNormalText"] = "Undead that can see or hear you"
+            turnUndead["preSaveNormalText"] = "Undead"
             if self.level>4:
                 
                 turnUndead["preSaveNormalText"] += " take "+str(self.modifiers[4])+"d8 damage and"
             
-            turnUndead["preSaveNormalText"] += " must spend their turns trying to move as far away from you as they can, Incapacitated and Frightened."
+            turnUndead["preSaveNormalText"] += " spend their turns fleeing from you, Incapacitated and Frightened."
             turnUndead["preSaveItalicText"] = "WIS"+str(self.profBonus+8+self.modifiers[4])+" to resist. Ends if target takes damage. "
             channelDivinityActionEntries.append(turnUndead)
             
@@ -126,8 +126,26 @@ class Cleric(c.Sheet):
             
         if self.level>2:
             subclassChosen = False
-            subclassChoice = self.subclass
-    
+
+            if self.subclass == "war":
+                weHaveChannelDivinityThatIsNotAnAction=True
+                self.classAsString="Cleric (of War)"
+                subclassChosen = True
+                self.actionEntries.append({"id":"Guiding Bolt"})
+                self.bonusActionEntries.append({"id":"Magic Weapon"})
+                self.bonusActionEntries.append({"id":"Shield of Faith"})
+                self.bonusActionEntries.append({"id":"Spiritual Weapon"})
+                self.bonusActionEntries.append(["War Priest Attack.","Make a weapon or unarmed attack. " + "O "*self.modifiers[4]])
+                self.shortRestEntries.append("Regain all your <strong>War Priest Attacks</strong>.")
+                self.reactions.append(["Guided Strike ("+channelDivinityText+").","When an ally misses with an attack roll, boost the result by 10."," When using on yourself this does not cost a Reaction." ]) 
+
+                if self.level>4:
+                    self.actionEntries.append({"id":"Crusader's Mantle"})
+                    self.actionEntries.append({"id":"Spirit Guardians"})
+
+                if self.level>5:
+                    self.notesForSpellCastingBlock.append("You can use your Channel Divinity to cast Shield of Faith or Spiritual Weapon. When cast this way, the spell doesn't require Concentration and lasts 1 min.")
+
             if self.subclass == "life" or not subclassChosen:
                 
                 self.subclass = "life"

@@ -153,16 +153,19 @@ def hello_world():
                 choicesDic["subclass"]=d["paladinSubclass"]
             if inp["classAsString"]=="Fighter":
                 choicesDic["subclass"]=d["fighterSubclass"]
+                choicesDic["l6-feat"]=d["l6-feat"]
             if inp["classAsString"]=="Rogue":
                 choicesDic["subclass"]=d["rogueSubclass"]
             if inp["classAsString"]=="Ranger":
                 choicesDic["subclass"]=d["rangerSubclass"]
             if inp["classAsString"]=="Cleric":
                 choicesDic["divineOrder"]=d["divineOrder"]
+                choicesDic["subclass"]=d["clericSubclass"]
             if inp["classAsString"]=="Druid":
                 choicesDic["primalOrder"]=d["primalOrder"]
         except:
-            print("issue handling subclass")    
+            pass
+            print("issue handling subclass")  
         if len(choicesDic.keys())>0:
             inp["choices"]=choicesDic
 

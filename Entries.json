@@ -723,9 +723,9 @@
     "Command": {
         "cost": "1",
         "rang": 60,
-        "preSaveNormalText": "One word command must be followed by target. WIS",
+        "preSaveNormalText": "One word command obeyed by target. WIS",
         "postSaveNormalText": " to resist.",
-        "preSaveItalicText": " eg. Drop, Fall Prone, Flee etc.",
+        "preSaveItalicText": " eg. Drop, Flee ect.",
         "useSpellcastingMod": true,
         "type": "spell"
     },
@@ -907,6 +907,13 @@
         "useSpellcastingMod": true,
         "type": "spell"
     },
+    "Magic Weapon": {
+        "cost": "2",
+        "castTime":"ba",
+        "duration":"1 hour",
+        "preSaveNormalText": "Give a weapon +1 to attack and damage rolls.",
+        "type": "spell"
+    },
     "Sanctuary": {
         "rang": 30,
         "cost": "1",
@@ -952,6 +959,24 @@
         "preSaveItalicText": "When cast, foes within 10ft have 10ft less speed until your next turn.",
         "castTime": "ba",
         "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Spirit Guardians": {
+        "cost": "3",
+        "duration": "10 min",
+        "conc": true,
+        "preSaveNormalText": "Enemies within 15ft have half speed and take 3d8 radiant damage. WIS",
+        "postSaveNormalText": " to half damage.",
+        "preSaveItalicText": "Enemies also take the damage when they enter or end a turn in range. ",
+        "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Crusader's Mantle": {
+        "cost": "3",
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": "You radiate a 30ft aura. You and allies within it deal +d4 radiant damage with weapons.",
         "type": "spell"
     },
     "Stun": {

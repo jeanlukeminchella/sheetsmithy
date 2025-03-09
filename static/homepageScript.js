@@ -81,13 +81,13 @@ function loadSpeciesOptions() {
 
 };
 function loadClassChoices() {
-    const classChoiceIDs = ["barbarianSubclass","fightStyle","l4-feat","l4-feat-label","l6-feat","monkSubclass","fighterSubclass","rogueSubclass","paladinSubclass","rangerSubclass","divineOrder","primalOrder"];
+    const classChoiceIDs = ["barbarianSubclass","clericSubclass","fightStyle","l4-feat","l4-feat-label","l6-feat","monkSubclass","fighterSubclass","rogueSubclass","paladinSubclass","rangerSubclass","divineOrder","primalOrder"];
     classChoiceIDs.forEach(hideID);
     
     console.log("loading class choices");
     /* multi dimensional array, showing what to display at what level. */
     let allClassChoices = {
-        "Cleric":[["divineOrder"],[],[],["l4-feat","l4-feat-label"]],
+        "Cleric":[["divineOrder"],[],["clericSubclass"],["l4-feat","l4-feat-label"]],
         "Druid":[["primalOrder"],[],[],["l4-feat","l4-feat-label"]],
         "Barbarian":[[],[],["barbarianSubclass"],["l4-feat","l4-feat-label"]],
         "Fighter":[["fightStyle"],[],["fighterSubclass"],["l4-feat","l4-feat-label"],[],["l6-feat"]],
