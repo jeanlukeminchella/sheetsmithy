@@ -95,6 +95,7 @@ function loadClassChoices() {
         "Ranger":[[],["fightStyle"],["rangerSubclass"],["l4-feat","l4-feat-label"]],
         "Paladin":[[],["fightStyle"],["paladinSubclass"],["l4-feat","l4-feat-label"]],
         "Monk":[[],[],["monkSubclass"],["l4-feat","l4-feat-label"]],
+        "Warlock":[],
         "":[]
     };
     const level = document.getElementById("level").value;

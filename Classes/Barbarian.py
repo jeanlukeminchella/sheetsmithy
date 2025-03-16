@@ -76,7 +76,7 @@ class Barbarian(c.Sheet):
                 for i in range(1,9):
                     wildMagicEntries.append({"id":prefix+str(i),"modifierIndex":2})
                     
-                wildMagicEntries.append(c.e.Entry("<em>* You may repeat this with another Bonus Action during Rage.</em>"))
+                wildMagicEntries.append("<em>* You may repeat this with another Bonus Action during Rage.</em>")
 
                 
                 
@@ -97,20 +97,20 @@ class Barbarian(c.Sheet):
                 self.classAsString = "Barbarian (Wild Heart)"
                 
                 totems = []
-                totems.append(c.e.TextEntry("bearWildHeart"))
-                totems.append(c.e.TextEntry("wolfWildHeart"))
-                totems.append(c.e.TextEntry("eagleWildHeart"))
+                totems.append({"id":"bearWildHeart"})
+                totems.append({"id":"wolfWildHeart"})
+                totems.append({"id":"eagleWildHeart"})
                 
                 totemBlock = c.e.Block(totems,"WILD RAGE EFFECTS")
                 self.rightColumnBlocks.append(totemBlock)
                 
                 if level>5:
-                    self.rightColumnBlocks.append(c.e.Block([c.e.TextEntry("wildHeartAspects")],"WILD HEART ASPECT"))
+                    self.rightColumnBlocks.append(c.e.Block([{"id":"wildHeartAspects"}],"WILD HEART ASPECT"))
                     
                     
         
         if level>4:
-            extraAttackEntry = c.e.TextEntry("extraAttackHighlighted")
+            extraAttackEntry = {"id":"extraAttackHighlighted"}
             self.actionEntries.insert(self.highlightedBlockIndex,extraAttackEntry)
             self.highlightedBlockIndex+=1
             self.speed+=10

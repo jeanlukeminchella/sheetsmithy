@@ -77,10 +77,9 @@ class Fighter(c.Sheet):
         if not self.showShortRest:
             secondWindText +=  "<em>Regain one use on a rest. </em> "
         elif self.level==1:
-            self.shortRestEntries.append(c.e.Entry("Regain one use of <strong>Second Wind</strong>."))
+            self.shortRestEntries.append("Regain one use of <strong>Second Wind</strong>.")
         secondWindText +=  "O "*c.gf.getNumberFromRange(self.level,[0,3,8])
-        secondWindEntry = c.e.Entry(secondWindText)
-        self.bonusActionEntries.append(secondWindEntry)
+        self.bonusActionEntries.append(secondWindText)
         
         
         fightStyle = None
@@ -96,66 +95,52 @@ class Fighter(c.Sheet):
             if not self.showShortRest:
                 actionSurgeText +=  "<em>You must rest before doing this again. </em> "
             else:
-                self.shortRestEntries.append(c.e.Entry("Regain your <strong>Action Surge </strong> and <strong> Second Wind </strong>features."))
+                self.shortRestEntries.append("Regain your <strong>Action Surge </strong> and <strong> Second Wind </strong>features.")
             actionSurgeText +=  "O"
-            actionSurgeEntry = c.e.Entry(actionSurgeText)
-            self.actionEntries.insert(0,actionSurgeEntry)
+            self.actionEntries.insert(0,actionSurgeText)
             self.highlightedBlockIndex+=1
-            self.charInfos.append(c.e.Entry("<strong>Tactical Mind. </strong> Spend a use of your Second Wind feature to boost an ability check by d10."))
+            self.charInfos.append("<strong>Tactical Mind. </strong> Spend a use of your Second Wind feature to boost an ability check by d10.")
 
         if self.level>2:
             chosen = False
             if self.subclass == "champion":
                 chosen = True
-                self.charInfos.append(c.e.Entry("You Critically Hit on a 19 or 20, and can move up to half your speed when you do so, without provoking Opportunity Attacks."))
-                self.charInfos.append(c.e.Entry("You have advantage on Initiative rolls."))
+                self.charInfos.append("You Critically Hit on a 19 or 20, and can move up to half your speed when you do so, without provoking Opportunity Attacks.")
+                self.charInfos.append("You have advantage on Initiative rolls.")
                 self.skillNotes.append([3,"(advantage)"])
                 self.classAsString = "Fighter (Champion)"
             elif self.subclass == "rune" or chosen == False:
                 self.classAsString = "Fighter (Rune Knight)"
                 self.subclass="rune"
-                stoneRuneEntryCommands = [["title","Stone Rune (1 min)"],["range",30],["preSaveNormalText","When an enemy ends their turn, charm them. WIS"],["postSaveNormalText"," to resist."],["preSaveItalicText","Target is incapactiated and has speed 0 while charmed, repeating saves on end of turn. </em>O"],["modiferIndex",2]]
-                fireRuneEntryCommands = [["title","Fire Rune"],["preSaveNormalText","When you hit a creature with an attack, you can invoke the Fire rune, summoning firey shackles. "],["preSaveItalicText","2d6 fire damage on hit and on start of target turns, STR"],["postSaveItalicText"," to avoid being restrained, retry on turns end. </em>O"],["modiferIndex",2]]
                 
-                stoneRuneEntry = c.e.SpellEntry("blank")
-                stoneRuneEntry.applyCommandList(stoneRuneEntryCommands)
+                stoneEntry = {"id":"Stone Rune","duration":"1 min","type":"spell","rang":30,"preSaveNormalText":"When an enemy ends their turn, charm them. WIS","postSaveNormalText":" to resist.","preSaveItalicText":"Target is incapactiated and has speed 0 while charmed, repeating saves on end of turn. </em>O","modifierIndex":2}
+                fireEntry = {"id":"Fire Rune","type":"spell","preSaveNormalText":"When you hit a creature with an attack, you can invoke the Fire rune, summoning firey shackles. ","preSaveItalicText":"2d6 fire damage on hit and on start of target turns, STR","postSaveItalicText":" to avoid being restrained, retry on turns end. </em>O","modiferIndex":2}
                 self.skillNotes.append([6,"(advantage)"])
-                self.reactions.append(stoneRuneEntry)
+                self.reactions.append(stoneEntry)
                 
-                fireRuneEntry = c.e.SpellEntry("blank")
-                fireRuneEntry.applyCommandList(fireRuneEntryCommands)
-                
-                runeEntries = [fireRuneEntry]
+                runeEntries = [fireEntry]
                 if self.showShortRest:
-                    self.shortRestEntries.append(c.e.Entry("Regain the use off all your <strong>Runes</strong>."))
+                    self.shortRestEntries.append("Regain the use off all your <strong>Runes</strong>.")
                         
                 else:
-                    runeEntries.append(c.e.Entry("<em>You must rest before invoking each rune again.</em>"))
+                    runeEntries.append("<em>You must rest before invoking each rune again.</em>")
                 
                 runeBlock = c.e.Block(runeEntries,"RUNES")
                 self.rightColumnBlocks.append(runeBlock)
                 
-                giantsMight = c.e.SpellEntry("blank")
-                giantsMight.title="Giant's Might"
-                giantsMight.duration="1 min"
-                giantsMight.preSaveNormalText="You become large, gain advantage on Strength saves and Athletics checks, and deal an extra d6 damage once per turn."
+                giantsMight = {"type":"spell"}
+                giantsMight["id"]="Giant's Might"
+                giantsMight["duration"]="1 min"
+                giantsMight["preSaveNormalText"]="You become large, gain advantage on Strength saves and Athletics checks, and deal an extra d6 damage once per turn."
                 for i in range(self.profBonus):
-                    giantsMight.preSaveNormalText+=" O"
+                    giantsMight["preSaveNormalText"]+=" O"
                 self.bonusActionEntries.append(giantsMight)
                    
         if self.level>4:
-            extraAttackEntry = c.e.TextEntry("extraAttackHighlighted")
+            extraAttackEntry = {"id":"extraAttackHighlighted"}
             self.actionEntries.insert(self.highlightedBlockIndex,extraAttackEntry)
             self.highlightedBlockIndex+=1
-        if self.level>5:
-            
-            featChoice = None
-            if "l6-feat" in self.choices.keys():
-                featChoice = self.choices["l6-feat"]
-            if featChoice in feats.featFunctions.keys():
-                feats.featFunctions[featChoice](self)
-            else:
-                feats.asi(self)
+        
         
         
         #Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, and Survival.

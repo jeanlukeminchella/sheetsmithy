@@ -133,6 +133,15 @@ class Sheet:
                 feats.featFunctions[featChoice](self)
             else:
                 feats.asi(self)
+        if self.level>5 and self.classAsString=="Fighter":
+            
+            featChoice = None
+            if "l6-feat" in self.choices.keys():
+                featChoice = self.choices["l6-feat"]
+            if featChoice in feats.featFunctions.keys():
+                feats.featFunctions[featChoice](self)
+            else:
+                feats.asi(self)
                 
         ccc.applyBackground(self, inp.background)
         # this sets self.backgroundAsString
@@ -141,7 +150,7 @@ class Sheet:
         self.hp += getHp(self.hitDie,self.level,self.modifiers[2])
          
         self.reactions.append({"id":"oppAttack"})
-        hitDiceString = "Regain "+str(max(1,int(self.level/2)))+" hit di"
+        hitDiceString = "Regain your hit di"
         if self.level>3:
             hitDiceString+="ce"
         else:
@@ -150,19 +159,14 @@ class Sheet:
         hitDiceString+=", and all your hp"
         self.longRestEntries.append(hitDiceString)
         
-        class HitDiceEntry(e.Entry):
-            
-            def getHTML(self,char):
-                bold = ""
-                mid = "<strong>Heal</strong> d"+str(char.hitDie)+gf.getSignedStringFromInt(char.modifiers[2],True)+" hp for each hit die you spend."
-                if char.level>1:
-                    mid += "<br>"
-                for i in range(char.level):
-                    mid += " O"
-                it = ""
-                return e.getHTMLfromThruple([bold,mid,it])
-        hitDiceEntry = HitDiceEntry("")
-        self.shortRestEntries.append(hitDiceEntry)
+        bold = ""
+        mid = "<strong>Heal</strong> d"+str(self.hitDie)+gf.getSignedStringFromInt(self.modifiers[2],True)+" hp for each hit die you spend."
+        if self.level>1:
+            mid += "<br>"
+        for i in range(self.level):
+            mid += " O"
+        it = ""
+        self.shortRestEntries.append([bold,mid,it])
 
         if inp.gearList != "" and inp.gearList!=" ":
             gear = inp.gearList.split(", ")
@@ -171,12 +175,13 @@ class Sheet:
 
     
     # returns True if added successfully
-    # doesnt handle text entries very well - loses it when comparing "cost"
     def addEntry(self,command,highlight=True):
         
         if type(command)==str:
-            command = e.getEntryWithSpellCommand(command)
+            command = {"id":command}
+            command = e.ne.getExpandedDictionary(command)
             
+        # lets scan and see if we have other entries with the same title first
         weHaveThisEntryAlready = False
 
         allEntries = self.actionEntries[:]
@@ -186,34 +191,38 @@ class Sheet:
 
         for ent in allEntries:
             if "Entry" in str(type(ent)):
-
-                if ent.title == command.title:
+                if ent.title == command["id"]:
                     weHaveThisEntryAlready = True
             elif type(ent)==dict:
                 if not "id" in ent.keys():
                     ent = e.ne.getExpandedDictionary(ent)
-                if ent["id"]==command.title:
+                if ent["id"]==command["id"]:
                     weHaveThisEntryAlready = True
                 if "title" in ent.keys():
-                    if ent["title"]==command["title"]:
+                    if ent["title"]==command["id"]:
                         weHaveThisEntryAlready = True
         if not weHaveThisEntryAlready:
-            if command.castTime=="a":
-                if command.cost=="" and highlight:
+            if command["castTime"]=="a":
+                freeAction = True
+
+                if "cost" in command.keys():
+                    if command["cost"]!="":
+                        freeAction = False
+                
+                if freeAction and highlight:        
                     self.highlightedEntries.append(command)
                 else:
                     self.actionEntries.append(command)
-
-            elif command.castTime=="ba":
+            elif command["castTime"]=="ba":
                 self.bonusActionEntries.append(command)
-            elif command.castTime=="re":
+            elif command["castTime"]=="re":
                 self.reactionEntries.append(command)
             else:
-                print("This cast time confused me: ",command)
+                print("castTime error in : ",command)
                 return False
             return True
         else:
-            print("We already have ",command.title," in class ",self.classAsString)
+            # We already have this entry's ID somewhere in the class 
             return False            
 
 
@@ -223,7 +232,7 @@ class Sheet:
         
         weNeedToConcentrate = False
         weNeedToExplainRituals= False
-        self.longRestEntries.append(e.TextEntry("regainSpellSlots"))
+        self.longRestEntries.append({"id":"regainSpellSlots"})
         
         # lets load in the spells - ones we dont have already of course
         l = self.actionEntries[:]
@@ -321,26 +330,26 @@ class Sheet:
                     nextSpellIndexToConsider+=1
             
             
-            resourceEntry = e.Entry(gf.getSpellSlotHTMLString(self.spellSlotResourceTuples))
+            resourceEntry = gf.getSpellSlotHTMLString(self.spellSlotResourceTuples)
             spellcastingBlockEntries = [resourceEntry]
             spellcastingBlockEntries.extend(self.notesForSpellCastingBlock)
             
             
             if weNeedToConcentrate:
-                spellcastingBlockEntries.append(e.TextEntry("conc"))
+                spellcastingBlockEntries.append({"id":"conc"})
             
             if weNeedToExplainRituals and self.ritualCaster:
-                spellcastingBlockEntries.append(e.TextEntry("ritual"))
+                spellcastingBlockEntries.append({"id":"ritual"})
             
             spellBlock = e.Block(spellcastingBlockEntries,spellcastingTitle)
             self.rightColumnBlocks.append(spellBlock)
         else:
 
             if weNeedToConcentrate:
-                self.charInfos.append(e.TextEntry("conc"))
+                self.charInfos.append({"id":"conc"})
             
             if weNeedToExplainRituals and self.ritualCaster:
-                self.charInfos.append(e.TextEntry("ritual"))
+                self.charInfos.append({"id":"ritual"})
     
     def addResistance(self,r):
         
@@ -392,7 +401,7 @@ class Sheet:
         
         if self.wearingShield and self.proficientWithShields and "Shield" in self.stuff:
             ac = ac+2
-            print("adding shield")
+            #print("adding shield")
             self.addedShield = True
         
         self.AC = ac  + self.cumulativeACBonus
@@ -424,8 +433,7 @@ class Sheet:
     
     def addHighlightedEntry(self,entry):
         if type(entry)==str:
-            entry = e.getEntryWithSpellCommand(entry)
-            # handle an error here?    
+            entry = {"id":entry}
         self.highlightedEntries.append(entry)
             
     # takes an input and gives the class their scores and modifiers, also takes as input the default scores
@@ -624,7 +632,7 @@ class Sheet:
             self.addItemToInventory(str(int(copper))+"cp")
         
         if self.stuff!="":
-            stuffEntry = e.Entry(self.stuff)
+            stuffEntry = self.stuff
             stuffBlock = e.Block([stuffEntry],equipmentTitle)
             self.rightColumnBlocks.append(stuffBlock)
         self.calculateAC()
@@ -847,7 +855,7 @@ class Sheet:
         result+= "<div class='topBanner middleBanner bannerLabel' id='classlabel'>CLASS</div>\n"
         result+= "<div class='topBanner middleBanner bannerValue' id='class'>"+self.classAsString+"</div>\n"
 
-        result+= "<div class='topBanner leftBanner bannerLabel' id='labelrace'>RACE</div>\n"
+        result+= "<div class='topBanner leftBanner bannerLabel' id='labelrace'>SPECIES</div>\n"
         result+= "<div class='topBanner leftBanner bannerValue' id='race'>"+self.raceString+"</div>\n"
         
         if self.darkvision>0:

@@ -9,6 +9,7 @@ from Classes import Monk as monk
 from Classes import Ranger as ranger
 from Classes import Paladin as pal
 from Classes import Cleric as cleric
+from Classes import Warlock as warlock
 import datetime
 
 
@@ -49,6 +50,8 @@ def getHTMLFromInput(d):
         character = pal.Paladin(inp)
     elif c=="Cleric":
         character = cleric.Cleric(inp)
+    elif c=="Warlock":
+        character = warlock.Warlock(inp)
     else:
         inp.classAsString="Fighter"
         character = fighter.Fighter(inp)

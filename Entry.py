@@ -12,6 +12,8 @@ class Entry():
     # datum could be loads of data types  - depends on type of entry)
     def __init__(self, datum):
 
+        print("loading an old school entry here: ",datum)
+
         self.datum=datum
         self.title=""
         self.rang=0

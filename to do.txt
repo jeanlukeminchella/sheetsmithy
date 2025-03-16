@@ -13,4 +13,6 @@
 
     - cause an issue when we have 2h weapon and a shield
 
+  - race doc needs renaming to species and sorting out, lots of spagetti code ect
+
 

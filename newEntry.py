@@ -68,8 +68,8 @@ def getExpandedDictionary(e):
 
 
     if not "id" in keys:
-        print("weve got a bad entry here with no id- ")
-        print(e)
+        #print("weve got a bad entry here with no id- ")
+        #print(e)
         return expandedDictionary
     
     #  weve now got a dictionary with an "id" key
@@ -77,10 +77,10 @@ def getExpandedDictionary(e):
 
     if not e["id"]in allEntries.keys():
         #got an id here that doesnt work
-        print("given ID here that doesnt load an entry",e["id"]," by entry ",e)
+        #print("given ID here that doesnt load an entry",e["id"]," by entry ",e)
         for k in keys:
             expandedDictionary[k]=e[k]
-        print("so we will just return ",expandedDictionary)
+        #print("so we will just return ",expandedDictionary)
         return expandedDictionary
     else:
         loadedDictionary = allEntries[e["id"]]

@@ -70,8 +70,8 @@ class Druid(c.Sheet):
             self.addEntry("Produce Flame")
         else:
             # we need the entry to only take up one line really - and not be highlighted
-            self.actionEntries.append(c.e.AttackRollEntry("Produce Flame"))
-
+            self.addEntry("Produce Flame",False)
+            
         self.addEntry("Guidance",False)
         self.addEntry("Speak With Animals")
 
@@ -101,37 +101,37 @@ class Druid(c.Sheet):
         
         self.showReady=False
 
-        wildshapeAction = c.e.SpellEntry("Assume Wild Shape (Wild Shape)")
-        wildshapeAction.preSaveItalicText="Lasts for up to "+str(int(self.level/2))+" hours. "
-        wildshapeAction.preSaveItalicText+="Gain "+str(self.level)+" temp hp. Cannot cast new spells while transformed."
+        wildshapeAction = {"id":"Assume Wild Shape (Wild Shape)","type":"spell"}
+        wildshapeAction["preSaveItalicText"]="Lasts for up to "+str(int(self.level/2))+" hours. "
+        wildshapeAction["preSaveItalicText"]+="Gain "+str(self.level)+" temp hp. Cannot cast new spells while transformed."
 
 
         knownForms = []
         
         if self.level<4:
-            knownForms.append({"type":"text","id":"Riding Horse"})
-            knownForms.append({"type":"text","id":"Wolf"})
-            knownForms.append({"type":"text","id":"Spider"})
-            knownForms.append({"type":"text","id":"Other Form 1"})
+            knownForms.append({"id":"Riding Horse"})
+            knownForms.append({"id":"Wolf"})
+            knownForms.append({"id":"Spider"})
+            knownForms.append({"id":"Other Form 1"})
         elif self.level==5:
-            knownForms.append({"type":"text","id":"Black Bear"})
-            knownForms.append({"type":"text","id":"Crocodile"})
-            knownForms.append({"type":"text","id":"Spider"})
-            knownForms.append({"type":"text","id":"Other Form 2"})
+            knownForms.append({"id":"Black Bear"})
+            knownForms.append({"id":"Crocodile"})
+            knownForms.append({"id":"Spider"})
+            knownForms.append({"id":"Other Form 2"})
         else:            
-            knownForms.append({"type":"text","id":"Black Bear"})
-            knownForms.append({"type":"text","id":"Crocodile"})
-            knownForms.append({"type":"text","id":"Other Form 3"})
+            knownForms.append({"id":"Black Bear"})
+            knownForms.append({"id":"Crocodile"})
+            knownForms.append({"id":"Other Form 3"})
 
         longRestRegainString = ""
 
         if self.level>1:
 
             self.bonusActionEntries.insert(0,wildshapeAction)
-            self.bonusActionEntries.insert(1,{"type":"text","id":"Leave Wild Shape"})
+            self.bonusActionEntries.insert(1,{"id":"Leave Wild Shape"})
             self.rightColumnBlocks.append(c.e.Block(knownForms,"WILD SHAPE FORMS"))
             self.shortRestEntries.append("Regain a use of Wild Shape")
-            self.actionEntries.append({"type":"text","id":"Wild Companion"})
+            self.actionEntries.append({"id":"Wild Companion"})
             longRestRegainString = "Regain your use of <strong>Wild Companion</strong>."
             
         
@@ -143,11 +143,12 @@ class Druid(c.Sheet):
                 self.classAsString="Druid (Circle of the Land)"
                 self.subclass = "land"
 
-                landsAid = c.e.SpellEntry("blank")
-                landsAid.title = "Land's Aid (Wild Shape, 60ft)"
-                landsAid.preSaveNormalText = "20ft sphere deals 2d6 necrotic damage to enemies. CON"
-                landsAid.postSaveNormalText = " to half damage."
-                landsAid.preSaveItalicText = " Choose an ally within sphere to regain 2d6 hp. "
+                landsAid = {"type":"spell"}
+
+                landsAid["id"] = "Land's Aid (Wild Shape, 60ft)"
+                landsAid["preSaveNormalText"] = "20ft sphere deals 2d6 necrotic damage to enemies. CON"
+                landsAid["postSaveNormalText"] = " to half damage."
+                landsAid["preSaveItalicText"] = " Choose an ally within sphere to regain 2d6 hp. "
                 self.actionEntries.append(landsAid)
 
                 lands = ["arid"]
@@ -164,7 +165,7 @@ class Druid(c.Sheet):
                     if self.level>4:
                         self.addEntry("Fireball")
                     if self.level>5:
-                        self.notesForSpellCastingBlock.append({"type":"text","id":"Natural Recovery - arid"})
+                        self.notesForSpellCastingBlock.append({"id":"Natural Recovery - arid"})
                 else: 
                     pass
 
@@ -175,8 +176,8 @@ class Druid(c.Sheet):
             self.showDisengage = False
             self.showDodge = False
             self.showUseObject=False
-            self.notesForSpellCastingBlock.append({"type":"text","id":"Wild Resurgence"})
-            self.notesForSpellCastingBlock.append({"type":"text","id":"Wild Resurgence 2"})
+            self.notesForSpellCastingBlock.append({"id":"Wild Resurgence"})
+            self.notesForSpellCastingBlock.append({"id":"Wild Resurgence 2"})
             longRestRegainString = "Regain your uses of <strong>Wild Companion</strong> and <strong>Wild Resurgence</strong>."
             self.showDash = False
             
