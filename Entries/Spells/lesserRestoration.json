@@ -1,7 +1,0 @@
-{
-    "title": "Lesser Restoration",
-    "cost": "2",
-    "preSaveNormalText": "Target is cured of a disease or condition (blinded, deafened, paralyzed, or poisoned).",
-    "castTime": "ba",
-    "isSpell": true
-}

@@ -1,9 +1,0 @@
-{
-    "title": "Sling",
-    "addModToDamage": true,
-    "forcedMod": 1,
-    "damageType": "Bludgeoning",
-    "damage": "d4",
-    "rang": 30,
-    "mastery": "Slow"
-}

@@ -1,14 +1,11 @@
 import globalFunctions as gf
 import json
-textEntries = {}
-spellEntries = {}
 
 fileExtension = ".json"
 standardEntryStart = "<p>"
 standardEntryEnd = "</p>\n"
 
-with open(gf.pathToSource+"Entries/TextEntries.txt", 'r') as file:
-    textEntries = json.load(file)
+
 
 allEntries = json.load(open(gf.pathToSource+"Entries.json", 'r'))
 

@@ -1,8 +1,0 @@
-{
-    "title": "Sickle",
-    "addModToDamage": true,
-    "forcedMod": 0,
-    "damageType": "Slashing",
-    "damage": "d4",
-    "mastery": "Nick"
-}

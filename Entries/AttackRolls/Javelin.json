@@ -1,9 +1,0 @@
-{
-    "title": "Javelin",
-    "addModToDamage": true,
-    "forcedMod": 0,
-    "damageType": "Piercing",
-    "damage": "d6",
-    "thrown": 30,
-    "mastery": "Slow"
-}

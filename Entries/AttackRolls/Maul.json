@@ -1,8 +1,0 @@
-{
-    "title": "Maul",
-    "addModToDamage": true,
-    "forcedMod": 0,
-    "damageType": "Bludgeoning",
-    "damage": "2d6",
-    "mastery": "Topple"
-}

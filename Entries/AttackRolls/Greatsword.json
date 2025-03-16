@@ -1,8 +1,0 @@
-{
-    "title": "Greatsword",
-    "addModToDamage": true,
-    "forcedMod": 0,
-    "damageType": "Slashing",
-    "damage": "2d6",
-    "mastery": "Graze"
-}

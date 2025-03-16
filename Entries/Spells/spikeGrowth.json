@@ -1,9 +1,0 @@
-{
-    "conc": true,
-    "title": "Spike Growth",
-    "cost": "2",
-    "preSaveNormalText": "20ft square of thorns erupt from the ground as difficult terrain, dealing 2d4 poison damage for every 5ft travelled across it.",
-    "preSaveItalicText": "STR",
-    "postSaveItalicText": " to resist.",
-    "isSpell": true
-}

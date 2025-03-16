@@ -1,9 +1,0 @@
-{
-    "title": "Heavy Crossbow",
-    "addModToDamage": true,
-    "forcedMod": 1,
-    "damageType": "Piercing",
-    "damage": "d10",
-    "rang": 100,
-    "mastery": "Push"
-}

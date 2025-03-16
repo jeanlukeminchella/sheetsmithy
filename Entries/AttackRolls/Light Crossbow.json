@@ -1,9 +1,0 @@
-{
-    "title": "Light Crossbow",
-    "addModToDamage": true,
-    "forcedMod": 1,
-    "damageType": "Piercing",
-    "damage": "d8",
-    "rang": 80,
-    "mastery": "Slow"
-}

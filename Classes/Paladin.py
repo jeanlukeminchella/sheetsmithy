@@ -46,7 +46,7 @@ class Paladin(c.Sheet):
         
         priorityListByMaxSpellSlot={
             "1":[{"id":"Thunderous Smite"},{"id":"Command"},{"id":"Shield of Faith"},{"id":"Wrathful Smite"},{"id":"Detect Magic"},heroism,{"id":"Cure Wounds"}, {"id":"Protection from Evil and Good"}],
-            "2":[{"id":"Shining Smite"},{"id":"Thunderous Smite"},{"id":"Lesser Restoration"},{"id":"Command"},{"id":"Wrathful Smite"},{"id":"Shield of Faith"},heroism,{"id":"Cure Wounds"},{"id":"Detect Magic"}, {"id":"Protection from Evil and Good"}]
+            "2":[{"id":"Shining Smite"},{"id":"Thunderous Smite"},{"id":"Protection from Evil and Good"},{"id":"Cure Wounds"},{"id":"Lesser Restoration"},{"id":"Command"},{"id":"Wrathful Smite"},{"id":"Shield of Faith"},heroism,{"id":"Detect Magic"}]
             }
 
         maxSpellSlot = str(c.gf.getNumberFromRange(self.level,[4]))

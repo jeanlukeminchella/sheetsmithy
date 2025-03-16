@@ -1,8 +1,0 @@
-{
-    "title": "Greataxe",
-    "addModToDamage": true,
-    "forcedMod": 0,
-    "damageType": "Slashing",
-    "damage": "d12",
-    "mastery": "Cleave"
-}

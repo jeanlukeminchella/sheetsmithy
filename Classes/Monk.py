@@ -137,7 +137,7 @@ class Monk(c.Sheet):
                 wholenessOfBody["preSaveNormalText"]="Regain "+getMartialArtsDie(self.level)+"+"+str(self.modifiers[4])+" hp. "
                 wholenessOfBody["preSaveNormalText"]+=" O"*self.modifiers[4]
                 if self.showLongRest:
-                    self.longRestEntries.append(c.e.Entry("Regain all uses of <strong>Wholenes Of Body</strong>"))
+                    self.longRestEntries.append("Regain all uses of <strong>Wholenes Of Body</strong>")
                 else:
                     wholenessOfBody.preSaveItalicText="Regain all uses on a Long Rest"
                 self.bonusActionEntries.append(wholenessOfBody)

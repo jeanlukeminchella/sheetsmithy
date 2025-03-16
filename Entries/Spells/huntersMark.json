@@ -1,9 +1,0 @@
-{
-    "title": "Hunter's Mark",
-    "cost": "1",
-    "preSaveNormalText": "Deal an extra d6 damage to target. ",
-    "conc": true,
-    "castTime": "ba",
-    "preSaveItalicText": " Can be moved with a Bonus Action.",
-    "isSpell": true
-}

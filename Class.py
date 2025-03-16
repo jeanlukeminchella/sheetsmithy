@@ -242,13 +242,7 @@ class Sheet:
         spellTitlesKnownAlready = []
         
         for action in l:
-            if type(action) == e.SpellEntry or type(action)==e.AttackRollEntry or type(action)==e.HealingEntry:
-                spellTitlesKnownAlready.append(action.title)
-                if action.conc:
-                    weNeedToConcentrate=True
-                if action.ritual:
-                    weNeedToExplainRituals=True
-            elif type(action)==dict:
+            if type(action)==dict:
                 expanded = False
 
                 if "expanded"in action.keys():
@@ -284,9 +278,7 @@ class Sheet:
                 
                 spell = spellPriorityList[nextSpellIndexToConsider]
                 title = None
-                if type(spell) == e.SpellEntry or type(spell)==e.AttackRollEntry or type(spell)==e.HealingEntry:
-                    title = spell.title
-                elif type(spell)==str:
+                if type(spell)==str:
                     title = spell
                 else:
                     spell = e.ne.getExpandedDictionary(spell)
@@ -300,20 +292,14 @@ class Sheet:
                     castTime = "a"
                     if type(spell)==str:
                         spell = {"id":spell}
-                    if type(spell) == e.SpellEntry or type(spell)==e.AttackRollEntry or type(spell)==e.HealingEntry:
-                        castTime = spell.castTime
-                        if spell.conc:
-                            weNeedToConcentrate=True
-                        if spell.ritual:
-                            weNeedToExplainRituals=True
-                    else:
-                        spell = e.ne.getExpandedDictionary(spell)
-                        castTime = spell["castTime"]
-                        if spell["conc"]:
-                            weNeedToConcentrate = True
-                        if spell["ritual"]:
-                            weNeedToExplainRituals = True
-                    
+                
+                    spell = e.ne.getExpandedDictionary(spell)
+                    castTime = spell["castTime"]
+                    if spell["conc"]:
+                        weNeedToConcentrate = True
+                    if spell["ritual"]:
+                        weNeedToExplainRituals = True
+                
                     if castTime=="a":
                         self.actionEntries.append(spell)
                     elif castTime=="ba":
@@ -365,7 +351,6 @@ class Sheet:
         options.append(10+self.modifiers[1])
         
         armorsThatWeHave = []
-        bestArmor = None
         bestArmorAC = max(options)
         bestArmorObject = None
         
@@ -383,7 +368,7 @@ class Sheet:
                 else:
                     ac=ac+self.modifiers[1]
             if ac>bestArmorAC:
-                bestArmor = a
+                
                 bestArmorAC = ac
                 bestArmorObject = armorObject
         ac = None

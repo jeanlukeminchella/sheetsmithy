@@ -1,9 +1,0 @@
-{
-    "title": "Glaive",
-    "addModToDamage": true,
-    "forcedMod": 0,
-    "damageType": "Slashing",
-    "damage": "d10",
-    "reach": true,
-    "mastery": "Graze"
-}

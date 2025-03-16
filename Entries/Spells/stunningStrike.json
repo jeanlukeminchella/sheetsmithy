@@ -1,7 +1,0 @@
-{
-    "title": "Stun",
-    "preSaveNormalText": "When you hit with a melee attack, spend 1 Focus to Stun target until your next turn. CON",
-    "postSaveNormalText": " to resist.",
-    "preSaveItalicText": "Targets that resist still have their speed halved, and the next attack against them is with advantage. ",
-    "isSpell": true
-}

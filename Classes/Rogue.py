@@ -60,30 +60,32 @@ class Rogue(c.Sheet):
             
             self.bonusActionEntries.append({"id":"steadyAim"})
             
-            if self.subclass == "thief":
-                self.classAsString ="Rogue (Thief)"
-                self.charInfos.append("Climbing costs you no extra movement <em>(Thief)</em>")
-                self.showUseObject=False
-                evasiveMoves.append({"id":"useObject"})
-                evasiveMoves.append({"id":"sleightOfHandThief"})
-
-            elif self.subclass == "assassin":
+            if self.subclass == "assassin":
+                
                 self.classAsString ="Rogue (Assassin)"
                 self.charInfos.append("On the first round of combat, you have adv. vs enemies that have not yet taken a turn, and your sneak attack deals +"+str(self.level)+" damage")
                 c.item.buyItem(self,"Disguise Kit",False)
                 c.item.buyItem(self,"Poisoner's Kit",False)
 
-            else:
-                
-                self.subclass = "swash"
+            elif self.subclass == "swash":
+
                 self.classAsString ="Rogue (Swashbuckler)"
                 if self.modifiers[5]>0:
                     self.charInfos.append("Your intiative rolls are "+c.gf.getSignedStringFromInt(self.modifiers[1]+self.modifiers[5])+" <em>(Swashbuckler)</em>")
                 sneakAttackString = "Once per turn when you hit a target, you may add "
                 sneakAttackString += "<strong>"+getSneakAttackString(level)+"</strong>"
                 sneakAttackString += "  to the damage if you have advantage on the attack roll, the target is distracted (has a hostile within 5ft), or you are in a duel <em>(Swashbuckler)</em>."
-                
                 self.charInfos.append("Targets of your Shortsword cannot make Opportunity Attacks on you for one turn. <em>(Swashbuckler)</em>")
+
+            else:
+                self.classAsString ="Rogue (Thief)"
+                self.charInfos.append("Climbing costs you no extra movement <em>(Thief)</em>")
+                self.showUseObject=False
+                evasiveMoves.append({"id":"useObject"})
+                evasiveMoves.append({"id":"sleightOfHandThief"})
+                self.subclass = "thief"
+
+                
         if level>4:
             
             self.reactions.append({"id":"uncannyDodge"})

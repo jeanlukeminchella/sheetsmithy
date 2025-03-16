@@ -86,7 +86,7 @@ class Ranger(c.Sheet):
                 
                 colSlayer = ["","",""]
                 colSlayer[1] = "Once per turn, you may deal an extra d8 damage to a wounded target you have hit."
-                colSlayer[2] = "<em> (Monster Slayer) </em>"
+                colSlayer[2] = "<em> (Hunter) </em>"
                 self.charInfos.append(colSlayer)
                 
                 subclassChosen = True
@@ -96,38 +96,42 @@ class Ranger(c.Sheet):
                 self.classAsString="Ranger (Monster Slayer)"
                 self.subclass = "monster slayer"
                 
-                protectionFromEvilAndGood = c.e.SpellEntry("protectionFromEvilAndGood")
-                self.actionEntries.append(protectionFromEvilAndGood)
+                self.actionEntries.append({"id":"Protection from Evil and Good"})
                 
-                hunterSense = c.e.SpellEntry("blank")
-                hunterSense.title = "Hunter's Sense (60ft)"
-                hunterSense.preSaveNormalText = " Discern a creature's immunities, resistances, and vulnerabilities."
+                hunterSense = {"type":"spell"}
+                hunterSense["id"] = "Hunter's Sense"
+                hunterSense["rang"] =60
+
+                hunterSense["preSaveNormalText"] = " Discern a creature's immunities, resistances, and vulnerabilities."
                 count = "O "*max(1,self.modifiers[4])
-                hunterSense.preSaveItalicText = "Uses per long rest -  </em>"+count+" <em>(Monster Slayer)"
+                hunterSense["preSaveItalicText"] = "</em>"+count+" <em>(Monster Slayer)"
                 self.actionEntries.append(hunterSense)
+                self.longRestEntries.append("Regain your uses of <strong>Hunter's Sense</strong>.")
                 
-                slayersPrey = c.e.SpellEntry("blank")
-                slayersPrey.title = "Mark Slayer's Prey (60ft)"
-                slayersPrey.preSaveNormalText = " Each turn, the first time you hit the target you deal an extra d6 damage. "
-                slayersPrey.preSaveItalicText = "Effect ends if you target a new prey. (Monster Slayer)"
+                slayersPrey = {"type":"spell"}
+                slayersPrey["id"] = "Mark Slayer's Prey"
+                slayersPrey["rang"] = 60
+
+                slayersPrey["preSaveNormalText"] = " Each turn, the first time you hit the target you deal an extra d6 damage. "
+                slayersPrey["preSaveItalicText"] = "Effect ends if you target a new prey. (Monster Slayer)"
                 self.bonusActionEntries.append(slayersPrey)
                 
             #primal awareness
-            swAnimals = c.e.SpellEntry("swAnimals")
-            swAnimals.preSaveItalicText=" One free casting per long rest. O"
+            swAnimals = {"id":"Speak With Animals","preSaveItalicText":" One free casting per long rest. O"}
+
             self.actionEntries.append(swAnimals)
             
             
         
             
         if level>4:
-            extraAttackEntry = c.e.TextEntry("extraAttackHighlighted")
+            extraAttackEntry = {"id":"extraAttackHighlighted"}
             self.actionEntries.insert(self.highlightedBlockIndex,extraAttackEntry)
             self.highlightedBlockIndex+=1
 
         if level>5:
             self.speed+=5
-            self.charInfos.append(c.e.Entry(" • Your speed is for walking, climbing or swimming."))
+            self.charInfos.append(" • Your speed is for walking, climbing or swimming.")
             self.showDodge=False
             
 

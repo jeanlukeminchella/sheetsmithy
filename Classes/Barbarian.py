@@ -124,7 +124,7 @@ class Barbarian(c.Sheet):
         #get the entries first
         rageEntries = []
         for t in rageTexts:
-            rageEntries.append(c.e.Entry(t))
+            rageEntries.append(t)
         rageBlock = c.e.Block(rageEntries,rageTitle)
         #maybe dont put it at the bottom?
         self.rightColumnBlocks.insert(0,rageBlock)

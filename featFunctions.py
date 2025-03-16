@@ -43,7 +43,7 @@ def lucky(c):
             luckyString+="<br>"
         for i in range(c.profBonus):
             luckyString+="O "
-        c.charInfos.append(e.Entry(luckyString))
+        c.charInfos.append(luckyString)
         
 def addCon(c):
     c.scores[2]=c.scores[2]+2

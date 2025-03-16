@@ -1,9 +1,0 @@
-{
-    "title": "Warhammer",
-    "addModToDamage": true,
-    "forcedMod": 0,
-    "damageType": "Bludgeoning",
-    "damage": "d8",
-    "versatile": "d10",
-    "mastery": "Push"
-}

@@ -1,9 +1,0 @@
-{
-    "title": "Blowgun",
-    "addModToDamage": true,
-    "forcedMod": 1,
-    "damageType": "Piercing",
-    "damage": "1",
-    "rang": 25,
-    "mastery": "Vex"
-}
