@@ -223,6 +223,10 @@ class Cleric(c.Sheet):
                 self.wishlist.append("Mace")
             else:
                 self.wishlist.append("Dagger")
+
+        if strengthOverDex and self.level<5:
+            self.highlightedEntries.append({"id":"Grapple"})
+            self.highlightedEntries.append({"id":"Shove"})
         
 
          

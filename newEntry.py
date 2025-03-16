@@ -317,15 +317,3 @@ def getBoldText(e,c):
 
 
 
-
-
-"""print(getHTML("wagwan"))
-print()
-print(getHTML(4))
-print()
-print(getHTML(False))
-print()
-r = {"type":"text","id":"Disengage"}
-print(getHTML(r))"""
-
-

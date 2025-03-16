@@ -146,11 +146,7 @@ def elf(c,choice):
             spell = e.ne.getExpandedDictionary(spell)
             spell["preSaveItalicText"] = freeCastText
             c.bonusActionEntries.append(spell)
-    
-    
-
-
-# needs light cantrip?
+ 
 def aasimar(c,choice):
     c.size="Medium"
     c.speed = 30
@@ -163,21 +159,21 @@ def aasimar(c,choice):
         if choice["size"]=="Small":
             c.size="Small"
             
-            
+    
     healingHandsString = "<strong>Healing Hands.</strong> Touch a creature and heal "
     healingHandsString+=str(c.profBonus)
     healingHandsString+="d4 hp. O"
     c.actionEntries.append(healingHandsString)
+    c.actionEntries.append({"id":"Light"})
     c.longRestEntries.append("Regain your <strong> Healing Hands</strong> feature.")
     c.addResistance("Necrotic")
     c.addResistance("Radiant")
     
     if c.level>2:
         
-        
         hw = "<strong>Heavenly Wings. </strong> You can fly."
         ir = "<strong>Inner Radiance.</strong> At the end of each of your turns, each creature within 10ft takes "+str(c.profBonus)+" radiant damage."
-        ns = "necroticShroud"
+        ns = {"id":"Necrotic Shroud"}
         transformationEntries = [hw,ir,ns]
         c.leftColumnBlocks.append(e.Block(transformationEntries,"TRANSFORMATIONS"))
         celestialRevelationText = "<strong>Celestial Revelation (1 min). </strong> "
@@ -262,8 +258,6 @@ def goliath(c, choice):
     c.raceString = "Goliath"
     
     count = "O "*c.profBonus
-
-
     c.preferredLanguages.append("giant")
     
     subraces = ["Cloud","Fire","Frost","Hill","Stone","Storm"]
@@ -334,7 +328,6 @@ def human(c, choice):
         else:
             feat.tough(c)
 
-        
     c.charInfos.append("Reroll a d20 with Heroic Inspiration - O")
 
 def halfling(c, choice):

@@ -582,6 +582,10 @@
         "preSaveItalicText": "Lights can be moved 60ft with a Bonus Action, but must stay within 20ft of another light and within range.",
         "type": "spell"
     },
+    "Light":{
+        "type":"spell",
+        "preSaveNormalText":"An object sheds 20ft of bright light for 1 hour."
+        },
     "Darkness": {
         "rang": 60,
         "cost": "2",
@@ -801,6 +805,7 @@
         "preSaveNormalText": "Target's speed is 0, and moves with you. Athletics / Acrobatics DC",
         "postSaveNormalText": " to resist / break grapple.",
         "preSaveItalicText": " Targets of a similar size half your speed. You must have a free hand for grappling.",
+        "modifierIndex": 0,
         "type": "spell"
     },
     "Guidance": {

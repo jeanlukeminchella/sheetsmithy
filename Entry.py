@@ -1,5 +1,4 @@
 import globalFunctions as gf
-import json
 import newEntry as ne
 
 fileExtension = ".json"
@@ -40,37 +39,6 @@ class Block():
         
         return result
         
-spellCommands = {}
-with open(gf.pathToSource+"Entries/spellCommands.json", 'r') as file:
-    spellCommands = json.load(file)
 
-# type: spell / text / heal / attackRoll     
-# code is what loads the JSON 
-
-def getEntryWithSpellCommand(inp):
-    command = spellCommands[inp]
-    commandType = command["type"]
-    commandCode = command["code"]
-    if commandType=="spell":
-        return SpellEntry(commandCode)
-    elif commandType=="text":
-        return TextEntry(commandCode)
-    elif commandType=="heal":
-        return HealingEntry(commandCode)
-    elif commandType=="attackRoll":
-        return AttackRollEntry(commandCode)
-
-
-def getHTML(e):
-    if type(e)==str:
-        return e
-    elif type(e)!=dict:
-        try:
-            return str(e)
-        except:
-            return ""
-    # ok so type is dictionary
-
-    keys = list(e.keys())
     
    
