@@ -22,7 +22,7 @@ class Monk(c.Sheet):
         self.actionEntries.append({"id":"Hide"})
 
         self.highlightedEntries.append({"id":"Quarterstaff","finesse":True})
-        c.item.buyItem(self,"Quarterstaff")
+        self.buyItem("Quarterstaff")
         self.wishlist.append("Shortbow")
         self.wishlist.append("Dart")
         self.wishlist.append("Whip")

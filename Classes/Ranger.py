@@ -29,13 +29,13 @@ class Ranger(c.Sheet):
 
         
         if self.wearingShield:
-            c.item.buyItem(c,"Shield")
+            self.wishlist.insert(0,"Shield")
             self.wishlist.append("Rapier")
             self.wishlist.append("Hand Crossbow")
             self.wishlist.append("Dagger")
             
         else:
-            c.item.buyItem(self,"Longbow")
+            self.buyItem("Longbow")
             self.wishlist.append("Shortsword")
             self.wishlist.append("offhand shortsword")
 

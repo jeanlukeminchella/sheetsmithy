@@ -24,9 +24,9 @@ class Barbarian(c.Sheet):
         self.masteries+=2
 
         if self.wearingShield:
-            c.item.buyItem(self,"Longsword")
+            self.buyItem("Longsword")
         else:
-            c.item.buyItem(self,"Maul")
+            self.buyItem("Maul")
             
         self.wishlist.append("Javelin")
         
@@ -35,8 +35,8 @@ class Barbarian(c.Sheet):
         self.mediumArmorProficiency = True
         level = self.level
         
-        self.addHighlightedEntry("Shove")
-        self.addHighlightedEntry("Grapple")
+        self.addEntry("Shove")
+        self.addEntry("Grapple")
         
         rageTitle = "RAGE"
         self.longRestEntries.append("Regain all your uses of <strong>RAGE</strong>")

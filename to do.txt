@@ -1,18 +1,14 @@
 
  - action entries could just be "actions" but this would take a lot of renaming!
-
-  - validate string, string list
-  - dictionary even? thats done in character creation choices. get rid of the separate file then :)
-    - consolidate item class, ccc function file ect
-  
-  - handle spell commands that dont match, let users input?
-  
-
-   - more backgroundds obviously
-   - sort out the ranger feats
-
-    - cause an issue when we have 2h weapon and a shield
-
-  - race doc needs renaming to species and sorting out, lots of spagetti code ect
-
+ - sort Items out
+ - consolidate item class, ccc function file ect
+ - handle spell commands that dont match, let users input?
+ - more backgroundds obviously
+ - sort out the ranger feats (?)
+ - cause an issue when we have 2h weapon and a shield
+ - print the buildlog?
+ - race doc needs renaming to species and sorting out, lots of spagetti code ect
+ - feat file needs streamlining a lot, checking for duplicates ect. 
+ - dig out all the randomisation - no, seed it properly
+ - finish the javascript - inventory is sent in post request even if not selected
 

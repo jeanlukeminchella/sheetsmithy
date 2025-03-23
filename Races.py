@@ -40,7 +40,7 @@ def tiefling(c,choice):
             c.reactions.append(hRebuke)
         if c.level>4:
             d  = {"id":"Darkness"}
-            d = e.ne.getExpandedDictionary(d)
+            d = e.getExpandedDictionary(d)
             d["preSaveItalicText"] += freeCastText
             c.actionEntries.append(d)
     if choice["subrace"]=="Chthonic":
@@ -51,13 +51,13 @@ def tiefling(c,choice):
         c.actionEntries.append(fireBolt)
         if c.level>2:
             fLife = {"id":"False Life"}
-            fLife = e.ne.getExpandedDictionary(fLife)
+            fLife = e.getExpandedDictionary(fLife)
             fLife["preSaveItalicText"]=freeCastText
             c.actionEntries.append(fLife)
         if c.level>4:
             d  = {"id":"Ray of Enfeeblement"}
             d["modifierIndex"] = bestMod
-            d = e.ne.getExpandedDictionary(d)
+            d = e.getExpandedDictionary(d)
             d["preSaveItalicText"] += freeCastText
             c.actionEntries.append(d)
     if choice["subrace"]=="Abyssal":
@@ -68,13 +68,13 @@ def tiefling(c,choice):
         c.actionEntries.append(pSpray)
         if c.level>2:
             x = {"id":"Ray of Sickness"}
-            x = e.ne.getExpandedDictionary(x)
+            x = e.getExpandedDictionary(x)
             x["note"]=x["note"]+freeCastText
             x["modifierIndex"]=bestMod
             c.actionEntries.append(x)
         if c.level>4:
             d  = {"id":"Hold Person"}
-            d = e.ne.getExpandedDictionary(d)
+            d = e.getExpandedDictionary(d)
             d["modifierIndex"]=bestMod
             d["preSaveItalicText"] += freeCastText
             c.actionEntries.append(d)
@@ -108,12 +108,12 @@ def elf(c,choice):
         c.addEntry("Druidcraft",False)
         if c.level>2:
             spell = {"id":"Longstrider"}
-            spell = e.ne.getExpandedDictionary(spell)
+            spell = e.getExpandedDictionary(spell)
             spell["preSaveItalicText"]=freeCastText
             c.actionEntries.append(spell)
         if c.level>4:
             spell  = {"id":"Pass without Trace"}
-            spell = e.ne.getExpandedDictionary(spell)
+            spell = e.getExpandedDictionary(spell)
             spell["preSaveItalicText"] = freeCastText
             c.actionEntries.append(spell)
     if choice["subrace"]=="Drow":
@@ -122,13 +122,13 @@ def elf(c,choice):
         c.darkvision = 120
         if c.level>2:
             spell = {"id":"Faerie Fire"}
-            spell = e.ne.getExpandedDictionary(spell)
+            spell = e.getExpandedDictionary(spell)
             spell["modifierIndex"] = bestMod
             spell["preSaveItalicText"] = freeCastText
             c.actionEntries.append(spell)
         if c.level>4:
             d  = {"id":"Darkness"}
-            d = e.ne.getExpandedDictionary(d)
+            d = e.getExpandedDictionary(d)
             d["preSaveItalicText"] += freeCastText
             c.actionEntries.append(d)
     if choice["subrace"]=="High":
@@ -138,12 +138,12 @@ def elf(c,choice):
         c.highlightedEntries.append(fireBolt)
         if c.level>2:
             spell  = {"id":"Detect Magic"}
-            spell = e.ne.getExpandedDictionary(spell)
+            spell = e.getExpandedDictionary(spell)
             spell["preSaveItalicText"] = freeCastText
             c.actionEntries.append(spell)
         if c.level>4:
             spell  = {"id":"Misty Step"}
-            spell = e.ne.getExpandedDictionary(spell)
+            spell = e.getExpandedDictionary(spell)
             spell["preSaveItalicText"] = freeCastText
             c.bonusActionEntries.append(spell)
  
@@ -247,7 +247,7 @@ def gnome(c, choice):
         c.raceString = "Forest Gnome"
         c.actionEntries.append({"id":"Create Minor Illusion"})
         swAnimals = {"id":"Speak With Animals"}
-        swAnimals = e.ne.getExpandedDictionary(swAnimals)
+        swAnimals = e.getExpandedDictionary(swAnimals)
         swAnimals["cost"] = ""
         swAnimals["preSaveNormalText"]+= " O"*c.profBonus
         c.actionEntries.append(swAnimals)

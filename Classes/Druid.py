@@ -34,10 +34,10 @@ class Druid(c.Sheet):
         
         
         if strengthOverDex:
-            c.item.buyItem(self,"Quarterstaff")
+            self.buyItem("Quarterstaff")
 
         else:
-            c.item.buyItem(self,"Sprig of Mistletoe")
+            self.buyItem("Sprig of Mistletoe")
 
         self.gp+=50
         self.spellcasting = True

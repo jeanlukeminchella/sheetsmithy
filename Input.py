@@ -28,21 +28,7 @@ class Input():
         print(commands)
         for command in commands:
             self.changeAttribute(command[0],command[1])
-    
-    def printMe(self):
-        print()
-        print(self.level)
-        print(self.classAsString)
-        print(self.scores)
-        print(self.race)
-        print(self.showScores)
-        print(self.showBuildLog)
-        print(self.showShortRest)
-        print(self.showLongRest)
-        print(self.shoppingList)
-        print(self.background)
-        print(self.choices)
-        print(self.name)
+
     
     # takes a string as a label for the attribute, then changes it to value. input probably needs checking like
     def changeAttribute(self, attributeLabel, value):

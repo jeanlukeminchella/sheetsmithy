@@ -31,7 +31,7 @@ class Cleric(c.Sheet):
         
         
         
-        c.item.buyItem(self,"Amulet")
+        self.buyItem("Amulet")
         
         self.gp+=110
         self.ritualCaster = True

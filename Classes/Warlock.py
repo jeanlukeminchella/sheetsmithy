@@ -30,7 +30,7 @@ class Warlock(c.Sheet):
         
         
         
-        c.item.buyItem(self,"Wand")
+        self.buyItem("Wand")
         
         self.gp+=100
         self.spellcasting = True

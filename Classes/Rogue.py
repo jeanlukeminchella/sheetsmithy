@@ -20,7 +20,7 @@ class Rogue(c.Sheet):
         self.masteries+=2
         level = self.level
         
-        c.item.buyItem(self,"Shortbow")
+        self.buyItem("Shortbow")
         self.wishlist.append("Shortsword")
         self.wishlist.append("offhand shortsword")
         self.wishlist.append("thieves' tools")
@@ -64,8 +64,8 @@ class Rogue(c.Sheet):
                 
                 self.classAsString ="Rogue (Assassin)"
                 self.charInfos.append("On the first round of combat, you have adv. vs enemies that have not yet taken a turn, and your sneak attack deals +"+str(self.level)+" damage")
-                c.item.buyItem(self,"Disguise Kit",False)
-                c.item.buyItem(self,"Poisoner's Kit",False)
+                self.buyItem("Disguise Kit",False)
+                self.buyItem("Poisoner's Kit",False)
 
             elif self.subclass == "swash":
 

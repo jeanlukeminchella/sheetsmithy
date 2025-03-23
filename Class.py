@@ -2,10 +2,11 @@
 import globalFunctions as gf
 import Entry as e
 import Armor as armor
-import characterCreationChoices as ccc
 import featFunctions as feats
-import Item as item
 import random as rand
+import json
+import Races as r
+import Backgrounds as b
 
 equipmentTitle = "INVENTORY"
 bonusActionTitle = "BONUS ACTIONS (1 per turn)"
@@ -15,7 +16,9 @@ skillModifierIndex =[1,4,3,0,4,3,4,5,3,4,3,4,5,5,3,1,1,4,1]
 armors = ["Studded Leather","Leather","Splint","Scale Mail","Ring Mail","Plate","Hide","Half Plate","Chain Shirt","Chain Mail","Breastplate"]
 languages = ["elven","draconic","gnomish","dwarven","sign","orc","giant","halfling"]
 
-
+items = {}
+with open(gf.pathToSource+"items.json", 'r') as file:
+    items = json.load(file)
 
 class Sheet:
     
@@ -145,9 +148,9 @@ class Sheet:
             else:
                 feats.asi(self)
                 
-        ccc.applyBackground(self, inp.background)
+        self.applyBackground(inp.background)
         # this sets self.backgroundAsString
-        ccc.applyRace(self, inp.race)
+        self.applyRace(inp.race)
         # hitDie is not initaliased here, type of sheet has to have already initalised it
         self.hp += getHp(self.hitDie,self.level,self.modifiers[2])
          
@@ -170,18 +173,19 @@ class Sheet:
         it = ""
         self.shortRestEntries.append([bold,mid,it])
 
+        # add any free gear the user has listed
         if inp.gearList != "" and inp.gearList!=" ":
             gear = inp.gearList.split(", ")
             for g in gear:
-                item.buyItem(self,g,False)
+                self.buyItem(g,False)
 
     
     # returns True if added successfully
-    def addEntry(self,command,highlight=True):
+    def addEntry(self,command,highlight=True, priority=False):
         
         if type(command)==str:
             command = {"id":command}
-            command = e.ne.getExpandedDictionary(command)
+            command = e.getExpandedDictionary(command)
             
         # lets scan and see if we have other entries with the same title first
         weHaveThisEntryAlready = False
@@ -197,7 +201,7 @@ class Sheet:
                     weHaveThisEntryAlready = True
             elif type(ent)==dict:
                 if not "id" in ent.keys():
-                    ent = e.ne.getExpandedDictionary(ent)
+                    ent = e.getExpandedDictionary(ent)
                 if ent["id"]==command["id"]:
                     weHaveThisEntryAlready = True
                 if "title" in ent.keys():
@@ -211,14 +215,29 @@ class Sheet:
                     if command["cost"]!="":
                         freeAction = False
                 
-                if freeAction and highlight:        
-                    self.highlightedEntries.append(command)
+                if freeAction and highlight:
+                    if priority:
+                        self.highlightedEntries.insert(0,command)
+                    else:
+                        self.highlightedEntries.append(command)
                 else:
-                    self.actionEntries.append(command)
+                    if priority:
+                        self.actionEntries.insert(0,command)
+                    else:
+                        self.actionEntries.append(command)
+                    
             elif command["castTime"]=="ba":
-                self.bonusActionEntries.append(command)
+                
+                if priority:
+                    self.bonusActionEntries.insert(0,command)
+                else:
+                    self.bonusActionEntries.append(command)
+                    
             elif command["castTime"]=="re":
-                self.reactionEntries.append(command)
+                if priority:
+                    self.reactionEntries.insert(0,command)
+                else:
+                    self.reactionEntries.append(command)
             else:
                 print("castTime error in : ",command)
                 return False
@@ -226,7 +245,57 @@ class Sheet:
         else:
             # We already have this entry's ID somewhere in the class 
             return False            
+        
+    # race is a dictionary that must have "name" key and a value in the Races Dictionary (in Races.py)
+    def applyRace(self,race):
+        r.racesDictionary[race["name"]](self,race)
 
+    # background is a dictionary that must have "name" key and a value in the backgrounds dictionary (in Backgrounds.py)
+    def applyBackground(self, background):
+        print(background)
+        if not "name" in background.keys():
+            background = {
+                "name":self.preferredBackgrounds[0]
+            }
+        self.backgroundAsString=background["name"]
+        b.backgrounds[background["name"]](self,background)
+
+        
+    # Items is a dictionary, with each value being a dictionary.
+    # These value dictionaries all have some important keys.
+    # "key" is its key that is used to find the item, LOWER CASE
+    # "name" is what gets added to the stuff list. 
+    # "price" is how many gp you have to have to buy it
+    # "entryCommand" is the command that will be used to look up the entry in Entries.json
+
+    # returns False if not added
+    def buyItem(self,itemCommand, spendCash=True, listFirst=False):
+        
+        item = None
+        if itemCommand.lower() in items.keys():
+            # Item is in the dictionary and can be loaded in with ease
+            item = items[itemCommand.lower()]
+            
+            if "price" in item.keys():
+                if spendCash:        
+                    if item["price"]<=self.gp:
+                        # weve got enough gold, lets buy it
+                        self.gp = self.gp - item["price"]
+                    else:
+                        # oh dear, not enough gold
+                        self.buildLog.append("Not enough gold to buy "+item["name"]+" only "+str(self.gp)+" gp left")
+                        
+                        return False
+            # if weve got this far then weve either bought the item or it has no cost
+            self.addItemToInventory(item["name"])
+            if "entryCommand" in item.keys():
+                self.addEntry(item["entryCommand"],True,listFirst)
+        
+        else:
+            print("Unrecognised item ", itemCommand)
+            self.addItemToInventory(itemCommand+" <em>(price unknown)</em>")
+            return True
+        
 
     def makeSpellcastingBlock(self):
         
@@ -251,7 +320,7 @@ class Sheet:
                     if action["expanded"]:
                         expanded = True
                 if not expanded:
-                    action = e.ne.getExpandedDictionary(action)
+                    action = e.getExpandedDictionary(action)
                 
                 spellTitlesKnownAlready.append(action["id"])
                 if action["conc"]:
@@ -259,7 +328,7 @@ class Sheet:
                 if action["ritual"]:
                     weNeedToExplainRituals = True
             else:
-                l = e.ne.getExpandedDictionary(l)
+                l = e.getExpandedDictionary(l)
                 spellTitlesKnownAlready.append(l["id"])
         
         if self.spellcasting:
@@ -283,7 +352,7 @@ class Sheet:
                 if type(spell)==str:
                     title = spell
                 else:
-                    spell = e.ne.getExpandedDictionary(spell)
+                    spell = e.getExpandedDictionary(spell)
                     title = spell["id"]
                 
                 
@@ -295,7 +364,7 @@ class Sheet:
                     if type(spell)==str:
                         spell = {"id":spell}
                 
-                    spell = e.ne.getExpandedDictionary(spell)
+                    spell = e.getExpandedDictionary(spell)
                     castTime = spell["castTime"]
                     if spell["conc"]:
                         weNeedToConcentrate = True
@@ -423,11 +492,6 @@ class Sheet:
                 self.modifiers[i]=int(score/2)
     
     
-    
-    def addHighlightedEntry(self,entry):
-        if type(entry)==str:
-            entry = {"id":entry}
-        self.highlightedEntries.append(entry)
             
     # takes an input and gives the class their scores and modifiers, also takes as input the default scores
     def loadScoresAndMods(self,preferredScores,inp):
@@ -604,9 +668,9 @@ class Sheet:
         self.wishlist.append("rope")
 
         for i in self.wishlist:
-            item.buyItem(self,i)
+            self.buyItem(i)
         for i in self.usersWishlist:
-            item.buyItem(self,i)
+            self.buyItem(i)
 
         gold = int(self.gp)
         silver = self.gp%1

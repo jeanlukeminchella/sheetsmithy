@@ -29,16 +29,16 @@ class Paladin(c.Sheet):
         level = self.level
         
         if self.wearingShield:
-            c.item.buyItem(self,"Longsword")
+            self.buyItem("Longsword")
         else:
-            c.item.buyItem(self,"Maul")
+            self.buyItem("Maul")
 
         self.wishlist.append("Holy Symbol")
         self.wishlist.append("Javelin")
-        self.addHighlightedEntry("Grapple")
+        self.addEntry("Grapple")
 
         if self.level<5:
-            self.addHighlightedEntry("Shove")
+            self.addEntry("Shove")
 
         self.bonusActionEntries.append("<strong>Lay on Hands. </strong>Restore hp to a touched creature from a pool of "+str(5*level)+ " hp")
         

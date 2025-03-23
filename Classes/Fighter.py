@@ -40,10 +40,10 @@ class Fighter(c.Sheet):
         
         if dexBased:
             if self.wearingShield:
-                c.item.buyItem(self,"Rapier")
+                self.buyItem("Rapier")
                 self.wishlist.append("Hand Crossbow")
             else:
-                c.item.buyItem(self,"Shortsword")
+                self.buyItem("Shortsword")
                 self.wishlist.append("offhand shortsword")
                 self.wishlist.append("Heavy Crossbow")
 
@@ -53,10 +53,10 @@ class Fighter(c.Sheet):
              
         else:
             if self.wearingShield:
-                c.item.buyItem(self,"Longsword")
+                self.buyItem("Longsword")
                 self.wishlist.append("Javelin")
             else:
-                c.item.buyItem(self,"Maul")
+                self.buyItem("Maul")
                 self.wishlist.append("Javelin")
             
             highlightedEntriesToAdd.append("Shove")
@@ -65,7 +65,7 @@ class Fighter(c.Sheet):
             
         
         for e in highlightedEntriesToAdd:
-            self.addHighlightedEntry(e)
+            self.addEntry(e)
 
         
         secondWindText = "<strong>Second Wind. </strong> Regain d10+"+str(self.level)+" hp"
