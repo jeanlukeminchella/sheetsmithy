@@ -50,7 +50,7 @@ class Ranger(c.Sheet):
             self.spellPriorityList = ["Cure Wounds","Spike Growth","Jump","Hunter's Mark","Lesser Restoration","Entangle"]
             
         resourceDictionary = {
-            1:[["Spell",0]],
+            1:[["Spell",2]],
             2:[["Spell",2]],
             3:[["Spell",3]],
             4:[["Spell",3]],
@@ -66,6 +66,10 @@ class Ranger(c.Sheet):
         self.spellSlotResourceTuples=resourceDictionary[self.level]
         self.spellsKnown = gf.getNumberFromRange(self.level,[0,0,1,2,3,4])
         self.spellcasting = True
+
+        if self.level in [5,6]:
+            self.showUpcasting=True
+        self.showSpellRestriction=True
 
         if level>1:
             fightStyle = None

@@ -54,7 +54,7 @@ class Paladin(c.Sheet):
         
             
         resourceDictionary = {
-            1:[["Spell",0]],
+            1:[["Spell",2]],
             2:[["Spell",2]],
             3:[["Spell",3],[channelDivinityText,2]],
             4:[["Spell",3],[channelDivinityText,2]],
@@ -68,8 +68,12 @@ class Paladin(c.Sheet):
                 "1":"Spell"
             }
             
+        self.spellcasting = True
+        if self.level in [5,6]:
+            self.showUpcasting=True
+        self.showSpellRestriction=True
+        
         if level>1:
-            self.spellcasting = True
             fightStyle = None
             if "fightStyle" in self.choices.keys():
                 fightStyle = self.choices["fightStyle"]

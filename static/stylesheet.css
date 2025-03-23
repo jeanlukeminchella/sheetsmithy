@@ -48,7 +48,6 @@ font-size: 1em;
 margin-bottom: 15px;
 width: 100%;
 border-width: 0.5px;
-
 }   
 
 input[type="number"] {
@@ -58,6 +57,7 @@ input[type="number"] {
 }
 input[type="checkbox"] {
     width:30px;
+    cursor:pointer;
 }
 input:focus, select:focus {
     background-color: #f6f2ed;

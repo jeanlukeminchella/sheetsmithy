@@ -205,7 +205,6 @@ def getHTML(e,c=None):
             if not c.addedShield and e["versatile"]!="":
                 dmgString  = e["versatile"]
             if e["cantripScaling"]:
-                #needs a fix
                 pre = int(c.level/5)
                 if pre>0:
                     dmgString = str(pre+1)+dmgString
@@ -216,9 +215,12 @@ def getHTML(e,c=None):
                     dmgString+=" "+e["damageType"]
                     
             dmgString+=" damage"
-            
+            archeryBonus = 0
+            if "You have the Archery feat" in c.buildLog and e["rang"]!=0:
+                archeryBonus=2
+
             if not e["saveNotAttack"]:
-                normalBit+="d20"+gf.getSignedStringFromInt(modifier+c.profBonus)+" to hit, "
+                normalBit+="d20"+gf.getSignedStringFromInt(modifier+c.profBonus+archeryBonus)+" to hit, "
                 normalBit+=dmgString+"."
             else:
                 normalBit+=dmgString+", "

@@ -1,6 +1,5 @@
 
 function showLanguages(){
-    console.log("SHOWING LANGUAGES");
     showIDList(["langs","hideLangsButton"]);
     hideIDList(["showLangsButton"]);
 
@@ -11,6 +10,15 @@ function hideLanguages(){
 
 };
 
+function hideHelp(){
+    showIDList(["showHelpButton"]);
+    hideIDList(["help","hideHelpButton"]);
+};
+
+function showHelp(){
+    hideIDList(["showHelpButton"]);
+    showIDList(["help","hideHelpButton"]);
+};
 
 function showInventory(){
     showIDList(["hideInventoryButton", "inventory", "shoppingList", "gearList"]);

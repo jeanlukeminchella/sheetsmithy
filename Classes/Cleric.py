@@ -36,6 +36,10 @@ class Cleric(c.Sheet):
         self.gp+=110
         self.ritualCaster = True
         self.spellcasting = True
+        if self.level in range(3,6):
+            self.showUpcasting=True
+        if self.level<6:
+            self.showSpellRestriction=True
         self.proficientWithShields = True
         self.mediumArmorProficiency = True
         self.lightArmorProficiency = True
@@ -80,7 +84,7 @@ class Cleric(c.Sheet):
         elif self.level in [3,4]:
             self.spellPriorityList = ["Bless",healingWord,"Aid","Spiritual Weapon", "Guiding Bolt","Hold Person","Sanctuary","Command","Shield of Faith","Lesser Restoration",cureWounds,"Detect Magic","Protection from Evil and Good","Zone of Truth"]
         elif self.level in [5,6]:
-            self.spellPriorityList = [masshw,"Spiritual Weapon","Command","Dispel Magic",revivify, "Guiding Bolt","Aid","Shield of Faith","Detect Magic",healingWord,"Sanctuary","Hold Person","Lesser Restoration","Zone of Truth" ,"Command",cureWounds,"Protection from Evil and Good","Spirit Shroud","Bless"]
+            self.spellPriorityList = [masshw,"Spiritual Weapon","Command",revivify, "Guiding Bolt","Aid","Shield of Faith",healingWord,"Sanctuary",cureWounds,"Hold Person","Lesser Restoration","Other Cleric Spell","Bless","Dispel Magic","Detect Magic","Zone of Truth","Protection from Evil and Good","Spirit Shroud"]
         
         
         resourceDictionary = {
@@ -165,7 +169,7 @@ class Cleric(c.Sheet):
                 if self.level>5:
                     cureWounds["note"]="<em> You regain 3 hp.</em>"
                     healingWord["note"]="<em> You regain 3 hp.</em>"
-                    masshw["note"]=".<em> You regain 5 hp</em>"
+                    masshw["note"]="<em> You regain 5 hp.</em>"
                     revivify["note"]=" You gain 5 hp."
                     
                 if self.level>4:

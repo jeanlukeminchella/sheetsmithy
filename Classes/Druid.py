@@ -41,6 +41,10 @@ class Druid(c.Sheet):
 
         self.gp+=50
         self.spellcasting = True
+        if self.level in range(3,5):
+            self.showUpcasting=True
+        if self.level<6:
+            self.showSpellRestriction=True
         self.proficientWithShields = True
         self.lightArmorProficiency = True
         

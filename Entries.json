@@ -3,6 +3,7 @@
         "rang": 60,
         "cost": "3",
         "preHealText":"Up to six creatures regain 2d4",
+        "postHealText": " hp.",
         "castTime": "ba",
         "useSpellcastingMod": true,
         "type": "heal"
@@ -568,7 +569,7 @@
     },
     "Burning Hands": {
         "cost": "1",
-        "preSaveNormalText": "Unleash a 15ft cone of 2d6 fire damage. ",
+        "preSaveNormalText": "Unleash a 15ft cone of 3d6 fire damage. ",
         "preSaveItalicText": "DEX",
         "postSaveItalicText": " to half damage.",
         "useSpellcastingMod": true,
@@ -1497,6 +1498,30 @@
             "Other Druidic Spell.",
             "Choose one to have prepared.",
             ""
+        ]
+    },
+    "Other Cleric Spell": {
+        "type": "text",
+        "contents": [
+            "Other Cleric Spell.",
+            "Choose one to have prepared.",
+            ""
+        ]
+    },
+    "Upcasting": {
+        "type": "text",
+        "contents": [
+            "",
+            "Some spells can be 'upcast' by using a higher level spell slot, rolling an extra die or targeting another creature.",
+            ""
+        ]
+    },
+    "Spell Slot Restriction": {
+        "type": "text",
+        "contents": [
+            "",
+            "",
+            "Note: You cannot use both your Action and Bonus Action to spend a spell slot."
         ]
     }
 }

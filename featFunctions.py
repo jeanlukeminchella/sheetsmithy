@@ -92,7 +92,7 @@ def archery(c):
             defence(c)
     else:
         c.buildLog.append(logText)
-        c.charInfos.append("Add +2 to attack rolls you make with Ranged weapons.")
+        #c.charInfos.append("Add +2 to attack rolls you make with Ranged weapons.")
     
 def protection(c):
     logText = "You have the Protection feat"

@@ -79,6 +79,8 @@ class Sheet:
         self.heavyArmorProficiency = False
         self.mediumArmorProficiency = False
         self.lightArmorProficiency = False
+        self.showUpcasting = False
+        self.showSpellRestriction = False
         self.showDash = True
         self.showDodge = True
         self.showDisengage = True
@@ -318,6 +320,9 @@ class Sheet:
             
             resourceEntry = gf.getSpellSlotHTMLString(self.spellSlotResourceTuples)
             spellcastingBlockEntries = [resourceEntry]
+            if self.showUpcasting:
+                spellcastingBlockEntries.append({"id":"Upcasting"})
+            
             spellcastingBlockEntries.extend(self.notesForSpellCastingBlock)
             
             
@@ -326,6 +331,9 @@ class Sheet:
             
             if weNeedToExplainRituals and self.ritualCaster:
                 spellcastingBlockEntries.append({"id":"ritual"})
+            
+            if self.showSpellRestriction:
+                spellcastingBlockEntries.append({"id":"Spell Slot Restriction"})
             
             spellBlock = e.Block(spellcastingBlockEntries,spellcastingTitle)
             self.rightColumnBlocks.append(spellBlock)
