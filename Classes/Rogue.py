@@ -1,5 +1,5 @@
 import Class as c
-import featFunctions as feats
+import Feats as feats
 
 
 class Rogue(c.Sheet):

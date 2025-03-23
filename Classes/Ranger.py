@@ -1,5 +1,5 @@
 import Class as c
-import featFunctions as feats
+import Feats as feats
 
 import globalFunctions as gf
 
@@ -75,10 +75,10 @@ class Ranger(c.Sheet):
             fightStyle = None
             if "fightStyle" in self.choices.keys():
                 fightStyle = self.choices["fightStyle"]
-            if fightStyle in feats.featFunctions.keys():
-                feats.featFunctions[fightStyle](self)
+            if fightStyle in feats.Feats.keys():
+                feats.Feats[fightStyle](self)
             else:
-                feats.featFunctions["defence"](self)
+                feats.Feats["defence"](self)
             
         if level>2:
             

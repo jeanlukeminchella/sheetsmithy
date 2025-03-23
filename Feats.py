@@ -124,7 +124,7 @@ def greatWeaponFighting(c):
 def featAlreadyTaken(c,logText):
     return logText in c.buildLog
 
-featFunctions = {
+Feats = {
     "addStr":addStr,
     "addDex":addDex,
     "addCon":addCon,

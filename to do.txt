@@ -1,4 +1,3 @@
-
  - action entries could just be "actions" but this would take a lot of renaming!
  - sort Items out
  - consolidate item class, ccc function file ect
@@ -11,4 +10,7 @@
  - feat file needs streamlining a lot, checking for duplicates ect. 
  - dig out all the randomisation - no, seed it properly
  - finish the javascript - inventory is sent in post request even if not selected
-
+ - make spellcasting block should use addEntry  
+ - validate boolean in global functions - defend against strings that say "false"? as they will interpret as true? 
+ - bonus gold?
+ - javascript: dont send empty values 

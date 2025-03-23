@@ -1,53 +1,53 @@
-import featFunctions
+import Feats
 import globalFunctions as gf
 
 def soldier(c,choice):
-    featFunctions.savageAttacker(c)
+    Feats.savageAttacker(c)
     boostAbilityScores(c,choice,[0,1,2])
     c.skillProficiencies.extend([3,7])
 
 def farmer(c,choice):
-    featFunctions.tough(c)
+    Feats.tough(c)
     boostAbilityScores(c,choice,[0,2,4])
     c.skillProficiencies.extend([1,10])
 
 def noble(c,choice):
-    featFunctions.skilled(c)
+    Feats.skilled(c)
     boostAbilityScores(c,choice,[0,3,5])
     c.skillProficiencies.extend([5,13])
     
 def sage(c,choice):
-    featFunctions.skilled(c)
+    Feats.skilled(c)
     boostAbilityScores(c,choice,[2,3,4])
     c.skillProficiencies.extend([2,5])
     
 def scribe(c,choice):
-    featFunctions.skilled(c)
+    Feats.skilled(c)
     boostAbilityScores(c,choice,[1,3,4])
     c.skillProficiencies.extend([8,11])
 
 def charlatan(c,choice):
-    featFunctions.skilled(c)
+    Feats.skilled(c)
     boostAbilityScores(c,choice,[1,2,5])
     c.skillProficiencies.extend([4,15])
 
 def criminal(c,choice):
-    featFunctions.alert(c)
+    Feats.alert(c)
     boostAbilityScores(c,choice,[1,2,3])
     c.skillProficiencies.extend([15,16])
 
 def guard(c,choice):
-    featFunctions.alert(c)
+    Feats.alert(c)
     boostAbilityScores(c,choice,[0,3,4])
     c.skillProficiencies.extend([3,11])
     
 def wayfarer(c,choice):
-    featFunctions.lucky(c)
+    Feats.lucky(c)
     boostAbilityScores(c,choice,[1,4,5])
     c.skillProficiencies.extend([6,16])
         
 def merchant(c,choice):
-    featFunctions.lucky(c)
+    Feats.lucky(c)
     boostAbilityScores(c,choice,[2,2,5])
     c.skillProficiencies.extend([13,11])
     

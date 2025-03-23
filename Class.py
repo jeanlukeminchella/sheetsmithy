@@ -2,7 +2,7 @@
 import globalFunctions as gf
 import Entry as e
 import Armor as armor
-import featFunctions as feats
+import Feats as feats
 import random as rand
 import json
 import Races as r
@@ -27,11 +27,12 @@ class Sheet:
         
 
         #cosmetics stuff & variants
-        self.showScores = inp.showScores
+        self.showScores = inp["showScores"]
         self.buildLog = []
         self.showBuildLog = True
-        self.showShortRest = inp.showShortRest
-        self.showLongRest = inp.showLongRest
+        self.showShortRest = inp["showShortRest"]
+        self.showLongRest = inp["showLongRest"]
+        self.seed = inp["seed"]
         self.showPhysicalDamageTypes = False
         
         self.skillProficiencies = []
@@ -47,27 +48,27 @@ class Sheet:
         # freeSkills are proficiencies that can be picked at the end, in ANY skill, may come from race, feat or other
         self.freeSkills = 0
         
-        self.level = inp.level
+        self.level = inp["level"]
         self.profBonus = gf.getNumberFromRange(self.level,[0,4,8,12,16])
         self.speed = 30
         self.raceString = ""
-        self.classAsString = inp.classAsString
-        self.choices = inp.choices
+        self.classAsString = inp["classAsString"]
+        self.choices = inp["choices"]
         self.subclass = None
         if "subclass" in self.choices.keys():
             self.subclass = self.choices["subclass"]
         self.resistances = ""
-        self.name= inp.name
+        self.name= inp["name"]
         self.spellcastingMod = self.defaultMod
         
         self.stuff = ""
         
         self.wishlist = []
         self.usersWishlist = []
-        if inp.shoppingList != "" and inp.shoppingList!=" ":
-            self.usersWishlist = inp.shoppingList.split(", ")
+        if inp["shoppingList"] != "" and inp["shoppingList"]!=" ":
+            self.usersWishlist = inp["shoppingList"].split(", ")
         self.languages = ["common"]
-        self.userLanguages = inp.languages
+        self.userLanguages = inp["languages"]
         self.preferredLanguages = []
         self.numberOfLanguages = 3
         
@@ -96,7 +97,7 @@ class Sheet:
         # these are static AC options without shield / other stacking bonuses. eg. warforged / tortle
         self.baseACOptions = []
         self.equippedArmor = None
-        self.wearingShield = "shield" in inp.shoppingList.lower()
+        self.wearingShield = "shield" in inp["shoppingList"].lower()
         # just because we want to wear a shield though doesnt mean we can afford it and are proficient
         self.addedShield = False
         
@@ -134,8 +135,8 @@ class Sheet:
             featChoice = None
             if "l4-feat" in self.choices.keys():
                 featChoice = self.choices["l4-feat"]
-            if featChoice in feats.featFunctions.keys():
-                feats.featFunctions[featChoice](self)
+            if featChoice in feats.Feats.keys():
+                feats.Feats[featChoice](self)
             else:
                 feats.asi(self)
         if self.level>5 and self.classAsString=="Fighter":
@@ -143,14 +144,14 @@ class Sheet:
             featChoice = None
             if "l6-feat" in self.choices.keys():
                 featChoice = self.choices["l6-feat"]
-            if featChoice in feats.featFunctions.keys():
-                feats.featFunctions[featChoice](self)
+            if featChoice in feats.Feats.keys():
+                feats.Feats[featChoice](self)
             else:
                 feats.asi(self)
                 
-        self.applyBackground(inp.background)
+        self.applyBackground(inp["background"])
         # this sets self.backgroundAsString
-        self.applyRace(inp.race)
+        self.applyRace(inp["race"])
         # hitDie is not initaliased here, type of sheet has to have already initalised it
         self.hp += getHp(self.hitDie,self.level,self.modifiers[2])
          
@@ -174,8 +175,8 @@ class Sheet:
         self.shortRestEntries.append([bold,mid,it])
 
         # add any free gear the user has listed
-        if inp.gearList != "" and inp.gearList!=" ":
-            gear = inp.gearList.split(", ")
+        if inp["gearList"] != "" and inp["gearList"]!=" ":
+            gear = inp["gearList"].split(", ")
             for g in gear:
                 self.buyItem(g,False)
 
@@ -248,14 +249,19 @@ class Sheet:
         
     # race is a dictionary that must have "name" key and a value in the Races Dictionary (in Races.py)
     def applyRace(self,race):
+        if not "name" in race.keys():
+            race = {
+                "name":"human"
+            }
         r.racesDictionary[race["name"]](self,race)
 
     # background is a dictionary that must have "name" key and a value in the backgrounds dictionary (in Backgrounds.py)
     def applyBackground(self, background):
-        print(background)
         if not "name" in background.keys():
+            preferredBackgroundIndex = self.seed % len(self.preferredBackgrounds) 
+            preferredBackground = self.preferredBackgrounds[preferredBackgroundIndex]
             background = {
-                "name":self.preferredBackgrounds[0]
+                "name":preferredBackground
             }
         self.backgroundAsString=background["name"]
         b.backgrounds[background["name"]](self,background)
@@ -496,10 +502,10 @@ class Sheet:
     # takes an input and gives the class their scores and modifiers, also takes as input the default scores
     def loadScoresAndMods(self,preferredScores,inp):
         
-        if inp.scores == None:
+        if inp["scores"] == None:
             self.scores = preferredScores
         else:
-            self.scores = inp.scores
+            self.scores = inp["scores"]
         self.updateModifiers()
     
     # returns None if there are no languages left to pick
@@ -511,7 +517,7 @@ class Sheet:
                 languagesToPickFrom.append(l)
         
         if len(languagesToPickFrom)>0:
-            chosenIndex = rand.randint(0,len(languagesToPickFrom)-1)
+            chosenIndex = self.seed % (len(languagesToPickFrom)-1)
             return languagesToPickFrom[chosenIndex]
         else:
             return None

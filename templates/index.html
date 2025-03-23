@@ -10,8 +10,8 @@
     <script src="/static/homepageScript.js"></script>
     
 </head>
-<body onload="loadSpeciesOptions();loadClassChoices();hideAbilityScores();hideLanguages();">
-    <form id="characterForm" method="post">
+<body onload="setSeed();loadSpeciesOptions();loadClassChoices();hideAbilityScores();hideLanguages();hideInventory()">
+    <form id="characterForm" method="post" >
         <div>
            Welcome adventurer, to Sheet Smithy! Lets put hammer to steel and forge your first character! Give your new hero a great name below. Use <a href="https://www.fantasynamegenerators.com" target="_blank">this&nbsp;website</a> if you're stuck!
         </div>
@@ -318,14 +318,14 @@
             <label for="name">Preferred Extra Languages:</label>
             <input type="text" id="languages" name="languages" value="">
             
-            </div>
+        </div>
     
 
         <div id="showInventoryButton">
             <button type="button" class="minorButton" onclick="showInventory();">Customise inventory?</button>
             
         </div>
-        <input type="hidden" id="considerInventory" name="considerInventory" value=0>
+    
         <div id="hideInventoryButton" class="startInvisible">
             <button  type="button" class="minorButton" onclick="hideInventory();">Hide inventory</button>
         </div> 
@@ -349,24 +349,7 @@
             <input type="text" id="gearList" name="gearList" value="">    
         </div>
 
-
-
         <button type="submit" value="" class="majorButton">Create my character!</button>
-        <div id="showMoreInfoButton">
-            <button type="button" class="minorButton" onclick="document.getElementById('info').style.display='block'; document.getElementById('showMoreInfoButton').style.display='none';">Show more info about Sheet Smithy?</button>
-            
-        </div>
-        <div id="info" class="startInvisible">
-            <button type="button" class="minorButton" onclick="document.getElementById('info').style.display='none'; document.getElementById('showMoreInfoButton').style.display='block';">Show less info about Sheet Smithy?</button>
-            Hi! My name is Luke! I'm a Game Master and developer from Newcastle (UK) and have built Sheet Smithy to create easy to read, beginner friendly character sheets.
-            For more customisability, checkout other sites like Fast Character, DM's vault or of course, D&D Beyond. 
-            
-            <br><br>If you have a feature you want to see built into Sheet Smithy (and £5) then <a href="https://www.paypal.com/donate/?hosted_button_id=TDSH2JPEGA4UL" target="_blank"> toss a coin to your coder</a> and ill build it for you :)
-            
-            <br><br> Alternatively, if you are a Python-whisperer too and want to collaborate then check out my <a href="https://github.com/jeanlukeminchella/sheetsmithy" target="_blank">github</a> and drop me an <a href='mailto:sheetsmithy@gmail.com' target="_blank">email</a>!
-            <br>
-            <br>
-        </div>
 
         <div id="showHelpButton">
             <button type="button" class="minorButton" onclick="showHelp();">Help! I don't know what I'm doing!</button>
@@ -381,7 +364,24 @@
             <br><br>If you see some "o"s following an ability, this means you can only use it so many times before running out. Be sure to cross off an "o" when you use it with a pencil, so you can regain the use when you take a rest. 
             <br><br>If you play a spellcaster, some abilities may cost Spell Slots or other resources, which will also need crossing off in the Spellcasting section. If it is your first time playing, I would recommend not playing a Cleric or Druid as they can be quite complicated.
             <br><br>If you're not sure about anything drop me an <a href='mailto:sheetsmithy@gmail.com' target="_blank">email</a> or ask your Game Master :) Good luck! 
+            <br><br>
         </div>
+
+        <div id="showMoreInfoButton">
+            <button type="button" class="minorButton" onclick="document.getElementById('info').style.display='block'; document.getElementById('showMoreInfoButton').style.display='none';">Show more info about Sheet Smithy?</button>
+        </div>
+        <div id="info" class="startInvisible">
+            <button type="button" class="minorButton" onclick="document.getElementById('info').style.display='none'; document.getElementById('showMoreInfoButton').style.display='block';">Show less info about Sheet Smithy?</button>
+            Hi! My name is Luke! I'm a Game Master and developer from Newcastle (UK) and have built Sheet Smithy to create easy to read, beginner friendly character sheets.
+            For more customisability, checkout other sites like Fast Character, DM's vault or of course, D&D Beyond. 
+            <br><br>If you have a feature you want to see built into Sheet Smithy (and £5) then <a href="https://www.paypal.com/donate/?hosted_button_id=TDSH2JPEGA4UL" target="_blank"> toss a coin to your coder</a> and ill build it for you :)
+            <br><br> Alternatively, if you are a Python-whisperer too and want to collaborate then check out my <a href="https://github.com/jeanlukeminchella/sheetsmithy" target="_blank">github</a> and drop me an <a href='mailto:sheetsmithy@gmail.com' target="_blank">email</a>!
+        </div>
+
+        <input type="hidden" id="seed" name="seed">
+        </input>
+
+        
         
         
     </form>

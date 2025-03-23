@@ -1,11 +1,11 @@
 
 function showLanguages(){
-    showIDList(["langs","hideLangsButton"]);
+    showIDList(["langs","hideLangsButton","languages"]);
     hideIDList(["showLangsButton"]);
 
 };
 function hideLanguages(){
-    hideIDList(["langs","hideLangsButton"]);
+    hideIDList(["langs","hideLangsButton","languages"]);
     showIDList(["showLangsButton"]);
 
 };
@@ -31,14 +31,6 @@ function hideInventory(){
 
 };
 
-function showID(id){
-    document.getElementById(id).style.display='block';
-    document.getElementById(id).disabled=false;
-}; 
-
-function showIDList(l){
-    l.forEach(showID)
-}; 
 
 function showID(id){
     document.getElementById(id).style.display='block';
@@ -56,6 +48,14 @@ function hideID(id){
 function hideIDList(l){
     l.forEach(hideID)
 }; 
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
+}
+
+function setSeed(){
+    document.getElementById("seed").value=getRndInteger(0,1000);
+};
 
 const abilityIDs = ["Strength","Dexterity","Constitution","Intelligence","Wisdom","Charisma"];
 function showAbilityScores(){

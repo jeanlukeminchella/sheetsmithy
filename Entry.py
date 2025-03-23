@@ -5,7 +5,7 @@ fileExtension = ".json"
 standardEntryStart = "<p>"
 standardEntryEnd = "</p>\n"
 
-allEntries = json.load(open(gf.pathToSource+"Entries.json", 'r'))
+allEntries = json.load(open(gf.pathToSource+"entries.json", 'r'))
 
 class Block():
     

@@ -1,7 +1,6 @@
-import featFunctions as feat
+import Feats as feat
 import globalFunctions as gf
 import Entry as e
-import Input as inp
 
 freeCastText =" One free casting per Long Rest - </em>O<em>"
 
@@ -309,7 +308,7 @@ def human(c, choice):
     keys = choice.keys()
     
     if "skillful" in keys:
-        skill = inp.validateInt(choice["skillful"], 11, 0,17)
+        skill = gf.validateInt(choice["skillful"], 11, 0,17)
         if skill in c.skillProficiencies:
             c.freeSkills+=1
         else:
@@ -318,8 +317,8 @@ def human(c, choice):
         c.freeSkills+=1
     featChoice = None
     if "originFeat" in keys:
-        if choice["originFeat"] in feat.featFunctions.keys():
-            feat.featFunctions[choice["originFeat"]](c)
+        if choice["originFeat"] in feat.Feats.keys():
+            feat.Feats[choice["originFeat"]](c)
             featChoice = choice["originFeat"]
 
     if featChoice == None:

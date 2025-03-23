@@ -155,7 +155,7 @@ def validateIntList(l, defaultValue, length=None, minimum=None,maximum=None):
     else:
         return [defaultValue]*length
 
-# defend against strings that say "false" here? as they will interpret as true? 
+
 def validateBoolean(b,default=False):
     try:
         a = bool(b)

@@ -1,5 +1,5 @@
 import Class as c
-import featFunctions as feats
+import Feats as feats
 
 defaultRageTexts = ["• You take half physical damage.","• You may enter Rage as a Bonus Action.","• You have advantage on Athletics checks and Strength saving throws.","• You may add <strong>2</strong> to all Strength-based damage.","• Rages last for a maximum of 10 mins."]
 

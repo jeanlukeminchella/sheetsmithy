@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
 
-import Input as i
 from Classes import Barbarian as barb
 from Classes import Fighter as fighter
 from Classes import Rogue as rogue
@@ -10,8 +9,8 @@ from Classes import Ranger as ranger
 from Classes import Paladin as pal
 from Classes import Cleric as cleric
 from Classes import Warlock as warlock
+import Class as Sheet
 import datetime
-
 
 app = Flask(__name__)
 
@@ -28,10 +27,28 @@ def getTimeAsString():
 
 def getHTMLFromInput(d):
 
-    inp = i.Input()
-    inp.loadInput(list(d.items()))
+    inp = {
+        "classAsString":"",
+        "scores" : None,
+        "race":{},
+        "showScores" : False,
+        "showBuildLog" : False,
+        "showShortRest" : False,
+        "showLongRest" : False,
+        "gearList" : "",
+        "languages" : "",
+        "shoppingList" : "",
+        "background":{},
+        "seed":0,
+        "choices" : {},
+        "name":"",
+        "level":None
+    }
 
-    c = inp.classAsString
+    for key in d.keys():
+        inp[key]=d[key]
+
+    c = inp["classAsString"]
     character = None
 
     if c=="Fighter":
@@ -53,7 +70,7 @@ def getHTMLFromInput(d):
     elif c=="Warlock":
         character = warlock.Warlock(inp)
     else:
-        inp.classAsString="Fighter"
+        inp["classAsString"]="Fighter"
         character = fighter.Fighter(inp)
 
     return(character.generateClassHTML())
@@ -63,8 +80,9 @@ def getHTMLFromInput(d):
 def hello_world():
     if request.method == "POST":
         d = request.form
-
-        print("This is what we got from the request: ",d)
+        print()
+        print("This is what we got from the request: ")
+        print(d)
         
         # changing form values into one thats readable by the generator
         # this needs to be resilient to bad  requests as well
@@ -72,6 +90,8 @@ def hello_world():
         keys = d.keys()
         inp = {}
         
+        
+
         try:
             inp["level"] = int(d["level"])
         except:
@@ -94,7 +114,7 @@ def hello_world():
                 inp["name"] = d["name"]
         
         if "background" in keys:    
-            if d["background"]:
+            if d["background"] in Sheet.b.backgrounds.keys():
                 inp["background"] = {
                     "name":d["background"]
                 }
@@ -144,7 +164,7 @@ def hello_world():
         for choice in possibleFeatChoices:
 
             if choice in keys:
-                if d[choice]!="" and d[choice] in barb.c.feats.featFunctions.keys():
+                if d[choice]!="" and d[choice] in barb.c.feats.Feats.keys():
                     choicesDic[choice]=d[choice]
 
         try:
@@ -182,7 +202,7 @@ def hello_world():
                 if chosenScore == "":
                     scores.append(10)
                 else:
-                    scores.append(chosenScore)
+                    scores.append(int(chosenScore))
                     userHasChosenAScore = True
             if userHasChosenAScore:
                 inp["scores"]=scores
@@ -190,6 +210,13 @@ def hello_world():
             pass
             #print("issue picking scores") 
         
+        if "seed" in keys:
+            inp["seed"]=int(d["seed"])
+            
+        print()
+        print("This is what were sending to the code: ")
+        print(inp)
+        print()
         return getHTMLFromInput(inp)
     else:
         return render_template("index.html")

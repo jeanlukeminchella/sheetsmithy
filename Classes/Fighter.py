@@ -1,5 +1,5 @@
 import Class as c
-import featFunctions as feats
+import Feats as feats
 
 
 class Fighter(c.Sheet):
@@ -85,10 +85,10 @@ class Fighter(c.Sheet):
         fightStyle = None
         if "fightStyle" in self.choices.keys():
             fightStyle = self.choices["fightStyle"]
-        if fightStyle in feats.featFunctions.keys():
-            feats.featFunctions[fightStyle](self)
+        if fightStyle in feats.Feats.keys():
+            feats.Feats[fightStyle](self)
         else:
-            feats.featFunctions["defence"](self)
+            feats.Feats["defence"](self)
         
         if self.level>1:
             actionSurgeText = "<strong>Action Surge. </strong> Take two actions. "
