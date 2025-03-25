@@ -92,7 +92,7 @@ class Paladin(c.Sheet):
             if self.subclass == "ancients":
                 self.classAsString="Paladin (Oath of the Ancients)"
                 subclassChosen = True
-                self.actionEntries.append({"id":"Speak With Animals"})
+                self.actions.append({"id":"Speak With Animals"})
                 self.bonusActionEntries.append({"id":"Ensnaring Strike"})
                 
                 naturesWrath = {}
@@ -102,10 +102,10 @@ class Paladin(c.Sheet):
                 naturesWrath["postSaveNormalText"] = " to resist."
                 naturesWrath["preSaveItalicText"] = "Target repeats save at the end of their turns."
                 naturesWrath["useSpellcastingMod"]=True
-                self.actionEntries.append(naturesWrath)
+                self.actions.append(naturesWrath)
                 
                 if level>4:
-                    self.actionEntries.append({"id":"Moonbeam"})
+                    self.actions.append({"id":"Moonbeam"})
                     self.bonusActionEntries.append({"id":"Misty Step"})
                 
             if self.subclass == "vengeance" or not subclassChosen:
@@ -114,7 +114,7 @@ class Paladin(c.Sheet):
                 
                 self.bonusActionEntries.append({"id":"Hunter's Mark"})
                  
-                self.actionEntries.append({"id":"Bane"})
+                self.actions.append({"id":"Bane"})
                 
                 vowOfEmnity = {"id":"Vow of Emnity ("+channelDivinityText+", 10ft, 1 min)","type":"spell"}
                 vowOfEmnity["preSaveNormalText"] = "When you attack, vow emnity with a target and gain advantage on attack rolls against them."
@@ -126,11 +126,11 @@ class Paladin(c.Sheet):
                 abjureEnemy["preSaveNormalText"] = "Target is frightened and its speed is 0. WIS"
                 abjureEnemy["postSaveNormalText"] = " to resist. Targets who resist still have their speed halved until they take damage."
                 abjureEnemy["preSaveItalicText"] = "Fiends and Undead have disadvantage on their saving throw. "
-                self.actionEntries.append(abjureEnemy)
+                self.actions.append(abjureEnemy)
                 
                 if level>4:
                     self.bonusActionEntries.append({"id":"Misty Step"})
-                    self.actionEntries.append({"id":"Hold Person"})
+                    self.actions.append({"id":"Hold Person"})
                     
             
             self.shortRestEntries.append("You regain one use of "+channelDivinityText+".")
@@ -139,7 +139,7 @@ class Paladin(c.Sheet):
    
         if level>4:
             extraAttackEntry = {"id":"extraAttackHighlighted"}
-            self.actionEntries.insert(self.highlightedBlockIndex,extraAttackEntry)
+            self.actions.insert(self.highlightedBlockIndex,extraAttackEntry)
             self.highlightedBlockIndex+=1
             
         if level>5:

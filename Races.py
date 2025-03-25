@@ -31,7 +31,7 @@ def tiefling(c,choice):
         c.raceString = "Tiefling (Infernal)"
         fireBolt = {"id":"Fire Bolt"}
         fireBolt["modifierIndex"] = bestMod
-        c.actionEntries.append(fireBolt)
+        c.actions.append(fireBolt)
         if c.level>2:
             hRebuke = {"id":"Hellish Rebuke"}
             hRebuke["modifierIndex"] = bestMod
@@ -41,42 +41,42 @@ def tiefling(c,choice):
             d  = {"id":"Darkness"}
             d = e.getExpandedDictionary(d)
             d["preSaveItalicText"] += freeCastText
-            c.actionEntries.append(d)
+            c.actions.append(d)
     if choice["subrace"]=="Chthonic":
         c.addResistance("Necrotic")
         c.raceString = "Tiefling (Chthonic)"
         fireBolt = {"id":"Chill Touch"}
         fireBolt["modifierIndex"] = bestMod
-        c.actionEntries.append(fireBolt)
+        c.actions.append(fireBolt)
         if c.level>2:
             fLife = {"id":"False Life"}
             fLife = e.getExpandedDictionary(fLife)
             fLife["preSaveItalicText"]=freeCastText
-            c.actionEntries.append(fLife)
+            c.actions.append(fLife)
         if c.level>4:
             d  = {"id":"Ray of Enfeeblement"}
             d["modifierIndex"] = bestMod
             d = e.getExpandedDictionary(d)
             d["preSaveItalicText"] += freeCastText
-            c.actionEntries.append(d)
+            c.actions.append(d)
     if choice["subrace"]=="Abyssal":
         c.addResistance("Poison")
         c.raceString = "Tiefling (Abyssal)"
         pSpray = {"id":"Poison Spray"}
         pSpray["modifierIndex"] = bestMod
-        c.actionEntries.append(pSpray)
+        c.actions.append(pSpray)
         if c.level>2:
             x = {"id":"Ray of Sickness"}
             x = e.getExpandedDictionary(x)
             x["note"]=x["note"]+freeCastText
             x["modifierIndex"]=bestMod
-            c.actionEntries.append(x)
+            c.actions.append(x)
         if c.level>4:
             d  = {"id":"Hold Person"}
             d = e.getExpandedDictionary(d)
             d["modifierIndex"]=bestMod
             d["preSaveItalicText"] += freeCastText
-            c.actionEntries.append(d)
+            c.actions.append(d)
     
 def elf(c,choice):
     c.size="Medium"
@@ -109,12 +109,12 @@ def elf(c,choice):
             spell = {"id":"Longstrider"}
             spell = e.getExpandedDictionary(spell)
             spell["preSaveItalicText"]=freeCastText
-            c.actionEntries.append(spell)
+            c.actions.append(spell)
         if c.level>4:
             spell  = {"id":"Pass without Trace"}
             spell = e.getExpandedDictionary(spell)
             spell["preSaveItalicText"] = freeCastText
-            c.actionEntries.append(spell)
+            c.actions.append(spell)
     if choice["subrace"]=="Drow":
         c.addEntry("Dancing Lights",False)
         c.raceString = "Drow"
@@ -124,12 +124,12 @@ def elf(c,choice):
             spell = e.getExpandedDictionary(spell)
             spell["modifierIndex"] = bestMod
             spell["preSaveItalicText"] = freeCastText
-            c.actionEntries.append(spell)
+            c.actions.append(spell)
         if c.level>4:
             d  = {"id":"Darkness"}
             d = e.getExpandedDictionary(d)
             d["preSaveItalicText"] += freeCastText
-            c.actionEntries.append(d)
+            c.actions.append(d)
     if choice["subrace"]=="High":
         c.raceString = "High Elf"
         fireBolt = {"id":"Fire Bolt"}
@@ -139,7 +139,7 @@ def elf(c,choice):
             spell  = {"id":"Detect Magic"}
             spell = e.getExpandedDictionary(spell)
             spell["preSaveItalicText"] = freeCastText
-            c.actionEntries.append(spell)
+            c.actions.append(spell)
         if c.level>4:
             spell  = {"id":"Misty Step"}
             spell = e.getExpandedDictionary(spell)
@@ -162,8 +162,8 @@ def aasimar(c,choice):
     healingHandsString = "<strong>Healing Hands.</strong> Touch a creature and heal "
     healingHandsString+=str(c.profBonus)
     healingHandsString+="d4 hp. O"
-    c.actionEntries.append(healingHandsString)
-    c.actionEntries.append({"id":"Light"})
+    c.actions.append(healingHandsString)
+    c.actions.append({"id":"Light"})
     c.longRestEntries.append("Regain your <strong> Healing Hands</strong> feature.")
     c.addResistance("Necrotic")
     c.addResistance("Radiant")
@@ -239,17 +239,17 @@ def gnome(c, choice):
 
     if choice["subrace"]=="Rock":
         c.raceString = "Rock Gnome"
-        c.actionEntries.append({"id":"Prestidigitation"})
-        c.actionEntries.append({"id":"Mending"})
+        c.actions.append({"id":"Prestidigitation"})
+        c.actions.append({"id":"Mending"})
         c.charInfos.append("If you cast Prestidigitation for 10 minutes you create a Tiny clockwork device that lasts 8 hours and can perform one effect of Prestidigitation")
     if choice["subrace"]=="Forest":
         c.raceString = "Forest Gnome"
-        c.actionEntries.append({"id":"Create Minor Illusion"})
+        c.actions.append({"id":"Create Minor Illusion"})
         swAnimals = {"id":"Speak With Animals"}
         swAnimals = e.getExpandedDictionary(swAnimals)
         swAnimals["cost"] = ""
         swAnimals["preSaveNormalText"]+= " O"*c.profBonus
-        c.actionEntries.append(swAnimals)
+        c.actions.append(swAnimals)
 
 def goliath(c, choice):
     c.size="Medium"

@@ -35,7 +35,7 @@ class Rogue(c.Sheet):
         
         if self.level ==1:
             
-            self.actionEntries.append({"id":"Hide"})
+            self.actions.append({"id":"Hide"})
         
         
         sneakAttackString = "Once per turn when you hit a target, you may add "
@@ -120,7 +120,7 @@ class Rogue(c.Sheet):
         self.rightColumnBlocks.append(sneakBlock)
         
         if len(evasiveMoves)>0:
-            self.actionEntries.append(evasiveMoveEntry)
+            self.actions.append(evasiveMoveEntry)
             evasiveBlock=c.e.Block(evasiveMoves,evasiveMoveTitle)
             self.middleColumnBlocks.append(evasiveBlock)
 

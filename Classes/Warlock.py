@@ -103,18 +103,18 @@ class Warlock(c.Sheet):
                 self.classAsString="Warlock (Pact of the Fiend)"
                 subclassChosen = True
 
-                self.actionEntries.append(command)
+                self.actions.append(command)
                 if self.level>4:
-                    self.actionEntries.append({"id":"Scorching Ray","note":"x4"})
-                    self.actionEntries.append({"id":"Burning Hands","preSaveNormalText":"Unleash a 15ft cone of 5d6 fire damage. "})
+                    self.actions.append({"id":"Scorching Ray","note":"x4"})
+                    self.actions.append({"id":"Burning Hands","preSaveNormalText":"Unleash a 15ft cone of 5d6 fire damage. "})
                 else:
-                    self.actionEntries.append({"id":"Burning Hands","preSaveNormalText":"Unleash a 15ft cone of 4d6 fire damage. "})
-                    self.actionEntries.append({"id":"Scorching Ray"})
+                    self.actions.append({"id":"Burning Hands","preSaveNormalText":"Unleash a 15ft cone of 4d6 fire damage. "})
+                    self.actions.append({"id":"Scorching Ray"})
 
                 if self.level>5:
                     pass    
                 if self.level>4:
-                    self.actionEntries.append({"id":"Fireball"})
+                    self.actions.append({"id":"Fireball"})
 
 
         # Arcana, Deception, History, Intimidation, Investigation, Nature, or Religion.

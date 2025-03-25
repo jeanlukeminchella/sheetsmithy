@@ -19,7 +19,7 @@ class Monk(c.Sheet):
         self.costDic["f"]="1 Focus"
         
 
-        self.actionEntries.append({"id":"Hide"})
+        self.actions.append({"id":"Hide"})
 
         self.highlightedEntries.append({"id":"Quarterstaff","finesse":True})
         self.buyItem("Quarterstaff")
@@ -42,7 +42,7 @@ class Monk(c.Sheet):
         fastActions.append(shove)
 
         self.showDodge = False
-        self.actionEntries.append({"id":"Dodge"})
+        self.actions.append({"id":"Dodge"})
         
         
         # ki block is initalised here so sublass & levelling can affect it
@@ -60,8 +60,8 @@ class Monk(c.Sheet):
             self.showDash = False
             self.showReady = False
             self.showDisengage = False
-            self.actionEntries.append({"id":"Ready"})
-            self.actionEntries.append({"id":"useObject"})
+            self.actions.append({"id":"Ready"})
+            self.actions.append({"id":"useObject"})
             self.showUseObject=False
             
             fastActions.append("<strong>Disengage.</strong> <em>See Opportunity Attack. Spend 1 Focus to also Dodge or Dash.</em>")
@@ -99,9 +99,9 @@ class Monk(c.Sheet):
                 self.classAsString="Monk (Way of the Shadow)"
                 chosen = True
                 darkness = {"id":"Darkness","note":" Can be moved to any space with 60ft of you at the start of your turns. You can see within this darkness.","cost":"f"}
-                self.actionEntries.append(darkness)
+                self.actions.append(darkness)
                 self.darkvision+=60
-                self.actionEntries.append({"id":"Create Minor Illusion"})
+                self.actions.append({"id":"Create Minor Illusion"})
 
             if self.subclass == "openHand" or not chosen:
                 self.subclass = "openHand"
@@ -123,7 +123,7 @@ class Monk(c.Sheet):
         if level>4:
             
             extraAttackEntry = {"id":"extraAttackHighlighted"}
-            self.actionEntries.insert(self.highlightedBlockIndex,extraAttackEntry)
+            self.actions.insert(self.highlightedBlockIndex,extraAttackEntry)
             self.highlightedBlockIndex+=1
             
             kiBlock.entries.insert(0,{"id":"Stun"})
@@ -162,7 +162,7 @@ class Monk(c.Sheet):
             self.bonusActionEntries.append(flurryString)
         
         fastAction = "Take a <strong>Fast Action.</strong> <em>See Fast Action Options.</em>"
-        self.actionEntries.append(fastAction)
+        self.actions.append(fastAction)
         self.bonusActionEntries.append(fastAction)
         self.rightColumnBlocks.append(c.e.Block(fastActions,"FAST ACTION OPTIONS"))
     

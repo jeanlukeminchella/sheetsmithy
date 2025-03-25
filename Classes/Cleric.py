@@ -45,7 +45,7 @@ class Cleric(c.Sheet):
         self.lightArmorProficiency = True
         
         self.highlightedEntries.append({"id":"Sacred Flame"})
-        self.actionEntries.append({"id":"Guidance"})
+        self.actions.append({"id":"Guidance"})
         
         
         divineOrders = ["protector","thaumaturge"]
@@ -135,7 +135,7 @@ class Cleric(c.Sheet):
                 weHaveChannelDivinityThatIsNotAnAction=True
                 self.classAsString="Cleric (of War)"
                 subclassChosen = True
-                self.actionEntries.append({"id":"Guiding Bolt"})
+                self.actions.append({"id":"Guiding Bolt"})
                 self.bonusActionEntries.append({"id":"Magic Weapon"})
                 self.bonusActionEntries.append({"id":"Shield of Faith"})
                 self.bonusActionEntries.append({"id":"Spiritual Weapon"})
@@ -144,8 +144,8 @@ class Cleric(c.Sheet):
                 self.reactions.append(["Guided Strike ("+channelDivinityText+").","When an ally misses with an attack roll, boost the result by 10."," When using on yourself this does not cost a Reaction." ]) 
 
                 if self.level>4:
-                    self.actionEntries.append({"id":"Crusader's Mantle"})
-                    self.actionEntries.append({"id":"Spirit Guardians"})
+                    self.actions.append({"id":"Crusader's Mantle"})
+                    self.actions.append({"id":"Spirit Guardians"})
 
                 if self.level>5:
                     self.notesForSpellCastingBlock.append("You can use your Channel Divinity to cast Shield of Faith or Spiritual Weapon. When cast this way, the spell doesn't require Concentration and lasts 1 min.")
@@ -174,12 +174,12 @@ class Cleric(c.Sheet):
                     
                 if self.level>4:
                     self.bonusActionEntries.append(masshw)
-                    self.actionEntries.append(revivify)
+                    self.actions.append(revivify)
 
                 self.bonusActionEntries.append({"id":"Lesser Restoration"})
-                self.actionEntries.append(cureWounds)
-                self.actionEntries.append({"id":"Bless"})
-                self.actionEntries.append({"id":"Aid"})
+                self.actions.append(cureWounds)
+                self.actions.append({"id":"Bless"})
+                self.actions.append({"id":"Aid"})
 
         if self.level>4:
             self.showDisengage = False
@@ -190,7 +190,7 @@ class Cleric(c.Sheet):
             self.showDash = False
         
         if weHaveChannelDivinityThatIsNotAnAction:
-            self.actionEntries.extend(channelDivinityActionEntries)
+            self.actions.extend(channelDivinityActionEntries)
         else:
             for ent in channelDivinityActionEntries:
                 
@@ -207,7 +207,7 @@ class Cleric(c.Sheet):
             if len(channelDivinityActionEntries)>0:
 
                 self.rightColumnBlocks.append(channelBlock)
-                self.actionEntries.append({"id":"channelDiv"})
+                self.actions.append({"id":"channelDiv"})
 
         # History, Insight, Medicine, Persuasion, and Religion.
         self.skillProficiencies.append(self.pickSkillProficiency([5,6,9,13,14]))

@@ -270,7 +270,7 @@ def getHTML(e,c=None):
                     italicBit +=" to resist."
                 elif e["mastery"] == "Slow":
                     added = True
-                    italicBit +="On a hit, target's speed is reduced by 10 (can only apply once)"
+                    italicBit +="On a hit, target's speed is reduced by 10 (can only apply once)."
                 elif e["mastery"] == "Sap":
                     added = True
                     italicBit +="On a hit, target has disadvantage on their next attack before your next turn."
@@ -282,7 +282,7 @@ def getHTML(e,c=None):
                     italicBit +="Deal "+str(modifier)+" damage on a miss."
                 elif e["mastery"] == "Cleave":
                     added = True
-                    italicBit +="On a hit, you may make a free attack with this weapon on an enemy within 5ft of you and the target. This free attack can only happen once per turn and its damage is "+e["damage"]
+                    italicBit +="On a hit, you may make a free attack with this weapon on an enemy within 5ft of you and the target. This free attack can only happen once per turn and its damage is "+e["damage"]+"."
 
                     
                 

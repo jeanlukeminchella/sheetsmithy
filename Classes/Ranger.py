@@ -39,7 +39,7 @@ class Ranger(c.Sheet):
             self.wishlist.append("Shortsword")
             self.wishlist.append("offhand shortsword")
 
-        self.actionEntries.append({"id":"Hide"})
+        self.actions.append({"id":"Hide"})
 
         self.charInfos.append("Favoured Enemy: ___________________ <br><em>Adv. on tracking & lore checks.</em>")
         self.numberOfLanguages+=2
@@ -100,7 +100,7 @@ class Ranger(c.Sheet):
                 self.classAsString="Ranger (Monster Slayer)"
                 self.subclass = "monster slayer"
                 
-                self.actionEntries.append({"id":"Protection from Evil and Good"})
+                self.actions.append({"id":"Protection from Evil and Good"})
                 
                 hunterSense = {"type":"spell"}
                 hunterSense["id"] = "Hunter's Sense"
@@ -109,7 +109,7 @@ class Ranger(c.Sheet):
                 hunterSense["preSaveNormalText"] = " Discern a creature's immunities, resistances, and vulnerabilities."
                 count = "O "*max(1,self.modifiers[4])
                 hunterSense["preSaveItalicText"] = "</em>"+count+" <em>(Monster Slayer)"
-                self.actionEntries.append(hunterSense)
+                self.actions.append(hunterSense)
                 self.longRestEntries.append("Regain your uses of <strong>Hunter's Sense</strong>.")
                 
                 slayersPrey = {"type":"spell"}
@@ -123,14 +123,14 @@ class Ranger(c.Sheet):
             #primal awareness
             swAnimals = {"id":"Speak With Animals","preSaveItalicText":" One free casting per long rest. O"}
 
-            self.actionEntries.append(swAnimals)
+            self.actions.append(swAnimals)
             
             
         
             
         if level>4:
             extraAttackEntry = {"id":"extraAttackHighlighted"}
-            self.actionEntries.insert(self.highlightedBlockIndex,extraAttackEntry)
+            self.actions.insert(self.highlightedBlockIndex,extraAttackEntry)
             self.highlightedBlockIndex+=1
 
         if level>5:

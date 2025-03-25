@@ -49,12 +49,12 @@ class Barbarian(c.Sheet):
         if level>1:
             #get reckless
             recklessEntry = {"id":"reckless"}
-            self.actionEntries.insert(0,recklessEntry)
+            self.actions.insert(0,recklessEntry)
             self.highlightedBlockIndex+=1
             # danger sense
             self.saveNotes.append([1," (advantage)"])
             self.showDodge = False
-            self.actionEntries.append({"id":"Barbarian Dodge"})
+            self.actions.append({"id":"Barbarian Dodge"})
                     
         if level>2:
             
@@ -63,12 +63,12 @@ class Barbarian(c.Sheet):
                 
                 
             if self.subclass  == "wildMagic" :
-                self.actionEntries.append({"id":"senseMagicItem"})
+                self.actions.append({"id":"senseMagicItem"})
                 self.classAsString = "Barbarian (Wild Magic)"
                 rageTexts.append("• When you enter rage, roll a d8 to unleash a magical effect. <em>(Wild Magic - see TCoE for effects)</em>")
                 if level>5:
                     bolsterTitle = "<strong>Bolster.</strong> Add a d3 to target's ability checks and attack for 10 minutes, or have them regain a level d3 spell slot. O"+" O"*(self.profBonus-1)
-                    self.actionEntries.append(bolsterTitle)
+                    self.actions.append(bolsterTitle)
 
                 wildMagicEntries = []
 
@@ -111,7 +111,7 @@ class Barbarian(c.Sheet):
         
         if level>4:
             extraAttackEntry = {"id":"extraAttackHighlighted"}
-            self.actionEntries.insert(self.highlightedBlockIndex,extraAttackEntry)
+            self.actions.insert(self.highlightedBlockIndex,extraAttackEntry)
             self.highlightedBlockIndex+=1
             self.speed+=10
         

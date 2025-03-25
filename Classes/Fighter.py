@@ -97,7 +97,7 @@ class Fighter(c.Sheet):
             else:
                 self.shortRestEntries.append("Regain your <strong>Action Surge </strong> and <strong> Second Wind </strong>features.")
             actionSurgeText +=  "O"
-            self.actionEntries.insert(0,actionSurgeText)
+            self.actions.insert(0,actionSurgeText)
             self.highlightedBlockIndex+=1
             self.charInfos.append("<strong>Tactical Mind. </strong> Spend a use of your Second Wind feature to boost an ability check by d10.")
 
@@ -138,7 +138,7 @@ class Fighter(c.Sheet):
                    
         if self.level>4:
             extraAttackEntry = {"id":"extraAttackHighlighted"}
-            self.actionEntries.insert(self.highlightedBlockIndex,extraAttackEntry)
+            self.actions.insert(self.highlightedBlockIndex,extraAttackEntry)
             self.highlightedBlockIndex+=1
         
         

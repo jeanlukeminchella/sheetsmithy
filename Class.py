@@ -121,7 +121,7 @@ class Sheet:
         self.highlightedBlockIndex = 0
         self.reactions=[]
         self.bonusActionEntries = []
-        self.actionEntries = []
+        self.actions = []
         self.shortRestEntries = []
         self.longRestEntries = []
         
@@ -191,7 +191,7 @@ class Sheet:
         # lets scan and see if we have other entries with the same title first
         weHaveThisEntryAlready = False
 
-        allEntries = self.actionEntries[:]
+        allEntries = self.actions[:]
         allEntries.extend(self.bonusActionEntries[:])
         allEntries.extend(self.highlightedEntries[:])
         allEntries.extend(self.reactions[:])
@@ -223,9 +223,9 @@ class Sheet:
                         self.highlightedEntries.append(command)
                 else:
                     if priority:
-                        self.actionEntries.insert(0,command)
+                        self.actions.insert(0,command)
                     else:
-                        self.actionEntries.append(command)
+                        self.actions.append(command)
                     
             elif command["castTime"]=="ba":
                 
@@ -312,7 +312,7 @@ class Sheet:
         self.longRestEntries.append({"id":"regainSpellSlots"})
         
         # lets load in the spells - ones we dont have already of course
-        l = self.actionEntries[:]
+        l = self.actions[:]
         l.extend(self.reactions)
         l.extend(self.bonusActionEntries)
         
@@ -378,7 +378,7 @@ class Sheet:
                         weNeedToExplainRituals = True
                 
                     if castTime=="a":
-                        self.actionEntries.append(spell)
+                        self.actions.append(spell)
                     elif castTime=="ba":
                         self.bonusActionEntries.append(spell)
                     elif castTime=="re":
@@ -573,18 +573,18 @@ class Sheet:
         self.makeSpellcastingBlock()
 
         if self.showUseObject:
-            self.actionEntries.append({"id":"useObject"})
+            self.actions.append({"id":"useObject"})
         
         if self.showReady:
-            self.actionEntries.append({"id":"Ready"} )
+            self.actions.append({"id":"Ready"} )
             
         if self.showDisengage:
-            self.actionEntries.append({"id":"Disengage"})
+            self.actions.append({"id":"Disengage"})
             
         if self.showDash:
-            self.actionEntries.append({"id":"Dash"})
+            self.actions.append({"id":"Dash"})
         if self.showDodge:
-            self.actionEntries.append({"id":"Dodge"})    
+            self.actions.append({"id":"Dodge"})    
             
         self.buildLog.insert(0,self.classAsString)
         if self.showBuildLog:
@@ -704,15 +704,15 @@ class Sheet:
         # this is for things like extra attack, reckless attack ect which should be listed before weapon
         blockBeforeHighlightedActions = e.Block([])
         for i in range(self.highlightedBlockIndex):
-            blockBeforeHighlightedActions.addEntry(self.actionEntries[i])
+            blockBeforeHighlightedActions.addEntry(self.actions[i])
         self.middleColumnBlocks.insert(0,blockBeforeHighlightedActions)
         
         highLightedBlock = e.Block(self.highlightedEntries, "","attack01")
         self.middleColumnBlocks.insert(1,highLightedBlock)
         
         blockAfterHighlightedStuff = e.Block([])
-        for i in range(self.highlightedBlockIndex,len(self.actionEntries)):
-            blockAfterHighlightedStuff.addEntry(self.actionEntries[i])
+        for i in range(self.highlightedBlockIndex,len(self.actions)):
+            blockAfterHighlightedStuff.addEntry(self.actions[i])
         self.middleColumnBlocks.insert(2,blockAfterHighlightedStuff)
         
         #generateReactionBlock, add it to the (end of the) chosen column, as per parameter at start

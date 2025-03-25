@@ -1,8 +1,6 @@
- - action entries could just be "actions" but this would take a lot of renaming!
- - sort Items out
- - consolidate item class, ccc function file ect
  - handle spell commands that dont match, let users input?
- - more backgroundds obviously
+ - more backgrounds obviously
+ - show damage types?
  - sort out the ranger feats (?)
  - cause an issue when we have 2h weapon and a shield
  - print the buildlog?
@@ -14,3 +12,4 @@
  - validate boolean in global functions - defend against strings that say "false"? as they will interpret as true? 
  - bonus gold?
  - javascript: dont send empty values 
+ - GET REQUEST

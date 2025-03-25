@@ -135,7 +135,7 @@ class Druid(c.Sheet):
             self.bonusActionEntries.insert(1,{"id":"Leave Wild Shape"})
             self.rightColumnBlocks.append(c.e.Block(knownForms,"WILD SHAPE FORMS"))
             self.shortRestEntries.append("Regain a use of Wild Shape")
-            self.actionEntries.append({"id":"Wild Companion"})
+            self.actions.append({"id":"Wild Companion"})
             longRestRegainString = "Regain your use of <strong>Wild Companion</strong>."
             
         
@@ -153,7 +153,7 @@ class Druid(c.Sheet):
                 landsAid["preSaveNormalText"] = "20ft sphere deals 2d6 necrotic damage to enemies. CON"
                 landsAid["postSaveNormalText"] = " to half damage."
                 landsAid["preSaveItalicText"] = " Choose an ally within sphere to regain 2d6 hp. "
-                self.actionEntries.append(landsAid)
+                self.actions.append(landsAid)
 
                 lands = ["arid"]
                 land = lands[0]

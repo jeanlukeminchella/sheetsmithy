@@ -803,8 +803,8 @@
         "type": "spell"
     },
     "Grapple": {
-        "preSaveNormalText": "Target's speed is 0, and moves with you. Athletics / Acrobatics DC",
-        "postSaveNormalText": " to resist / break grapple.",
+        "preSaveNormalText": "Target's speed is 0, and moves with you. STR/DEX save DC",
+        "postSaveNormalText": " to resist grapple.",
         "preSaveItalicText": " Targets of a similar size half your speed. You must have a free hand for grappling.",
         "modifierIndex": 0,
         "type": "spell"
@@ -968,7 +968,7 @@
         "type": "spell"
     },
     "Shove": {
-        "preSaveNormalText": "Target is pushed 5ft or knocked Prone. Athletics / Acrobatics DC",
+        "preSaveNormalText": "Target is pushed 5ft or knocked Prone. STR/DEX save DC",
         "postSaveNormalText": " to resist.",
         "preSaveItalicText": " Targets can still move or get up on their turn.",
         "modifierIndex": 0,
