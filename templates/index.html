@@ -11,7 +11,7 @@
     
 </head>
 <body onload="setSeed();loadSpeciesOptions();loadClassChoices();hideAbilityScores();hideLanguages();hideInventory()">
-    <form id="characterForm" method="post" >
+    <form id="characterForm" action="/generate" method="get" >
         <div>
            Welcome adventurer, to Sheet Smithy! Lets put hammer to steel and forge your first character! Give your new hero a great name below. Use <a href="https://www.fantasynamegenerators.com" target="_blank">this&nbsp;website</a> if you're stuck!
         </div>
@@ -164,6 +164,7 @@
             <option value="Sage">Sage</option>
             <option value="Criminal">Criminal</option>
             <option value="Charlatan">Charlatan</option>
+            <option value="Hermit">Hermit</option>
             <option value="Noble">Noble</option>
             <option value="Merchant">Merchant</option>
             <option value="Soldier">Soldier</option>
@@ -172,7 +173,7 @@
             <option value="Guard">Guard</option>
         </select>
         <br>
-        <button type="submit" value=""  class="majorButton">Create my character!</button>
+        <button type="submit" value="" onclick="wrapUp();" class="majorButton">Create my character!</button>
         <br>
         <p>These following questions are optional. If this is your first character, please just ignore this. </p>
 
@@ -206,6 +207,7 @@
             <option value="savageAttacker">Savage Attacker</option>
             <option value="tough">Tough (+hp)</option>
             <option value="alert">Alert (+initiative)</option>
+            <option value="healer">Healer</option>
             
         </select>
         <select id="l6-feat" name="l6-feat" class="startInvisible" onchange="loadClassChoices()">
@@ -228,6 +230,7 @@
             <option value="savageAttacker">Savage Attacker</option>
             <option value="tough">Tough (+hp)</option>
             <option value="alert">Alert (+initiative)</option>
+            <option value="healer">Healer</option>
             
         </select>
                     <em id="l4-feat-label">Please note: some feats cannot be taken more than once.<br><br></em>

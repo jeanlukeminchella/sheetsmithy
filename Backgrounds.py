@@ -11,6 +11,11 @@ def farmer(c,choice):
     boostAbilityScores(c,choice,[0,2,4])
     c.skillProficiencies.extend([1,10])
 
+def hermit(c,choice):
+    Feats.healer(c)
+    boostAbilityScores(c,choice,[2,4,5])
+    c.skillProficiencies.extend([9,14])
+
 def noble(c,choice):
     Feats.skilled(c)
     boostAbilityScores(c,choice,[0,3,5])
@@ -72,6 +77,7 @@ backgrounds = {
     "Sage":sage,
     "Noble":noble,
     "Criminal":criminal,
+    "Hermit":hermit,
     "Merchant":merchant,
     "Soldier":soldier,
     "Scribe":scribe,

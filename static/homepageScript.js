@@ -57,6 +57,18 @@ function setSeed(){
     document.getElementById("seed").value=getRndInteger(0,1000);
 };
 
+function wrapUp(){
+    console.log("wrapping up here");
+    ids = ["name","classAsString","race","background"]
+    ids.forEach(disableIDIfBlank)
+}
+
+function disableIDIfBlank(id){
+    if (document.getElementById(id).value==""){
+        document.getElementById(id).disabled=true
+    }
+};
+
 const abilityIDs = ["Strength","Dexterity","Constitution","Intelligence","Wisdom","Charisma"];
 function showAbilityScores(){
     showIDList(abilityIDs);
@@ -92,7 +104,6 @@ function loadClassChoices() {
     const classChoiceIDs = ["barbarianSubclass","clericSubclass","fightStyle","l4-feat","l4-feat-label","l6-feat","monkSubclass","fighterSubclass","rogueSubclass","paladinSubclass","rangerSubclass","divineOrder","primalOrder"];
     classChoiceIDs.forEach(hideID);
     
-    console.log("loading class choices");
     /* multi dimensional array, showing what to display at what level. */
     let allClassChoices = {
         "Cleric":[["divineOrder"],[],["clericSubclass"],["l4-feat","l4-feat-label"]],

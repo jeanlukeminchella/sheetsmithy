@@ -44,7 +44,18 @@ def lucky(c):
         for i in range(c.profBonus):
             luckyString+="O "
         c.charInfos.append(luckyString)
-        
+
+def healer(c):
+    logText = "You have the Healer feat"
+    if featAlreadyTaken(c,logText):
+        skilled(c)
+    else:
+        c.buildLog.append(logText)
+        battleMedic = ["Battle Medic.","Spend a use of a Healer's Kit to allow a creature to spend a hit die, healing that much hp +"+str(c.profBonus)+"."]
+        c.actions.append(battleMedic)
+        c.charInfos.append("Whenever you roll to see how much hp you restore, re-roll a 1.")
+        c.wishlist.append("Healer's Kit")
+
 def addCon(c):
     c.scores[2]=c.scores[2]+2
     c.updateModifiers()
@@ -134,6 +145,7 @@ Feats = {
     "lucky":lucky,
     "asi":asi,
     "skilled":skilled,
+    "healer":healer,
     "savageAttacker":savageAttacker,
     "tough":tough,
     "alert":alert,

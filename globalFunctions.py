@@ -1,7 +1,7 @@
 
 attributes =  ["Strength","Dexterity","Constitution","Intelligence","Wisdom","Charisma"]
 pathToSource = "./"
-#pathToSource = "/home/sheetsmithy/mysite/"
+pathToSource = "/home/sheetsmithy/mysite/"
 
 def getStringFromBoosts(boostList,originOfBoost):
    

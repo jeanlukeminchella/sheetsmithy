@@ -517,7 +517,7 @@ class Sheet:
                 languagesToPickFrom.append(l)
         
         if len(languagesToPickFrom)>0:
-            chosenIndex = self.seed % (len(languagesToPickFrom)-1)
+            chosenIndex = self.seed % (len(languagesToPickFrom))
             return languagesToPickFrom[chosenIndex]
         else:
             return None
