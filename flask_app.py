@@ -10,20 +10,8 @@ from Classes import Paladin as pal
 from Classes import Cleric as cleric
 from Classes import Warlock as warlock
 import Class as Sheet
-import datetime
 
 app = Flask(__name__)
-
-def getTimeAsString():
-    result = ""
-    x= datetime.datetime.now()
-    result += x.strftime("%y")
-    result += "-"+x.strftime("%m")
-    result += "-"+x.strftime("%d")
-    result += "-"+x.strftime("%H")
-    result += "-"+x.strftime("%M")
-    result += "-"+x.strftime("%S")
-    return result
 
 def getHTMLFromInput(d):
 
@@ -102,17 +90,17 @@ def makeSheet():
     keys = d.keys()
     inp = {}
     
-    
-
     try:
         inp["level"] = int(d["level"])
     except:
-        print("issue loading / parsing level from input")
+        pass
+        #print("issue loading / parsing level from input")
     
     try:
         inp["classAsString"] = str(d["classAsString"])
     except:
-        print("issue loading / parsing class from input")
+        pass
+        #print("issue loading / parsing class from input")
     
     
     
@@ -170,7 +158,6 @@ def makeSheet():
 
     choicesDic = {}
 
-
     possibleFeatChoices = ["fightStyle","l4-feat"]
 
     for choice in possibleFeatChoices:
@@ -204,7 +191,7 @@ def makeSheet():
     if len(choicesDic.keys())>0:
         inp["choices"]=choicesDic
 
-    attributes =  ["Strength","Dexterity","Constitution","Intelligence","Wisdom","Charisma"]
+    attributes =  ["str","dex","con","int","wis","cha"]
     scores = []
     userHasChosenAScore = False
     try:

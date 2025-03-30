@@ -710,7 +710,7 @@
     },
     "healer's kit": {
         "key": "healer's kit",
-        "name": "Healer's Kit",
+        "name": "Healer's Kit (10 uses)",
         "price": 5
     },
     "handaxe": {

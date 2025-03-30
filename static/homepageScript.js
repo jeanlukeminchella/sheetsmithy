@@ -31,6 +31,9 @@ function hideInventory(){
 
 };
 
+function loadCoreOptions(){
+    showIDList(["name","background","classAsString","race"])
+};
 
 function showID(id){
     document.getElementById(id).style.display='block';
@@ -51,17 +54,18 @@ function hideIDList(l){
 
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
-}
+};
 
 function setSeed(){
-    document.getElementById("seed").value=getRndInteger(0,1000);
+    document.getElementById("seed").value=getRndInteger(0,10000);
 };
 
 function wrapUp(){
-    console.log("wrapping up here");
-    ids = ["name","classAsString","race","background"]
-    ids.forEach(disableIDIfBlank)
-}
+    ids = ["name","classAsString","race","background"];
+    ids.forEach(disableIDIfBlank);
+};
+
+
 
 function disableIDIfBlank(id){
     if (document.getElementById(id).value==""){

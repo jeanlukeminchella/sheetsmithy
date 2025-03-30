@@ -1,7 +1,11 @@
+import os 
+
+pathToSource = "/home/sheetsmithy/mysite/"
+if "cabinhammer" in os.getcwd():
+    pathToSource = "./"
+
 
 attributes =  ["Strength","Dexterity","Constitution","Intelligence","Wisdom","Charisma"]
-pathToSource = "./"
-pathToSource = "/home/sheetsmithy/mysite/"
 
 def getStringFromBoosts(boostList,originOfBoost):
    

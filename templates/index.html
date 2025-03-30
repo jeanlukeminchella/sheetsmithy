@@ -10,7 +10,7 @@
     <script src="/static/homepageScript.js"></script>
     
 </head>
-<body onload="setSeed();loadSpeciesOptions();loadClassChoices();hideAbilityScores();hideLanguages();hideInventory()">
+<body onload="setSeed();" onpageshow="loadCoreOptions();loadSpeciesOptions();loadClassChoices();hideAbilityScores();hideLanguages();hideInventory()">
     <form id="characterForm" action="/generate" method="get" >
         <div>
            Welcome adventurer, to Sheet Smithy! Lets put hammer to steel and forge your first character! Give your new hero a great name below. Use <a href="https://www.fantasynamegenerators.com" target="_blank">this&nbsp;website</a> if you're stuck!
@@ -270,31 +270,31 @@
             <div class="row">
             <div class="column">
             <label for="Strength">Strength:</label>
-            <input type="number" id="Strength" name="Strength" min="1" max="20" value=10>
+            <input type="number" id="Strength" name="str" min="1" max="20" value=10>
             </div>
             
             <div class="column" style="left:15%">
             <label for="Dexterity">Dexterity:</label>
-            <input type="number" id="Dexterity" name="Dexterity" min="1" max="20" value=10>
+            <input type="number" id="Dexterity" name="dex" min="1" max="20" value=10>
             </div>
             
             <div class="column" style="left:15%">
             <label for="Constitution">Constitution:</label>
-            <input type="number" id="Constitution" name="Constitution" min="1" max="20" value=10>
+            <input type="number" id="Constitution" name="con" min="1" max="20" value=10>
             </div>
             
             <div class="column">
             <label for="Intelligence">Intelligence:</label>
-            <input type="number" id="Intelligence" name="Intelligence" min="1" max="20" value=10>
+            <input type="number" id="Intelligence" name="int" min="1" max="20" value=10>
             </div>
             
             <div class="column">
             <label for="Wisdom">Wisdom:</label>
-            <input type="number" id="Wisdom" name="Wisdom" min="1" max="20" value=10>
+            <input type="number" id="Wisdom" name="wis" min="1" max="20" value=10>
             </div>
             <div class="column">
             <label for="Charisma">Charisma:</label>
-            <input type="number" id="Charisma" name="Charisma" min="1" max="20" value=10>
+            <input type="number" id="Charisma" name="cha" min="1" max="20" value=10>
             </div>
         </div>
             
