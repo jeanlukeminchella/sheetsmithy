@@ -12,7 +12,7 @@ equipmentTitle = "INVENTORY"
 bonusActionTitle = "BONUS ACTIONS (1 per turn)"
 skillsAsStrings = ["Acrobatics",   "Animal Handling",  "Arcana",  "Athletics",  "Deception",  "History",  "Insight",  "Intimidation",  "Investigation",  "Medicine",  "Nature",  "Perception","Performance",  "Persuasion",  "Religion",  "Sleight of Hand",  "Stealth",  "Survival",  "Thieves' Tools"]
 savesAsStrings = gf.attributes
-skillModifierIndex =[1,4,3,0,4,3,4,5,3,4,3,4,5,5,3,1,1,4,1]
+skillModifierIndex =[1,4,3,0,5,3,4,5,3,4,3,4,5,5,3,1,1,4,1]
 armors = ["Studded Leather","Leather","Splint","Scale Mail","Ring Mail","Plate","Hide","Half Plate","Chain Shirt","Chain Mail","Breastplate"]
 languages = ["elven","draconic","gnomish","dwarven","sign","orc","giant","halfling"]
 
