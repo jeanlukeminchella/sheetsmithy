@@ -48,7 +48,7 @@ class Monk(c.Sheet):
         # ki block is initalised here so sublass & levelling can affect it
         kiEntry = "<strong>Focus -</strong> "+(" O"*(level))
         kiBlock = c.e.Block([kiEntry],"FOCUS")
-        if self.showShortRest:
+        if self.hideShortRest:
             if self.level>1:
                 self.shortRestEntries.append("Regain all your <strong>Focus</strong>.")
         else:
@@ -86,7 +86,7 @@ class Monk(c.Sheet):
             
             uncannyMetabolismText = "<strong>Uncanny Metabolism. </strong> When you roll initiative, regain"
             uncannyMetabolismText += " all Focus and "+getMartialArtsDie(self.level)+"+"+str(self.level)+" hp."
-            if self.showLongRest:
+            if self.hideLongRest:
                 self.longRestEntries.append("Regain your use of <strong>Uncanny Metabolism</strong>.")
             else:
                 uncannyMetabolismText += " <em>You must take a Long Rest before doing this again.</em>"
@@ -136,7 +136,7 @@ class Monk(c.Sheet):
                 wholenessOfBody = {"id":"Wholeness of Body","type":"spell","expanded":True,"conc":False,"ritual":False}
                 wholenessOfBody["preSaveNormalText"]="Regain "+getMartialArtsDie(self.level)+"+"+str(self.modifiers[4])+" hp. "
                 wholenessOfBody["preSaveNormalText"]+=" O"*self.modifiers[4]
-                if self.showLongRest:
+                if self.hideLongRest:
                     self.longRestEntries.append("Regain all uses of <strong>Wholenes Of Body</strong>")
                 else:
                     wholenessOfBody.preSaveItalicText="Regain all uses on a Long Rest"

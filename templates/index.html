@@ -242,21 +242,17 @@
         </label>
         
     
-        <label for="showShortRest">
-        <input type="checkbox" id="showShortRest" name="showShortRest" checked>Show what to do after a Short Rest ?
+        <label for="hideShortRest">
+        <input type="checkbox" id="hideShortRest" name="hideShortRest">Hide what to do after a Short Rest ?
         </label>
         
-        <label for="showLongRest">
-        <input type="checkbox" id="showLongRest" name="showLongRest" checked>Show what to do after a Long Rest ?
+        <label for="hideLongRest">
+        <input type="checkbox" id="hideLongRest" name="hideLongRest">Hide what to do after a Long Rest ?
         </label>
         
-        <label for="showPhysicalDamageTypes">
-        <input type="checkbox" id="showPhysicalDamageTypes" name="showPhysicalDamageTypes" checked>Show physical damage types ?
+        <label for="hidePhysicalDamageTypes">
+        <input type="checkbox" id="hidePhysicalDamageTypes" name="hidePhysicalDamageTypes" >Hide physical damage types ?
         </label>
-
-        
-        
-        
 
         <br>
         <div id="showScoresButton">
@@ -266,11 +262,9 @@
         <div id="hideScoresButton" class="startInvisible" >
             <button  type="button" class="minorButton" onclick="hideAbilityScores();">Hide scores</button>
         </div>
-        
-        
 
         <div id="abilityScores" class="startInvisible">
-            <br>
+
             Distribute your ability scores from the Standard Array [15,14,13,12,10,8] or use a Point Buy method to get a different array <a href="https://chicken-dinner.com/5e/5e-point-buy.html" target="_blank">here</a> (ignore Race). Legends even speak of some who roll dice for their scores, but check this with your DM before rolling. 
             <div class="row">
             <div class="column">
@@ -319,7 +313,7 @@
 
         <div id="langs" class="startInvisible">
 
-            Extra languages are picked randomly, but if you would like to choose what they are list them below. <em>Eg. giant</em>
+            Extra languages are picked randomly, but if you would like to choose what they are list them below. <em>Eg. giant, sign</em>
             
             <label for="name">Preferred Extra Languages:</label>
             <input type="text" id="languages" name="languages" value="">
@@ -355,15 +349,18 @@
             <input type="text" id="gearList" name="gearList" value="">    
             
             
-            If you have some gold from previous adventures please add it below in gold pieces. For example, for 1pp, 2gp, 4sp and 5cp please enter: 
-            <em>
-                12.45
-            </em>
+            If you have some coinage from previous adventures please add it below. 
+            <br>
             <label for="bonusGold">Bonus Gold:</label>
-            <input type="number" id="bonusGold" name="bonusGold" value=0 step=0.01>    
+            <input type="number" id="bonusGold" name="bonusGold" value=0 step=1>  
+            <label for="bonusSilver">Bonus Silver:</label>
+            <input type="number" id="bonusSilver" name="bonusSilver" value=0 step=1>    
+            <label for="bonusCopper">Bonus Copper:</label>
+            <input type="number" id="bonusCopper" name="bonusCopper" value=0 step=1>  
+            <input type="hidden" id="goldPieceDecimal" name="gp">  
         </div>
 
-        <button type="submit" value="" class="majorButton">Create my character!</button>
+        <button type="submit" value="" onclick="wrapUp();" class="majorButton">Create my character!</button>
 
         <div id="showHelpButton">
             <button type="button" class="minorButton" onclick="showHelp();">Help! I don't know what I'm doing!</button>

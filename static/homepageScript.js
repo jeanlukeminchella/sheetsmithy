@@ -21,19 +21,19 @@ function showHelp(){
 };
 
 function showInventory(){
-    showIDList(["hideInventoryButton", "inventory", "shoppingList", "gearList","bonusGold"]);
+    showIDList(["hideInventoryButton", "inventory", "shoppingList", "gearList","bonusGold","bonusSilver","bonusCopper","goldPieceDecimal"]);
     hideIDList(["showInventoryButton"]);
 
 };
 function hideInventory(){
-    hideIDList(["hideInventoryButton", "inventory", "shoppingList", "gearList","bonusGold"]);
+    hideIDList(["hideInventoryButton", "inventory", "shoppingList", "gearList","bonusGold","bonusSilver","bonusCopper","goldPieceDecimal"]);
     showIDList(["showInventoryButton"]);
 
 };
 
 function loadCoreOptions(){
     showIDList(["name","background","classAsString","race"]);
-    const checkBoxes = ["showScores","showShortRest","showLongRest","showPhysicalDamageTypes" ]
+    const checkBoxes = ["showScores","hideShortRest","hideLongRest","hidePhysicalDamageTypes" ]
     for (let i = 0; i < checkBoxes.length; i++) {
         
         document.getElementById(checkBoxes[i]).disabled=false 
@@ -67,23 +67,21 @@ function setSeed(){
 };
 
 function wrapUp(){
-    ids = ["name","classAsString","race","background"];
+    ids = ["name","classAsString","race","background","shoppingList","gearList"];
     ids.forEach(disableIDIfBlank);
+    console.log("wrapping up");
 
-    const booleanIds = ["showScores","showShortRest","showLongRest","showPhysicalDamageTypes" ];
-    const booleansDefaultValues = [false,true,true,true];
+    
+    let cp = document.getElementById("bonusCopper").value/100;
+    let sp = document.getElementById("bonusSilver").value/10;
+    let gp = document.getElementById("bonusGold").value;    
+    console.log("gp, sp, cp is ",gp, sp,cp);
+    gp = (gp*1)+(cp*1) + (sp*1);
+    gp.toFixed(2);
+    document.getElementById("goldPieceDecimal").value = gp.toFixed(2);
+    console.log("document.getElementById('goldPieceDecimal').value is ",document.getElementById("goldPieceDecimal").value);
+    hideIDList(["bonusGold","bonusSilver","bonusCopper"]);
 
-    for (let i = 0; i < booleanIds.length; i++) {
-        console.log(i)
-        console.log(booleanIds[i])
-        console.log(document.getElementById(booleanIds[i]))
-        if(document.getElementById(booleanIds[i]).value=="off" && booleansDefaultValues[i]==false){
-            document.getElementById(booleanIds[i]).disabled=true 
-        };
-        if(document.getElementById(booleanIds[i]).value=="on" && booleansDefaultValues[i]==true){
-            document.getElementById(booleanIds[i]).disabled=true 
-        };
-    };
 };
 
 

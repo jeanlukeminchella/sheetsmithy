@@ -30,10 +30,10 @@ class Sheet:
         self.showScores = inp["showScores"]
         self.buildLog = []
         self.showBuildLog = True
-        self.showShortRest = inp["showShortRest"]
-        self.showLongRest = inp["showLongRest"]
+        self.hideShortRest = inp["hideShortRest"]
+        self.hideLongRest = inp["hideLongRest"]
         self.seed = inp["seed"]
-        self.showPhysicalDamageTypes = inp["showPhysicalDamageTypes"]
+        self.hidePhysicalDamageTypes = inp["hidePhysicalDamageTypes"]
         
         self.skillProficiencies = []
         self.skillExpertises = []
@@ -178,6 +178,7 @@ class Sheet:
         # add any free gear the user has listed
         if inp["gearList"] != "" and inp["gearList"]!=" ":
             gear = inp["gearList"].split(", ")
+            print("adding free gear ",inp["gearList"] )
             for g in gear:
                 self.buyItem(g,False)
 
@@ -597,11 +598,11 @@ class Sheet:
             p = self.pickSkillProficiency()
             self.skillProficiencies.append(p)
             
-        if self.showShortRest:
+        if not self.hideShortRest:
             shortRestBlock = e.Block(self.shortRestEntries,"ON A SHORT REST")
             self.leftColumnBlocks.append(shortRestBlock)
         
-        if self.showLongRest:
+        if not self.hideLongRest:
             longRestBlock = e.Block(self.longRestEntries,"ON A LONG REST")
             self.leftColumnBlocks.append(longRestBlock)
 

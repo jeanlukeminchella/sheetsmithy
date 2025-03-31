@@ -74,7 +74,7 @@ class Fighter(c.Sheet):
         else:
             secondWindText +=  ". "
             
-        if not self.showShortRest:
+        if not self.hideShortRest:
             secondWindText +=  "<em>Regain one use on a rest. </em> "
         elif self.level==1:
             self.shortRestEntries.append("Regain one use of <strong>Second Wind</strong>.")
@@ -92,7 +92,7 @@ class Fighter(c.Sheet):
         
         if self.level>1:
             actionSurgeText = "<strong>Action Surge. </strong> Take two actions. "
-            if not self.showShortRest:
+            if not self.hideShortRest:
                 actionSurgeText +=  "<em>You must rest before doing this again. </em> "
             else:
                 self.shortRestEntries.append("Regain your <strong>Action Surge </strong> and <strong> Second Wind </strong>features.")
@@ -119,7 +119,7 @@ class Fighter(c.Sheet):
                 self.reactions.append(stoneEntry)
                 
                 runeEntries = [fireEntry]
-                if self.showShortRest:
+                if self.hideShortRest:
                     self.shortRestEntries.append("Regain the use off all your <strong>Runes</strong>.")
                         
                 else:

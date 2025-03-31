@@ -238,7 +238,7 @@ def getHTML(e,c=None):
             if e["addModToDamage"]:
                 dmgString += gf.getSignedStringFromInt(modifier,True)
             if e["damageType"] is not None:
-                if c.showPhysicalDamageTypes or not (e["damageType"] in ["bludgeoning","piercing","slashing"] ): 
+                if not c.hidePhysicalDamageTypes or not (e["damageType"] in ["bludgeoning","piercing","slashing"] ): 
                     dmgString+=" "+e["damageType"]
                     
             dmgString+=" damage"

@@ -21,9 +21,9 @@ def getHTMLFromInput(d):
         "race":{},
         "showScores" : False,
         "showBuildLog" : False,
-        "showShortRest" : True,
-        "showLongRest" : True,
-        "showPhysicalDamageTypes" : True,
+        "hideShortRest" : False,
+        "hideLongRest" : False,
+        "hidePhysicalDamageTypes" : False,
         "gearList" : "",
         "bonusGold" : 0,
         "languages" : "",
@@ -104,16 +104,16 @@ def makeSheet():
         pass
         #print("issue loading / parsing class from input")
     
-    if "bonusGold" in d.keys():
+    if "gp" in d.keys():
         bonusGold = 0
         try:
-            bonusGold = float(d["bonusGold"])
+            bonusGold = float(d["gp"])
             inp["bonusGold"] = bonusGold
         except:
             # issue handling  bonus gold
             pass
     
-    bools = ["showShortRest","showLongRest","showScores","showPhysicalDamageTypes"]
+    bools = ["hideShortRest","hideLongRest","showScores","hidePhysicalDamageTypes"]
     for i in range(len(bools)):
         if bools[i] in keys:
             inp[bools[i]] = bool(d[bools[i]])
@@ -132,12 +132,12 @@ def makeSheet():
     except:
         pass
         #print("we have a problem considering languages")
-    try:
+
+    if "shoppingList" in keys:
         inp["shoppingList"]=d["shoppingList"]
+
+    if "gearList" in keys:
         inp["gearList"]=d["gearList"]
-    except:
-        pass
-        #print("we have a problem considering inventory")
 
     try:
         if d["race"]:
