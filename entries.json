@@ -27,7 +27,7 @@
     "Battleaxe": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Slashing",
+        "damageType": "slashing",
         "damage": "d8",
         "versatile": "d10",
         "mastery": "Topple",
@@ -36,7 +36,7 @@
     "Blowgun": {
         "addModToDamage": true,
         "modifierIndex": 1,
-        "damageType": "Piercing",
+        "damageType": "piercing",
         "damage": "1",
         "rang": 25,
         "mastery": "Vex",
@@ -55,7 +55,7 @@
     "Club": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Bludgeoning",
+        "damageType": "bludgeoning",
         "damage": "d4",
         "mastery": "Slow",
         "type": "attack"
@@ -78,7 +78,7 @@
     "Dagger": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Piercing",
+        "damageType": "piercing",
         "damage": "d4",
         "thrown": 20,
         "finesse": true,
@@ -88,7 +88,7 @@
     "Dart": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Piercing",
+        "damageType": "piercing",
         "damage": "d4",
         "thrown": 20,
         "finesse": true,
@@ -108,7 +108,7 @@
     "Flail": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Bludgeoning",
+        "damageType": "bludgeoning",
         "damage": "d8",
         "mastery": "Sap",
         "type": "attack"
@@ -116,7 +116,7 @@
     "Glaive": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Slashing",
+        "damageType": "slashing",
         "damage": "d10",
         "reach": true,
         "mastery": "Graze",
@@ -125,7 +125,7 @@
     "Greataxe": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Slashing",
+        "damageType": "slashing",
         "damage": "d12",
         "mastery": "Cleave",
         "type": "attack"
@@ -133,7 +133,7 @@
     "Greatclub": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Bludgeoning",
+        "damageType": "bludgeoning",
         "damage": "d8",
         "mastery": "Push",
         "type": "attack"
@@ -141,7 +141,7 @@
     "Greatsword": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Slashing",
+        "damageType": "slashing",
         "damage": "2d6",
         "mastery": "Graze",
         "type": "attack"
@@ -149,7 +149,7 @@
     "Halberd": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Slashing",
+        "damageType": "slashing",
         "damage": "d10",
         "reach": true,
         "mastery": "Cleave",
@@ -158,7 +158,7 @@
     "Hand Crossbow": {
         "addModToDamage": true,
         "modifierIndex": 1,
-        "damageType": "Piercing",
+        "damageType": "piercing",
         "damage": "d6",
         "rang": 30,
         "mastery": "Vex",
@@ -167,7 +167,7 @@
     "Handaxe": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Slashing",
+        "damageType": "slashing",
         "damage": "d6",
         "thrown": 20,
         "mastery": "Vex",
@@ -176,7 +176,7 @@
     "Heavy Crossbow": {
         "addModToDamage": true,
         "modifierIndex": 1,
-        "damageType": "Piercing",
+        "damageType": "piercing",
         "damage": "d10",
         "rang": 100,
         "mastery": "Push",
@@ -185,7 +185,7 @@
     "Javelin": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Piercing",
+        "damageType": "piercing",
         "damage": "d6",
         "thrown": 30,
         "mastery": "Slow",
@@ -194,7 +194,7 @@
     "Lance": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Piercing",
+        "damageType": "piercing",
         "damage": "d10",
         "reach": true,
         "mastery": "Topple",
@@ -203,7 +203,7 @@
     "Light Crossbow": {
         "addModToDamage": true,
         "modifierIndex": 1,
-        "damageType": "Piercing",
+        "damageType": "piercing",
         "damage": "d8",
         "rang": 80,
         "mastery": "Slow",
@@ -212,7 +212,7 @@
     "Light Hammer": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Bludgeoning",
+        "damageType": "bludgeoning",
         "damage": "d4",
         "thrown": 20,
         "mastery": "Nick",
@@ -221,7 +221,7 @@
     "Longbow": {
         "addModToDamage": true,
         "modifierIndex": 1,
-        "damageType": "Piercing",
+        "damageType": "piercing",
         "damage": "d8",
         "rang": 150,
         "mastery": "Slow",
@@ -230,7 +230,7 @@
     "Longsword": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Slashing",
+        "damageType": "slashing",
         "damage": "d8",
         "versatile": "d10",
         "mastery": "Sap",
@@ -239,7 +239,7 @@
     "Mace": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Bludgeoning",
+        "damageType": "bludgeoning",
         "damage": "d6",
         "mastery": "Sap",
         "type": "attack"
@@ -247,7 +247,7 @@
     "Maul": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Bludgeoning",
+        "damageType": "bludgeoning",
         "damage": "2d6",
         "mastery": "Topple",
         "type": "attack"
@@ -255,7 +255,7 @@
     "Morningstar": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Piercing",
+        "damageType": "piercing",
         "damage": "d8",
         "mastery": "Sap",
         "type": "attack"
@@ -263,7 +263,7 @@
     "Musket": {
         "addModToDamage": true,
         "modifierIndex": 1,
-        "damageType": "Piercing",
+        "damageType": "piercing",
         "damage": "d12",
         "rang": 40,
         "mastery": "Slow",
@@ -272,7 +272,7 @@
     "Pike": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Piercing",
+        "damageType": "piercing",
         "damage": "d10",
         "reach": true,
         "mastery": "Push",
@@ -281,7 +281,7 @@
     "Pistol": {
         "addModToDamage": true,
         "modifierIndex": 1,
-        "damageType": "Piercing",
+        "damageType": "piercing",
         "damage": "d10",
         "rang": 30,
         "mastery": "Vex",
@@ -320,7 +320,7 @@
     "Quarterstaff": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Bludgeoning",
+        "damageType": "bludgeoning",
         "damage": "d6",
         "versatile": "d8",
         "mastery": "Topple",
@@ -329,7 +329,7 @@
     "Rapier": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Piercing",
+        "damageType": "piercing",
         "damage": "d8",
         "finesse": true,
         "mastery": "Vex",
@@ -369,7 +369,7 @@
     "Scimitar": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Slashing",
+        "damageType": "slashing",
         "damage": "d6",
         "finesse": true,
         "mastery": "Nick",
@@ -378,7 +378,7 @@
     "Shortbow": {
         "addModToDamage": true,
         "modifierIndex": 1,
-        "damageType": "Piercing",
+        "damageType": "piercing",
         "damage": "d6",
         "rang": 80,
         "mastery": "Vex",
@@ -388,7 +388,7 @@
         "castTime": "ba",
         "addModToDamage": false,
         "modifierIndex": 0,
-        "damageType": "Slashing",
+        "damageType": "slashing",
         "damage": "d6",
         "finesse": true,
         "note": "You must have already made a Shortsword attack this turn.",
@@ -397,7 +397,7 @@
     "Shortsword": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Piercing",
+        "damageType": "piercing",
         "damage": "d6",
         "finesse": true,
         "mastery": "Vex",
@@ -406,7 +406,7 @@
     "Sickle": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Slashing",
+        "damageType": "slashing",
         "damage": "d4",
         "mastery": "Nick",
         "type": "attack"
@@ -414,7 +414,7 @@
     "Sling": {
         "addModToDamage": true,
         "modifierIndex": 1,
-        "damageType": "Bludgeoning",
+        "damageType": "bludgeoning",
         "damage": "d4",
         "rang": 30,
         "mastery": "Slow",
@@ -423,7 +423,7 @@
     "Spear": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Piercing",
+        "damageType": "piercing",
         "damage": "d6",
         "thrown": 20,
         "versatile": "d8",
@@ -433,7 +433,7 @@
     "Staff": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Bludgeoning",
+        "damageType": "bludgeoning",
         "damage": "d6",
         "versatile": "d8",
         "type": "attack"
@@ -454,7 +454,7 @@
     "Trident": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Piercing",
+        "damageType": "piercing",
         "damage": "d8",
         "thrown": 20,
         "versatile": "d10",
@@ -464,7 +464,7 @@
     "War Pick": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Piercing",
+        "damageType": "piercing",
         "damage": "d8",
         "versatile": "d10",
         "mastery": "Sap",
@@ -473,7 +473,7 @@
     "Warhammer": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Bludgeoning",
+        "damageType": "bludgeoning",
         "damage": "d8",
         "versatile": "d10",
         "mastery": "Push",
@@ -482,7 +482,7 @@
     "Whip": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Slashing",
+        "damageType": "slashing",
         "damage": "d4",
         "finesse": true,
         "reach": true,
@@ -1400,7 +1400,7 @@
         "type": "text",
         "contents": [
             "",
-            "Your Punches deal Bludgeoning or Force damage ",
+            "Your Punches deal bludgeoning or Force damage ",
             ""
         ]
     },

@@ -119,17 +119,17 @@ def getSpellSlotHTMLString(listOfResourcesAndCounts):
     return s
 
 def validateInt(i, defaultValue, minimum=None,maximum=None):
-        try:
-            a = int(i)
-            if minimum!=None:
-                if a<minimum:
-                    a = defaultValue
-            if maximum!=None:
-                if a>maximum:
-                    a = defaultValue
-            return a
-        except:
-            a = defaultValue
+    try:
+        a = int(i)
+        if minimum!=None:
+            if a<minimum:
+                a = defaultValue
+        if maximum!=None:
+            if a>maximum:
+                a = defaultValue
+        return a
+    except:
+        a = defaultValue
 
 def validateString(s, defaultValue=""):
     
@@ -159,11 +159,4 @@ def validateIntList(l, defaultValue, length=None, minimum=None,maximum=None):
     else:
         return [defaultValue]*length
 
-
-def validateBoolean(b,default=False):
-    try:
-        a = bool(b)
-        return a
-    except:
-        return default
  

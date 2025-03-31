@@ -21,12 +21,12 @@ function showHelp(){
 };
 
 function showInventory(){
-    showIDList(["hideInventoryButton", "inventory", "shoppingList", "gearList"]);
+    showIDList(["hideInventoryButton", "inventory", "shoppingList", "gearList","bonusGold"]);
     hideIDList(["showInventoryButton"]);
 
 };
 function hideInventory(){
-    hideIDList(["hideInventoryButton", "inventory", "shoppingList", "gearList"]);
+    hideIDList(["hideInventoryButton", "inventory", "shoppingList", "gearList","bonusGold"]);
     showIDList(["showInventoryButton"]);
 
 };

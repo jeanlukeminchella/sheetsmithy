@@ -33,7 +33,7 @@ class Sheet:
         self.showShortRest = inp["showShortRest"]
         self.showLongRest = inp["showLongRest"]
         self.seed = inp["seed"]
-        self.showPhysicalDamageTypes = False
+        self.showPhysicalDamageTypes = inp["showPhysicalDamageTypes"]
         
         self.skillProficiencies = []
         self.skillExpertises = []
@@ -129,6 +129,7 @@ class Sheet:
         self.size = None
         # all backgrounds get 50gp
         self.gp = 50
+        self.gp+=inp["bonusGold"]
             
         self.hp = 0
         if self.level>3:
@@ -686,7 +687,8 @@ class Sheet:
         copper = silver%1
         copper=copper*10
         copper=int(copper)
-
+        silver = int(silver)
+        print("g,s,c is ",gold," ",silver," ",copper)
         if gold>0:   
             self.addItemToInventory(str(gold)+"gp")
         if silver>0:   
