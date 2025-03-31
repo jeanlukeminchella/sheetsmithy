@@ -13,7 +13,7 @@ class Barbarian(c.Sheet):
         self.defaultMod = 0
         self.proficientWithShields = True
         
-        self.loadScoresAndMods([15,14,13,10,10,10],inp)
+        self.loadScoresAndMods([15,14,13,8,12,10],inp)
         self.attributePriorityList = [0,2,1,4,3,0]
         self.preferredBackgrounds = ["Soldier","Farmer"]
 

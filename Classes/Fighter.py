@@ -10,7 +10,7 @@ class Fighter(c.Sheet):
         self.defaultMod = 0
         
         
-        self.loadScoresAndMods([15,13,14,10,10,10],inp)
+        self.loadScoresAndMods([15,13,14,8,12,10],inp)
         
         dexBased = False
         if self.scores[1]>self.scores[0]:

@@ -12,7 +12,7 @@ class Druid(c.Sheet):
         self.saveProficiencies = [3,4]
         self.defaultMod = 4
         
-        self.loadScoresAndMods([10,14,13,10,15,10],inp)
+        self.loadScoresAndMods([12,14,13,10,15,8],inp)
 
 
         strengthOverDex = False

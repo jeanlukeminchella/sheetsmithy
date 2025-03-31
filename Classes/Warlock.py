@@ -10,7 +10,7 @@ class Warlock(c.Sheet):
         self.saveProficiencies = [4,5]
         self.defaultMod = 5
         
-        self.loadScoresAndMods([10,13,14,10,10,15],inp)
+        self.loadScoresAndMods([8,13,14,10,12,15],inp)
 
 
         strengthOverDex = False

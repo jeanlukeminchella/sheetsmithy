@@ -32,7 +32,13 @@ function hideInventory(){
 };
 
 function loadCoreOptions(){
-    showIDList(["name","background","classAsString","race"])
+    showIDList(["name","background","classAsString","race"]);
+    const checkBoxes = ["showScores","showShortRest","showLongRest","showPhysicalDamageTypes" ]
+    for (let i = 0; i < checkBoxes.length; i++) {
+        
+        document.getElementById(checkBoxes[i]).disabled=false 
+        
+    };
 };
 
 function showID(id){
@@ -63,6 +69,21 @@ function setSeed(){
 function wrapUp(){
     ids = ["name","classAsString","race","background"];
     ids.forEach(disableIDIfBlank);
+
+    const booleanIds = ["showScores","showShortRest","showLongRest","showPhysicalDamageTypes" ];
+    const booleansDefaultValues = [false,true,true,true];
+
+    for (let i = 0; i < booleanIds.length; i++) {
+        console.log(i)
+        console.log(booleanIds[i])
+        console.log(document.getElementById(booleanIds[i]))
+        if(document.getElementById(booleanIds[i]).value=="off" && booleansDefaultValues[i]==false){
+            document.getElementById(booleanIds[i]).disabled=true 
+        };
+        if(document.getElementById(booleanIds[i]).value=="on" && booleansDefaultValues[i]==true){
+            document.getElementById(booleanIds[i]).disabled=true 
+        };
+    };
 };
 
 

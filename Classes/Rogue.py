@@ -9,7 +9,7 @@ class Rogue(c.Sheet):
         self.saveProficiencies = [1,3]
         self.defaultMod = 1
 
-        self.loadScoresAndMods([10,15,14,10,13,10],inp)
+        self.loadScoresAndMods([8,15,14,10,13,12],inp)
         self.attributePriorityList = [1,2,4,5,3,0]
         self.preferredBackgrounds = ["Charlatan","Criminal","Scribe","Soldier","Wayfarer"]
         

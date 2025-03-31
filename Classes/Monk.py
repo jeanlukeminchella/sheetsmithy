@@ -7,7 +7,7 @@ class Monk(c.Sheet):
         self.saveProficiencies = [0,1]
         self.defaultMod = 1
         
-        self.loadScoresAndMods([10,15,13,10,14,10],inp)
+        self.loadScoresAndMods([10,15,13,8,14,12],inp)
         self.attributePriorityList = [1,2,4,5,0,3]
         
         self.preferredBackgrounds = ["Soldier","Charlatan","Criminal"]

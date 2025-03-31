@@ -10,7 +10,7 @@ class Paladin(c.Sheet):
         self.hitDie = 10
         self.saveProficiencies = [4,5]
         self.defaultMod = 0
-        self.loadScoresAndMods([15,10,14,10,10,13],inp)
+        self.loadScoresAndMods([15,12,14,8,10,13],inp)
         
         self.attributePriorityList = [0,5,2,1,4,3]
         self.preferredBackgrounds = ["Noble"]
