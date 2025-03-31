@@ -1,13 +1,8 @@
  
- 
- - handle spell commands that dont match, let users input?
- - more backgrounds obviously
- - sort out the ranger feats (?)
  - the core booleans dont need sending everytime, dont show if on default?
  - cause an issue when we have 2h weapon and a shield
  - print the buildlog?
  - race doc needs renaming to species and sorting out, lots of spagetti code ect
  - feat file needs streamlining a lot, checking for duplicates ect. 
  - make spellcasting block should use addEntry  
- - clean up armors?
 

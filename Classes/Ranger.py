@@ -41,14 +41,18 @@ class Ranger(c.Sheet):
 
         self.actions.append({"id":"Hide"})
 
-        self.charInfos.append("Favoured Enemy: ___________________ <br><em>Adv. on tracking & lore checks.</em>")
-        self.numberOfLanguages+=2
         
         if self.level in [1,2,3,4]:
-            self.spellPriorityList = ["Cure Wounds","Hunter's Mark","Entangle","Jump"]
+            self.spellPriorityList = ["Cure Wounds","Entangle","Jump"]
         else:
             self.spellPriorityList = ["Cure Wounds","Spike Growth","Jump","Hunter's Mark","Lesser Restoration","Entangle"]
             
+        note = " You can cast this without a spell slot twice. </em> O O<em>"
+        if self.level>4:
+
+            note = " You can cast this without a spell slot three times. </em> O O O<em>"
+        self.bonusActionEntries.append({"id":"Hunter's Mark","note":note})
+        self.longRestEntries.append("Regain your free castings of <strong>Hunter's Mark</strong>.")
         resourceDictionary = {
             1:[["Spell",2]],
             2:[["Spell",2]],
@@ -72,6 +76,8 @@ class Ranger(c.Sheet):
         self.showSpellRestriction=True
 
         if level>1:
+            self.numberOfLanguages+=2
+        
             fightStyle = None
             if "fightStyle" in self.choices.keys():
                 fightStyle = self.choices["fightStyle"]
@@ -144,11 +150,12 @@ class Ranger(c.Sheet):
         self.skillProficiencies.append(self.pickSkillProficiency([1,3,6,7,10,11,16,17]))
         self.skillProficiencies.append(self.pickSkillProficiency([1,3,6,7,10,11,16,17]))
         
-        # deft explorer - expertise in stealth
-        if 16 in self.skillProficiencies:
-            self.skillExpertises.append(16)
-        else:
-            self.skillExpertises.append(self.skillProficiencies[0])
+        if level>1:
+            # deft explorer - expertise in stealth
+            if 16 in self.skillProficiencies:
+                self.skillExpertises.append(16)
+            else:
+                self.skillExpertises.append(self.skillProficiencies[0])
             
         
         
