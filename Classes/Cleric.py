@@ -11,7 +11,7 @@ class Cleric(c.Sheet):
         self.saveProficiencies = [4,5]
         self.defaultMod = 4
         
-        self.loadScoresAndMods([10,13,14,10,15,10],inp)
+        self.loadScoresAndMods([12,13,14,8,15,10],inp)
 
 
         strengthOverDex = False
@@ -215,11 +215,14 @@ class Cleric(c.Sheet):
         
 
         # add a weapon for the opp attacks.
-        self.wearingShield = True
         
         if self.martialProficiency:
             if strengthOverDex:
-                self.wishlist.append("Longsword")
+                if self.wearingShield:
+                    self.wishlist.append("Maul")
+
+                else:
+                    self.wishlist.append("Longsword")
             else:
                 self.wishlist.append("Rapier")
         else:

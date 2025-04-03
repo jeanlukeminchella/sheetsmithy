@@ -1,5 +1,6 @@
 
  - cause an issue when we have 2h weapon and a shield
+ - the shield situation is a bit of a mess
  - print the buildlog?
  - race doc needs renaming to species and sorting out, lots of spagetti code ect
  - feat file needs streamlining a lot, checking for duplicates ect. 

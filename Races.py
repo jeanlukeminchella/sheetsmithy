@@ -281,7 +281,7 @@ def goliath(c, choice):
     elif choice["subrace"]=="Hill":
         c.raceString = "Goliath (Hill)"
         c.charInfos.append("Knock a Large or smaller target Prone when you land an attack. "+count)
-        c.longRestEntries.append("Regain all uses of your uses of Knocking targets Prone <em>(Hill Goliath)</em>")
+        c.longRestEntries.append("Regain all uses of knocking targets Prone <em>(Hill Goliath)</em>")
     elif choice["subrace"]=="Stone":
         c.raceString = "Goliath (Stone)"
         c.reactions.append("<strong>Stone's Endurance. </strong>Reduce incoming damage by d12"+gf.getSignedStringFromInt(c.modifiers[2])+". "+count)
