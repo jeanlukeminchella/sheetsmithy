@@ -224,7 +224,7 @@ class Cleric(c.Sheet):
                 else:
                     self.wishlist.append("Maul")
             else:
-                if self.wearingShield and self.modifiers[1]=self.modifiers[0]:
+                if self.wearingShield and self.modifiers[1]==self.modifiers[0]:
                     self.wishlist.append("Maul")
                 else:
 
