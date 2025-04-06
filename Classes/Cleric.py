@@ -219,12 +219,16 @@ class Cleric(c.Sheet):
         if self.martialProficiency:
             if strengthOverDex:
                 if self.wearingShield:
-                    self.wishlist.append("Maul")
 
-                else:
                     self.wishlist.append("Longsword")
+                else:
+                    self.wishlist.append("Maul")
             else:
-                self.wishlist.append("Rapier")
+                if self.wearingShield and self.modifiers[1]=self.modifiers[0]:
+                    self.wishlist.append("Maul")
+                else:
+
+                    self.wishlist.append("Rapier")
         else:
             if strengthOverDex:
                 self.wishlist.append("Mace")
