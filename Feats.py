@@ -132,8 +132,24 @@ def greatWeaponFighting(c):
         c.buildLog.append(logText)
         c.charInfos.append("When you roll damage for an attack you make with a Melee weapon that you are holding with two hands, you can treat any 1 or 2 on a damage die as a 3.")
 
+def crusher(c):
+    logText = "You have the Crusher feat"
+    if featAlreadyTaken(c,logText):
+        skilled(c)
+    else:
+        c.buildLog.append(logText)
+        pushText = "Once per turn, push a Large or smaller creatue you have hit with bludgeoning damage 5ft."
+        if c.size=="small":
+            pass
+        c.charInfos.append("When you roll damage for an attack you make with a Melee weapon that you are holding with two hands, you can treat any 1 or 2 on a damage die as a 3.")
+        c.charInfos.append("When you roll damage for an attack you make with a Melee weapon that you are holding with two hands, you can treat any 1 or 2 on a damage die as a 3.")
+
+
 def featAlreadyTaken(c,logText):
     return logText in c.buildLog
+
+
+
 
 Feats = {
     "addStr":addStr,
