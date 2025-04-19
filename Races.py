@@ -58,6 +58,7 @@ def tiefling(c,choice):
             d["modifierIndex"] = bestMod
             d = e.getExpandedDictionary(d)
             d["preSaveItalicText"] += freeCastText
+            
             c.actions.append(d)
     if choice["subrace"]=="Abyssal":
         c.addResistance("Poison")

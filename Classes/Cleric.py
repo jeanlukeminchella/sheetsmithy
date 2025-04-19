@@ -24,7 +24,7 @@ class Cleric(c.Sheet):
         if strengthOverDex:
             self.preferredBackgrounds = ["Guard","Farmer"]
         else:
-            self.preferredBackgrounds = ["Wayfarer","Scribe"]
+            self.preferredBackgrounds = ["Wayfarer","Scribe","Hermit"]
             
 
         super().__init__(inp)

@@ -12,7 +12,7 @@ class Druid(c.Sheet):
         self.saveProficiencies = [3,4]
         self.defaultMod = 4
         
-        self.loadScoresAndMods([12,14,13,10,15,8],inp)
+        self.loadScoresAndMods([12,13,14,10,15,8],inp)
 
 
         strengthOverDex = False
@@ -26,7 +26,7 @@ class Druid(c.Sheet):
         if strengthOverDex:
             self.preferredBackgrounds = ["Guard","Farmer"]
         else:
-            self.preferredBackgrounds = ["Wayfarer","Scribe"]
+            self.preferredBackgrounds = ["Wayfarer","Scribe","Hermit"]
         
 
         super().__init__(inp)
