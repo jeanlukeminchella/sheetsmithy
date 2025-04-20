@@ -166,6 +166,9 @@ def makeSheet():
 
     choicesDic = {}
 
+    if "land" in keys:    
+        choicesDic["land"]=d["land"]
+
     possibleFeatChoices = ["fightStyle","l4-feat"]
 
     for choice in possibleFeatChoices:
@@ -198,6 +201,8 @@ def makeSheet():
         print("issue handling subclass")  
     if len(choicesDic.keys())>0:
         inp["choices"]=choicesDic
+
+    
 
     attributes =  ["str","dex","con","int","wis","cha"]
     scores = []

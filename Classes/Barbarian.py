@@ -39,9 +39,10 @@ class Barbarian(c.Sheet):
         self.addEntry("Grapple")
         
         rageTitle = "RAGE"
+        rageEntry = ["Enter RAGE. ","See RAGE for the full effects."+" O"*getRageCount(level),""]
         self.longRestEntries.append("Regain all your uses of <strong>RAGE</strong>")
         self.shortRestEntries.append("Regain one use of <strong>RAGE</strong>")
-        self.bonusActionEntries.append(["Enter RAGE. ","See RAGE for the full effects."+" O"*getRageCount(level),""])
+        self.bonusActionEntries.append(rageEntry)
         self.bonusActionEntries.append(["Maintain RAGE. ","","Not required if you have attacked or caused a saving throw this turn."])
         
         subclassChoice = None
@@ -88,6 +89,23 @@ class Barbarian(c.Sheet):
                 
                 if level>5:
                     rageTexts.append("• You cannot be Charmed or Frightened while in a rage.")
+            elif self.subclass  == "worldTree":
+                self.classAsString = "Barbarian (World Tree)"
+                rageTexts.append("• Gain "+str(self.level)+" temporary hp when entering Rage.")
+                rageTexts.append("• At the start of each of your turns during Rage, give an ally within 10ft 2d6 temporary hp. They disappear when your Rage ends.")
+                if level>5:
+                    self.reactions.append({"id":"Branches of the Tree"})
+            
+            elif self.subclass  == "zealot":
+                self.classAsString = "Barbarian (Zealot)"
+                rageTexts.append("• The first creature you hit on your turn takes an extra d6+"+str(int(self.level/2))+" radiant / necrotic damage.")
+                healCount = "O O O O"
+                if self.level>5:
+                    healCount+=" O"
+                self.bonusActionEntries.append(["Warrior of the Gods.","Spend d12s ("+healCount+") to regain that much hp."])
+                self.longRestEntries.append("Regain your pool of d12s in <strong>Warrior of the Gods</strong>.")
+                if level>5:
+                    rageTexts.append("• Once per Rage when you fail a saving throw, you can reroll it with a +2 bonus, and you must use the new roll. O")
 
                 
             elif self.subclass  == "wildHeart" or not chosen:

@@ -45,7 +45,7 @@
     "Chill Touch": {
         "damage": "d10",
         "addModToDamage": false,
-        "damageType": "Necrotic",
+        "damageType": "necrotic",
         "cantripScaling": true,
         "saveNotAttack": false,
         "note": "Target cannot regain hp until end of your next turn.",
@@ -103,6 +103,27 @@
         "cantripScaling": true,
         "saveNotAttack": false,
         "useSpellcastingMod": true,
+        "type": "attack"
+    },
+    "Ray of Frost": {
+        "damage": "d8",
+        "rang": 60,
+        "addModToDamage": false,
+        "damageType": "cold",
+        "cantripScaling": true,
+        "saveNotAttack": false,
+        "useSpellcastingMod": true,
+        "note":"Target's speed -10ft until start of your next turn.",
+        "type": "attack"
+    },
+    "Shocking Grasp": {
+        "damage": "d8",
+        "addModToDamage": false,
+        "damageType": "lightning",
+        "cantripScaling": true,
+        "saveNotAttack": false,
+        "useSpellcastingMod": true,
+        "note":"Target cannot make Opportunity Attacks until the start of its next turn.",
         "type": "attack"
     },
     "Flail": {
@@ -621,6 +642,15 @@
         "postSaveNormalText": " to half damage.",
         "type": "spell"
     },
+    "Daylight": {
+        "rang": 60,
+        "cost": "3",
+        "duration":"1 hour",
+        "preSaveNormalText": "Bright Sunlight spreads 60ft from a point within range and Dim light 60ft beyond that. ",
+        "postSaveNormalText": " to half damage.",
+        "preSaveItalicText":"Magical darkness of level 3 or lower is dispelled.",
+        "type": "spell"
+    },
     "Goodberry": {
         "cost": "1",
         "duration": "24 hours",
@@ -641,6 +671,12 @@
         "duration": "1 min",
         "preSaveNormalText": "Once per turn, target can jump 30ft with 10ft of movement.",
         "castTime": "ba",
+        "type": "spell"
+    },
+    "See Invisibility": {
+        "cost": "2",
+        "duration": "1 hour",
+        "castTime": "a",
         "type": "spell"
     },
     "Longstrider": {
@@ -797,6 +833,17 @@
         "useSpellcastingMod": true,
         "type": "spell"
     },
+    "Fog Cloud": {
+        "conc": true,
+        "cost": "1",
+        "rang": 90,
+        "duration": "1 hour",
+        "preSaveNormalText": "40ft ball of fog originates from a point. Object are Heavily Obscured inside.",
+        "preSaveItalicText": "Dispersed by strong wind.",
+        "type": "spell"
+    },
+    
+    
     "Focused Aim": {
         "preSaveNormalText": " When you miss with an attack roll, you can spend 1 to 3 ki points to increase your attack roll by 2 for each.",
         "useSpellcastingMod": true,
@@ -828,7 +875,7 @@
         "cost": "2",
         "duration": "1 hour",
         "conc": true,
-        "preSaveNormalText": "A creature you touch has the Invisible condition until the spell ends. The spell ends early immediately after the target makes an attack roll, deals damage, or casts a spell.",
+        "preSaveNormalText": "A creature you touch has the Invisible condition until the spell ends. The spell ends if the target makes an attack roll, deals damage, or casts a spell.",
         "type": "spell"
     },
     "Hold Person": {
@@ -930,6 +977,24 @@
         "useSpellcastingMod": true,
         "type": "spell"
     },
+    "Charm Person": {
+        "cost": "1",
+        "rang":30,
+        "duration": "1 hour",
+        "preSaveNormalText": "Target is Charmed and friendly to you unless your allies damage them. WIS",
+        "postSaveNormalText": " to resist",
+        "preSaveItalicText": "Target rolls with advantage if you or allies are fighting it. When the spell ends, the target knows it was Charmed by you.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Disguise Self": {
+        "cost": "1",
+        "rang":30,
+        "duration": "1 hour",
+        "preSaveNormalText": "You make yourself look different until the spell ends. Does not hold up to physical inspection. Investigation Check DC",
+        "postSaveNormalText": " to discern you are disguised.",
+        "type": "spell"
+    },
     "Revivify": {
         "cost": "3",
         "preSaveNormalText": "You touch a creature that has died within the last minute. They return to life with 1 hp.",
@@ -964,6 +1029,17 @@
         "rang": 60,
         "duration": "10 min",
         "castTime": "ba",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Sleep": {
+        "cost": "1",
+        "preSaveNormalText": "Creatures in a 10ft ball are Incapacitated until the end of their next turn. WIS",
+        "postSaveNormalText": " to resist. Ends if target takes damage or is shaken awake with an Action. At the end of their next turn, they repeat the save, dropping Unconcious on a failure.",
+        "preSaveItalicText": "Does not affect Elves and those immune to Exhaustion.",
+        "rang": 60,
+        "conc":true,
+        "duration": "1 min",
         "useSpellcastingMod": true,
         "type": "spell"
     },
@@ -1011,6 +1087,38 @@
         "preSaveNormalText": "You radiate a 30ft aura. You and allies within it deal +d4 radiant damage with weapons.",
         "type": "spell"
     },
+    "Sleet Storm": {
+        "cost": "3",
+        "rang":150,
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": "Summon a 40ft by 40ft cylinder of sleet. Area is Difficult Terrain and Heavily Obscured. DEX",
+        "postSaveNormalText":" to not be Prone and lose concentration.",
+        "type": "spell"
+    },
+    "Lightning Bolt": {
+        "cost": "3",
+        "preSaveNormalText": "A 100ft line of 8d6 lightning damage blasts from you. DEX",
+        "postSaveNormalText":" to half damage.",
+        "type": "spell"
+    },
+    "Hypnotic Pattern": {
+        "cost": "3",
+        "rang":120,
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": "Creatures in a 30ft cube are Charmed, Incapacitated and have a speed of 0. WIS ",
+        "postSaveNormalText": " to resist. Targets can be awoken with an Action or if they take damage.",
+        "type": "spell"
+    },
+    "Nondetection": {
+        "cost": "3",
+        "duration": "8 hours ",
+        "conc": true,
+        "preSaveNormalText": "Target cannot be targeted by any Divination spell or perceived through magical scrying sensors.",
+        "preSaveItalicText": " Consumes 25gp of diamond dust.",
+        "type": "spell"
+    },
     "Stun": {
         "preSaveNormalText": "When you hit with a melee attack, spend 1 Focus to Stun target until your next turn. CON",
         "postSaveNormalText": " to resist.",
@@ -1035,6 +1143,22 @@
         "preSaveNormalText": "STR",
         "postSaveNormalText": " to resist.",
         "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Radiance of the Dawn": {
+        "rang":30,
+        "preSaveNormalText": "Enemies within range take 2d10 radiant damage. CON",
+        "postSaveNormalText": " to half damage.",
+        "preSaveItalicText": " Magical darkness within range is dispelled.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Invoke Duplicity": {
+        "rang":30,
+        "cost":"c",
+        "duration":"1 min",
+        "preSaveNormalText": "Summon a perfect visual illusion of yourself. You can cast spells originating from the illusion. If you are both within 5ft of a target you have advantage on attack rolls.  ",
+        "preSaveItalicText": " Ends if you are Incapacitated or dismiss the illusion at any time. Can be moved 30ft with a Bonus Action, to a space within 120ft of you",
         "type": "spell"
     },
     "Thunderous Smite": {
@@ -1082,6 +1206,14 @@
         "preSaveNormalText": " Creatures in a 30ft sphere cannot lie. CHAR",
         "postSaveNormalText": " to resist, and you know if targets have passed.",
         "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Branches of the Tree": {
+        "rang": 30,
+        "preSaveNormalText": " When a creature starts its turn within 30ft, teleport it to within 5ft of you. STR",
+        "postSaveNormalText": " to resist.",
+        "preSaveItalicText":"You may also choose to reduce its speed to 0 until it ends its turn.",
+        "modifierIndex":0,
         "type": "spell"
     },
     "blank": {
@@ -1481,6 +1613,22 @@
         "contents": [
             "Circle of the Land - Arid.",
             "You get one free casting of either Fireball, Burning Hands or Blur. O ",
+            ""
+        ]
+    },
+    "Natural Recovery - polar": {
+        "type": "text",
+        "contents": [
+            "Circle of the Land - Polar.",
+            "You get one free casting of either Fog Cloud, Hold Person or Sleet Storm. O ",
+            ""
+        ]
+    },
+    "Natural Recovery - temperate": {
+        "type": "text",
+        "contents": [
+            "Circle of the Land - Temperate.",
+            "You get one free casting of Misty Step, Sleep or Lightning Bolt. O ",
             ""
         ]
     },

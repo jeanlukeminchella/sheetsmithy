@@ -148,8 +148,58 @@ class Cleric(c.Sheet):
                     self.actions.append({"id":"Spirit Guardians"})
 
                 if self.level>5:
-                    self.notesForSpellCastingBlock.append("You can use your Channel Divinity to cast Shield of Faith or Spiritual Weapon. When cast this way, the spell doesn't require Concentration and lasts 1 min.")
+                    self.notesForSpellCastingBlock.append("You can use a Channel Divinity to cast Shield of Faith or Spiritual Weapon. When cast this way, the spell doesn't require Concentration and lasts 1 min.")
+            
+            
+            if self.subclass == "light":
+                
+                self.classAsString="Cleric (of Light)"
+                subclassChosen = True
 
+                self.addEntry("Burning Hands")
+                self.addEntry("Faerie Fire")
+                self.addEntry("Scorching Ray")
+                self.addEntry("See Invisibility")
+                channelDivinityActionEntries.append({"id":"Radiance of the Dawn"})
+                wardingFlareEntry= ["Warding Flare (30ft).","Before a creature makes an attack roll, impose disadvantage on it.",""]
+                self.reactions.append(wardingFlareEntry)
+                
+                if self.level>4:
+                    self.actions.append({"id":"Fireball"})
+                    self.actions.append({"id":"Daylight"})
+
+                if self.level>5:
+                    self.showUpcasting=True
+                    self.shortRestEntries.append("Regain all your <strong>Warding Flares</strong>.")
+                    
+                    wardingFlareEntry[2]=" You may also give target of attack 2d6+"+str(self.modifiers[4])+" temporary hp."
+                else:
+                    self.longRestEntries.append("Regain all your <strong>Warding Flares</strong>.")
+                wardingFlareEntry[2]+="</em>" +" O"*self.modifiers[4]+"<em>"
+            if self.subclass == "trickery":
+
+                self.classAsString="Cleric (of Trickery)"
+                subclassChosen = True
+                weHaveChannelDivinityThatIsNotAnAction=True
+
+                self.addEntry("Charm Person")
+                self.addEntry("Disguise Self")
+                self.addEntry("Pass without Trace")
+                self.addEntry("Invisibility")
+                self.actions.append(["Blessing of the Trickster (30ft).","Choose a creature to have advantage on stealth checks.","This effect ends if you cast it on someone else or finish a Long Rest."])
+
+                
+                duplicityEntry = {"id":"Invoke Duplicity"}
+                if self.level>5:
+                    duplicityEntry["note"]=", during which you can swap places."
+                else:
+                    duplicityEntry["note"]="."
+                self.bonusActionEntries.append(duplicityEntry)
+               
+                if self.level>4:
+                    self.actions.append({"id":"Hypnotic Pattern"})
+                    self.actions.append({"id":"Nondetection"})
+                
             if self.subclass == "life" or not subclassChosen:
                 
                 self.subclass = "life"

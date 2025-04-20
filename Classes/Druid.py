@@ -155,7 +155,7 @@ class Druid(c.Sheet):
                 landsAid["preSaveItalicText"] = " Choose an ally within sphere to regain 2d6 hp. "
                 self.actions.append(landsAid)
 
-                lands = ["arid"]
+                lands = ["arid","polar","temperate"]
                 land = lands[0]
 
                 if "land" in self.choices.keys():
@@ -170,8 +170,27 @@ class Druid(c.Sheet):
                         self.addEntry("Fireball")
                     if self.level>5:
                         self.notesForSpellCastingBlock.append({"id":"Natural Recovery - arid"})
-                else: 
-                    pass
+                elif land == lands[1]:
+
+                    self.addEntry("Fog Cloud")
+                    self.addEntry("Hold Person")
+                    self.addEntry("Ray of Frost",False)
+
+                    if self.level>4:
+                        self.addEntry("Sleet Storm")
+                    if self.level>5:
+                        self.notesForSpellCastingBlock.append({"id":"Natural Recovery - polar"})
+                        
+                elif land == lands[2]:
+
+                    self.addEntry("Misty Step")
+                    self.addEntry("Shocking Grasp",False)
+                    self.addEntry("Sleep")
+
+                    if self.level>4:
+                        self.addEntry("Lightning Bolt")
+                    if self.level>5:
+                        self.notesForSpellCastingBlock.append({"id":"Natural Recovery - temperate"})  
 
                 if self.level>5:
                     self.longRestEntries.append("Regain your <strong>Circle of the Land</strong> free casting.")
