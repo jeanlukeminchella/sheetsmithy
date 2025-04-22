@@ -41,13 +41,21 @@ def getHTMLFromInput(d):
     race = inp["race"]
 
     if race=={}:
-        races = [{"name":"human"},{"name":"gnome"},{"name":"tiefling"},{"name":"elf"},{"name":"goliath"},{"name":"aasimar"},{"name":"halfling"},{"name":"orc"},{"name":"dwarf"}]
+        races = [{"name":"human"},{"name":"gnome","subrace":"Forest"},{"name":"gnome","subrace":"Rock"},{"name":"tiefling","subrace":"Abyssal"},{"name":"tiefling","subrace":"Infernal"},{"name":"tiefling","subrace":"Chthonic"},{"name":"elf","subrace":"High"},{"name":"elf","subrace":"Drow"},{"name":"elf","subrace":"Wood"},{"name":"aasimar"},{"name":"halfling"},{"name":"halfling"},{"name":"orc"},{"name":"dwarf"},{"name":"dwarf"}]
+        
+        goliathSubraces = ["Cloud","Fire","Frost","Hill","Stone","Storm"]
+        
+        for g in goliathSubraces:
+            races.append({"name":"goliath","subrace":g})
+        print("race count is ",len(races))
+
         cIndex = inp["seed"]%(len(races))
         inp["race"] = races[cIndex]
 
     c = inp["classAsString"]
     if c=="":
-        classes = ["Fighter","Rogue","Monk","Barbarian","Ranger","Paladin","Cleric"]
+        classes = ["Fighter","Rogue","Monk","Druid","Barbarian","Ranger","Paladin","Cleric"]
+        print("class count is ",len(classes))
         cIndex = inp["seed"]%(len(classes))
         c = classes[cIndex]
         inp["classAsString"] = classes[cIndex]

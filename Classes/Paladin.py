@@ -85,7 +85,7 @@ class Paladin(c.Sheet):
             
         if level>2:
 
-            self.bonusActionEntries.append("<strong>Divine Sense ("+channelDivinityText+", 10 mins) </strong> You know the location of any celestial, fiend, or undead within 60 feet, or any area that is desecrated or concecrated.")
+            self.bonusActionEntries.append("<strong>Divine Sense ("+channelDivinityText+", 10 mins). </strong> You know the location of any celestial, fiend, or undead within 60 feet, or any area that is desecrated or concecrated.")
             
             subclassChosen = False
             

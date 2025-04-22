@@ -194,7 +194,7 @@ def orc(c, choice):
     adrenalineRushText += " temporary hp."
     for i in range(c.profBonus):
         adrenalineRushText += " O"
-    if c.hideShortRest:
+    if not c.hideShortRest:
         c.shortRestEntries.append("Regain all your uses of <strong>Adrenaline Rush</strong>")
     else:
         adrenalineRushText += "<em> Regain all uses on a short rest</em>"

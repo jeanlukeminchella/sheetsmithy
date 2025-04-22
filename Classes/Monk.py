@@ -136,10 +136,10 @@ class Monk(c.Sheet):
                 wholenessOfBody = {"id":"Wholeness of Body","type":"spell","expanded":True,"conc":False,"ritual":False}
                 wholenessOfBody["preSaveNormalText"]="Regain "+getMartialArtsDie(self.level)+"+"+str(self.modifiers[4])+" hp. "
                 wholenessOfBody["preSaveNormalText"]+=" O"*self.modifiers[4]
-                if self.hideLongRest:
+                if not self.hideLongRest:
                     self.longRestEntries.append("Regain all uses of <strong>Wholenes Of Body</strong>")
                 else:
-                    wholenessOfBody.preSaveItalicText="Regain all uses on a Long Rest"
+                    wholenessOfBody["preSaveItalicText"]="Regain all uses on a Long Rest"
                 self.bonusActionEntries.append(wholenessOfBody)
             if self.subclass =="shadow":
                 self.bonusActionEntries.append({"id":"Shadow Step"})
@@ -164,7 +164,7 @@ class Monk(c.Sheet):
         fastAction = "Take a <strong>Fast Action.</strong> <em>See Fast Action Options.</em>"
         self.actions.append(fastAction)
         self.bonusActionEntries.append(fastAction)
-        self.rightColumnBlocks.append(c.e.Block(fastActions,"FAST ACTION OPTIONS"))
+        self.middleColumnBlocks.append(c.e.Block(fastActions,"FAST ACTION OPTIONS"))
     
         self.skillProficiencies.append(self.pickSkillProficiency([0,3,5,6,14,16]))
         self.skillProficiencies.append(self.pickSkillProficiency([0,3,5,6,14,16]))
