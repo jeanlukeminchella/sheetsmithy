@@ -174,8 +174,7 @@ def makeSheet():
 
     choicesDic = {}
 
-    if "land" in keys:    
-        choicesDic["land"]=d["land"]
+
 
     possibleFeatChoices = ["fightStyle","l4-feat"]
 
@@ -204,6 +203,7 @@ def makeSheet():
             choicesDic["subclass"]=d["clericSubclass"]
         if inp["classAsString"]=="Druid":
             choicesDic["primalOrder"]=d["primalOrder"]
+            choicesDic["subclass"]=d["druidSubclass"]
     except:
         pass
         print("issue handling subclass")  

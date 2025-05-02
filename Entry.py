@@ -97,8 +97,6 @@ def getExpandedDictionary(e):
         return expandedDictionary
     
     #  weve now got a dictionary with an "id" key
-
-
     if not e["id"]in allEntries.keys():
         #got an id here that doesnt work
         #print("given ID here that doesnt load an entry",e["id"]," by entry ",e)
@@ -112,7 +110,7 @@ def getExpandedDictionary(e):
             expandedDictionary[k]=loadedDictionary[k]
 
     # lets add everything useful from the entry into the expanded dictionary, overwriting anything loaded from allEntries
-    keysToKeep = ["id","castTime","cost","duration","title","rang","cost","duration","conc","castTime","modifierIndex","preHealText","postHealText","healingBonus","damage","addModToDamage","damageType","cantripScaling","saveNotAttack","resistAttributeText","resistText","note","finesse","reach","versatile","thrown","mastery","preSaveNormalText","postSaveNormalText","preSaveItalicText","postSaveItalicText","ritual","useSpellcastingMod"]
+    keysToKeep = ["id","castTime","cost","contents","duration","title","rang","cost","duration","conc","castTime","modifierIndex","preHealText","postHealText","healingBonus","damage","addModToDamage","damageType","cantripScaling","saveNotAttack","resistAttributeText","resistText","note","finesse","reach","versatile","thrown","mastery","preSaveNormalText","postSaveNormalText","preSaveItalicText","postSaveItalicText","ritual","useSpellcastingMod"]
     
     for key in keysToKeep:
         if key in keys:

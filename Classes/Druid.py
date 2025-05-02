@@ -129,23 +129,43 @@ class Druid(c.Sheet):
 
         longRestRegainString = ""
 
-        if self.level>1:
-
-            self.bonusActionEntries.insert(0,wildshapeAction)
-            self.bonusActionEntries.insert(1,{"id":"Leave Wild Shape"})
-            self.rightColumnBlocks.append(c.e.Block(knownForms,"WILD SHAPE FORMS"))
-            self.shortRestEntries.append("Regain a use of Wild Shape")
-            self.actions.append({"id":"Wild Companion"})
-            longRestRegainString = "Regain your use of <strong>Wild Companion</strong>."
+        
             
         
         if self.level>2:
             subclassChosen = False
-            
-            if self.subclass == "land" or not subclassChosen:
+            if self.subclass == "moon":
+                subclassChosen = True
+                self.classAsString="Druid (Circle of the Moon)"
+                
+                knownForms=[{"id":"Dire Wolf"},{"id":"Brown Bear"},{"id":"Other Form 4"}]
+                
+                potentialAC = self.modifiers[4]+13
+                print("potentialAC",potentialAC)
+                if potentialAC>14:
+                    knownForms[0]["contents"]=[
+                    "Dire Wolf. ",
+                    "50ft speed, AC"+str(potentialAC)+", Large, +4 Stealth, Bite action: +5 to hit, d10+3 damage, Huge or smaller targets are knocked Prone.",
+                    "Adv. vs distracted enemies (Pack Tactics)"
+                    ]
+                if potentialAC>11:
+                    knownForms[1]["contents"]=[
+                    "Brown Bear. ",
+                    "30ft climb, 40ft walk speed, AC"+str(potentialAC)+", Large, Multiattack action (Bite & Claws): Bite: +5 to hit, d8+3 damage. Claw: +5 to hit, d4+3 damage, Huge or smaller targets are knocked Prone.",
+                    ""
+                    ]
+                wildshapeAction["preSaveItalicText"]="Lasts for up to "+str(int(self.level/2))+" hours. "
+                wildshapeAction["preSaveItalicText"]+=" Gain "+str(3*self.level)+" temp hp. Can only cast </em>☽<em> spells while transformed."
+
+     
+                self.actions.extend([{"id":"Cure Wounds","note":"</em>☽<em>","postHealText":"."},{"id":"Moonbeam","note":" </em>☽<em>"}])
+                self.highlightedEntries.append({"id":"Starry Wisp","note":"</em>☽<em>"})
+
+
+            if "land" in self.subclass  or not subclassChosen:
                 
                 self.classAsString="Druid (Circle of the Land)"
-                self.subclass = "land"
+                
 
                 landsAid = {"type":"spell"}
 
@@ -155,12 +175,12 @@ class Druid(c.Sheet):
                 landsAid["preSaveItalicText"] = " Choose an ally within sphere to regain 2d6 hp. "
                 self.actions.append(landsAid)
 
-                lands = ["arid","polar","temperate"]
+                lands = ["arid","polar","temperate","tropical"]
                 land = lands[0]
 
-                if "land" in self.choices.keys():
-                    if self.choices["land"] in lands:
-                        land = self.choices["land"]
+                for l in lands:
+                    if l in self.subclass:
+                        land = l
                 
                 if land == lands[0]:
                     self.addEntry("Fire Bolt")
@@ -190,7 +210,18 @@ class Druid(c.Sheet):
                     if self.level>4:
                         self.addEntry("Lightning Bolt")
                     if self.level>5:
-                        self.notesForSpellCastingBlock.append({"id":"Natural Recovery - temperate"})  
+                        self.notesForSpellCastingBlock.append({"id":"Natural Recovery - temperate"}) 
+                
+                elif land == lands[3]:
+
+                    self.addEntry("Acid Splash",False)
+                    self.addEntry("Ray of Sickness")
+                    self.addEntry("Web")
+
+                    if self.level>4:
+                        self.addEntry("Stinking Cloud")
+                    if self.level>5:
+                        self.notesForSpellCastingBlock.append({"id":"Natural Recovery - tropical"})  
 
                 if self.level>5:
                     self.longRestEntries.append("Regain your <strong>Circle of the Land</strong> free casting.")
@@ -207,6 +238,16 @@ class Druid(c.Sheet):
         if longRestRegainString:
             self.longRestEntries.append(longRestRegainString)
         
+        if self.level>1:
+
+            self.bonusActionEntries.insert(0,wildshapeAction)
+            self.bonusActionEntries.insert(1,{"id":"Leave Wild Shape"})
+            self.rightColumnBlocks.append(c.e.Block(knownForms,"WILD SHAPE FORMS"))
+
+            self.shortRestEntries.append("Regain a use of Wild Shape")
+            self.actions.append({"id":"Wild Companion"})
+            longRestRegainString = "Regain your use of <strong>Wild Companion</strong>."
+
         if self.martialProficiency:
             if strengthOverDex:
                 self.wishlist.append("Longsword")

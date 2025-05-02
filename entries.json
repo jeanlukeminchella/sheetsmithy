@@ -105,6 +105,17 @@
         "useSpellcastingMod": true,
         "type": "attack"
     },
+    "Starry Wisp": {
+        "damage": "d8",
+        "rang": 60,
+        "addModToDamage": false,
+        "damageType": "radiant",
+        "cantripScaling": true,
+        "saveNotAttack": false,
+        "useSpellcastingMod": true,
+        "type": "attack",
+        "note":"Target cannot become invisible and emits dim light until end of your next turn."
+    },
     "Ray of Frost": {
         "damage": "d8",
         "rang": 60,
@@ -459,6 +470,19 @@
         "versatile": "d8",
         "type": "attack"
     },
+    "Acid Splash": {
+        "damage": "d6",
+        "rang": 60,
+        "addModToDamage": false,
+        "damageType": "acid",
+        "cantripScaling": true,
+        "saveNotAttack": true,
+        "resistAttributeText": "DEX",
+        "resistText": " to dodge",
+        "note": "Affects targets in a 10ft ball.",
+        "useSpellcastingMod": true,
+        "type": "attack"
+    },
     "Toll the Dead": {
         "damage": "d8",
         "rang": 60,
@@ -611,9 +635,21 @@
     "Darkness": {
         "rang": 60,
         "cost": "2",
+        "duration":"10 mins",
         "conc": true,
         "preSaveNormalText": "Darkness spreads 15ft from a point or object.",
         "preSaveItalicText": "Dispels light from weaker spells.",
+        "type": "spell"
+    },
+    "Web": {
+        "rang": 60,
+        "cost": "2",
+        "conc": true,
+        "duration":"1 hour",
+        "preSaveNormalText": "Sticky webbing fills a 20ft cube, restraining occupants. DEX",
+        "postSaveNormalText": " to resist.",
+        "preSaveItalicText":"A creature can make an Athletics check DC",
+        "postSaveItalicText":" to break free. Webs are flammable, difficult terrain and lightly obscure their area. Creatures that start their turn in webbing or move into it must also make the save.",
         "type": "spell"
     },
     "Druidcraft": {
@@ -1080,6 +1116,18 @@
         "useSpellcastingMod": true,
         "type": "spell"
     },
+    "Stinking Cloud": {
+        "cost": "3",
+        "duration": "1 min",
+        "conc": true,
+        "rang": 90,
+        "preSaveNormalText": "Creatures in a Heavily Obscured 40ft ball of gas have the Poisoned condition and cannot take actions or reactions. CON",
+        "postSaveNormalText": " to resist.",
+        "preSaveItalicText": "Can be dispersed with a strong wind.",
+        "castTime": "a",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
     "Crusader's Mantle": {
         "cost": "3",
         "duration": "1 min",
@@ -1436,7 +1484,23 @@
         "type": "text",
         "contents": [
             "Crocodile. ",
-            "20ft walk, 30ft swim speed, AC12, Large, +2 Stealth, Bite action: +4 to hit, d8+2 damage, Medium or smaller targets are Grappled (DC12) and Restrained",
+            "20ft walk, 30ft swim speed, AC12, Large, +2 Stealth, Bite action: +4 to hit, d8+2 damage, Medium or smaller targets are Grappled (DC12) and restrained",
+            ""
+        ]
+    },
+    "Dire Wolf": {
+        "type": "text",
+        "contents": [
+            "Dire Wolf. ",
+            "50ft speed, AC14, Large, +4 Stealth, Bite action: +5 to hit, d10+3 damage, Huge or smaller targets are knocked Prone.",
+            "Adv. vs distracted enemies (Pack Tactics)."
+        ]
+    },
+    "Brown Bear": {
+        "type": "text",
+        "contents": [
+            "Brown Bear. ",
+            "30ft climb, 40ft walk speed, AC11, Large, Multiattack action (Bite & Claws): Bite: +5 to hit, d8+3 damage. Claw: +5 to hit, d4+3 damage, Huge or smaller targets are knocked Prone.",
             ""
         ]
     },
@@ -1461,6 +1525,14 @@
         "contents": [
             "4 x Other Forms. ",
             "Choose non-flying Beasts, CR1/2",
+            ""
+        ]
+    },
+    "Other Form 4": {
+        "type": "text",
+        "contents": [
+            "4 x Other Forms. ",
+            "Choose non-flying Beasts, CR1",
             ""
         ]
     },
@@ -1613,6 +1685,14 @@
         "contents": [
             "Circle of the Land - Arid.",
             "You get one free casting of either Fireball, Burning Hands or Blur. O ",
+            ""
+        ]
+    },
+    "Natural Recovery - tropical": {
+        "type": "text",
+        "contents": [
+            "Circle of the Land - Tropical.",
+            "You get one free casting of either Ray of Sickness, Web or Stinking Cloud. O ",
             ""
         ]
     },

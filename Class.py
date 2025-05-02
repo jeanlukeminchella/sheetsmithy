@@ -158,7 +158,7 @@ class Sheet:
          
         self.reactions.append({"id":"oppAttack"})
         hitDiceString = "Regain your hit di"
-        if self.level>3:
+        if self.level>1:
             hitDiceString+="ce"
         else:
             hitDiceString+="e"
