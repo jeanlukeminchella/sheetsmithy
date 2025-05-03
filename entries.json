@@ -75,6 +75,21 @@
         "useSpellcastingMod": true,
         "type": "attack"
     },
+    "Luminous Arrow - Archer": {
+        "damage": "d8",
+        "rang": 60,
+        "addModToDamage": false,
+        "damageType": "radiant",
+        "cantripScaling": false,
+        "saveNotAttack": false,
+        "note": " Must have the Archer form active.",
+        "useSpellcastingMod": true,
+        "type": "attack"
+    },
+    "Spare the Dying": {
+        "rang": 15,
+        "preSaveNormalText":"Unconcious target becomes Stable."
+    },
     "Dagger": {
         "addModToDamage": true,
         "modifierIndex": 0,
@@ -104,6 +119,17 @@
         "saveNotAttack": false,
         "useSpellcastingMod": true,
         "type": "attack"
+    },
+    "Thorn Whip": {
+        "damage": "d6",
+        "rang": 30,
+        "addModToDamage": false,
+        "damageType": "piercing",
+        "cantripScaling": true,
+        "saveNotAttack": false,
+        "useSpellcastingMod": true,
+        "type": "attack",
+        "note":" Large or smaller targets are pulled 10ft closer."
     },
     "Starry Wisp": {
         "damage": "d8",
@@ -983,6 +1009,25 @@
         "useSpellcastingMod": true,
         "type": "spell"
     },
+    "Gust of Wind": {
+        "cost": "2",
+        "duration": "1 min",
+        "conc": true,
+        "preSaveNormalText": "60ft line of strong wind blasts from you, pushing creatures back 15ft. STR",
+        "postSaveNormalText": " to stay put. Creatures that end their turn in the line also make the same save.",
+        "preSaveItalicText": " Direction can be changed with a bonus action on later turns.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Shatter": {
+        "cost": "2",
+        "rang":60,
+        "preSaveNormalText": "20ft ball of noise deals 3d8 thunder damage. CON",
+        "postSaveNormalText": " to half damage. ",
+        "preSaveItalicText": " Constructs roll with disadvantage.",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
     "Necrotic Shroud": {
         "rang": 10,
         "modifierIndex": 5,
@@ -1018,7 +1063,7 @@
         "rang":30,
         "duration": "1 hour",
         "preSaveNormalText": "Target is Charmed and friendly to you unless your allies damage them. WIS",
-        "postSaveNormalText": " to resist",
+        "postSaveNormalText": " to resist.",
         "preSaveItalicText": "Target rolls with advantage if you or allies are fighting it. When the spell ends, the target knows it was Charmed by you.",
         "useSpellcastingMod": true,
         "type": "spell"
@@ -1057,6 +1102,21 @@
         "type": "spell"
     },
 
+
+    "Shield": {
+        "cost": "1",
+        "preSaveNormalText": "Before you are hit with an attack roll or a Magic Missile spell, give yourself +5 AC until your next turn and block all Magic Missiles.",
+        "castTime": "re",
+        "type": "spell"
+    },
+
+    "Feather Fall": {
+        "cost": "1",
+
+        "preSaveNormalText": "When you or allies within 60ft fall, they take no fall damage if they land within a minute.",
+        "castTime": "re",
+        "type": "spell"
+    },
 
     "Shield of Faith": {
         "conc": true,
@@ -1159,6 +1219,14 @@
         "postSaveNormalText": " to resist. Targets can be awoken with an Action or if they take damage.",
         "type": "spell"
     },
+    "Water Breathing": {
+        "cost": "3",
+        "rang":30,
+        "duration": "24 hours",
+        "ritual": true,
+        "preSaveNormalText": "Up to ten creatures within range can breathe underwater for the duration.",
+        "type": "spell"
+    },
     "Nondetection": {
         "cost": "3",
         "duration": "8 hours ",
@@ -1174,6 +1242,7 @@
         "useSpellcastingMod": true,
         "type": "spell"
     },
+
     "Speak With Animals": {
         "cost": "1",
         "preSaveNormalText": "You can comprehend and verbally communicate with beasts for 10 mins.",
@@ -1262,6 +1331,26 @@
         "postSaveNormalText": " to resist.",
         "preSaveItalicText":"You may also choose to reduce its speed to 0 until it ends its turn.",
         "modifierIndex":0,
+        "type": "spell"
+    },
+    "Ambush": {
+        "preSaveNormalText":"When you make a Stealth check or Initiative roll, you may add a d8.",
+        "cost":"m",
+        "type": "spell"
+    },
+    "Commander's Strike": {
+        "preSaveNormalText":"Allow an ally to spend their reaction to attack with a weapon or unarmed strike, with an extra d8 damage.",
+        "cost":"m",
+        "type": "spell"
+    },
+    "Riposte": {
+        "preSaveNormalText":"When a creature misses with a melee attack, make a melee attack in response, with an extra d8 damage.",
+        "cost":"m",
+        "type": "spell"
+    },
+    "Feinting Attack": {
+        "preSaveNormalText":"Choose a target within 5ft. You have advantage on your next attack roll against the target, which deals an extra d8 damage.",
+        "cost":"m",
         "type": "spell"
     },
     "blank": {

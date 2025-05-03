@@ -65,7 +65,7 @@ class Druid(c.Sheet):
             bon = self.addEntry("Create Bonfire")
             # if the class already has create bon
             if not bon:
-                self.addEntry("Druidcraft")
+                self.addEntry("Thorn Whip")
             self.skillBoosts.append([2,self.modifiers[4]])
             self.skillBoosts.append([10,self.modifiers[4]])
 
@@ -127,13 +127,19 @@ class Druid(c.Sheet):
             knownForms.append({"id":"Crocodile"})
             knownForms.append({"id":"Other Form 3"})
 
-        longRestRegainString = ""
+        longRestRegainString = "Regain all uses of <strong>Wild Shape</strong>"
 
         
             
         
         if self.level>2:
             subclassChosen = False
+            
+            subclasses = ["moon","sea","star","land - polar","land - tropical","land - temperate","land - arid"]
+            
+            if self.subclass== "" or self.subclass==None:
+                self.subclass = subclasses[self.seed%len(subclasses)]
+                
             if self.subclass == "moon":
                 subclassChosen = True
                 self.classAsString="Druid (Circle of the Moon)"
@@ -160,7 +166,47 @@ class Druid(c.Sheet):
      
                 self.actions.extend([{"id":"Cure Wounds","note":"</em>☽<em>","postHealText":"."},{"id":"Moonbeam","note":" </em>☽<em>"}])
                 self.highlightedEntries.append({"id":"Starry Wisp","note":"</em>☽<em>"})
+            
+            if self.subclass == "sea":
+                subclassChosen = True
+                self.classAsString="Druid (Circle of the Sea)"
+                
+                self.addEntry("Ray of Frost")
+                self.addEntry("Fog Cloud")
+                self.addEntry("Gust of Wind")
+                self.addEntry("Shatter")
+                self.addEntry("Thunderwave")
 
+                if self.level>4:
+                    self.addEntry("Lightning Bolt")
+                    self.addEntry("Water Breathing")
+
+                rangeString = "5ft"
+                if self.level>5:
+                    rangeString = "10ft"
+                    self.charInfos.append("Your speed is for walking or swimming.")
+
+                self.bonusActionEntries.append( ["Wrath of the Sea (Wild Shape, 10 mins).","Manifest a "+rangeString+" emanation and Invoke Wrath of the Sea.",""])
+                self.bonusActionEntries.append( ["Invoke Wrath of the Sea.","Choose a creature in your emanation. They take "+str(self.modifiers[4])+"d6 cold damage and if Large or smaller are pushed 15ft away. CON"+str(10+self.profBonus+self.modifiers[4])+" to resist.",""])
+            if self.subclass == "star":
+                subclassChosen = True
+                self.classAsString="Druid (Circle of the Stars)"
+                
+                self.actions.append({"id":"Guiding Bolt","note":"Free castings - </em>"+str("O "*self.modifiers[4]+"<em>")})
+                # character already will have guidance as its the first pick for a druid cantrip, so grant spare the dying instead
+                self.addEntry("Spare the Dying")
+                self.bonusActionEntries.append( ["Take on Starry Form (Wild Shape, 10 mins).","","See Starry Forms"])
+                starryForms = []
+                starryForms.append(["Archer.","Allows the use of Luminous Arrow.",""])
+                starryForms.append(["Chalice.","Whenever you cast a spell using a spell slot that restores Hit Points to a creature, you or another creature within 30 feet of you can regain Hit Points equal to d8"+str(self.modifiers[4]),""])
+                starryForms.append(["Archer.","When you make a Int or Wis check or a Con save to maintain concentration, treat a roll of 9 or lower as a 10.",""])
+                self.middleColumnBlocks.append(c.e.Block(starryForms,"STARRY FORMS"))
+                self.bonusActionEntries.append({"id":"Luminous Arrow - Archer"})
+
+                if self.level>5:
+                    self.longRestEntries.append("Roll a d20. If it is odd then you lose the Weal reaction, or Woe if even. You regain all uses of your active reaction.")
+                    self.reactions.append(["Weal (30ft)","Whenever a creature is about to roll a d20, add d6. "+str("O "*self.modifiers[4])])
+                    self.reactions.append(["Woe (30ft)","Whenever a creature is about to roll a d20, remove d6. "+str("O "*self.modifiers[4])])
 
             if "land" in self.subclass  or not subclassChosen:
                 
@@ -232,11 +278,10 @@ class Druid(c.Sheet):
             self.showUseObject=False
             self.notesForSpellCastingBlock.append({"id":"Wild Resurgence"})
             self.notesForSpellCastingBlock.append({"id":"Wild Resurgence 2"})
-            longRestRegainString = "Regain your uses of <strong>Wild Companion</strong> and <strong>Wild Resurgence</strong>."
+            longRestRegainString = "Regain your uses of <strong>Wild Companion</strong>,<strong>Wild Shape</strong> and <strong>Wild Resurgence</strong>."
             self.showDash = False
             
-        if longRestRegainString:
-            self.longRestEntries.append(longRestRegainString)
+        
         
         if self.level>1:
 
@@ -246,8 +291,9 @@ class Druid(c.Sheet):
 
             self.shortRestEntries.append("Regain a use of Wild Shape")
             self.actions.append({"id":"Wild Companion"})
-            longRestRegainString = "Regain your use of <strong>Wild Companion</strong>."
+            longRestRegainString = "Regain your uses of <strong>Wild Shape</strong> and <strong>Wild Companion</strong>."
 
+        self.longRestEntries.append(longRestRegainString)
         if self.martialProficiency:
             if strengthOverDex:
                 self.wishlist.append("Longsword")

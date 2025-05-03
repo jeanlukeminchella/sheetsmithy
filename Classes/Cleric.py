@@ -129,6 +129,12 @@ class Cleric(c.Sheet):
             channelDivinityActionEntries.append(divineSpark)
             
         if self.level>2:
+
+            subclasses = ["war","light","trickery","life","life"]
+            
+            if self.subclass== "" or self.subclass==None:
+                self.subclass = subclasses[self.seed%len(subclasses)]
+
             subclassChosen = False
 
             if self.subclass == "war":

@@ -107,6 +107,7 @@ class Sheet:
             "2": "2nd-level-spell",
             "3": "3rd-level-spell",
             "c":"Channel Divinity",
+            "m":"Maneuver",
         }
         
         
@@ -238,9 +239,9 @@ class Sheet:
                     
             elif command["castTime"]=="re":
                 if priority:
-                    self.reactionEntries.insert(0,command)
+                    self.reactions.insert(0,command)
                 else:
-                    self.reactionEntries.append(command)
+                    self.reactions.append(command)
             else:
                 print("castTime error in : ",command)
                 return False
@@ -384,9 +385,8 @@ class Sheet:
                     elif castTime=="ba":
                         self.bonusActionEntries.append(spell)
                     elif castTime=="re":
-                        self.reactionEntries.append(spell)
+                        self.reactions.append(spell)
                     else:
-                        print("This cast time confused me: ",spellPriorityList[nextSpellIndexToConsider].castTime," in spell ",spellPriorityList[nextSpellIndexToConsider].title)
                         # dont incriment spells added 
                         spellsAdded=spellsAdded-1
                     nextSpellIndexToConsider+=1

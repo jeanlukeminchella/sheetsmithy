@@ -28,7 +28,12 @@
             <option value=5>5</option>
             <option value=6>6</option>
         </select>
-        
+        <br>
+        <br>
+        <button type="submit" value="" onclick="wrapUp();" class="majorButton">Create my character!</button>
+
+        <p>These following questions are optional. If you do not pick a selection, Sheet Smithy will choose for you randomly.  </p>
+
         <label for="classAsString">Class:</label>
         <select id="classAsString" name="classAsString" onchange="loadClassChoices()">
             <option value="">Select a class</option>
@@ -43,25 +48,23 @@
             
         </select>
         
-        <select id="divineOrder" name="divineOrder" class="startInvisible" onchange="loadClassChoices()">
-            <option value="">Select a Divine Order (optional)</option>
-            <option value="thaumaturge">Thaumaturge</option>
-            <option value="protector">Protector</option>
+        
+        
+        <select id="druidSubclass" name="druidSubclass" class="startInvisible" onchange="loadClassChoices()">
+            <option value="">Select a subclass</option>
+            <option value="moon">Moon</option>
+            <option value="star">Star</option>
+            <option value="sea">Sea</option>
+            <option value="land - arid">Land (Arid)</option>
+            <option value="land - polar">Land (Polar)</option>
+            <option value="land - temperate">Land (Temperate)</option>
+            <option value="land - tropical">Land (Tropical)</option>
         </select>
         <select id="primalOrder" name="primalOrder" class="startInvisible" onchange="loadClassChoices()">
             <option value="">Select a Primal Order</option>
             <option value="magician">Magician</option>
             <option value="warden">Warden</option>
         </select>
-        <select id="druidSubclass" name="druidSubclass" class="startInvisible" onchange="loadClassChoices()">
-            <option value="">Select a subclass</option>
-            <option value="moon">Moon</option>
-            <option value="land - arid">Land - Arid</option>
-            <option value="land - polar">Land - Polar</option>
-            <option value="land - temperate">Land - Temperate</option>
-            <option value="land - tropical">Land - Tropical</option>
-        </select>
-
         <select id="barbarianSubclass" name="barbarianSubclass" class="startInvisible" onchange="loadClassChoices()">
             <option value="">Select a subclass</option>
             <option value="wildHeart">Path of the Wild Heart</option>
@@ -77,7 +80,11 @@
             <option value="trickery">Trickery</option>
             <option value="war">War</option>
         </select>
-        
+        <select id="divineOrder" name="divineOrder" class="startInvisible" onchange="loadClassChoices()">
+            <option value="">Select a Divine Order</option>
+            <option value="thaumaturge">Thaumaturge</option>
+            <option value="protector">Protector</option>
+        </select>
         <select id="rangerSubclass" name="rangerSubclass" class="startInvisible" onchange="loadClassChoices()">
             <option value="">Select a subclass</option>
             <option value="monster slayer">Monster Slayer</option>
@@ -93,6 +100,9 @@
         <select id="fighterSubclass" name="fighterSubclass" class="startInvisible" onchange="loadClassChoices()">
             <option value="">Select a subclass</option>
             <option value="champion">Champion</option>
+            <option value="eldritch">Eldritch Knight</option>
+            <option value="battle master">Battle Master</option>
+            <option value="psi">Psi Warrior</option>
             <option value="rune">Rune Knight</option>
         </select>
         
@@ -112,7 +122,7 @@
 
         <label for="race">Species:</label>
         <select id="race" name="race" onchange="loadSpeciesOptions()">
-            <option value="">Select a species (optional)</option>
+            <option value="">Select a species</option>
             <option value="aasimar">Aasimar</option>
             <option value="dwarf">Dwarf</option>
             <option value="elf">Elf</option>
@@ -172,7 +182,7 @@
         
         <label for="background">Background:</label>
         <select id="background" name="background">
-            <option value="">Select a background (optional)</option>
+            <option value="">Select a background</option>
             <option value="Farmer">Farmer</option>
             <option value="Sage">Sage</option>
             <option value="Criminal">Criminal</option>
@@ -188,8 +198,7 @@
         <br>
         <button type="submit" value="" onclick="wrapUp();" class="majorButton">Create my character!</button>
         <br>
-        <p>These following questions are optional. If this is your first character, please just ignore this. </p>
-
+        
 
         <select id="fightStyle" name="fightStyle" class="startInvisible" onchange="loadClassChoices()">
             <option value="">Select a Fight Style</option>

@@ -10,7 +10,7 @@ class Fighter(c.Sheet):
         self.defaultMod = 0
         
         
-        self.loadScoresAndMods([15,13,14,8,12,10],inp)
+        self.loadScoresAndMods([15,13,14,12,10,8],inp)
         
         dexBased = False
         if self.scores[1]>self.scores[0]:
@@ -19,11 +19,11 @@ class Fighter(c.Sheet):
             
             
         if dexBased:
-            self.attributePriorityList = [1,2,4,0,5,3]
+            self.attributePriorityList = [1,2,3,4,0,5]
             self.preferredBackgrounds = ["Soldier","Criminal","Charlatan"]
         
         else:
-            self.attributePriorityList = [0,2,1,4,5,3]
+            self.attributePriorityList = [0,2,3,1,4,5]
             self.preferredBackgrounds = ["Soldier","Farmer"]
         
         super().__init__(inp)
@@ -45,7 +45,11 @@ class Fighter(c.Sheet):
             else:
                 self.buyItem("Shortsword")
                 self.wishlist.append("offhand shortsword")
-                self.wishlist.append("Heavy Crossbow")
+                if self.level<5:
+
+                    self.wishlist.append("Heavy Crossbow")
+                else:
+                    self.wishlist.append("Longbow")
 
             if self.modifiers[0]>1:
                 highlightedEntriesToAdd.append("Shove")
@@ -105,11 +109,48 @@ class Fighter(c.Sheet):
             chosen = False
             if self.subclass == "champion":
                 chosen = True
+                
                 self.charInfos.append("You Critically Hit on a 19 or 20, and can move up to half your speed when you do so, without provoking Opportunity Attacks.")
                 self.charInfos.append("You have advantage on Initiative rolls.")
                 self.skillNotes.append([3,"(advantage)"])
                 self.classAsString = "Fighter (Champion)"
-            elif self.subclass == "rune" or chosen == False:
+            
+            elif self.subclass == "battle master":
+                chosen = True
+                self.classAsString = "Fighter (Battle Master)"
+                self.skillProficiencies.append(self.pickSkillProficiency([0,1,3,5,6,7,11,17]))
+
+                self.charInfos.append("You have four Maneuvers (Superiority Dice) - O O O O")
+                #self.charInfos.append({"id":"Ambush"})
+                self.highlightedEntries.append({"id":"Commander's Strike"})
+                self.reactions.append({"id":"Riposte"})
+                self.bonusActionEntries.append({"id":"Feinting Attack"})
+                self.shortRestEntries.append("Regain all your <strong>Maneuvers (Superiority Dice)</strong>")
+
+            elif self.subclass == "psi":
+                chosen = True
+                self.classAsString = "Fighter (Psi Warrior)"
+                
+                energyDice = "d6"
+                resourceString = "You have "
+                countString =  "O O O O"
+                if self.level<4:
+                    resourceString+="four"
+                else:
+                    resourceString+="six"
+                    countString+=" O O"
+                    energyDice="d8"
+                resourceString+=" <strong>Psionic Energy Dice </strong>- "
+
+
+                self.charInfos.append(["Psionic Strike (30ft).","Once per turn, you can spend an Energy die and boost a damage roll by "+energyDice+"+"+str(self.modifiers[3])+" force damage."])
+                self.reactions.append(["Protective Field.","When you or an ally within 30ft takes damage, spend an Energy die to reduce the damage by "+energyDice+"+"+str(self.modifiers[3])+".",""])
+                self.actions.append(["Telekenetic Movement.","Move a Large or smaller object or willing creature up to 30ft.","Requires an Energy die once you have used your free casting - </em>O<em>"])
+                self.charInfos.append(resourceString+countString)
+                self.shortRestEntries.append("Regain all your <strong>Psionic Energy </strong>dice and your free casting of <strong>Telekenetic Movement</strong>")
+
+            elif self.subclass == "rune":
+                chosen = True
                 self.classAsString = "Fighter (Rune Knight)"
                 self.subclass="rune"
                 
@@ -135,6 +176,41 @@ class Fighter(c.Sheet):
                 for i in range(self.profBonus):
                     giantsMight["preSaveNormalText"]+=" O"
                 self.bonusActionEntries.append(giantsMight)
+
+            if self.subclass == "eldritch" or chosen == False:
+                chosen = True
+                self.spellcasting = True
+                self.spellcastingMod = 3
+                spellString = "1st-level-spell"
+                if self.level<5:
+                    spellString = "Spell"
+
+                self.spellSlotResourceTuples=[[spellString,2]]
+                self.spellsKnown=3
+                if self.level>3:
+                    self.spellsKnown=4
+                    self.spellSlotResourceTuples=[[spellString,3]]
+                self.spellPriorityList=["Feather Fall","Shield","Jump","Sleep","Thunderwave","Burning Hands"]
+
+                cantrips = ["Ray of Frost","Shocking Grasp","Fire Bolt"]
+                picked = 0
+                for cantrip in cantrips:
+                    if picked <3:    
+                        added = self.addEntry(cantrip,False)
+                        if added:
+                            picked += 1
+
+                self.charInfos.append(["War Bond.","Choose two weapons to bond with. You cannot be disarmed of that weapon while concious.","Changing your bond to a new weapon requires a 1 hour ritual."])
+                self.bonusActionEntries.append(["Summon Weapon.","A weapon you have bonded with teleports instantly to your hand."])
+                self.wishlist.append("Quarterstaff")
+                # second level spell is needed for species that unlock them at level 5
+                if self.level<5:
+                    self.costDic= {
+                    "1":"Spell",
+                    }
+
+
+                self.classAsString = "Fighter (Eldritch Knight)"
                    
         if self.level>4:
             extraAttackEntry = {"id":"extraAttackHighlighted"}
