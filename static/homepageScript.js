@@ -33,7 +33,7 @@ function hideInventory(){
 
 function loadCoreOptions(){
     showIDList(["name","background","classAsString","race"]);
-    const checkBoxes = ["showScores","hideShortRest","hideLongRest","hidePhysicalDamageTypes" ]
+    const checkBoxes = ["showScores","hideShortRest","hideLongRest","hidePhysicalDamageTypes","shoppingList","gearList","bonusGold","bonusSilver","bonusCopper","goldPieceDecimal"]
     for (let i = 0; i < checkBoxes.length; i++) {
         
         document.getElementById(checkBoxes[i]).disabled=false 
@@ -80,7 +80,6 @@ function wrapUp(){
     gp.toFixed(2);
     document.getElementById("goldPieceDecimal").value = gp.toFixed(2);
     console.log("document.getElementById('goldPieceDecimal').value is ",document.getElementById("goldPieceDecimal").value);
-    hideIDList(["bonusGold","bonusSilver","bonusCopper"]);
 
 };
 

@@ -52,7 +52,7 @@ class Druid(c.Sheet):
         
 
         primalOrders = ["magician","warden"]
-        primalOrder = primalOrders[0]
+        primalOrder = primalOrders[1]
 
         if "primalOrder" in self.choices.keys():
             if self.choices["primalOrder"] in primalOrders:
@@ -152,7 +152,7 @@ class Druid(c.Sheet):
                     knownForms[0]["contents"]=[
                     "Dire Wolf. ",
                     "50ft speed, AC"+str(potentialAC)+", Large, +4 Stealth, Bite action: +5 to hit, d10+3 damage, Huge or smaller targets are knocked Prone.",
-                    "Adv. vs distracted enemies (Pack Tactics)"
+                    "Adv. vs distracted enemies (Pack Tactics)."
                     ]
                 if potentialAC>11:
                     knownForms[1]["contents"]=[
@@ -160,7 +160,12 @@ class Druid(c.Sheet):
                     "30ft climb, 40ft walk speed, AC"+str(potentialAC)+", Large, Multiattack action (Bite & Claws): Bite: +5 to hit, d8+3 damage. Claw: +5 to hit, d4+3 damage, Huge or smaller targets are knocked Prone.",
                     ""
                     ]
-                wildshapeAction["preSaveItalicText"]="Lasts for up to "+str(int(self.level/2))+" hours. "
+                wildshapeAction["preSaveItalicText"]="Lasts for up to "+str(int(self.level/2))+" hour"
+                if int(self.level/2)>1:
+                    wildshapeAction["preSaveItalicText"]+="s."
+                else:
+                    wildshapeAction["preSaveItalicText"]+="."
+
                 wildshapeAction["preSaveItalicText"]+=" Gain "+str(3*self.level)+" temp hp. Can only cast </em>☽<em> spells while transformed."
 
      
@@ -272,14 +277,7 @@ class Druid(c.Sheet):
                 if self.level>5:
                     self.longRestEntries.append("Regain your <strong>Circle of the Land</strong> free casting.")
         
-        if self.level>4:
-            self.showDisengage = False
-            self.showDodge = False
-            self.showUseObject=False
-            self.notesForSpellCastingBlock.append({"id":"Wild Resurgence"})
-            self.notesForSpellCastingBlock.append({"id":"Wild Resurgence 2"})
-            longRestRegainString = "Regain your uses of <strong>Wild Companion</strong>,<strong>Wild Shape</strong> and <strong>Wild Resurgence</strong>."
-            self.showDash = False
+        
             
         
         
@@ -289,9 +287,18 @@ class Druid(c.Sheet):
             self.bonusActionEntries.insert(1,{"id":"Leave Wild Shape"})
             self.rightColumnBlocks.append(c.e.Block(knownForms,"WILD SHAPE FORMS"))
 
-            self.shortRestEntries.append("Regain a use of Wild Shape")
+            self.shortRestEntries.append("Regain a use of <strong>Wild Shape</strong>.")
             self.actions.append({"id":"Wild Companion"})
             longRestRegainString = "Regain your uses of <strong>Wild Shape</strong> and <strong>Wild Companion</strong>."
+
+        if self.level>4:
+            self.showDisengage = False
+            self.showDodge = False
+            self.showUseObject=False
+            self.notesForSpellCastingBlock.append({"id":"Wild Resurgence"})
+            self.notesForSpellCastingBlock.append({"id":"Wild Resurgence 2"})
+            longRestRegainString = "Regain your uses of <strong>Wild Companion</strong>, <strong>Wild Shape</strong> and <strong>Wild Resurgence</strong>."
+            self.showDash = False
 
         self.longRestEntries.append(longRestRegainString)
         if self.martialProficiency:

@@ -314,7 +314,7 @@ class Sheet:
         weNeedToExplainRituals= False
         self.longRestEntries.append({"id":"regainSpellSlots"})
         
-        # lets load in the spells - ones we dont have already of course
+        # lets load in the spells - that we dont have already
         l = self.actions[:]
         l.extend(self.reactions)
         l.extend(self.bonusActionEntries)

@@ -13,11 +13,10 @@
 <body onload="setSeed();hideAbilityScores();hideLanguages();hideInventory();" onpageshow="loadCoreOptions();loadSpeciesOptions();loadClassChoices();">
     <form id="characterForm" action="/generate" method="get" >
         <div>
-           Welcome adventurer, to Sheet Smithy! Lets put hammer to steel and forge your first character! Give your new hero a great name below. Use <a href="https://www.fantasynamegenerators.com" target="_blank">this&nbsp;website</a> if you're stuck!
+           Welcome adventurer, to Sheet Smithy! Lets put hammer to steel and forge your first character!
         </div>
 
-        <label for="name">Character name:</label>
-        <input type="text" id="name" name="name" value="">
+
         <label for="level">Level:</label>
         <select id="level" name="level" onchange="loadClassChoices()">
             <option value=1>1</option>
@@ -27,6 +26,9 @@
             <option value=5>5</option>
             <option value=6>6</option>
         </select>
+        <label for="name">Character name:</label>
+        <input type="text" id="name" name="name" value="">
+
         <em>These following questions are optional. If you do not pick a selection, Sheet Smithy will choose for you randomly. </em>
 
         <label for="classAsString">Class:</label>
@@ -190,7 +192,7 @@
             <option value="Wayfarer">Wayfarer</option>
             <option value="Guard">Guard</option>
         </select>
-        <em>Please note this page is for the 2024 ruleset. For games that use the 2014 rules, please generate your character <a href="sheetsmithy2014.pythonanywhere.com" target="_blank">here</a>. </em>
+        <em>Please note this page is for the 2024 ruleset. For games that use the 2014 rules, please generate your character <a href="https://sheetsmithy2014.pythonanywhere.com/" target="_blank">here</a>. </em>
         
         <br>
         <br>
@@ -384,7 +386,7 @@
             Well, you're in the right place! Sheet Smithy can help you create a ready-to-play character sheet in just a few seconds. 
             <br>
             <br>
-            Ask your Game Master what level you're playing at, and then pick some options that sound cool (avoid a Cleric or Druid as they can be quite complicated).
+            Ask your Game Master what level you're playing at, and then pick some options that sound cool (avoid a Cleric or Druid as they can be quite complicated). Choose a name that fits your character and is easy to pronounce using <a href="https://www.fantasynamegenerators.com" target="_blank">this&nbsp;website for inspiration.</a> 
             Once you have generated a character, bookmark it or print it off and give it a read. Knowing your class, species, and what dice you will need will be helpful before you start playing. 
             <br><br>When it is your turn in a fight you get an Action, a Bonus Action and you can move up to your Speed. 
             All our character sheets have most of the Action options you can do listed in the middle of the page and your Bonus Actions (if you have any) on the bottom right. If you see some "O"s following an ability, this means you can only use it so many times before running out. Be sure to cross off an "O" when you use it with a pencil, so you can regain the use when you take a rest. 
