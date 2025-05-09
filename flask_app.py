@@ -91,7 +91,7 @@ def getHTMLFromInput(d):
 def makeSheet():
     d = request.args
     print()
-    print("This is what we got from the request: ")
+    print("This is what we got from the GET request: ")
     print(d)
     
     # changing form values into one thats readable by the generator

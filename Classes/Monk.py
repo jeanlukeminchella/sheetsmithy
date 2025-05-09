@@ -49,11 +49,11 @@ class Monk(c.Sheet):
         kiEntry = "<strong>Focus -</strong> "+(" O"*(level))
         kiBlock = c.e.Block([kiEntry],"FOCUS")
         if self.hideShortRest:
+            kiBlock.addEntry("<em>You regain all Focus after a rest.</em> ")
+        else:
             if self.level>1:
                 self.shortRestEntries.append("Regain all your <strong>Focus</strong>.")
-        else:
-            kiBlock.addEntry("<em>You regain all Focus after a rest.</em> ")
-        
+            
         
         if level>1:
             

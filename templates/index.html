@@ -10,7 +10,7 @@
     <script src="/static/homepageScript.js"></script>
     
 </head>
-<body onload="setSeed();" onpageshow="loadCoreOptions();loadSpeciesOptions();loadClassChoices();hideAbilityScores();hideLanguages();hideInventory()">
+<body onload="setSeed();hideAbilityScores();hideLanguages();hideInventory();" onpageshow="loadCoreOptions();loadSpeciesOptions();loadClassChoices();">
     <form id="characterForm" action="/generate" method="get" >
         <div>
            Welcome adventurer, to Sheet Smithy! Lets put hammer to steel and forge your first character! Give your new hero a great name below. Use <a href="https://www.fantasynamegenerators.com" target="_blank">this&nbsp;website</a> if you're stuck!
@@ -18,7 +18,6 @@
 
         <label for="name">Character name:</label>
         <input type="text" id="name" name="name" value="">
-        <em>Tip: Ask your Game Master if you're not sure what level you are playing at. </em>
         <label for="level">Level:</label>
         <select id="level" name="level" onchange="loadClassChoices()">
             <option value=1>1</option>
@@ -28,11 +27,7 @@
             <option value=5>5</option>
             <option value=6>6</option>
         </select>
-        <br>
-        <br>
-        <button type="submit" value="" onclick="wrapUp();" class="majorButton">Create my character!</button>
-
-        <p>These following questions are optional. If you do not pick a selection, Sheet Smithy will choose for you randomly.  </p>
+        <em>These following questions are optional. If you do not pick a selection, Sheet Smithy will choose for you randomly. </em>
 
         <label for="classAsString">Class:</label>
         <select id="classAsString" name="classAsString" onchange="loadClassChoices()">
@@ -195,6 +190,9 @@
             <option value="Wayfarer">Wayfarer</option>
             <option value="Guard">Guard</option>
         </select>
+        <em>Please note this page is for the 2024 ruleset. For games that use the 2014 rules, please generate your character <a href="sheetsmithy2014.pythonanywhere.com" target="_blank">here</a>. </em>
+        
+        <br>
         <br>
         <button type="submit" value="" onclick="wrapUp();" class="majorButton">Create my character!</button>
         <br>
@@ -249,7 +247,7 @@
             <option value="healer">Healer</option>
             
         </select>
-                    <em id="l4-feat-label">Please note: some feats cannot be taken more than once.<br><br></em>
+                    <em id="l4-feat-label">Please note: most feats cannot be taken more than once.<br><br></em>
                 </label>
                 
         <label for="showScores">
@@ -389,8 +387,10 @@
             Ask your Game Master what level you're playing at, and then pick some options that sound cool (avoid a Cleric or Druid as they can be quite complicated).
             Once you have generated a character, bookmark it or print it off and give it a read. Knowing your class, species, and what dice you will need will be helpful before you start playing. 
             <br><br>When it is your turn in a fight you get an Action, a Bonus Action and you can move up to your Speed. 
-            For your convenience, all our character sheets have most of the Action options you can do listed in the middle of the page and your Bonus Actions (if you have any) on the bottom right. If you see some "O"s following an ability, this means you can only use it so many times before running out. Be sure to cross off an "O" when you use it with a pencil, so you can regain the use when you take a rest. 
-            If you play a spellcaster, some abilities may cost Spell Slots or other resources, which will also need crossing off in the Spellcasting section. 
+            All our character sheets have most of the Action options you can do listed in the middle of the page and your Bonus Actions (if you have any) on the bottom right. If you see some "O"s following an ability, this means you can only use it so many times before running out. Be sure to cross off an "O" when you use it with a pencil, so you can regain the use when you take a rest. 
+            Some abilities may cost Spell Slots or other resources, which will need crossing off elsewhere on the sheet. 
+            
+            <br><br>If an ability can be used from a distance, it will have its range in the title <em>eg. Shortbow (80ft)</em>.
             <br><br>If you're not sure about anything drop me an <a href='mailto:sheetsmithy@gmail.com' target="_blank">email</a> or ask your Game Master :) Good luck! 
             <br><br>
         </div>

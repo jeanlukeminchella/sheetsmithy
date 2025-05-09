@@ -197,7 +197,7 @@ def orc(c, choice):
     if not c.hideShortRest:
         c.shortRestEntries.append("Regain all your uses of <strong>Adrenaline Rush</strong>")
     else:
-        adrenalineRushText += "<em> Regain all uses on a short rest</em>"
+        adrenalineRushText += "<em> Regain all uses on a short rest.</em>"
     c.bonusActionEntries.append(adrenalineRushText)
     
     c.charInfos.append("<strong>Relentless Endurance.</strong> When you are reduced to 0 hp you drop to 1 hp instead. O")
