@@ -102,6 +102,8 @@ def makeSheet():
     
     try:
         inp["level"] = int(d["level"])
+        if inp["level"] not in range (1,7):
+            inp["level"]=6
     except:
         pass
         #print("issue loading / parsing level from input")

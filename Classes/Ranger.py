@@ -51,7 +51,8 @@ class Ranger(c.Sheet):
         if self.level>4:
 
             note = " You can cast this without a spell slot three times. </em> O O O<em>"
-        self.bonusActionEntries.append({"id":"Hunter's Mark","note":note})
+        huntersMark = {"id":"Hunter's Mark","note":note}
+        self.bonusActionEntries.append(huntersMark)
         self.longRestEntries.append("Regain your free castings of <strong>Hunter's Mark</strong>.")
         resourceDictionary = {
             1:[["Spell",2]],
@@ -88,21 +89,42 @@ class Ranger(c.Sheet):
             
         if level>2:
             
-            subclassChosen = False
+            subclasses = ["hunter","hunter - horde breaker","beastMaster-sea","beastMaster-sky","beastMaster-land","gloom stalker","fey wanderer"]
+            
+            if self.subclass== "" or self.subclass==None:
+                self.subclass = subclasses[(self.seed%17)%len(subclasses)]
             
             
-            if self.subclass == "hunter":
+            if "hunter" in self.subclass:
                 self.classAsString="Ranger (Hunter)"
-                
-                colSlayer = ["","",""]
-                colSlayer[1] = "Once per turn, you may deal an extra d8 damage to a wounded target you have hit."
-                colSlayer[2] = "<em> (Hunter) </em>"
-                self.charInfos.append(colSlayer)
-                
-                subclassChosen = True
 
-            if "beastMaster" in self.subclass:
-                subclassChosen=True
+                huntersMark["note"]=" You also learn the target's Vulnerabilities, Immunities and Resistances."+huntersMark["note"]
+                
+                if "horde breaker" in self.subclass:
+                    self.charInfos.append(["Horde Breaker.","Once on each of your turns when you make an attack with a weapon, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target, that is within the weapon's range, and that you haven't attacked this turn."])
+                else:
+                        
+                    colSlayer = ["","",""]
+                    colSlayer[1] = "Once per turn, deal an extra d8 damage to a wounded target you have hit."
+                    colSlayer[2] = "<em> (Hunter) </em>"
+                    self.charInfos.append(colSlayer)
+
+            
+
+            elif self.subclass == "gloom stalker":
+                self.classAsString="Ranger (Gloom Stalker)"
+                self.charInfos.append(["Dread Ambusher.",gf.getSignedStringFromInt(self.modifiers[4])+" initiative."])
+                self.charInfos.append("You have +10ft to speed on your first turn in combat.")
+                self.charInfos.append(["Dreadful Strike.","Boost a weapon damage roll by 2d6 psychic damage.","Maximum use once per turn. </em>"+(" O"*max(1,self.modifiers[4])+"</em> ")])
+                self.longRestEntries.append("Regain your <strong>Dreadful Strikes</strong>.")
+                self.addEntry("Disguise Self")
+                if self.level>4:
+                    self.addEntry("Rope Trick")
+                self.charInfos.append("While in Darkness, you have the Invisible condition to any creature that relies on Darkvision to see you.")
+                self.darkvision+=60
+
+            elif "beastMaster" in self.subclass:
+                self.classAsString="Ranger (Beast Master)"
                 
                 damage = None
                 note = ""
@@ -112,7 +134,7 @@ class Ranger(c.Sheet):
                 hitDie = "d8"
                 con = 2
                 
-                self.classAsString="Ranger (Beast Master)"
+                
                 beastTitle = ""
                 beastStats = []
 
@@ -124,12 +146,6 @@ class Ranger(c.Sheet):
                     beastStats.append("Your Beast can swim 60ft, or walk 5ft per turn.")
                     beastStats.append("Your Beast has Darkvision out to 90ft.")
                     beastTitle = "BEAST OF THE SEA"
-                elif "land" in self.subclass:
-                    beastStats.append("STR +2 | DEX +2 | CON +2 | INT -1 | WIS +2 | CHA 0")
-                    beastStats.append("Your Beast can walk or climb 40ft per turn.")
-                    note="If the Beast has moved 20ft straight before hitting target, target takes an extra d6 damage and is knocked prone (if Large or smaller)."
-                    damage="d8"
-                    beastTitle = "BEAST OF THE LAND)"
                 elif "sky" in self.subclass:
                     hitDie = "d6"
                     con = 1
@@ -140,6 +156,14 @@ class Ranger(c.Sheet):
                     bonusDamage=3
                     damageType = "slashing"
                     beastTitle = "BEAST OF THE SKY"
+                
+                else:
+                    beastStats.append("STR +2 | DEX +2 | CON +2 | INT -1 | WIS +2 | CHA 0")
+                    beastStats.append("Your Beast can walk or climb 40ft per turn.")
+                    note="If the Beast has moved 20ft straight before hitting target, target takes an extra d6 damage and is knocked prone (if Large or smaller)."
+                    damage="d8"
+                    beastTitle = "BEAST OF THE LAND"
+                
 
                 bold = ""
                 mid = "Your <strong>Beast Heals </strong>"+str(hitDie)+gf.getSignedStringFromInt(con,True)+" hp for each hit die it spends."
@@ -181,34 +205,34 @@ class Ranger(c.Sheet):
                 self.actions.append({"id":"Revive Beast"})
 
 
+            else:
+                self.classAsString="Ranger (Fey Wanderer)"
+
+                self.charInfos.append(["","Once per turn, deal an extra d4 psychic damage to a target you have hit with a weapon."])
+                self.addEntry("Charm Person")
+                if self.level>4:
+                    self.addEntry("Misty Step")
+                
+                gifts = ["Illusory butterflies flutter around you while you take a Short or Long Rest.",
+                "Flowers bloom from your hair each dawn.",
+                "You faintly smell of cinnamon.",
+                "You faintly smell of lavender.",
+                "You faintly smell of nutmeg.",
+                "Your shadow dances while no one is looking directly at it.",
+                "Horns or antlers sprout from your head.",
+                "Your skin and hair change color each dawn."]
+
+                self.charInfos.append(gifts[self.seed%len(gifts)]+" <em>(Feywild Gift)</em>")
+
+                self.skillBoosts.append([4,self.modifiers[4]])
+                self.skillBoosts.append([7,self.modifiers[4]])
+                self.skillBoosts.append([12,self.modifiers[4]])
+                self.skillBoosts.append([13,self.modifiers[4]])
+                
+                self.pickSkillProficiency([4,12,13])
 
 
-                
-            if self.subclass == "monster slayer" or not subclassChosen:
-                
-                self.classAsString="Ranger (Monster Slayer)"
-                self.subclass = "monster slayer"
-                
-                self.actions.append({"id":"Protection from Evil and Good"})
-                
-                hunterSense = {"type":"spell"}
-                hunterSense["id"] = "Hunter's Sense"
-                hunterSense["rang"] =60
 
-                hunterSense["preSaveNormalText"] = " Discern a creature's immunities, resistances, and vulnerabilities."
-                count = "O "*max(1,self.modifiers[4])
-                hunterSense["preSaveItalicText"] = "</em>"+count+" <em>(Monster Slayer)"
-                self.actions.append(hunterSense)
-                self.longRestEntries.append("Regain your uses of <strong>Hunter's Sense</strong>.")
-                
-                slayersPrey = {"type":"spell"}
-                slayersPrey["id"] = "Mark Slayer's Prey"
-                slayersPrey["rang"] = 60
-
-                slayersPrey["preSaveNormalText"] = " Each turn, the first time you hit the target you deal an extra d6 damage. "
-                slayersPrey["preSaveItalicText"] = "Effect ends if you target a new prey. (Monster Slayer)"
-                self.bonusActionEntries.append(slayersPrey)
-                
             #primal awareness
             swAnimals = {"id":"Speak With Animals","preSaveItalicText":" One free casting per long rest. O"}
 
@@ -224,7 +248,7 @@ class Ranger(c.Sheet):
 
         if level>5:
             self.speed+=5
-            self.charInfos.append(" • Your speed is for walking, climbing or swimming.")
+            self.charInfos.append("Your speed is for walking, climbing or swimming.")
             self.showDodge=False
             
 

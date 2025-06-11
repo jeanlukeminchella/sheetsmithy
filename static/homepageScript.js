@@ -71,7 +71,6 @@ function wrapUp(){
     ids.forEach(disableIDIfBlank);
     console.log("wrapping up");
 
-    
     let cp = document.getElementById("bonusCopper").value/100;
     let sp = document.getElementById("bonusSilver").value/10;
     let gp = document.getElementById("bonusGold").value;    
@@ -79,7 +78,17 @@ function wrapUp(){
     gp = (gp*1)+(cp*1) + (sp*1);
     gp.toFixed(2);
     document.getElementById("goldPieceDecimal").value = gp.toFixed(2);
-    console.log("document.getElementById('goldPieceDecimal').value is ",document.getElementById("goldPieceDecimal").value);
+
+    const coinageIDs = ["bonusGold","bonusSilver","bonusCopper"];
+    if(gp.toFixed(2)==0){
+        coinageIDs.push("goldPieceDecimal");
+    }
+    console.log("coinage ids length - "+coinageIDs.length);
+    for (let i=0;i<coinageIDs.length;i++){
+       
+        document.getElementById(coinageIDs[i]).disabled=true;
+    }
+    
 
 };
 
@@ -141,7 +150,7 @@ function loadClassChoices() {
     };
     const level = document.getElementById("level").value;
     const cls = document.getElementById("classAsString").value;
-    
+    console.log("loading class choices, level is "+level+" and class is "+cls);
     const thisClassChoices = allClassChoices[cls]
     
     thisClassChoices.forEach(considerShowingClassChoices)

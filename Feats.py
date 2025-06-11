@@ -70,7 +70,7 @@ def alert(c):
         skilled(c)
     else:
         c.buildLog.append(logText)
-        c.charInfos.append("<strong>Alert. </strong>"+gf.getSignedStringFromInt(c.profBonus)+" bonus to initiative, and can swap your roll with an ally at the start of combat.")
+        c.charInfos.append("<strong>Alert. </strong>"+gf.getSignedStringFromInt(c.profBonus)+" initiative, and can swap your roll with an ally at the start of combat.")
     
 def addInt(c):
     c.scores[3]=c.scores[3]+2

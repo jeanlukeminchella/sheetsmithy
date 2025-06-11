@@ -618,6 +618,7 @@
         "useSpellcastingMod": true,
         "type": "attack"
     },
+    
     "Assume Wild Shape (Wild Shape)": {
         "preSaveNormalText": "Choose from your Wild Shape Forms.",
         "castTime": "ba",
@@ -940,6 +941,12 @@
         "preSaveNormalText": "A creature you touch has the Invisible condition until the spell ends. The spell ends if the target makes an attack roll, deals damage, or casts a spell.",
         "type": "spell"
     },
+    "Rope Trick": {
+        "cost": "2",
+        "duration": "1 hour",
+        "preSaveNormalText": "You touch a rope. One end of it hovers upward until the rope hangs perpendicular to the ground or the rope reaches a ceiling. At the rope's upper end, an Invisibile 3-foot-by-5-foot portal opens to an extradimensional space that lasts until the spell ends. That space can be reached by climbing the rope, which can be pulled into or dropped out of it.",
+        "type": "spell"
+    },
     "Hold Person": {
         "rang": 60,
         "cost": "2",
@@ -1252,6 +1259,7 @@
 
     "Speak With Animals": {
         "cost": "1",
+        "duration":"10 min",
         "preSaveNormalText": "You can comprehend and verbally communicate with beasts for 10 mins.",
         "useSpellcastingMod": true,
         "type": "spell"

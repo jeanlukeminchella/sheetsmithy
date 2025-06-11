@@ -269,7 +269,7 @@ def goliath(c, choice):
 
     if choice["subrace"]=="Cloud":
         c.raceString = "Goliath (Cloud)"
-        c.bonusActionEntries.append("Teleport 30ft "+count)
+        c.bonusActionEntries.append("<strong>Teleport</strong> 30ft. "+count)
         c.longRestEntries.append("Regain all uses of your uses of Teleport. <em>(Cloud Goliath)</em>")
     elif choice["subrace"]=="Fire":
         c.raceString = "Goliath (Fire)"
