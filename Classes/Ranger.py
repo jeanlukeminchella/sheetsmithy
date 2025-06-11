@@ -45,7 +45,7 @@ class Ranger(c.Sheet):
         if self.level in [1,2,3,4]:
             self.spellPriorityList = ["Cure Wounds","Entangle","Jump"]
         else:
-            self.spellPriorityList = ["Cure Wounds","Spike Growth","Jump","Hunter's Mark","Lesser Restoration","Entangle"]
+            self.spellPriorityList = ["Aid","Cure Wounds","Spike Growth","Pass without Trace","Magic Weapon","Barkskin","Hunter's Mark","Lesser Restoration","Entangle","Jump"]
             
         note = " You can cast this without a spell slot twice. </em> O O<em>"
         if self.level>4:
@@ -68,7 +68,7 @@ class Ranger(c.Sheet):
             }
         
         self.spellSlotResourceTuples=resourceDictionary[self.level]
-        self.spellsKnown = gf.getNumberFromRange(self.level,[0,0,1,2,3,4])
+        self.spellsKnown = gf.getNumberFromRange(self.level,[0,1,2,3,4])
         self.spellcasting = True
 
         if self.level in [5,6]:
@@ -100,6 +100,89 @@ class Ranger(c.Sheet):
                 self.charInfos.append(colSlayer)
                 
                 subclassChosen = True
+
+            if "beastMaster" in self.subclass:
+                subclassChosen=True
+                
+                damage = None
+                note = ""
+                bonusDamage = 2
+                damageType = "bludgeoning"
+                hp = 5+5*self.level
+                hitDie = "d8"
+                con = 2
+                
+                self.classAsString="Ranger (Beast Master)"
+                beastTitle = ""
+                beastStats = []
+
+                
+
+                if "sea" in self.subclass:
+                    damage="d6"
+                    beastStats.append("STR +2 | DEX +2 | CON +2 | INT -1 | WIS +2 | CHA 0")
+                    beastStats.append("Your Beast can swim 60ft, or walk 5ft per turn.")
+                    beastStats.append("Your Beast has Darkvision out to 90ft.")
+                    beastTitle = "BEAST OF THE SEA"
+                elif "land" in self.subclass:
+                    beastStats.append("STR +2 | DEX +2 | CON +2 | INT -1 | WIS +2 | CHA 0")
+                    beastStats.append("Your Beast can walk or climb 40ft per turn.")
+                    note="If the Beast has moved 20ft straight before hitting target, target takes an extra d6 damage and is knocked prone (if Large or smaller)."
+                    damage="d8"
+                    beastTitle = "BEAST OF THE LAND)"
+                elif "sky" in self.subclass:
+                    hitDie = "d6"
+                    con = 1
+                    beastStats.append("STR -2 | DEX +3 | CON +1 | INT -1 | WIS +2 | CHA 0")
+                    beastStats.append("Your Beast can fly 60ft per turn, and does not provoke Opportunity Attacks.")
+                    hp = 4+4*self.level
+                    damage="d4"
+                    bonusDamage=3
+                    damageType = "slashing"
+                    beastTitle = "BEAST OF THE SKY"
+
+                bold = ""
+                mid = "Your <strong>Beast Heals </strong>"+str(hitDie)+gf.getSignedStringFromInt(con,True)+" hp for each hit die it spends."
+                if self.level>1:
+                    mid += "<br>"
+                for i in range(self.level):
+                    mid += " O"
+                it = ""
+                self.shortRestEntries.append([bold,mid,it])
+
+                beastStats.append("Add "+gf.getSignedStringFromInt(self.profBonus)+" to any save / check the Beast makes.")
+
+                beastStats.append(["","Your Beast has <strong>"+str(hp)+"</strong> Hit Points and "+str(13+self.modifiers[4])+" AC."])
+                beastStats.append(["","If you are Incapacitated, your Beast acts on its own."])
+                self.rightColumnBlocks.append(c.e.Block(beastStats,beastTitle+" STATS"))
+                
+                strike = {
+                "id":"Strike",
+                "damage": damage+gf.getSignedStringFromInt(bonusDamage+self.modifiers[4]),
+                "addModToDamage": False,
+                "damageType": damageType,
+                "cantripScaling": False,
+                "saveNotAttack": False,
+                "useSpellcastingMod": True,
+                "type": "attack",
+                "note":note,
+                "castTime":"ba",
+                "expanded":True
+                }
+
+                
+                beastActions = [["Dodge.","","If no command is given, your Beast dodges."],strike]
+                beastActions.append(["Other Action.","","eg. Dash, Disengage, Help, Ready ect. "])
+                
+                self.rightColumnBlocks.append(c.e.Block(beastActions,beastTitle+" ACTIONS (1 per turn)"))
+
+                self.highlightedEntries.append(["Command Beast to Strike."])
+                self.bonusActionEntries.append(["Command Beast."])
+                self.actions.append({"id":"Revive Beast"})
+
+
+
+
                 
             if self.subclass == "monster slayer" or not subclassChosen:
                 

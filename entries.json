@@ -953,10 +953,12 @@
     },
     "Hunter's Mark": {
         "cost": "1",
-        "preSaveNormalText": "Deal an extra d6 damage to target. ",
+        "rang":90,
+        "duration":"1 hour",
+        "preSaveNormalText": "Deal an extra d6 force damage to the target, and gain adv. on checks to find it. ",
         "conc": true,
         "castTime": "ba",
-        "preSaveItalicText": " Can be moved with a Bonus Action.",
+        "preSaveItalicText": " Can be moved with a Bonus Action. ",
         "useSpellcastingMod": true,
         "type": "spell"
     },
@@ -1083,6 +1085,11 @@
         "useSpellcastingMod": true,
         "type": "spell"
     },
+    "Revive Beast": {
+        "cost": "1",
+        "preSaveNormalText": "You touch your beast and it returns to life after 1 minute with full hp.",
+        "type": "spell"
+    },
     "Magic Weapon": {
         "cost": "2",
         "castTime":"ba",
@@ -1149,9 +1156,9 @@
     "Spike Growth": {
         "conc": true,
         "cost": "2",
-        "preSaveNormalText": "20ft square of thorns erupt from the ground as difficult terrain, dealing 2d4 poison damage for every 5ft travelled across it.",
-        "preSaveItalicText": "STR",
-        "postSaveItalicText": " to resist.",
+        "rang":150,
+        "duration":"10 min",
+        "preSaveNormalText": "The ground in a 40ft circle erupts with thorns and is difficult terrain, dealing 2d4 poison damage for every 5ft travelled across it.",
         "useSpellcastingMod": true,
         "type": "spell"
     },
@@ -1462,6 +1469,14 @@
         "contents": [
             "Dodge. ",
             "You are attacked with disadvantage until your next turn. Advantage on Dex saves.",
+            ""
+        ]
+    },
+    "Help": {
+        "type": "text",
+        "contents": [
+            "Help (5ft). ",
+            "Grant advantage to an ally.",
             ""
         ]
     },

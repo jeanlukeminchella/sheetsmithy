@@ -66,7 +66,7 @@ class Barbarian(c.Sheet):
             if self.subclass  == "wildMagic" :
                 self.actions.append({"id":"senseMagicItem"})
                 self.classAsString = "Barbarian (Wild Magic)"
-                rageTexts.append("• When you enter rage, roll a d8 to unleash a magical effect. <em>(Wild Magic - see TCoE for effects)</em>")
+                rageTexts.append("• When you enter rage, roll a d8 to unleash a magical effect.")
                 if level>5:
                     bolsterTitle = "<strong>Bolster.</strong> Add a d3 to target's ability checks and attack for 10 minutes, or have them regain a level d3 spell slot. O"+" O"*(self.profBonus-1)
                     self.actions.append(bolsterTitle)
