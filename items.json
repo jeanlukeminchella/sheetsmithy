@@ -691,6 +691,7 @@
     "holy water": {
         "key": "holy water",
         "name": "Holy Water",
+        "entryCommand": "Holy Water",
         "price": 25
     },
     "holy symbol": {

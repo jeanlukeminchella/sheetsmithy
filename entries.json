@@ -8,6 +8,18 @@
         "useSpellcastingMod": true,
         "type": "heal"
     },
+    
+    
+    "Heroism": {
+        "cost": "1",
+        "duration": "1 min",
+        "conc": true,
+        "preHealText": "A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to being frightened and their temp hp is set to ",
+        "postHealText":" at the start of each of its turns.",
+        "useSpellcastingMod": true,
+        "type": "heal"
+    },
+    
     "Healing Word": {
         "rang": 60,
         "cost": "1",
@@ -110,6 +122,7 @@
         "mastery": "Vex",
         "type": "attack"
     },
+    
     "Fire Bolt": {
         "damage": "d10",
         "rang": 120,
@@ -368,7 +381,7 @@
     "Psychic Blade": {
         "addModToDamage": true,
         "modifierIndex": 0,
-        "damageType": "Psychic",
+        "damageType": "psychic",
         "damage": "d6",
         "thrown": 60,
         "finesse": true,
@@ -604,6 +617,19 @@
         "useSpellcastingMod": true,
         "type": "attack"
     },
+
+    "Holy Water": {
+        "damage": "2d8",
+        "rang": 20,
+        "addModToDamage": false,
+        "damageType": "radiant",
+        "saveNotAttack": true,
+        "resistAttributeText": "DEX",
+        "resistText": " to dodge",
+        "modifierIndex":1,
+        "type": "attack",
+        "note":"Only effective vs Fiends or Undead."
+    },
     "Spiritual Weapon": {
         "damage": "d8",
         "rang": 60,
@@ -822,6 +848,14 @@
         "useSpellcastingMod": true,
         "type": "spell"
     },
+    "Enhance Ability": {
+        "cost": "2",
+        "conc":true,
+        "duration": "1 hour",
+        "preSaveNormalText": "Target has Advantage on ability checks using a chosen ability (STR,DEX,INT,WIS or CHA).",
+        "useSpellcastingMod": true,
+        "type": "spell"
+    },
     "Bane": {
         "rang": 30,
         "cost": "1",
@@ -854,7 +888,7 @@
         "cost": "1",
         "duration": "10 min",
         "conc": true,
-        "preSaveNormalText": "Sense the presence of magic within 30 feet of you, and learn its school of magic.",
+        "preSaveNormalText": "Sense the presence of magic within 30 feet of you, and learn its school.",
         "ritual": true,
         "useSpellcastingMod": true,
         "type": "spell"
@@ -926,12 +960,16 @@
         "useSpellcastingMod": true,
         "type": "spell"
     },
-    "Heroism": {
-        "cost": "1",
+    "Elementalism": {
         "duration": "1 min",
-        "conc": true,
-        "preSaveNormalText": "A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to being frightened and gains ___ temporary hit points at the start of each of its turns ",
-        "useSpellcastingMod": true,
+        "rang":30,
+        "preSaveNormalText": "You exert control over the elements. Eg. Beckon Air - You create a breeze strong enough to ripple cloth, stir dust, rustle leaves, and close open doors, Beckon Earth - You cause a single word to appear in a patch of dirt, Beckon Fire - You create a thin cloud of harmless embers and colored, scented smoke in a 5-foot Cube, Beckon Water - You create 1 cup of clean water in an open container ect.",
+        "type": "spell"
+    },
+    "Mage Hand": {
+        "duration": "1 min",
+        "rang":30,
+        "preSaveNormalText": "Summon a spectral, floating hand to manipulate an object and move up to 30ft. The hand cannot move more than 30ft away from you or attack, activate magic items, or carry more than 10lb.",
         "type": "spell"
     },
     "Invisibility": {
@@ -990,6 +1028,10 @@
         "preSaveNormalText": "Repairs less than 1ft of damage on an object.",
         "preSaveItalicText": "Takes 10 actions (1 min) to cast.",
         "useSpellcastingMod": true,
+        "type": "spell"
+    },
+    "Message": {
+        "preSaveNormalText": "You point toward a creature within 120ft and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only you can hear. You can cast this spell through solid objects if you are familiar with the target and know it is beyond the barrier. Magical silence; 1 foot of stone, metal, or wood; or a thin sheet of lead blocks the spell.",
         "type": "spell"
     },
     "Create Minor Illusion": {
@@ -1716,7 +1758,7 @@
         "type": "text",
         "contents": [
             "",
-            "Your Punches deal bludgeoning or Force damage ",
+            "Your punches deal bludgeoning or force damage. ",
             ""
         ]
     },

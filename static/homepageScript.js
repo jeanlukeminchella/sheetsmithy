@@ -63,7 +63,7 @@ function getRndInteger(min, max) {
 };
 
 function setSeed(){
-    document.getElementById("seed").value=getRndInteger(0,10000);
+    document.getElementById("seed").value=getRndInteger(0,1000000);
 };
 
 function wrapUp(){

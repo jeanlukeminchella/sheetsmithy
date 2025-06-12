@@ -246,10 +246,8 @@ def gnome(c, choice):
     if choice["subrace"]=="Forest":
         c.raceString = "Forest Gnome"
         c.actions.append({"id":"Create Minor Illusion"})
-        swAnimals = {"id":"Speak With Animals"}
+        swAnimals = {"id":"Speak With Animals","note":" Free Castings per Long Rest - </em>"+" O"*c.profBonus+"<em>"}
         swAnimals = e.getExpandedDictionary(swAnimals)
-        swAnimals["cost"] = ""
-        swAnimals["preSaveNormalText"]+= " O"*c.profBonus
         c.actions.append(swAnimals)
 
 def goliath(c, choice):

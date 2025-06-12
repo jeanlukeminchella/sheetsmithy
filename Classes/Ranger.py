@@ -89,7 +89,7 @@ class Ranger(c.Sheet):
             
         if level>2:
             
-            subclasses = ["hunter","hunter - horde breaker","beastMaster-sea","beastMaster-sky","beastMaster-land","gloom stalker","fey wanderer"]
+            subclasses = ["hunter","hunter - horde breaker","beastMaster-sky","beastMaster-land","gloom stalker","fey wanderer"]
             
             if self.subclass== "" or self.subclass==None:
                 self.subclass = subclasses[(self.seed%17)%len(subclasses)]
@@ -208,7 +208,7 @@ class Ranger(c.Sheet):
             else:
                 self.classAsString="Ranger (Fey Wanderer)"
 
-                self.charInfos.append(["","Once per turn, deal an extra d4 psychic damage to a target you have hit with a weapon."])
+                self.charInfos.append(["Dreadful Strikes.","Once per turn, deal an extra d4 psychic damage to a target you hit with a weapon."])
                 self.addEntry("Charm Person")
                 if self.level>4:
                     self.addEntry("Misty Step")

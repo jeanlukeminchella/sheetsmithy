@@ -16,7 +16,7 @@ class Monk(c.Sheet):
         self.spellcastingMod = 4
         self.gp+=50
         level = self.level
-        self.costDic["f"]="1 Focus"
+        self.costDic["f"]="Focus"
         
 
         self.actions.append({"id":"Hide"})
@@ -27,8 +27,9 @@ class Monk(c.Sheet):
         self.wishlist.append("Dart")
         self.wishlist.append("Whip")
 
-        # some subclass features mean the flurry of blows have an asterisk
+        # some subclass features mean the flurry of blows have an asterisk or a note afterwards
         flurryOfBlowsAstricks = False
+        flurryNote = ""
         
         
         fastActions = []
@@ -47,7 +48,8 @@ class Monk(c.Sheet):
         
         # ki block is initalised here so sublass & levelling can affect it
         kiEntry = "<strong>Focus -</strong> "+(" O"*(level))
-        kiBlock = c.e.Block([kiEntry],"FOCUS")
+        kiEntries = [kiEntry]
+        kiBlock = c.e.Block(kiEntries,"FOCUS")
         if self.hideShortRest:
             kiBlock.addEntry("<em>You regain all Focus after a rest.</em> ")
         else:
@@ -94,16 +96,49 @@ class Monk(c.Sheet):
             uncannyMetabolismText += " O"
             self.charInfos.append(uncannyMetabolismText)
             
-            chosen = False
+            subclasses = ["shadow","openHand","mercy","elements"]
+            
+            if self.subclass== "" or self.subclass==None:
+                self.subclass = subclasses[(self.seed%13)%len(subclasses)]
+
+            
             if self.subclass =="shadow":
                 self.classAsString="Monk (Way of the Shadow)"
-                chosen = True
+                
                 darkness = {"id":"Darkness","note":" Can be moved to any space with 60ft of you at the start of your turns. You can see within this darkness.","cost":"f"}
                 self.actions.append(darkness)
                 self.darkvision+=60
                 self.actions.append({"id":"Create Minor Illusion"})
+            elif self.subclass =="elements":
+                self.classAsString="Monk (Way of the Elements)"
+                kiEntries.append(["Elemental Attunement (Focus, 10 min).","At the start of your turn, imbue yourself with elemental energy. While active, your Punches have a reach of 15ft and deal Acid, Bludgeoning, Cold, Fire, Lightning, or Thunder (your choice) and target is knocked 10ft away from you, STR"+str(8+self.profBonus+self.modifiers[4])+" to stay put.","Ends early if you are Incapacitated."])
+                self.addEntry("Elementalism",False)
+                if self.level>5:
+                    elementalBurst = {"id":"Elemental Burst","cost":"FF","rang":120,"preSaveNormalText":"Cause elemental energy to burst in a 40ft ball centered on a point within range. Choose a damage type: Acid, Cold, Fire, Lightning, or Thunder. Occupants take 3d8 damage. DEX","postSaveNormalText":" to half damage."}
+                    self.costDic["FF"]="2 Focus"
+                    elementalBurst["type"]="spell"
+                    elementalBurst["useSpellcastingMod"]=True
+                    self.actions.append(elementalBurst)
 
-            if self.subclass == "openHand" or not chosen:
+            elif self.subclass == "mercy":
+                self.classAsString="Monk (Way of Mercy)"
+                handOfHarm = ["Hand of Harm (Focus).","Boost a Punch damage roll by "+getMartialArtsDie(self.level)+"+"+str(self.modifiers[4])+" necrotic.","Can only be used once per turn."]
+                kiEntries.append(handOfHarm)
+                handOfHeal = ["Hand of Healing (Focus).","Touch a creature and give them "+getMartialArtsDie(self.level)+"+"+str(self.modifiers[4])+" hp."]
+                if self.level>5:
+                    handOfHeal.append("You can also end one of the following conditions on the creature: Blinded, Deafened, Paralyzed, Poisoned, or Stunned.")
+                    handOfHarm[2]+=" Target is also Poisoned until the end of your next turn."
+                self.actions.append(handOfHeal)
+                flurryNote = "<em> Or Punch once, and use Hand of Healing for free.</em>"
+                self.skillProficiencies.append(6)
+                self.skillProficiencies.append(9)
+                self.wishlist.append("Herbalism Kit")
+
+
+            elif self.subclass == "elements":
+                self.classAsString="Monk (Way of the Elements)"
+
+            else:
                 self.subclass = "openHand"
                 self.classAsString="Monk (Way of the Open Hand)"
                 e1 = "*When you hit with a Flurry of Blows attack, subject the target to one of the below effects."
@@ -153,10 +188,12 @@ class Monk(c.Sheet):
         if self.level>1:
             self.rightColumnBlocks.append(kiBlock)
             
-            flurryString = "<strong>Flurry of Blows (1 Focus)"
+            flurryString = "<strong>Flurry of Blows (Focus)"
             flurryString += ".</strong> Punch twice."
+            flurryString += flurryNote
             if flurryOfBlowsAstricks:
                 flurryString += "*"
+            
             
             
             self.bonusActionEntries.append(flurryString)

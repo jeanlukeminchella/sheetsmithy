@@ -35,6 +35,7 @@ class Paladin(c.Sheet):
 
         self.wishlist.append("Holy Symbol")
         self.wishlist.append("Javelin")
+        self.wishlist.append("Holy Water")
         self.addEntry("Grapple")
 
         if self.level<5:
@@ -81,17 +82,21 @@ class Paladin(c.Sheet):
                 feats.Feats[fightStyle](self)
             else:
                 feats.Feats["defence"](self)
-            self.bonusActionEntries.append({"id":"Divine Smite"})
+            smite = {"id":"Divine Smite"}
+            self.bonusActionEntries.append(smite)
             
         if level>2:
 
+            subclasses = ["glory","ancients","devotion","vengeance"]
+            
+            if self.subclass== "" or self.subclass==None:
+                self.subclass = subclasses[(self.seed%13)%len(subclasses)]
+
             self.bonusActionEntries.append("<strong>Divine Sense ("+channelDivinityText+", 10 mins). </strong> You know the location of any celestial, fiend, or undead within 60 feet, or any area that is desecrated or concecrated.")
             
-            subclassChosen = False
             
             if self.subclass == "ancients":
                 self.classAsString="Paladin (Oath of the Ancients)"
-                subclassChosen = True
                 self.actions.append({"id":"Speak With Animals"})
                 self.bonusActionEntries.append({"id":"Ensnaring Strike"})
                 
@@ -107,8 +112,28 @@ class Paladin(c.Sheet):
                 if level>4:
                     self.actions.append({"id":"Moonbeam"})
                     self.bonusActionEntries.append({"id":"Misty Step"})
-                
-            if self.subclass == "vengeance" or not subclassChosen:
+            
+            elif self.subclass == "glory":
+                self.classAsString = "Paladin (Oath of Glory)"
+
+                smite["note"]=". Also distribute 2d8+"+str(self.level)+" temporary hp to creatures within 30ft however you choose (Oath of Glory)."
+                self.addEntry("Guiding Bolt")
+                self.addEntry("Heroism")
+                if self.level>4:
+                    self.addEntry("Enhance Ability")
+                    self.addEntry("Magic Weapon")
+                self.bonusActionEntries.append(["Peerless Athlete ("+channelDivinityText+", 1 hour).","You have adv. on Athletics and Acrobatics checks and your Long Jump and High Jump distances increase by 10 ft."])
+            elif self.subclass == "devotion":
+                self.classAsString = "Paladin (Oath of Devotion)"
+
+                self.addEntry("Protection from Evil and Good")
+                self.addEntry("Shield of Faith")
+                if self.level>4:
+                    self.addEntry("Aid")
+                    self.addEntry("Zone of Truth")
+                self.notesForSpellCastingBlock.append(["Sacred Weapon ("+channelDivinityText+", 10 mins).","When you Attack, imbue one melee weapon that you are holding with positive energy. Add "+c.gf.getSignedStringFromInt(max(1,self.modifiers[5]))+" to its attack rolls, and choose if it deals radiant damage.","Weapon also emits Bright Light for 20ft."])
+
+            else:
                 self.subclass = "vengeance"
                 self.classAsString="Paladin (Oath of Vengeance)"
                 
