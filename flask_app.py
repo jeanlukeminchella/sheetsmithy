@@ -9,6 +9,7 @@ from Classes import Ranger as ranger
 from Classes import Paladin as pal
 from Classes import Cleric as cleric
 from Classes import Warlock as warlock
+from Classes import Sorcerer as sorcerer
 import Class as Sheet
 
 app = Flask(__name__)
@@ -79,6 +80,8 @@ def getHTMLFromInput(d):
         character = cleric.Cleric(inp)
     elif c=="Warlock":
         character = warlock.Warlock(inp)
+    elif c=="Sorcerer":
+        character = sorcerer.Sorcerer(inp)
     else:
 
         inp["classAsString"]="Fighter"
