@@ -66,8 +66,6 @@ class Cleric(c.Sheet):
             self.skillBoosts.append([14,self.modifiers[4]])
             
         
-        #generate some  spells as entries, as class features may affect them (like healing for Life clerics), not all of them may the same subtype of Entry though
-        
         #first level
         cureWounds = {"id":"Cure Wounds"}
         healingWord = {"id":"Healing Word"}
